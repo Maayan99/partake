@@ -15,10 +15,14 @@
 .bottom-info {
     display: flex;
     flex-direction: column;
+    min-height: 50px;
+    padding: 8px;
 }
 
 .icon-row {
     display: flex;
+    gap: 8px;
+    align-content: center;
 }
 
 
@@ -67,8 +71,16 @@
     align-items: center;
     border: 2px solid #007FFF;
     border-radius: 50%;
-    padding: 4px;
-    width: 20px;
-    height: 20px;
+    padding: 6px;
+    width: 14px;
+    height: 14px;
     color: #007FFF;
+}
+
+.duration-text {
+    font-size: 6pt;
+}
+
+.location-container {
+    display: flex;
 }
