@@ -1,7 +1,6 @@
 .cover-image {
-    background-image: url('https://unsplash.it/300');
-    width: 300px;
-    height: 180px;
+    width: 405px;
+    height: 244px;
     border-radius: 8px 8px 0px 0px;
     display: flex;
     flex-direction: column;
@@ -35,16 +34,9 @@
     color: #007FFF;
 }
 
-.title {
-    font-weight: bold;
-}
-
-.author {
-    font-style: italic;
-}
-
 .progress {
-    width: 300px;
+    width: 405px;
+    height: 16px;
 }
 
 .impact-icon {

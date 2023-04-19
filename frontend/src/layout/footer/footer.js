@@ -9,7 +9,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
     return (
-        <Box sx={{ backgroundColor: '#424952', py: 2 }}>
+        <Box sx={{ backgroundColor: '#494F65', py: 2 }}>
             <Container>
                 <Grid container spacing={4} sx={{ mb: 2 }}>
                     <Grid item xs={12} sm={2}>

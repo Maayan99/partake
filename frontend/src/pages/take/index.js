@@ -2,10 +2,10 @@ import SmallChallengeCard from "@components/components/cards/smallChallengeCard/
 
 export default function Take() {
     const challenge = {
-        coverImage: 'https://unsplash.it/300',
-        title: 'Small Challenge',
+        coverImage: 'take_card_vegan_option.png',
+        title: 'Vegan Option',
         author: 'John Doe',
-        impactType: 'Social',
+        impactType: 'Environment',
         coins: 5,
         progress: 60,
     };

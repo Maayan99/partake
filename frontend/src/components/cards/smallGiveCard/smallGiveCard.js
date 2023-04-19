@@ -5,12 +5,12 @@ import PetsIcon from '@mui/icons-material/Pets';
 import SignalWifiStatusbar4BarIcon from '@mui/icons-material/SignalWifiStatusbar4Bar';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import styles from "./smallGiveCard.module.css"
 
 const SmallGiveCard = ({give}) => {
-    const {coverImage, title, author, activityType, duration, donations, location} = give;
+    const {coverImage, title, author, activityType, duration, donations, location, endDate} = give;
 
     const getActivityIcon = () => {
         switch (activityType) {
@@ -24,9 +24,10 @@ const SmallGiveCard = ({give}) => {
     };
 
     return (
-        <Card className={styles["small-give-card"]}>
-            <CardContent>
-                <div className={styles["cover-image"]}>
+        <Card className={styles["small-give-card"]} elevation={7}>
+            {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
+            <CardContent sx={{padding: "0px"}}>
+                <div className={styles["cover-image"]} style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>
                     <div className={styles["layered-container"]}>
                         <div className={styles["activity-type"]}>
                             {getActivityIcon()}
@@ -36,28 +37,34 @@ const SmallGiveCard = ({give}) => {
                     </div>
 
                     <div className={styles["layered-text"]}>
-                        <Typography variant="h6" component="div" className={styles["title"]}>
+                        <Typography variant="h6" component="div" className="card-title">
                             {title}
                         </Typography>
-                        <Typography variant="subtitle2" component="div" className={styles["author"]}>
+                        <Typography variant="subtitle2" component="div" className="card-author">
                             by <em>{author}</em>
                         </Typography>
                     </div>
                 </div>
                 <div className={styles["bottom-info"]}>
-                    <div className={styles["icon-row"]}>
-                        <div className={`${styles["icon"]} ${styles["duration-icon"]}`}>
-                            <AccessTimeIcon fontSize="8pt"/>
-                            <span className={styles["duration-text"]}>{duration}</span>
+                    <div className={styles["top-row"]}>
+                        <div className={styles["icon-row"]}>
+                            <div className={`${styles["icon"]} ${styles["duration-icon"]}`}>
+                                <AccessTimeIcon fontSize="8pt"/>
+                                <span className={styles["duration-text"]}>{duration}</span>
+                            </div>
+                            {donations ?
+                                <div className={`${styles["icon"]} ${styles["donations-icon"]}`}>
+                                    <ShoppingBasketIcon/>
+                                </div> : <div/>
+                            }
                         </div>
-                        {donations ?
-                            <div className={`${styles["icon"]} ${styles["donations-icon"]}`}>
-                                <ShoppingBasketIcon/>
-                            </div> : <div/>
-                        }
                         <div className={styles["location-container"]}>
-                            <LocationOnIcon fontSize="8pt" style={{color: "gray"}}/>
+                            <LocationOnIcon style={{color: "gray"}}/>
                             <Typography variant="p" color="gray">{location}</Typography>
+                        </div>
+                        <div className="row">
+                            <CalendarMonthIcon style={{color: "gray"}}/>
+                            <Typography variant="p" color="gray">{endDate}</Typography>
                         </div>
                     </div>
                 </div>

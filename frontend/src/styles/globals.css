@@ -1,0 +1,13 @@
+.card-title {
+    font-weight: bold;
+    font-size: 21.5pt;
+}
+
+.card-author {
+    font-style: italic;
+    font-size: 17pt;
+}
+
+.row {
+    display: flex;
+}

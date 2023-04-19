@@ -26,7 +26,7 @@ const SmallChallengeCard = ({challenge}) => {
     return (
         <Card>
             <CardContent>
-                <div className={styles["cover-image"]}>
+                <div className={styles["cover-image"]} style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>
                     <div className={styles["icons-container"]}>
                         <div className={`${styles["icon"]} ${styles["impact-icon"]}`}>{getImpactIcon()}</div>
                         <div className={`${styles["icon"]} ${styles["coins-icon"]}`}>
@@ -43,10 +43,10 @@ const SmallChallengeCard = ({challenge}) => {
                     </div>
 
                     <div className={styles["text-container"]}>
-                        <Typography variant="h6" component="div" className={styles["title"]}>
+                        <Typography variant="h6" component="div" className="card-title">
                             {title}
                         </Typography>
-                        <Typography variant="subtitle2" component="div" className={styles["author"]}>
+                        <Typography variant="subtitle2" component="div" className="card-author">
                             by <em>{author}</em>
                         </Typography>
                     </div>

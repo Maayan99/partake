@@ -2,18 +2,19 @@ import SmallGiveCard from "@components/components/cards/smallGiveCard/smallGiveC
 
 export default function Give() {
     const give = {
-        coverImage: 'https://unsplash.it/300',
+        coverImage: 'shekel_hamezion_donations.png',
         title: 'Shekel Hamezion Donations',
         author: 'Shekel',
-        activityType: 'Online',
+        activityType: 'Field',
         duration: '3hr',
         donations: true,
         location: "Jerusalem",
+        endDate: "2/5/2023"
     };
 
     return (
         <div className="App">
-            <SmallGiveCard give={give} />
+            <SmallGiveCard give={give}/>
         </div>
     );
 }
