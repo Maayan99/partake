@@ -15,10 +15,10 @@ const Footer = () => {
                     <Grid item xs={12} sm={2}>
                         <Typography variant="h6" color="#ffffff">Contact Us</Typography>
                         <Box sx={{ display: "flex"}}>
-                            <EmailIcon color="#ffffff"/>
-                            <FacebookIcon color="#ffffff"/>
-                            <TwitterIcon color="#ffffff"/>
-                            <LinkedInIcon color="#ffffff"/>
+                            <EmailIcon style={{color: "white"}}/>
+                            <FacebookIcon style={{color: "white"}}/>
+                            <TwitterIcon style={{color: "white"}}/>
+                            <LinkedInIcon style={{color: "white"}}/>
                         </Box>
                         <Typography variant="h6" color="#ffffff">Partake</Typography>
                     </Grid>

@@ -1,18 +1,20 @@
+
 import React from 'react';
 import Button from '@mui/material/Button';
 
-const PrimaryButton = (props) => {
+const SelectedButton = (props) => {
     const { children, ...otherProps } = props;
 
     const customStyle = {
-        backgroundColor: 'white',
-        color: 'black',
-        minWidth: '30px',
-        height: '40px',
-        borderRadius: '50px',
+        backgroundColor: "#000000",
+        color: "#ffffff",
+        borderRadius: 25,
+        height: 50,
+        padding: "10px 30px 10px 30px",
+        font: "Roboto",
+        fontSize: 38,
         '&:hover': {
-            backgroundColor: 'black',
-            color: 'white',
+            backgroundColor: "#ffffff",
         },
     };
 
@@ -23,4 +25,5 @@ const PrimaryButton = (props) => {
     );
 };
 
-export default PrimaryButton;
+export default SelectedButton;
+
