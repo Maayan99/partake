@@ -1,0 +1,74 @@
+.small-give-card {
+    box-shadow: 5px 10px #888888;
+}
+
+.cover-image {
+    background-image: url('https://unsplash.it/300');
+    width: 300px;
+    height: 180px;
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-row {
+    display: flex;
+}
+
+
+
+.layered-container {
+    margin: 10px 0px 0px 10px;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.activity-type {
+    display: flex;
+    background-color: white;
+    border-radius: 42px;
+    padding: 5px 12px 8px 12px;
+    width: fit-content;
+    height: 20px;
+}
+
+.activity-type-text {
+    font-size: 12pt;
+    margin-left: 8px;
+    margin-top: 3px
+}
+
+.layered-text {
+    margin: 0px 0px 10px 10px;
+    color: white;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.author {
+    font-style: italic;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #007FFF;
+    border-radius: 50%;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+    color: #007FFF;
+}

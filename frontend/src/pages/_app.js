@@ -1,5 +1,4 @@
 import '@components/styles/globals.css'
-import '@components/components/cards/smallChallengeCard/smallChallengeCard.css';
 
 
 

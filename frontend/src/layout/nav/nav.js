@@ -1,16 +1,21 @@
-import {useState} from "react";
-import {AppBar, Box, Toolbar} from "@mui/material";
-import PrimaryButton from "@components/components/common/primaryButton";
+import {useEffect, useState, useSyncExternalStore} from "react";
+import {AppBar, Box, Link, Toolbar} from "@mui/material";
 import SelectedButton from "@components/components/common/selectedButton";
 import UnselectedButton from "@components/components/common/unselectedButton";
 
 const Nav = () => {
-    const [selected, setSelected] = useState('Do Good');
+    const [selected, setSelected] = useState("");
 
-    const options = ['Give', 'Take', 'Make'];
+    const options = ['give', 'take', 'make'];
+
+    useEffect(() => {
+        setSelected(sessionStorage.getItem("page"));
+    }, []);
 
     const onOptionClick = (option) => {
         setSelected(option);
+        window.location.href = '/' + option;
+        sessionStorage.setItem("page", option);
     };
 
     return (
