@@ -1,0 +1,13 @@
+.footer {
+    background-color: #494F65;
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+
+.social-icon {
+    color: white;
+}
+
+.column {
+    gap: 15px;
+}

@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .card-title {
     font-weight: bold;
     font-size: 21.5pt;
