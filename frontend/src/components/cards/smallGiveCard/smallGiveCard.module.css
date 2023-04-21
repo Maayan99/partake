@@ -82,5 +82,13 @@
 
 .location-container {
     display: flex;
+}
 
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.participants {
+    display: flex;
 }

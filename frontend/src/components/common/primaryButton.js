@@ -5,13 +5,13 @@ const PrimaryButton = (props) => {
     const { children, ...otherProps } = props;
 
     const customStyle = {
-        backgroundColor: 'white',
-        color: 'black',
+        backgroundColor: 'black',
+        color: 'white',
         minWidth: '30px',
         height: '40px',
         borderRadius: '50px',
         '&:hover': {
-            backgroundColor: 'black',
+            backgroundColor: 'blue',
             color: 'white',
         },
     };

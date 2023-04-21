@@ -8,6 +8,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import styles from "./smallGiveCard.module.css"
+import PrimaryButton from "@components/components/common/primaryButton";
 
 const SmallGiveCard = ({give}) => {
     const {coverImage, title, author, activityType, duration, donations, location, endDate} = give;
@@ -66,6 +67,12 @@ const SmallGiveCard = ({give}) => {
                             <CalendarMonthIcon style={{color: "gray"}}/>
                             <Typography variant="p" color="gray">{endDate}</Typography>
                         </div>
+                    </div>
+                    <div className={styles["bottom-row"]}>
+                        <div className={styles["participants"]}>
+
+                        </div>
+                        <PrimaryButton>Give help</PrimaryButton>
                     </div>
                 </div>
             </CardContent>
