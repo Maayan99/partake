@@ -1,16 +1,17 @@
 .small-challenge-card {
     min-width: 305px;
     max-width: 305px;
-    min-height: 200px;
-    max-height: 200px;
+    min-height: 420px;
+    max-height: 420px;
 
     border-radius: 8px 8px 0 0;
 }
 
 .cover-image {
     min-width: 305px;
-    min-height: 184px;
+    min-height: 404px;
     border-radius: 8px 8px 0 0;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -90,8 +91,8 @@
     .small-challenge-card {
         min-width: 405px;
         max-width: 405px;
-        min-height: 260px;
-        max-height: 260px;
+        min-height: 520px;
+        max-height: 520px;
     }
 
     .cover-image {

@@ -1,0 +1,27 @@
+.button {
+    background-color: black;
+    color: white;
+    padding: 8px 36px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32pt;
+}
+
+.small-button {
+    padding: 8px 20px;
+    font-size: 16pt;
+    max-width: 200px;
+}
+
+.button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.unselected-button {
+    background-color: white;
+    color: black;
+}

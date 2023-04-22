@@ -1,4 +1,5 @@
 import SmallGiveCard from "@components/components/cards/smallGiveCard/smallGiveCard";
+import Head from "next/head";
 
 export default function Give() {
     const give = {
@@ -13,8 +14,13 @@ export default function Give() {
     };
 
     return (
-        <div className="App">
-            <SmallGiveCard give={give}/>
-        </div>
+        <>
+            <Head>
+                <title>Give - Partake</title>
+            </Head>
+            <div>
+                <SmallGiveCard give={give}/>
+            </div>
+        </>
     );
 }

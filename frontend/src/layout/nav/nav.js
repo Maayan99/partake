@@ -8,14 +8,20 @@ const Nav = () => {
 
     const options = ['give', 'take', 'make'];
 
+    const capitalizedOptions =
+        {
+            give: 'Give',
+            take: 'Take',
+            make: 'Make',
+        };
+
     useEffect(() => {
-        setSelected(sessionStorage.getItem("page"));
+        const option = window.location.pathname.split("/")[1];
+        setSelected(option);
     }, []);
 
     const onOptionClick = (option) => {
-        setSelected(option);
         window.location.href = '/' + option;
-        sessionStorage.setItem("page", option);
     };
 
     return (
@@ -26,11 +32,11 @@ const Nav = () => {
                         <Box key={option} mx={1}>
                             {selected === option ? (
                                 <SelectedButton onClick={() => onOptionClick(option)}>
-                                    {option}
+                                    {capitalizedOptions[option]}
                                 </SelectedButton>
                             ) : (
                                 <UnselectedButton onClick={() => onOptionClick(option)}>
-                                    {option}
+                                    {capitalizedOptions[option]}
                                 </UnselectedButton>
                             )}
                         </Box>

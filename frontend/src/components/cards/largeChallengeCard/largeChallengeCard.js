@@ -5,9 +5,9 @@ import PeopleIcon from '@mui/icons-material/People';
 import PublicIcon from '@mui/icons-material/Public';
 import StarIcon from '@mui/icons-material/Star';
 
-import styles from "./smallChallengeCard.module.css"
+import styles from "./largeChallengeCard.module.css"
 
-const SmallChallengeCard = ({challenge}) => {
+const LargeChallengeCard = ({challenge}) => {
     const {coverImage, title, author, impactType, coins, progress} = challenge;
 
     const getImpactIcon = () => {
@@ -30,7 +30,7 @@ const SmallChallengeCard = ({challenge}) => {
                 <div className={styles["cover-image"]} style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>
                     <div className={styles["icons-container"]}>
 
-                        {impactType ? <div className={`${styles["icon"]} ${styles["impact-icon"]}`}>{getImpactIcon()}</div> : <></>}
+                        {impactType ? <div className={`${styles["icon"]} ${styles["impact-icon"]}`}>{getImpactIcon()}</div> :  <></>}
                         <div className={`${styles["icon"]} ${styles["coins-icon"]}`}>
                             <StarIcon/>
                             <span className={styles["coins-number"]}>{coins}</span>
@@ -59,4 +59,4 @@ const SmallChallengeCard = ({challenge}) => {
     );
 };
 
-export default SmallChallengeCard;
+export default LargeChallengeCard;

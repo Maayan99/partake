@@ -5,14 +5,20 @@
 
 .card-title {
     font-weight: bold;
-    font-size: 21.5pt;
+    font-size: 18.5pt;
 }
 
 .card-author {
     font-style: italic;
-    font-size: 17pt;
+    font-size: 14pt;
 }
 
-.row {
-    display: flex;
+@media screen and (min-width: 1440px) {
+    .card-title {
+        font-size: 21.5pt;
+    }
+
+    .card-author {
+        font-size: 17pt;
+    }
 }

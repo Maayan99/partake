@@ -1,11 +1,11 @@
 .small-give-card {
-    width: 405px;
-    height: 404px;
+    width: 305px;
+    height: 304px;
 }
 
 .cover-image {
-    width: 405px;
-    height: 263px;
+    width: 305px;
+    height: 203px;
     border-radius: 8px 8px 0px 0px;
     display: flex;
     flex-direction: column;
@@ -15,14 +15,14 @@
 .bottom-info {
     display: flex;
     flex-direction: column;
-    min-height: 141px;
+    min-height: 101px;
+    width: 305px;
 }
 
 .top-row {
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
-    width: 405px;
 }
 
 .icon-row {
@@ -91,4 +91,28 @@
 
 .participants {
     display: flex;
+}
+
+
+@media screen and (min-width: 1440px) {
+    .small-give-card {
+        width: 405px;
+        height: 404px;
+    }
+
+    .cover-image {
+        width: 405px;
+        height: 263px;
+        border-radius: 8px 8px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .bottom-info {
+        display: flex;
+        flex-direction: column;
+        min-height: 141px;
+        width: 405px;
+    }
 }
