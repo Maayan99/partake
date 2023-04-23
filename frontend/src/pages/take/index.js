@@ -2,31 +2,62 @@ import SmallChallengeCard from "@components/components/cards/smallChallengeCard/
 import challenges from "../../../public/challenges.js"
 import Head from "next/head";
 import styles from "./take.module.css";
-import {MenuItem, Select, TextField, Typography} from "@mui/material";
+import {Grid, IconButton, MenuItem, Select, TextField, Typography} from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import LargeChallengeCard from "@components/components/cards/largeChallengeCard/largeChallengeCard";
 import PrimaryButton from "@components/components/common/primaryButton";
 import {useState} from "react";
 
 
-const FilterBar = ( {type, setType} ) => {
-    const handleTypeChange = (option) => {
-        setType(option)
+const FilterBar = ({search, setSearch, type, setType, subject, setSubject, duration, setDuration}) => {
+    const handleSearchChange = (event) => {
+        setSearch(event.target.value);
+    };
+
+    const handleTypeChange = (event) => {
+        setType(event.target.value);
+    };
+
+    const handleSubjectChange = (event) => {
+        setSubject(event.target.value);
+    };
+
+    const handleDurationChange = (event) => {
+        setDuration(event.target.value);
     };
 
     return (
         <div className={styles["filter-bar"]}>
-            <TextField label="Search" variant="outlined" sx={{borderRadius: 0}} size="small"/>
-            <Select
-                value={type}
-                label="Type"
-                onChange={handleTypeChange}
-                className={styles["select-filter"]}
-            >
-                <MenuItem value="Environment">Environment</MenuItem>
-                <MenuItem value="Social">Social</MenuItem>
-                <MenuItem value="Wellness">Well-Being</MenuItem>
-            </Select>
+            <div className={styles["filter-options"]}>
+                <input placeholder="Search" className={styles["search-filter"]} onChange={handleSearchChange} value={search}/>
+                <select onChange={handleTypeChange} placeholder="Type" value={type}
+                        className={styles["select-filter"]}>
+                    <option value="">Type</option>
+                    <option value="Environment">Environment</option>
+                    <option value="Social">Social</option>
+                    <option value="Wellness">Well-Being</option>
+                </select>
+                <select onChange={handleSubjectChange} value={subject}
+                        className={styles["select-filter"]}>
+                    <option value="">Subject</option>
+                    <option value="Sustainability">Sustainability</option>
+                    <option value="Wellness">Wellness</option>
+                    <option value="Social Connection">Social Connection</option>
+                    <option value="Training and Development">Training and Development</option>
+                    <option value="Diversity and Inclusion">Diversity and Inclusion</option>
+                </select>
+                <select onChange={handleDurationChange} value={duration}
+                        className={styles["select-filter"]}>
+                    <option value="">Duration</option>
+                    <option value="15">Longer than 15 Minutes</option>
+                    <option value="60">Longer than 1 Hour</option>
+                    <option value="1440">Longer than a Day</option>
+                </select>
+            </div>
+            <IconButton href="/make">
+                <ControlPointIcon style={{fontSize: "100px", color: "black"}}/>
+            </IconButton>
         </div>
     );
 }
@@ -91,15 +122,40 @@ const BeforeSearch = () => {
     );
 }
 
-const AfterSearch = () => {
-    return (
-        <div>
+const AfterSearch = ({search, type, subject, duration}) => {
+    let filtered = challenges;
 
-        </div>
+    if (type !== "") {
+        filtered = filtered.filter(challenge => {
+            return challenge.impactType === type;
+        })
+    }
+
+    if (subject !== "") {
+        filtered = filtered.filter(challenge => {
+            return challenge.subject === subject;
+        })
+    }
+
+    if (search !== "") {
+        filtered = filtered.filter(challenge => {
+            let challengeText = `${challenge.category} ${challenge.subject} ${challenge.impactType} ${challenge.title} ${challenge.author}`
+            return challengeText.toLowerCase().includes(search.toLowerCase());
+        })
+    }
+
+    return (
+        <Grid container>
+            {filtered.map(challenge =>
+                <Grid item sm={3.5} sx={{pb: '30px'}}>
+                    <SmallChallengeCard key={challenge.id} challenge={challenge}/>
+                </Grid>)}
+        </Grid>
     )
 };
 
 export default function Take() {
+    const [search, setSearch] = useState("");
     const [type, setType] = useState("");
     const [subject, setSubject] = useState("");
     const [duration, setDuration] = useState("");
@@ -110,10 +166,15 @@ export default function Take() {
                 <title>Take - Partake</title>
             </Head>
             <div className={styles["take"]}>
-            <FilterBar type={type} setType={setType}/>
-            {(type !== "" || subject !== "" || duration !== "") ?
-            <AfterSearch/> :
-            <BeforeSearch/>}
+                <FilterBar
+                    search={search} setSearch={setSearch}
+                    type={type} setType={setType}
+                    subject={subject} setSubject={setSubject}
+                    duration={duration} setDuration={setDuration}
+                />
+                {(search !== "" || type !== "" || subject !== "" || duration !== "") ?
+                    <AfterSearch search={search} type={type} subject={subject} duration={duration}/> :
+                    <BeforeSearch/>}
             </div>
         </>
     );

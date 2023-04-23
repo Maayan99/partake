@@ -5,10 +5,10 @@ import PeopleIcon from '@mui/icons-material/People';
 import PublicIcon from '@mui/icons-material/Public';
 import StarIcon from '@mui/icons-material/Star';
 
-import styles from "./largeChallengeCard.module.css"
+import styles from "./challengeCoverCard.module.css"
 
-const LargeChallengeCard = ({challenge}) => {
-    const {id, coverImage, title, author, impactType, coins, progress} = challenge;
+const ChallengeCoverCard = ({challenge}) => {
+    const {coverImage, title, author, impactType, coins} = challenge;
 
     const getImpactIcon = () => {
         switch (impactType) {
@@ -57,10 +57,9 @@ const LargeChallengeCard = ({challenge}) => {
                         </Typography>
                     </div>
                 </div>
-                <LinearProgress variant="determinate" value={progress} className={styles["progress"]}/>
             </CardContent>
         </Card>
     );
 };
 
-export default LargeChallengeCard;
+export default ChallengeCoverCard;
