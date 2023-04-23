@@ -1,7 +1,15 @@
 .footer {
     background-color: #494F65;
-    padding-top: 75px;
-    padding-bottom: 30px;
+    padding: 75px 40px 30px 40px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-container {
+    display: flex;
+    gap: 16px;
 }
 
 .social-icon {
@@ -10,4 +18,6 @@
 
 .column {
     gap: 15px;
+    justify-content: space-around;
 }
+

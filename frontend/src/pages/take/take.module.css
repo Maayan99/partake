@@ -20,7 +20,10 @@
 
 .featured-row {
     display: flex;
+    overflow-x: auto;
     padding-top: 30px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Change scrollbar color */
     gap: 20px
 }
 

@@ -1,15 +1,14 @@
 .small-challenge-card {
+    width: 305px;
+    height: 420px;
     min-width: 305px;
-    max-width: 305px;
-    min-height: 420px;
-    max-height: 420px;
 
     border-radius: 8px 8px 0 0;
 }
 
 .cover-image {
-    min-width: 305px;
-    min-height: 404px;
+    width: 305px;
+    height: 404px;
     border-radius: 8px 8px 0 0;
     background-size: cover;
     display: flex;
@@ -89,15 +88,13 @@
 
 @media screen and (min-width: 1440px) {
     .small-challenge-card {
-        min-width: 405px;
-        max-width: 405px;
-        min-height: 520px;
-        max-height: 520px;
+        width: 405px;
+        height: 540px;
     }
 
     .cover-image {
-        min-width: 405px;
-        min-height: 244px;
+        width: 405px;
+        height: 524px;
     }
 
     .progress {
