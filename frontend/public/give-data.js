@@ -129,7 +129,7 @@ const giveData = [
         location: '',
         contactDetails:
             {
-                email: '',
+                email: 'example@email.com',
                 phone: '',
                 name: '',
             },
