@@ -30,6 +30,122 @@ const template = {
 
 const giveData = [
     {
+        id: 18,
+        title: '',
+        coverImage: '',
+        type: '', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        author: '',
+        about: '', //About the NGO or the Give
+        description: '',
+        skillBased: false,
+        skills: ['Coding', 'Teaching'],
+        location: '',
+        contactDetails:
+            {
+                email: '',
+                phone: '',
+                name: '',
+            },
+        reward: '',
+        requirements: [''],
+        impactType: '',
+        impactReward: '',
+        impact: [''],
+        timeDetails:
+            {
+                endDate: '',
+                frequency: '',
+                duration: '',
+            },
+    },
+    {
+        id: 19,
+        title: '',
+        coverImage: '',
+        type: '', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        author: '',
+        about: '', //About the NGO or the Give
+        description: '',
+        skillBased: false,
+        skills: ['Coding', 'Teaching'],
+        location: '',
+        contactDetails:
+            {
+                email: '',
+                phone: '',
+                name: '',
+            },
+        reward: '',
+        requirements: [''],
+        impactType: '',
+        impactReward: '',
+        impact: [''],
+        timeDetails:
+            {
+                endDate: '',
+                frequency: '',
+                duration: '',
+            },
+    },
+    {
+        id: 20,
+        title: '',
+        coverImage: '',
+        type: '', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        author: '',
+        about: '', //About the NGO or the Give
+        description: '',
+        skillBased: false,
+        skills: ['Coding', 'Teaching'],
+        location: '',
+        contactDetails:
+            {
+                email: '',
+                phone: '',
+                name: '',
+            },
+        reward: '',
+        requirements: [''],
+        impactType: '',
+        impactReward: '',
+        impact: [''],
+        timeDetails:
+            {
+                endDate: '',
+                frequency: '',
+                duration: '',
+            },
+    },
+    {
+        id: 21,
+        title: '',
+        coverImage: '',
+        type: '', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        author: '',
+        about: '', //About the NGO or the Give
+        description: '',
+        skillBased: false,
+        skills: ['Coding', 'Teaching'],
+        location: '',
+        contactDetails:
+            {
+                email: '',
+                phone: '',
+                name: '',
+            },
+        reward: '',
+        requirements: [''],
+        impactType: '',
+        impactReward: '',
+        impact: [''],
+        timeDetails:
+            {
+                endDate: '',
+                frequency: '',
+                duration: '',
+            },
+    },
+    {
         id: 1,
         title: 'Shekel Hamzion Donations',
         author: 'Shekel',
