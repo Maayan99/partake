@@ -1,25 +1,26 @@
 const template = {
     id: 17,
-    title: '',
+    title: 'Donate goods  for families in need.',
     coverImage: '',
-    type: '', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
-    author: '',
-    about: '', //About the NGO or the Give
-    description: '',
+    type: 'Goods Donation', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+    author: 'מיד ליעד',
+    about: 'Our charity is collecting donations of electricity products, furniture, and baby products to distribute to those who are struggling.', //About the NGO or the Give
+    description: "If you want to make a difference in someone's life, simply call us and arrange a date for us to pick up your donations. We will ensure that your items go to a family that truly needs them, providing them with essential household items that they might not otherwise be able to afford. By donating to our charity, you can make a meaningful impact on the lives of those who are less fortunate, while also promoting sustainability by reducing waste. Contact us today to schedule your donation and help us make a positive difference in the world.",
     skillBased: false,
     skills: ['Coding', 'Teaching'],
-    location: '',
+    location: 'We collect goods from Gush-Dan area.',
     contactDetails:
         {
-            email: '',
-            phone: '',
             name: '',
+            phone: '+972-03-6198214',
+            email: 'meyad2@gmail.com',
+            website: 'https://layaad.org.il/',
         },
     reward: '',
-    requirements: [''],
-    impactType: '',
-    impactReward: '',
-    impact: [''],
+    requirements:  ['We deliver only furniture, electricity products and baby products','furniture and baby products must be in good condition','All electricity products must be working.'],
+    impactType: 'Social',
+    impactReward: 'Bag- items donated',
+    impact: ['People in need','Children and Youth','Strengthen Local community','waste reduction','Re-use',],
     timeDetails:
         {
             endDate: '',
