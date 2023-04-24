@@ -160,7 +160,7 @@ const AfterSearch = ({search, type, subject, duration}) => {
         <Grid container className={styles["search-results"]}>
             {/*TODO: Make grid responsive*/}
             {filtered.map(challenge =>
-                <Grid item lg={3} sx={{pb: '30px'}}>
+                <Grid item lg={3} className={styles["search-item"]}>
                     <SmallChallengeCard key={challenge.id} challenge={challenge}/>
                 </Grid>)}
         </Grid>
