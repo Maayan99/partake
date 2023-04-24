@@ -2,6 +2,8 @@
     width: 305px;
     height: 304px;
     min-width: 305px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .cover-image {
@@ -14,8 +16,6 @@
 }
 
 .bottom-info {
-    display: flex;
-    flex-direction: column;
     min-height: 101px;
     width: 305px;
 }
@@ -23,7 +23,7 @@
 .top-row {
     display: flex;
     justify-content: space-around;
-    padding-top: 10px;
+    padding: 10px 10px 0 10px;
 }
 
 .icon-row {
@@ -83,6 +83,17 @@
 
 .location-container {
     display: flex;
+    align-items: center;
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+}
+
+.location-date-text {
+    font-size: 8pt;
+    color: gray;
 }
 
 .bottom-row {
@@ -94,11 +105,16 @@
     display: flex;
 }
 
+.give-help-button {
+    margin: 10px 10px 0 10px;
+}
+
 
 @media screen and (min-width: 1440px) {
     .small-give-card {
         width: 405px;
         height: 404px;
+        min-width: 405px;
     }
 
     .cover-image {

@@ -78,7 +78,7 @@ const BeforeSearch = () => {
                 </div>
                 <div className={styles["featured-row"]}>
                     <LargeChallengeCard challenge={featuredChallenge}/>
-                    <div className={styles["featured-two-takeData"]}>
+                    <div className={styles["featured-two-challenges"]}>
                         <SmallChallengeCard challenge={takeData[1]}/>
                         <SmallChallengeCard challenge={takeData[2]}/>
                     </div>

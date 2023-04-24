@@ -12,7 +12,7 @@ const LargeChallengeCard = ({challenge}) => {
     }
 
     return (
-        <Card className={styles["small-challenge-card"]} onClick={handleClick}>
+        <Card className={styles["large-challenge-card"]} onClick={handleClick}>
             {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
             <CardContent sx={{padding: "0px"}}>
                 <div className={styles["cover-image"]} style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>

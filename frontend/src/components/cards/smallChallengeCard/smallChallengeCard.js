@@ -34,8 +34,7 @@ const SmallChallengeCard = ({challenge}) => {
                   '& .MuiLinearProgress-bar': {
                     backgroundColor: '#0082FE'
                   }
-                }}
-       />
+                }}/>
             </CardContent>
         </Card>
     );
