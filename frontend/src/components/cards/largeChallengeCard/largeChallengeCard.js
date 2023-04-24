@@ -57,7 +57,11 @@ const LargeChallengeCard = ({challenge}) => {
                         </Typography>
                     </div>
                 </div>
-                <LinearProgress variant="determinate" value={progress} className={styles["progress"]}/>
+                <LinearProgress variant="determinate" value={progress} className={styles["progress"]} sx={{
+                  backgroundColor: '#E5E5E5',
+                  '& .MuiLinearProgress-bar': {
+                    backgroundColor: '#0082FE'
+                  }}}/>
             </CardContent>
         </Card>
     );
