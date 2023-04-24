@@ -7,7 +7,6 @@ import PublicIcon from "@mui/icons-material/Public";
 
 export default function ChallengeIcons({impactType, coins, duration}) {
     const getDurationText = () => {
-        console.log(duration);
         if (duration < 60) {
             return `${duration} Minutes`;
         } else if (duration < 1440) {
