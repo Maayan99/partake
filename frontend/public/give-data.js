@@ -1,3 +1,33 @@
+const template = {
+    id: 17,
+    title: '',
+    coverImage: '',
+    type: '', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+    author: '',
+    about: '', //About the NGO or the Give
+    description: '',
+    skillBased: false,
+    skills: ['Coding', 'Teaching'],
+    location: '',
+    contactDetails:
+        {
+            email: '',
+            phone: '',
+            name: '',
+        },
+    reward: '',
+    requirements: [''],
+    impactType: '',
+    impactReward: '',
+    impact: [''],
+    timeDetails:
+        {
+            endDate: '',
+            frequency: '',
+            duration: '',
+        },
+};
+
 const giveData = [
     {
         id: 1,

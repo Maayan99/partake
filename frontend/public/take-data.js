@@ -1,3 +1,22 @@
+const template = {
+    id: "12",
+    title: '',
+    coverImage: '',
+    type: '',
+    onboarding: '',
+    description: '',
+    difficultyLevel: '',
+    duration: 1440,
+    location: '',
+    coins: 100,
+    tasks: '',
+    tasksValidation: [''],
+    tips: [''],
+    impactType: '',
+    impact: [],
+    breed: '',
+};
+
 const takeData = [
     {
         id: "11",
