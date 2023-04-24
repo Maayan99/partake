@@ -55,8 +55,9 @@
     position: absolute;
     top: 53%;
     top: 55%;
-    left: 51%;
+    left: 52%;
     transform: translate(-50%, -50%);
     font-size: 11px;
     line-height: 1;
+    text-align: center
 }

@@ -7,12 +7,12 @@
 }
 
 .small-challenge-card:hover {
-    height: 290px;
+    height: 350px;
     margin-bottom: -90px;
-    transform: scale(1.4);
+    transform: scale(1.1);
     border-radius: 8px;
     z-index: 1;
-    transition: .4s;
+    transition: .2s;
 }
 
 .cover-image {
@@ -43,12 +43,13 @@
 
 .short-description {
     text-align: center;
+    margin: 2px;
 }
 
 .participants-take-row {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px 0 20px;
+    padding: 6px;
 }
 
 
