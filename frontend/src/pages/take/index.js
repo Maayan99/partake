@@ -1,5 +1,5 @@
 import SmallChallengeCard from "@components/components/cards/smallChallengeCard/smallChallengeCard";
-import challenges from "../../../public/challenges.js"
+import takeData from "../../../public/take-data.js"
 import Head from "next/head";
 import styles from "./take.module.css";
 import {Grid, IconButton, MenuItem, Select, TextField, Typography} from "@mui/material";
@@ -64,10 +64,10 @@ const FilterBar = ({search, setSearch, type, setType, subject, setSubject, durat
 }
 
 const BeforeSearch = () => {
-    const forYou = challenges.filter(challenge => challenge.category === 'For you');
-    const popular = challenges.filter(challenge => challenge.category === 'Popular');
-    const learningAndSurveys = challenges.filter(challenge => challenge.category === 'Learning and Surveys');
-    const featuredChallenge = challenges[0];
+    const forYou = takeData.filter(challenge => challenge.category === 'For you');
+    const popular = takeData.filter(challenge => challenge.category === 'Popular');
+    const learningAndSurveys = takeData.filter(challenge => challenge.category === 'Learning and Surveys');
+    const featuredChallenge = takeData[0];
 
 
     return (
@@ -78,9 +78,9 @@ const BeforeSearch = () => {
                 </div>
                 <div className={styles["featured-row"]}>
                     <LargeChallengeCard challenge={featuredChallenge}/>
-                    <div className={styles["featured-two-challenges"]}>
-                        <SmallChallengeCard challenge={challenges[1]}/>
-                        <SmallChallengeCard challenge={challenges[2]}/>
+                    <div className={styles["featured-two-takeData"]}>
+                        <SmallChallengeCard challenge={takeData[1]}/>
+                        <SmallChallengeCard challenge={takeData[2]}/>
                     </div>
                     <div className={styles["featured-text-container"]}>
                         <Typography variant="h5">Try the {featuredChallenge.title} challenge</Typography>
@@ -113,7 +113,7 @@ const BeforeSearch = () => {
 
             <div>
                 <div className={styles["category-title"]}>
-                    <h1>Leaning and Surveys</h1>
+                    <h1>Learning and Surveys</h1>
                     <ArrowForwardIosIcon/>
                 </div>
                 <div className={styles["challenges-container"]}>
@@ -126,7 +126,7 @@ const BeforeSearch = () => {
 }
 
 const AfterSearch = ({search, type, subject, duration}) => {
-    let filtered = challenges;
+    let filtered = takeData;
 
     if (search !== "") {
         filtered = filtered.filter(challenge => {

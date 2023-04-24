@@ -1,4 +1,4 @@
-import challenges from "../../../public/challenges.js"
+import takeData from "../../../public/take-data.js"
 import {useRouter} from "next/router";
 import ChallengeCoverCard from "@components/components/cards/challengeCoverCard/challengeCoverCard";
 import styles from './takePage.module.css'
@@ -16,7 +16,7 @@ export default function TakePage() {
         return null; // TODO: render a loading indicator
     }
 
-    const challenge = challenges.find(challenge => {
+    const challenge = takeData.find(challenge => {
         return challenge.id === id;
     });
 

@@ -1,9 +1,5 @@
 import React from 'react';
-import {Card, CardContent, CardMedia, Typography, LinearProgress} from '@mui/material';
-import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
-import PeopleIcon from '@mui/icons-material/People';
-import PublicIcon from '@mui/icons-material/Public';
-import StarIcon from '@mui/icons-material/Star';
+import {Card, CardContent, Typography} from '@mui/material';
 
 import styles from "./challengeCoverCard.module.css"
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";

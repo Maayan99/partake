@@ -1,6 +1,7 @@
 .small-give-card {
     width: 305px;
     height: 304px;
+    min-width: 305px;
 }
 
 .cover-image {

@@ -1,4 +1,4 @@
-const challenges = [
+const takeData = [
     {
         id: "11",
         coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
@@ -183,4 +183,4 @@ const challenges = [
     }
 ];
 
-export default challenges;
+export default takeData;
