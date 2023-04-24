@@ -53,9 +53,10 @@
 
 .duration-text {
     position: absolute;
-    text-align: center;
     top: 53%;
+    top: 55%;
     left: 51%;
     transform: translate(-50%, -50%);
     font-size: 11px;
+    line-height: 1;
 }

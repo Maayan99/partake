@@ -67,5 +67,6 @@
 
     .progress {
         width: 405px;
+        height: 16px;
     }
 }
