@@ -30,7 +30,8 @@ const FilterBar = ({search, setSearch, type, setType, subject, setSubject, durat
     return (
         <div className={styles["filter-bar"]}>
             <div className={styles["filter-options"]}>
-                <input placeholder="Search" className={styles["search-filter"]} onChange={handleSearchChange} value={search}/>
+                <input placeholder="Search" className={styles["search-filter"]} onChange={handleSearchChange}
+                       value={search}/>
                 <select onChange={handleTypeChange} placeholder="Type" value={type}
                         className={styles["select-filter"]}>
                     <option value="">Type</option>
@@ -73,7 +74,7 @@ const BeforeSearch = () => {
         <div>
             <div>
                 <div className={styles["category-title"]}>
-                    <Typography variant="h5" fontWeight="bold">Featured</Typography>
+                    <h1>Featured</h1>
                 </div>
                 <div className={styles["featured-row"]}>
                     <LargeChallengeCard challenge={featuredChallenge}/>
@@ -84,13 +85,15 @@ const BeforeSearch = () => {
                     <div className={styles["featured-text-container"]}>
                         <Typography variant="h5">Try the {featuredChallenge.title} challenge</Typography>
                         <Typography variant="h5">{featuredChallenge.shortDescription}</Typography>
-                        <PrimaryButton>Take Challenge</PrimaryButton>
+                        <a href={`/take/${featuredChallenge.id}`}><
+                            PrimaryButton>Take Challenge</PrimaryButton>
+                        </a>
                     </div>
                 </div>
             </div>
             <div>
                 <div className={styles["category-title"]}>
-                    <Typography variant="h5" fontWeight="bold">For You</Typography>
+                    <h1>For You</h1>
                     <ArrowForwardIosIcon/>
                 </div>
                 <div className={styles["challenges-container"]}>
@@ -100,7 +103,7 @@ const BeforeSearch = () => {
 
             <div>
                 <div className={styles["category-title"]}>
-                    <Typography variant="h5" fontWeight="bold">Popular</Typography>
+                    <h1>Popular</h1>
                     <ArrowForwardIosIcon/>
                 </div>
                 <div className={styles["challenges-container"]}>
@@ -110,7 +113,7 @@ const BeforeSearch = () => {
 
             <div>
                 <div className={styles["category-title"]}>
-                    <Typography variant="h5" fontWeight="bold">Leaning and Surveys</Typography>
+                    <h1>Leaning and Surveys</h1>
                     <ArrowForwardIosIcon/>
                 </div>
                 <div className={styles["challenges-container"]}>
@@ -125,6 +128,13 @@ const BeforeSearch = () => {
 const AfterSearch = ({search, type, subject, duration}) => {
     let filtered = challenges;
 
+    if (search !== "") {
+        filtered = filtered.filter(challenge => {
+            let challengeText = `${challenge.description} ${challenge.category} ${challenge.subject} ${challenge.impactType} ${challenge.title} ${challenge.author}`
+            return challengeText.toLowerCase().includes(search.toLowerCase());
+        })
+    }
+
     if (type !== "") {
         filtered = filtered.filter(challenge => {
             return challenge.impactType === type;
@@ -137,17 +147,20 @@ const AfterSearch = ({search, type, subject, duration}) => {
         })
     }
 
-    if (search !== "") {
-        filtered = filtered.filter(challenge => {
-            let challengeText = `${challenge.category} ${challenge.subject} ${challenge.impactType} ${challenge.title} ${challenge.author}`
-            return challengeText.toLowerCase().includes(search.toLowerCase());
-        })
+
+    if (filtered.length === 0) {
+        return (
+            <div className={styles["no-results"]}>
+                <h1>No results!! Try to filter differently</h1>
+            </div>
+        )
     }
 
     return (
-        <Grid container>
+        <Grid container className={styles["search-results"]}>
+            {/*TODO: Make grid responsive*/}
             {filtered.map(challenge =>
-                <Grid item sm={3.5} sx={{pb: '30px'}}>
+                <Grid item lg={3} sx={{pb: '30px'}}>
                     <SmallChallengeCard key={challenge.id} challenge={challenge}/>
                 </Grid>)}
         </Grid>

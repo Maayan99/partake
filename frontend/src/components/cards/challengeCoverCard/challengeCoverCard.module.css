@@ -1,7 +1,7 @@
 .small-challenge-card {
     width: 405px;
     height: 420px;
-    min-width: 305px;
+    min-width: 405px;
 }
 
 .cover-image {
@@ -83,18 +83,27 @@
     font-size: 14px;
 }
 
+@media screen and (min-width: 1000px) {
+    .small-challenge-card {
+        width: 455px;
+        height: 420px;
+        min-width: 455px;
+    }
+
+    .cover-image {
+        width: 455px;
+    }
+}
+
 @media screen and (min-width: 1440px) {
     .small-challenge-card {
         width: 505px;
         height: 540px;
+        min-width: 505px;
     }
 
     .cover-image {
         width: 505px;
         height: 540px;
-    }
-
-    .progress {
-        width: 405px;
     }
 }

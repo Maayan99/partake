@@ -1,13 +1,11 @@
-.take {
-    margin-left: 140px;
-}
-
 .filter-bar {
+    margin-left: 140px;
     display: flex;
     margin-top: 20px;
     height: 100px;
     align-items: center;
     gap: 25px;
+    margin-bottom: 40px;
 }
 
 .filter-options {
@@ -27,7 +25,17 @@
     border: 1px solid gray;
 }
 
+.search-results {
+    padding: 0 60px 0 60px;
+}
+
+.no-results {
+    margin-left: 140px;
+    margin-bottom: 200px;
+}
+
 .category-title {
+    margin-left: 140px;
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
@@ -35,6 +43,7 @@
 }
 
 .featured-row {
+    margin-left: 140px;
     display: flex;
     overflow-x: auto;
     padding-top: 30px;
@@ -58,6 +67,7 @@
 }
 
 .challenges-container {
+    margin-left: 140px;
     display: flex;
     gap: 20px;
     margin-top: 15px;
