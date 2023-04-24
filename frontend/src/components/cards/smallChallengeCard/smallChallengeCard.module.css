@@ -7,12 +7,16 @@
 }
 
 .small-challenge-card:hover {
-    height: 350px;
+    height: 260px;
     margin-bottom: -90px;
     transform: scale(1.1);
     border-radius: 8px;
     z-index: 1;
     transition: .2s;
+}
+
+.small-challenge-card p {
+    font-size: 12px;
 }
 
 .cover-image {
@@ -59,6 +63,14 @@
         min-width: 405px;
         width: 405px;
         height: 260px;
+    }
+
+    .small-challenge-card p {
+        font-size: 12px;
+    }
+
+    .small-challenge-card:hover {
+        height: 350px;
     }
 
     .cover-image {

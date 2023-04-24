@@ -85,8 +85,7 @@ const BeforeSearch = () => {
                     <div className={styles["featured-text-container"]}>
                         <Typography variant="h5">Try the {featuredChallenge.title} challenge</Typography>
                         <Typography variant="h5">{featuredChallenge.shortDescription}</Typography>
-                        <a href={`/take/${featuredChallenge.id}`}><
-                            PrimaryButton>Take Challenge</PrimaryButton>
+                        <a href={`/take/${featuredChallenge.id}`}><PrimaryButton style={{fontSize: "30px", maxWidth: "260px", padding: "10px 26px"}}>Take Challenge</PrimaryButton>
                         </a>
                     </div>
                 </div>

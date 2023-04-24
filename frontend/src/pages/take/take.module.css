@@ -1,3 +1,6 @@
+.h1 {
+    font-weight: 500;
+}
 .filter-bar {
     margin-left: 140px;
     display: flex;
@@ -50,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     padding-right: 40px;
 }
