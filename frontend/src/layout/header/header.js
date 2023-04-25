@@ -1,6 +1,4 @@
 import React from 'react';
-import styles from './header.module.css';
-import {AppBar, Toolbar, Typography, Avatar, Box} from '@mui/material';
 import PublicIcon from '@mui/icons-material/Public';
 import PeopleIcon from '@mui/icons-material/People';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
@@ -10,54 +8,36 @@ const Header = () => {
     const profilePhotoURL = 'https://unsplash.it/200'; // Replace with the user's profile photo URL later
 
     return (
-        <AppBar position="static" color="transparent" elevation={0}>
-            <Toolbar>
-                <Typography variant="h6" component="div">
-                    partake
-                </Typography>
-                <Box sx={{flexGrow: 1}}/>
+        <div className="flex items-center justify-between p-4">
+            <p>partake</p>
 
-                <div className={styles.myImpactContainer}>
-                    <Typography variant="subtitle1" component="span">
-                        My impact
-                    </Typography>
-                    <div className={styles.impactContainer}>
+            <div className='flex items-center space-x-7'>
+                <div className="flex items-center space-x-3">
+                    <p>My impact</p>
+                    <div className="flex items-center space-x-3">
                         <PublicIcon color="primary"/>
-                        <Typography variant="subtitle1" component="span">
-                            1000
-                        </Typography>
+                        <p>1000</p>
                     </div>
-                    <div className={styles.impactContainer}>
+                    <div className="flex items-center space-x-3">
                         <PeopleIcon color="primary"/>
-                        <Typography variant="subtitle1" component="span">
-                            2000
-                        </Typography>
+                        <p>2000</p>
                     </div>
-                    <div className={styles.impactContainer}>
+                    <div className="flex items-center space-x-3">
                         <MonitorHeartIcon color="primary"/>
-                        <Typography variant="subtitle1" component="span">
-                            491
-                        </Typography>
+                        <p>491</p>
                     </div>
                 </div>
 
-                <div className={styles.coinsContainer}>
-                    <Typography variant="subtitle1" component="span">
-                        Partake Coins
-                    </Typography>
+                <div className="flex mr-10">
+                    <p>Partake Coins</p>
                     <StarIcon color="primary"/>
-                    <Typography variant="subtitle1" component="span">
-                        100
-                    </Typography>
+                    <p>100</p>
                 </div>
-                <Avatar src={profilePhotoURL} alt="Profile"
-                        style={{
-                            border: '1px solid white',
-                            outline: '2px solid #007FFF'
-                        }}
+                <img src={profilePhotoURL} alt="Profile" className="w-10 h-10 rounded-full
+                outline outline-2 outline-offset-1 outline-cyan-500"
                 />
-            </Toolbar>
-        </AppBar>
+            </div>
+        </div>
     );
 };
 

@@ -1,13 +1,3 @@
-.footer {
-    background-color: #494F65;
-    margin-top: 140px;
-    padding: 75px 40px 30px 40px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .grid-container {
     display: flex;
     gap: 16px;

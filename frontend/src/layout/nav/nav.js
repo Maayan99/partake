@@ -1,5 +1,4 @@
-import {useEffect, useState, useSyncExternalStore} from "react";
-import {AppBar, Box, Link, Toolbar} from "@mui/material";
+import {useEffect, useState} from "react";
 import SelectedButton from "@components/components/common/selectedButton";
 import UnselectedButton from "@components/components/common/unselectedButton";
 
@@ -25,25 +24,21 @@ const Nav = () => {
     };
 
     return (
-        <AppBar position="static" color="transparent" elevation={0}>
-            <Toolbar>
-                <Box display="flex" justifyContent="center" width="100%">
-                    {options.map((option) => (
-                        <Box key={option} mx={1}>
-                            {selected === option ? (
-                                <SelectedButton onClick={() => onOptionClick(option)}>
-                                    {capitalizedOptions[option]}
-                                </SelectedButton>
-                            ) : (
-                                <UnselectedButton onClick={() => onOptionClick(option)}>
-                                    {capitalizedOptions[option]}
-                                </UnselectedButton>
-                            )}
-                        </Box>
-                    ))}
-                </Box>
-            </Toolbar>
-        </AppBar>
+        <div className="flex justify-center space-2.5">
+            {options.map((option) => (
+                <div key={option}>
+                    {selected === option ? (
+                        <SelectedButton onClick={() => onOptionClick(option)}>
+                            {capitalizedOptions[option]}
+                        </SelectedButton>
+                    ) : (
+                        <UnselectedButton onClick={() => onOptionClick(option)}>
+                            {capitalizedOptions[option]}
+                        </UnselectedButton>
+                    )}
+                </div>
+            ))}
+        </div>
     );
 };
 
