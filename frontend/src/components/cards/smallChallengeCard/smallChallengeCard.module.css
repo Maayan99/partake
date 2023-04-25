@@ -1,11 +1,3 @@
-.participants-take-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 6px;
-}
-
-
-
 @media screen and (min-width: 1440px) {
     .small-challenge-card {
         min-width: 405px;

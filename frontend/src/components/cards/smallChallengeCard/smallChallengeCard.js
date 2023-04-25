@@ -15,8 +15,8 @@ const SmallChallengeCard = ({challenge}) => {
     }
 
     return (
-        <Card className="w-72 h-[202px] min-w-[288px] rounded-t-lg transition-all duration-150
-         hover:h-[280px] hover:-mb-24 hover:scale-110 hover:rounded-lg hover:z-10 text-xs" onClick={handleClick}>
+        <Card className="w-72 h-[200px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
+         hover:h-[280px] hover:-mb-20 hover:scale-110 hover:rounded-lg hover:z-10 text-xs" onClick={handleClick}>
             {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
             <CardContent sx={{padding: "0px"}}>
                 <div className="w-full h-48 rounded-t-lg flex flex-col justify-between" style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>
