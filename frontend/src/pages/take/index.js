@@ -2,7 +2,7 @@ import SmallChallengeCard from "@components/components/cards/smallChallengeCard/
 import takeData from "../../../public/take-data.js"
 import Head from "next/head";
 import styles from "./take.module.css";
-import {Grid, IconButton, MenuItem, Select, TextField, Typography} from "@mui/material";
+import {Grid, IconButton, Typography} from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import LargeChallengeCard from "@components/components/cards/largeChallengeCard/largeChallengeCard";

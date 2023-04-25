@@ -22,7 +22,7 @@ const SmallChallengeCard = ({challenge}) => {
                     <ChallengeIcons impactType={impactType} coins={coins} duration={duration}/>
 
                     <div className={styles["text-container"]}>
-                        <Typography variant="h6" component="div" className="card-title">
+                        <Typography variant="h6" component="div" className="font-bold">
                             {title}
                         </Typography>
                         <Typography variant="subtitle2" component="div" className="card-author">

@@ -41,7 +41,7 @@
 }
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 750px) {
     .cover-important-row {
         flex-wrap: nowrap;
     }
