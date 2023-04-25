@@ -1,7 +1,6 @@
 import React from 'react';
 import {Card, CardContent, Typography} from '@mui/material';
 
-import styles from "./challengeCoverCard.module.css"
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
 
 const ChallengeCoverCard = ({challenge}) => {
@@ -12,19 +11,20 @@ const ChallengeCoverCard = ({challenge}) => {
     }
 
     return (
-        <Card className={styles["small-challenge-card"]} onClick={handleClick}>
+        <Card className="w-[430px] h-[420px] min-w-[430px] rounded-none rounded-b-none transition-all duration-150
+         text-xs" onClick={handleClick}>
             {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
             <CardContent sx={{padding: "0px"}}>
-                <div className={styles["cover-image"]} style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>
+                <div className="w-full h-[420px] flex flex-col justify-between bg-cover"
+                     style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>
                     <ChallengeIcons duration={duration} impactType={impactType} coins={coins}/>
-
-                    <div className={styles["text-container"]}>
-                        <Typography variant="h6" component="div" className="card-title">
+                    <div className="text-white ml-2.5 mb-2.5">
+                        <h2 className="font-bold text-2xl leading-snug drop-shadow-md">
                             {title}
-                        </Typography>
-                        <Typography variant="subtitle2" component="div" className="card-author">
+                        </h2>
+                        <p className="font-italics text-xl leading-snug drop-shadow-md">
                             by <em>{author}</em>
-                        </Typography>
+                        </p>
                     </div>
                 </div>
             </CardContent>

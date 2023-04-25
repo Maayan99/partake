@@ -1,9 +1,7 @@
 import React from 'react';
 import {Card, CardContent, Typography, LinearProgress} from '@mui/material';
 
-import styles from "./smallChallengeCard.module.css"
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
-import PrimaryButton from "@components/components/common/primaryButton";
 import BlueButton from "@components/components/common/blueButton";
 import ParticipantsRow from "@components/components/participantsRow/participantsRow";
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardContent, Typography, LinearProgress} from '@mui/material';
+import {Card, CardContent, LinearProgress} from '@mui/material';
 
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
 import ParticipantsRow from "@components/components/participantsRow/participantsRow";
