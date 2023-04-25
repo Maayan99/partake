@@ -3,11 +3,12 @@ import {Card, CardContent, Typography, LinearProgress} from '@mui/material';
 
 import styles from "./smallChallengeCard.module.css"
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
+import PrimaryButton from "@components/components/common/primaryButton";
+import BlueButton from "@components/components/common/blueButton";
+import ParticipantsRow from "@components/components/participantsRow/participantsRow";
 
 const SmallChallengeCard = ({challenge}) => {
-    const {id, coverImage, title, author, impactType, coins, progress, duration} = challenge;
-
-
+    const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription} = challenge;
 
     const handleClick = () => {
         window.location.href = `take/${id}`
@@ -35,6 +36,15 @@ const SmallChallengeCard = ({challenge}) => {
                     backgroundColor: '#0082FE'
                   }
                 }}/>
+                <div className={styles['show-on-hover']}>
+                    <p className={styles["short-description"]}>{shortDescription}</p>
+                    <div className={styles["participants-take-row"]}>
+                        <div className={styles["participants"]}>
+                            <ParticipantsRow/>
+                        </div>
+                        <BlueButton className='small-button'>Take Challenge</BlueButton>
+                    </div>
+                </div>
             </CardContent>
         </Card>
     );

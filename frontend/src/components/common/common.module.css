@@ -10,9 +10,20 @@
     font-size: 32pt;
 }
 
+.top-button {
+    padding: 12px 34px;
+    font-size: 20pt;
+    max-width: 250px;
+    font-weight: 400;
+}
+
+.blue-button {
+    background-color: #0082FE;
+}
+
 .small-button {
-    padding: 8px 20px;
-    font-size: 16pt;
+    padding: 4px 10px;
+    font-size: 12pt;
     max-width: 200px;
 }
 
@@ -20,6 +31,12 @@
     background-color: #0082FE;
     color: white;
 }
+
+
+.blue-button:hover {
+    background-color: black;
+}
+
 
 .unselected-button {
     background-color: white;

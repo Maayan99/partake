@@ -90,13 +90,16 @@
     top: 53%;
     left: 51%;
     transform: translate(-50%, -50%);
-    font-size: 14px;
+    font-size: 11px;
 }
 
 @media screen and (min-width: 1440px) {
     .small-challenge-card {
         width: 405px;
         height: 540px;
+    }
+    .duration-text {
+        font-size: 11px;
     }
 
     .cover-image {
@@ -106,5 +109,6 @@
 
     .progress {
         width: 405px;
+        height: 16px;
     }
 }
