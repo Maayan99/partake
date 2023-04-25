@@ -1,13 +1,12 @@
 
 import React from 'react';
-import Button from '@mui/material/Button';
-import styles from "@components/components/common/common.module.css";
 
 const SelectedButton = (props) => {
-    const { children, ...otherProps } = props;
+    const { children, className, ...otherProps } = props;
 
     return (
-        <button className={`${styles["button"]} ${styles['selected-button']}`} {...otherProps}>
+        <button className={`${className} bg-black text-white py-4 px-8 rounded-full cursor-pointer
+        transition-all duration-300 hover:bg-cyan-500 text-5xl`} {...otherProps}>
             {children}
         </button>
     );

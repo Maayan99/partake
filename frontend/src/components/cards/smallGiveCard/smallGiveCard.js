@@ -8,7 +8,6 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
-import styles from "./smallGiveCard.module.css";
 import PrimaryButton from "@components/components/common/primaryButton";
 import ParticipantsRow from "@components/components/participantsRow/participantsRow";
 

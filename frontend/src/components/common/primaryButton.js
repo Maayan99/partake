@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from "@components/components/common/common.module.css";
 
 const PrimaryButton = (props) => {
     const { children, className, ...otherProps } = props;
 
 
     return (
-        <button className={`${styles["button"]} ${styles[className]} ${styles["small-button"]}`} {...otherProps}>
+        <button className={`${className} bg-black text-white py-2 px-4 rounded-full cursor-pointer
+        transition-all duration-300 hover:bg-cyan-500`} {...otherProps}>
             {children}
         </button>
     );
