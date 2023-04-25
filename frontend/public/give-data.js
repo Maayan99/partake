@@ -32,21 +32,21 @@ const template = {
 const giveData = [
     {
         id: 18,
-        title: 'Donate goods  for families in need.',
+        title: 'Donate goods for families in need',
         coverImage: '',
         type: 'Goods Donation', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'מיד ליעד',
-        about: 'Our charity is collecting donations of electricity products, furniture, and baby products to distribute to those who are struggling.', //About the NGO or the Give
+        about: 'Our charity collects donations of electricity products, furniture, and baby products to distribute to those who are struggling.', //About the NGO or the Give
         description: "If you want to make a difference in someone's life, simply call us and arrange a date for us to pick up your donations. We will ensure that your items go to a family that truly needs them, providing them with essential household items that they might not otherwise be able to afford. By donating to our charity, you can make a meaningful impact on the lives of those who are less fortunate, while also promoting sustainability by reducing waste. Contact us today to schedule your donation and help us make a positive difference in the world.",
         skillBased: false,
-        skills: ['Coding', 'Teaching'],
-        location: 'We collect goods from Gush-Dan area.',
+        skills: ['', ''],
+        location: 'Gush-Dan area',
         contactDetails:
             {
                 name: '',
                 phone: '+972-03-6198214',
                 email: 'meyad2@gmail.com',
-                website: 'https://layaad.org.il/',
+                website: 'layaad.org.il',
             },
         reward: '',
         requirements:  ['We deliver only furniture, electricity products and baby products','furniture and baby products must be in good condition','All electricity products must be working.'],
@@ -67,26 +67,25 @@ const giveData = [
         coverImage: '',
         type: 'Online Voluneering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'The Foundation for the welfare of holocaust victims',
-        about: '', //About the NGO or the Give
-        description: '',
-        skillBased: false,
-        skills: ['Coding', 'Teaching'],
-        location: '',
+        about: 'The Foundation for the welfare of holocaust victims”  is the central association for the care of Holocaust survivors in Israel. The foundation was established in 1994 by Holocaust survivors with the aim of assisting Holocaust survivors in Israel in all areas of welfare and providing them with medical, social, psychological and economic assistance so that they can live with dignity and improve their later years. ', //About the NGO or the Give
+        description: 'The program helps Holocaust survivors acquire tablet usage skills with the assistance of volunteers. We are looking for a volunteer to visit a survivor once a week and guide them on various tablet uses based on their specific needs for about an hour. We also encourage social contact between the survivor and the volunteer, which can continue beyond the initial 5 months if both parties agree. A commitment of 5 months is required, which includes 3 weeks of online training, one session per week.',
+        skillBased: true,
+        skills: ['Basic computer and tablet skills.', 'Teaching.','Communication.'],
+        location: 'Online',
         contactDetails:
             {
-                email: '',
-                phone: '',
-                name: '',
+                name: 'Rachel, volunteer coordinator',
+                email: 'info@k-shoa.org',
+                phone: ' +972-03-6090866',
             },
-        reward: '',
+        reward: 'LinkedIn badge: ',
         requirements: [''],
-        impactType: '',
-        impactReward: '',
-        impact: [''],
+        impactType: 'Social',
+        impactReward: 'Clock- 20 hours of volunteering',
+        impact: ['Seniors','Strengthen Local community.','Companionship.'],
         timeDetails:
             {
-                endDate: '',
-                frequency: '',
+                frequency: 'Once a week',
                 duration: '',
             },
     },
