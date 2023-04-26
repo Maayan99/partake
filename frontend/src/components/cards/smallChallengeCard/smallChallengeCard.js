@@ -5,8 +5,8 @@ import ChallengeIcons from "@components/components/cards/challengeIcons/challeng
 import BlueButton from "@components/components/common/blueButton";
 import ParticipantsRow from "@components/components/participantsRow/participantsRow";
 
-const SmallChallengeCard = ({challenge}) => {
-    const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription} = challenge;
+const SmallChallengeCard = ({take}) => {
+    const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription} = take;
 
     const handleClick = () => {
         window.location.href = `take/${id}`

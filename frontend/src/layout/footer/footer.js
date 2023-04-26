@@ -1,17 +1,15 @@
 // components/Footer.js
 import React from 'react';
-import {Box, Typography, Grid, Link} from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
 
-import styles from "./footer.module.css";
 
 
 const Footer = () => {
     return (
-        <div className="flex flex-col bg-gray-500 px-10 pt-10 pb-3 h-80 mt-32 justify-between text-white">
+        <div className="flex flex-col bg-footer-gray px-10 pt-10 pb-3 h-80 mt-32 justify-between text-white">
             <div className="flex space-x-32">
                 <div className="flex flex-col justify-around">
                     <h2 className="text-lg font-semibold">Contact Us</h2>

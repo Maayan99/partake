@@ -25,11 +25,11 @@ const FilterBar = ({search, setSearch, type, setType, cause, setCause, duration,
     return (
         <div className="flex ml-36 h-24 items-center space-x-8 mb-10">
             <div className="flex h-10">
-                <input placeholder="Search" className="w-72 border border-1 border-gray-500
-                rounded-none border-r-0" onChange={handleSearchChange} value={search}/>
+                <input placeholder="Search" className="w-72 pl-1 border border-1 border-gray-500
+                rounded-none border-r-0 focus:outline-none focus:shadow-md " onChange={handleSearchChange} value={search}/>
                 <select onChange={handleTypeChange} placeholder="Type" value={type}
                         className="w-52 border border-1 border-gray-500
-                rounded-none border-r-0">
+                rounded-none border-r-0 focus:outline-none focus:shadow-md">
                     <option value="">Type</option>
                     <option value="Environment">Environment</option>
                     <option value="Social">Social</option>
@@ -37,7 +37,7 @@ const FilterBar = ({search, setSearch, type, setType, cause, setCause, duration,
                 </select>
                 <select onChange={handleCauseChange} value={cause}
                         className="w-52 border border-1 border-gray-500
-                rounded-none border-r-0">
+                rounded-none border-r-0 focus:outline-none focus:shadow-md">
                     <option value="">Cause</option>
                     <option value="Sustainability">Sustainability</option>
                     <option value="Wellness">Wellness</option>
@@ -47,7 +47,7 @@ const FilterBar = ({search, setSearch, type, setType, cause, setCause, duration,
                 </select>
                 <select onChange={handleDurationChange} value={duration}
                         className="w-52 border border-1 border-gray-500
-                rounded-none">
+                rounded-none focus:outline-none focus:shadow-md">
                     <option value="">Duration</option>
                     <option value="15">Longer than 15 Minutes</option>
                     <option value="60">Longer than 1 Hour</option>
@@ -90,12 +90,12 @@ const BeforeSearch = () => {
         <div>
             {categories.map(category =>
                 <div>
-                    <div className="ml-36 mr-14 mt-10 flex justify-between">
+                    <div className="ml-36 mr-14 mt-10 mb-5 flex justify-between">
                         <h1 className="text-3xl font-bold">{categoriesTitleDictionary[category]}</h1>
                         <ArrowForwardIosIcon/>
                     </div>
 
-                    <div className="flex pl-36 pt-5 pb-5 space-x-5 overflow-x-auto overflow-y-visible">
+                    <div className="flex pl-36 pt-5 space-x-5 overflow-y-visible">
                         {categoriesDictionary[category].map(give => <SmallGiveCard key={give.id} give={give}/>)}
                     </div>
                 </div>)}

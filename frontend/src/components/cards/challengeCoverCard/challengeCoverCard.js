@@ -3,8 +3,8 @@ import {Card, CardContent, Typography} from '@mui/material';
 
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
 
-const ChallengeCoverCard = ({challenge}) => {
-    const {coverImage, title, author, impactType, coins, duration} = challenge;
+const ChallengeCoverCard = ({take}) => {
+    const {coverImage, title, author, impactType, coins, duration} = take;
 
     const handleClick = () => {
         window.location.href = `take/${id}`
