@@ -1,14 +1,11 @@
 import SmallChallengeCard from "@components/components/cards/smallChallengeCard/smallChallengeCard";
 import takeData from "../../../public/take-data.js"
 import Head from "next/head";
-import {Grid, IconButton, Typography} from "@mui/material";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ControlPointIcon from '@mui/icons-material/ControlPoint';
 import LargeChallengeCard from "@components/components/cards/largeChallengeCard/largeChallengeCard";
 import PrimaryButton from "@components/components/common/primaryButton";
 import {useState} from "react";
 import AddIcon from "@mui/icons-material/Add";
-import SmallGiveCard from "@components/components/cards/smallGiveCard/smallGiveCard";
 
 
 const FilterBar = ({search, setSearch, type, setType, subject, setSubject, duration, setDuration}) => {

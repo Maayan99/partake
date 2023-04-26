@@ -24,7 +24,7 @@ const Nav = () => {
     };
 
     return (
-        <div className="flex justify-center space-2.5 mb-8">
+        <div className="sticky top-0 bg-white w-full flex justify-center space-2.5 py-4 z-20 mb-32">
             {options.map((option) => (
                 <div key={option}>
                     {selected === option ? (

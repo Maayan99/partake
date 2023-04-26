@@ -7,14 +7,23 @@ module.exports = {
       "./src/layout/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+      fontFamily: {
+          sans: ['Roboto', 'sans-serif'],
+          serif: ['Roboto', 'serif'],
+      },
       colors: {
           'blue': '#0082FE',
           'white': '#FFFFFF',
           'black': '#000000',
           'gray': '#808080',
           'footer-gray': '#494F65',
+          'important-blue': '#E6F7FF',
       },
-    extend: {},
+    extend: {
+        gridTemplateColumns: {
+            'page-grid': '35% 26% 26%'
+        }
+    },
   },
   plugins: [],
 }

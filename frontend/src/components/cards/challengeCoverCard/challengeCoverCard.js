@@ -6,13 +6,9 @@ import ChallengeIcons from "@components/components/cards/challengeIcons/challeng
 const ChallengeCoverCard = ({take}) => {
     const {coverImage, title, author, impactType, coins, duration} = take;
 
-    const handleClick = () => {
-        window.location.href = `take/${id}`
-    }
-
     return (
-        <Card className="w-[430px] h-[420px] min-w-[430px] rounded-none rounded-b-none transition-all duration-150
-         text-xs" onClick={handleClick}>
+        <Card className="w-full h-[420px] min-w-[300px] rounded-lg transition-all duration-150
+         text-xs">
             {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
             <CardContent sx={{padding: "0px"}}>
                 <div className="w-full h-[420px] flex flex-col justify-between bg-cover"

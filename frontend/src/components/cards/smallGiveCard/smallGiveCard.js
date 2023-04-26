@@ -30,7 +30,7 @@ const SmallGiveCard = ({give}) => {
     };
 
     return (
-        <Card className="w-80 h-80 min-w-[320px] rounded-lg shadow-md transition-all duration-150
+        <Card className=" w-80 h-80 min-w-[320px] rounded-lg shadow-md transition-all duration-150
          hover:scale-110 hover:z-10" elevation={0}>
             {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
             <CardContent sx={{padding: "0px"}}>

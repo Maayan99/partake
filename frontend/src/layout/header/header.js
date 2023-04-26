@@ -15,26 +15,26 @@ const Header = () => {
                 <div className="flex items-center space-x-3">
                     <p>My impact</p>
                     <div className="flex items-center space-x-3">
-                        <PublicIcon color="primary"/>
+                        <PublicIcon className="text-blue"/>
                         <p>1000</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                        <PeopleIcon color="primary"/>
+                        <PeopleIcon className="text-blue"/>
                         <p>2000</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                        <MonitorHeartIcon color="primary"/>
+                        <MonitorHeartIcon className="text-blue"/>
                         <p>491</p>
                     </div>
                 </div>
 
                 <div className="flex mr-10">
                     <p>Partake Coins</p>
-                    <StarIcon color="primary"/>
+                    <StarIcon className="text-blue"/>
                     <p>100</p>
                 </div>
                 <img src={profilePhotoURL} alt="Profile" className="w-10 h-10 rounded-full
-                outline outline-2 outline-offset-1 outline-cyan-500"
+                outline outline-2 outline-offset-1 outline-blue"
                 />
             </div>
         </div>

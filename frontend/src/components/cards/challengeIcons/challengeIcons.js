@@ -9,10 +9,19 @@ export default function ChallengeIcons({impactType, coins, duration}) {
         if (duration < 60) {
             return `${duration} Min`;
         } else if (duration < 1440) {
+            if (duration === 60) {
+                return "1 Hour";
+            }
             return `${duration / 60} Hours`;
         } else if (duration < 10080) {
+            if (duration === 1440) {
+                return "1 Day";
+            }
             return `${duration / 1440} Days`;
         } else {
+            if (duration === 10080) {
+                return "1 Week";
+            }
             return `${duration / 10080} Weeks`;
         }
     }
