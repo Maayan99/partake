@@ -111,7 +111,7 @@ const BeforeSearch = () => {
                 </div>
             </div>
             {categories.map(category =>
-                <div>
+                <div key={category}>
                     <div className="ml-36 mr-14 mt-10 mb-5 flex justify-between">
                         <h1 className="text-3xl font-bold">{categoriesTitleDictionary[category]}</h1>
                         <ArrowForwardIosIcon/>
