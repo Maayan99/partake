@@ -5,7 +5,7 @@ const PrimaryButton = (props) => {
 
 
     return (
-        <button className={`${className} bg-black text-white py-2 px-4 rounded-full cursor-pointer
+        <button className={`bg-black text-white ${className} rounded-full cursor-pointer
         transition-all duration-300 hover:bg-blue`} {...otherProps}>
             {children}
         </button>
