@@ -56,22 +56,22 @@ const SmallGiveCard = ({give}) => {
                     <div className="flex justify-around p-2.5">
                         <div className="flex gap-2 items-center">
                             <div className="flex flex-col justify-center items-center border-solid border-2
-                            border-cyan-500 rounded-full p-1.5 w-9 h-9 text-cyan-500">
+                            border-blue rounded-full p-1.5 w-9 h-9 text-blue">
                                 <AccessTimeIcon fontSize="8pt"/>
                                 <p className="text-xs">{duration}</p>
                             </div>
                             {donations ?
                                 <div className="flex flex-col justify-center items-center border-solid border-2
-                            border-cyan-500 rounded-full p-1.5 w-9 h-9 text-cyan-500">
+                            border-blue rounded-full p-1.5 w-9 h-9 text-blue">
                                     <ShoppingBasketIcon/>
                                 </div> : <div/>
                             }
                         </div>
-                        <div className="flex items-center text-gray-500">
+                        <div className="flex items-center text-gray">
                             <LocationOnIcon/>
                             <p className="text-xs">{location}</p>
                         </div>
-                        <div className="flex items-center text-gray-500">
+                        <div className="flex items-center text-gray">
                             <CalendarMonthIcon/>
                             <p className="text-xs">{endDate}</p>
                         </div>

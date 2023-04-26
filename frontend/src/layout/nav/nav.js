@@ -24,7 +24,7 @@ const Nav = () => {
     };
 
     return (
-        <div className="flex justify-center space-2.5">
+        <div className="flex justify-center space-2.5 mb-8">
             {options.map((option) => (
                 <div key={option}>
                     {selected === option ? (

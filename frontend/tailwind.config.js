@@ -7,8 +7,11 @@ module.exports = {
       "./src/layout/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-      color: {
-          'blue': '#0082FE'
+      colors: {
+          'blue': '#0082FE',
+          'white': '#FFFFFF',
+          'black': '#000000',
+          'gray': '#808080',
       },
     extend: {},
   },

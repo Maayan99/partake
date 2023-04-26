@@ -35,9 +35,9 @@ export default function ChallengeIcons({impactType, coins, duration}) {
     return (
         <div className="mt-2.5 ml-2.5 flex gap-2">
             {impactType ? <div className="flex flex-col justify-center items-center bg-white
-            border-solid border-2 border-cyan-500 rounded-full p-1 w-12 h-12 text-cyan-500">{getImpactIcon()}</div> : <></>}
+            border-solid border-2 border-blue rounded-full p-1 w-12 h-12 text-blue">{getImpactIcon()}</div> : <></>}
             <div className="flex flex-col justify-center items-center bg-white
-            border-solid border-2 border-cyan-500 rounded-full p-1 w-12 h-12 text-cyan-500">
+            border-solid border-2 border-blue rounded-full p-1 w-12 h-12 text-blue">
                 <StarIcon/>
                 <span className="text-xs">{coins}</span>
             </div>
