@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PrimaryButton = (props) => {
+const BlueButton = (props) => {
     const { children, className, ...otherProps } = props;
 
 
@@ -12,4 +12,4 @@ const PrimaryButton = (props) => {
     );
 };
 
-export default PrimaryButton;
+export default BlueButton;

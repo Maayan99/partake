@@ -17,6 +17,10 @@ const template = {
         type: '',
     },
     breed: '',
+    info: {
+        text: '',
+        link: '',
+    },
 };
 
 const takeData = [
@@ -25,6 +29,11 @@ const takeData = [
         coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
         title: 'Clean Inbox, Clear Conscience',
         author: 'Anonymous Bee',
+        impact: {
+            cases: ['CO2'],
+            text: '1 deleted Email saves 4 grams of CO2',
+            type: 'Environment'
+        },
         impactType: 'Environment',
         subject: 'Sustainability',
         shortDescription: 'Reduce unnecessary energy usage in seconds',
@@ -44,6 +53,10 @@ const takeData = [
         location: 'Online',
         difficultyLevel: 'Easy',
         participants: 31,
+        info: {
+            text: 'Reduce Carbon Footprint',
+            link: '/hello-world',
+        },
     },
     {
         id: "1",

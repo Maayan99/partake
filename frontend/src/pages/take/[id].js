@@ -1,10 +1,15 @@
 import takeData from "../../../public/take-data.js"
 import {useRouter} from "next/router";
-import Image from "next/image"
 import ChallengeCoverCard from "@components/components/cards/challengeCoverCard/challengeCoverCard";
 import PrimaryButton from "@components/components/common/primaryButton";
+import TransparentButton from "@components/components/common/transparentButton"
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
+import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
+import PeopleIcon from "@mui/icons-material/People";
+import PublicIcon from "@mui/icons-material/Public";
+import Co2Icon from '@mui/icons-material/Co2';
+import InfoIcon from '@mui/icons-material/Info';
 
 export default function TakePage() {
     const router = useRouter();
@@ -23,12 +28,60 @@ export default function TakePage() {
         return null;
     }
 
-    const {reward, tips, impact, task, description, type, numberOfTasks, location, difficultyLevel, participants, duration} = take;
+    const {
+        info,
+        reward,
+        tips,
+        impact,
+        task,
+        description,
+        type,
+        numberOfTasks,
+        location,
+        difficultyLevel,
+        participants,
+        duration
+    } = take;
+
+    const impactCases = impact.cases;
+    const impactText = impact.text;
+    const impactType = impact.type;
+
+    const infoLink = info.link;
+    const infoText = info.text;
+
+    const getImpactCaseIcon = () => {
+        switch (impactCases[0]) {
+            case 'CO2':
+                return <Co2Icon className="text-6xl"/>;
+        }
+    };
+
+    const getImpactTypeIcon = () => {
+        switch (impactType) {
+            case 'Wellness':
+                return <MonitorHeartIcon className="text-black text-3xl"/>;
+            case 'Social':
+                return <PeopleIcon className="text-black text-3xl"/>;
+            case 'Environment':
+                return <PublicIcon className="text-black text-3xl"/>;
+            default:
+                return null;
+        }
+    };
 
     const getImpactGraphic = () => {
         return (
-            <div>
-
+            <div className="flex flex-col justify-between text-sm">
+                <div className="flex text-blue h-24 space-x-7">
+                    {getImpactTypeIcon()}
+                    {getImpactCaseIcon()}
+                    <p>{impactText}</p>
+                </div>
+                <div className="flex space-x-6 items-center">
+                    <InfoIcon/>
+                    <a href={infoLink} className="text-blue">{infoText}</a>
+                </div>
             </div>
         );
     }
@@ -56,15 +109,15 @@ export default function TakePage() {
 
     return (
         <>
-            <div className="grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-20 px-20">
+            <div className="grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20">
                 {/*TODO: Check why the col-span-2 doesn't work*/}
                 <ChallengeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>
 
                 {/*Important details container*/}
-                <div className="md:col-span-2 space-y-10 h-[760px] lg:h-[420px]">
-                    <div className="flex space-x-2 h-10">
+                <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
+                    <div className="flex space-x-1 text-2xl">
                         <PrimaryButton>Take Challenge</PrimaryButton>
-                        <PrimaryButton>Invite Friends</PrimaryButton>
+                        <TransparentButton>Invite Friends</TransparentButton>
                     </div>
                     <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2">
                         <div className="ml-10 my-7 space-y-2">
@@ -112,6 +165,20 @@ export default function TakePage() {
                     {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
                     <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}>{tip}</li>)}</ul>
                 </div> : <></>}
+                {reward ? <div className="space-y-5">
+                    <h1 className="font-bold">Reward</h1>
+                    <ul className="space-y-2">{reward.map(reward =>
+                        <div className="flex space-x-4">
+                            <div className="flex flex-col justify-center items-center bg-white
+            border-solid border-2 border-blue rounded-full p-1 min-w-[80px] h-20 text-blue">
+                                <StarIcon/>
+                                <p className="text-xs">{reward[0]}</p>
+                            </div>
+                            <p className="text-sm text-gray">{reward[1]}</p>
+                        </div>
+                    )
+                    }</ul>
+                </div> : <></>}
                 {participants ? <div className="space-y-5">
                     <h1 className="font-bold">Participants ({participants})</h1>
                     <div className="grid grid-cols-6 gap-2 w-max">
@@ -134,20 +201,6 @@ export default function TakePage() {
                         <img className="rounded-full h-10 w-10" src="https://unsplash.it/216" alt="Profile"/>
                         <img className="rounded-full h-10 w-10" src="https://unsplash.it/217" alt="Profile"/>
                     </div>
-                </div> : <></>}
-                {reward ? <div className="space-y-5">
-                    <h1 className="font-bold">Reward</h1>
-                    <ul className="space-y-2">{reward.map(reward =>
-                        <div className="flex space-x-2">
-                            <div className="flex flex-col justify-center items-center bg-white
-            border-solid border-2 border-blue rounded-full p-1 min-w-[80px] h-20 text-blue">
-                                <StarIcon/>
-                                <p className="text-xs">{reward[0]}</p>
-                            </div>
-                            <p className="text-sm text-gray">{reward[1]}</p>
-                        </div>
-                    )
-                    }</ul>
                 </div> : <></>}
             </div>
         </>
