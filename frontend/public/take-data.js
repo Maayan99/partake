@@ -16,7 +16,7 @@ const template = {
         cases: [],
         type: '',
     },
-    breed: '',
+    breed: '', // Either competition, Individual, or Group Challenge.
     info: {
         text: '',
         link: '',
@@ -24,6 +24,81 @@ const template = {
 };
 
 const takeData = [
+{
+     id: "12",
+    title: 'Clean Inbox, Clean Conscience',
+    coverImage: '',
+    type: 'Environmental',
+    onboarding: 'A single email produces an average of 4 grams of CO2 emissions. While it may not seem like much, the carbon footprint of billions of emails sent every day can quickly add up.',
+    description: "In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
+    difficultyLevel: 'Easy',
+    duration: 10,
+    location: 'Online',
+    coins: 100,
+    tasks: "Delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before  and another one  after.Don't forget to encourage your coworkers to participate as well!",
+    tasksValidation: ['Share the screenshot in the challenge feed'],
+    tips: ["1. Don’t forget to delete spam or sale emails.",'2. Unsubscribe from unnecessary emails you no longer need or want.','3. Use labels to help you organize your email by category such as “work” or “personal”.',"Remember, even small actions can make a big impact on the environment."],
+    impact: {
+        type: 'Co2',
+        cases: ['Computer emissions'],
+    },
+    breed: 'Individual', // Either competition, Individual, or Group Challenge.
+    info: {
+        text: '',
+        link: '',
+    },
+
+},
+{
+    id: "13",
+    title: '',
+    coverImage: '',
+    type: '',
+    onboarding: '',
+    description: '',
+    difficultyLevel: '',
+    duration: 1440,
+    location: '',
+    coins: 100,
+    tasks: '',
+    tasksValidation: [''],
+    tips: [''],
+    impact: {
+        cases: [],
+        type: '',
+    },
+    breed: '',
+    info: {
+        text: '',
+        link: '',
+    },
+},    
+{
+        id: "14",
+    title: '',
+    coverImage: '',
+    type: '',
+    onboarding: '',
+    description: '',
+    difficultyLevel: '',
+    duration: 1440,
+    location: '',
+    coins: 100,
+    tasks: '',
+    tasksValidation: [''],
+    tips: [''],
+    impact: {
+        cases: [],
+        type: '',
+    },
+    breed: '',
+    info: {
+        text: '',
+        link: '',
+    },
+
+},
+    
     {
         id: "11",
         messages: [
