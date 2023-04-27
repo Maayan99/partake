@@ -32,7 +32,7 @@ const template = {
 const giveData = [
     {
         id: 18,
-        title: 'Donate goods for families in need',
+        title: 'Goods donation for families in need',
         coverImage: '',
         type: 'Goods Donation', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'מיד ליעד',
@@ -91,31 +91,28 @@ const giveData = [
     },
     {
         id: 20,
-        title: '',
+        title: 'Ein-Gedi national Park cleaning day',
         coverImage: '',
-        type: '', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
-        author: '',
-        about: '', //About the NGO or the Give
-        description: '',
+        type: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        author: 'רשות הטבע והגנים & Clean Coin.',
+        about: "Ein Gedi National Park is a nature reserve located in the Judean Desert of Israel, near the Dead Sea. The park features a lush oasis with waterfalls and streams, surrounded by dry desert mountains.The park is home to a variety of flora and fauna, including ibex, hyrax, and many species of birds. Ein Gedi is a popular destination for nature lovers, hikers, offering a unique and stunning contrast between the desert and oasis environments.Abraham Hostel's HR department is proud to partner with in and, “Israel Nature and Parks Authority” (רשות הטבע והגנים), to organize a day of hiking and cleaning one of Israel’s most unique places.", //About the NGO or the Givedescription: " Cleaning natural resort and national parks helps to reduce litter and waste, protect local wildlife, prevent pollution and enhance natural beauty of the park for visitors,Together, as volunteers we can make a positive impact, learn about the Ein-Gedi’s environment, wildlife and history. Ein-Gedi is a stunning natural reserve that can be enjoyed and preserved through volunteer efforts.",
         skillBased: false,
         skills: ['Coding', 'Teaching'],
-        location: '',
+        location: 'Ein Gedi National Park',
         contactDetails:
             {
-                email: '',
-                phone: '',
-                name: '',
+                name: 'Shiri Buzaglo,HR Department',
+                phone: '054-12345678', 
             },
         reward: '',
-        requirements: [''],
-        impactType: '',
-        impactReward: '',
-        impact: [''],
+        requirements: ['Minimum 10 volunteers.',"Don’t forget to bring hiking essentials:",'1.3L water for each participant','2. Sun Protection: Sunscreen, hat and sunglasses.','3. First aid kit such as band-aids, antiseptic and pain relievers.','4. Water shoes or hiking sandals for hiking in water.','5. Optional: bathing suit.','*Food and snacks will be provided by the sponsor “clean coin”.'],
+        impactType: 'Social, Environmental',
+        impactReward: 'clock- 5 hours of volunteering',
+        impact: ['Cleaning or rehabilitating natural areas.','Protecting wildlife.'],
         timeDetails:
             {
-                endDate: '',
-                frequency: '',
-                duration: '',
+                Date: 'Saturday, May 21st', 
+                duration: ['5 hours','9am - 2 pm']
             },
     },
     {
