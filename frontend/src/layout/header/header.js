@@ -7,7 +7,7 @@ import users from "@components/users";
 
 const Header = () => {
 
-    const profilePhotoURL = `/assets/PNG/profile_image_1`;
+    const profilePhotoURL = `/assets/PNG/profile_image_1.jpeg`;
 
 
     const handleProfileClick = () => {

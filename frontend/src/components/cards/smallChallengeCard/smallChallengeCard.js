@@ -20,7 +20,7 @@ const SmallChallengeCard = ({take}) => {
             {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
             <CardContent sx={{padding: "0px"}}>
                 <div className="w-full h-[190px] rounded-t-lg flex flex-col justify-between"
-                     style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>
+                     style={{backgroundImage: `linear-gradient(to bottom, transparent 30%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
                     <ChallengeIcons impactType={impactType} coins={coins} duration={duration}/>
 
                     <div className="text-white ml-2.5 mb-2.5">

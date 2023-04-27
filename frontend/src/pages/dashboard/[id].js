@@ -1,10 +1,8 @@
 import BlueButton from "@components/components/common/blueButton";
-import {useUser} from "@components/components/userContext/userContext";
 
 export default function Dashboard() {
-    const {user, setUser} = useUser();
 
-    const profileImage = `/assets/PNG/${user.profileImage}`
+    const profileImage = `/assets/PNG/profile_image_1.jpeg`
 
     const handleLogout = () => {
         sessionStorage.setItem('loggedIn', 'false');

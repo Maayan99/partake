@@ -6,8 +6,9 @@ import UnloggedHeader from "@components/layout/unloggedHeader/unloggedHeader";
 import React, {useEffect, useState} from "react";
 
 
-//TODO:  Add a loading screen
+//TODO: Landing screen
 //TODO: Confetti screen
+//TODO: Full take flow
 //TODO:
 
 export default function App({Component, pageProps}) {

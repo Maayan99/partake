@@ -12,6 +12,9 @@ module.exports = {
             serif: ['Roboto', 'serif'],
         },
         extend: {
+            backgroundImage: {
+                'card-pattern': 'linear-gradient(to bottom, transparent 0%, black 100%)'
+            },
             animation: {
                 scroll: 'scroll 20s linear infinite',
                 scroll2: 'scroll2 20s linear infinite',
