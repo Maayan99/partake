@@ -1,42 +1,10 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-.card-title {
-    font-weight: bold;
-    font-size: 18.5pt;
-    line-height: 1.2;
-    text-shadow: 0px 0px 4px rgba(0,0,0,.4);
-}
-
-.card-author {
-    font-style: italic;
-    font-size: 14pt;
-    font-weight: 400;
-    text-shadow: 0px 0px 4px rgba(0,0,0,.4);
-}
-
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
-h2 {
-    font-family: 'Roboto', sans-serif;
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-}
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 
-@media screen and (min-width: 1440px) {
-    .card-title {
-        font-size: 21.5pt;
-    }
-
-    .card-author {
-        font-size: 17pt;
+@layer base {
+    h1 {
+        @apply text-2xl;
     }
 }

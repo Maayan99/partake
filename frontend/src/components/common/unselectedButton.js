@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './common.module.css';
 
 const UnselectedButton = (props) => {
-    const { children, ...otherProps } = props;
+    const { children, className, ...otherProps } = props;
 
     return (
-        <button className={`${styles["button"]} ${styles['unselected-button']}`} {...otherProps}>
+        <button className={`${className} bg-white text-black py-4 px-8 rounded-full cursor-pointer
+        transition-all duration-300 hover:bg-blue text-3xl mx-2`} {...otherProps}>
             {children}
         </button>
     );

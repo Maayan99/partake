@@ -4,7 +4,7 @@ import styles from './participantsRow.module.css';
 
 export default function ParticipantsRow() {
     return (
-        <Grid container sm={4} columns={8} className={styles["participants-row"]}>
+        <Grid container columns={8} className={styles["participants-row"]}>
             <Grid item sm={1}>
                 <Avatar src="https://unsplash.it/200" alt="Profile"/>
             </Grid>

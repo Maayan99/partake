@@ -12,9 +12,15 @@ const template = {
     tasks: '',
     tasksValidation: [''],
     tips: [''],
-    impactType: '',
-    impact: [],
+    impact: {
+        cases: [],
+        type: '',
+    },
     breed: '',
+    info: {
+        text: '',
+        link: '',
+    },
 };
 
 const takeData = [
@@ -23,6 +29,11 @@ const takeData = [
         coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
         title: 'Clean Inbox, Clear Conscience',
         author: 'Anonymous Bee',
+        impact: {
+            cases: ['CO2'],
+            text: '1 deleted Email saves 4 grams of CO2',
+            type: 'Environment'
+        },
         impactType: 'Environment',
         subject: 'Sustainability',
         shortDescription: 'Reduce unnecessary energy usage in seconds',
@@ -35,13 +46,17 @@ const takeData = [
             'Remember, even small actions can make a big impact on the environment'],
         moreInformation: 'Did you know that every year, the world’s data centers consume more energy than the entire United Kingdom? And did you know that a single email produces an average of 4 grams of CO2 emissions? It’s time to take action and reduce our digital footprint.',
         coins: 200,
-        reward: [100, 'You will receive 1 point for each email you delete, for a maximum of 100 points.', 100, 'Additionally, every 50 emails deleted will get you another 10 points, for a maximum of 100 points.'],
+        reward: [[100, 'You will receive 1 point for each email you delete, for a maximum of 100 points.'], [100, 'Additionally, every 50 emails deleted will get you another 10 points, for a maximum of 100 points.']],
         progress: 0,
         duration: 1440,
         numberOfTasks: 1,
         location: 'Online',
         difficultyLevel: 'Easy',
         participants: 31,
+        info: {
+            text: 'Reduce Carbon Footprint',
+            link: '/hello-world',
+        },
     },
     {
         id: "1",
