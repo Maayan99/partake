@@ -5,6 +5,11 @@ const users = [
         email: 'a@a.a',
         password: 'a',
         profileImage: 'profile_image_1.jpeg',
+        startedChallenges: [
+            {
+                id: "2",
+            }
+        ],
     },
     {
         id: 'oiuadsfhli1u32e',
@@ -12,6 +17,14 @@ const users = [
         email: 'evithar1310@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_2.jpeg',
+        startedChallenges: [
+            {
+                id: "1",
+            },
+            {
+                id: "11",
+            },
+        ],
     },
     {
         id: 'oiuadsfhli1u31e',
@@ -19,6 +32,8 @@ const users = [
         email: 'doarnitai@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_3.jpeg',
+        startedChallenges: [
+        ],
     },
     {
         id: 'owuadsfhli1u32e',
@@ -26,6 +41,8 @@ const users = [
         email: 'hil472@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_4.jpeg',
+        startedChallenges: [
+        ],
     },
     {
         id: 'oiuadsfhli1u32d',
@@ -33,6 +50,8 @@ const users = [
         email: 'ofergetz@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_5.jpeg',
+        startedChallenges: [
+        ],
     },
     {
         id: 'aiuadsfhli1u32e',
@@ -40,6 +59,8 @@ const users = [
         email: 'osnat479@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_6.jpeg',
+        startedChallenges: [
+        ],
     },
 ]
 

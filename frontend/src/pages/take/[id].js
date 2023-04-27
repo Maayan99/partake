@@ -5,29 +5,98 @@ import Leaderboard from "@components/components/cards/leaderboard/leaderboard";
 import PrimaryButton from "@components/components/common/primaryButton";
 import TransparentButton from "@components/components/common/transparentButton"
 import BlueButton from "@components/components/common/blueButton"
-import React from "react";
+import React, {useEffect, useState} from "react";
 import StarIcon from "@mui/icons-material/Star";
 import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
 import PeopleIcon from "@mui/icons-material/People";
 import PublicIcon from "@mui/icons-material/Public";
 import Co2Icon from '@mui/icons-material/Co2';
 import InfoIcon from '@mui/icons-material/Info';
+import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 
-const TopAfterStarted = ({take}) => {
-    const {title, task} = take;
+const TopBeforeStarted = ({take, user, setStartedChallenges, id}) => {
+    const {
+        type,
+        numberOfTasks,
+        location,
+        difficultyLevel,
+        durationText,
+        participants,
+    } = take;
+
+    const handleStartChallenge = () => {
+        console.log(user);
+        user.startedChallenges.push(
+            {
+                id: id,
+            }
+        )
+        console.log(user.startedChallenges);
+        setStartedChallenges(prevStartedChallenges => [
+            ...prevStartedChallenges,
+            {
+                id: id,
+            },
+        ]);
+    };
 
     return (
-        <div className="col-span-3 grid grid-cols-3 gap-24 w-full">
-            <ChallengeCoverCard take={take}/>
-            <div className="flex flex-col">
+        <>
+            <ChallengeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>
+
+            {/*Important details container*/}
+            <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
                 <div className="flex space-x-1 text-2xl">
+                    <PrimaryButton onClick={handleStartChallenge}>Take Challenge</PrimaryButton>
+                    <TransparentButton>Invite Friends</TransparentButton>
+                </div>
+                <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2">
+                    <div className="ml-10 my-7 space-y-2">
+                        <h1 className="font-bold">Duration</h1>
+                        <p>{durationText}</p>
+                    </div>
+                    <div className="ml-10 lg:ml-0 my-7 space-y-2">
+                        <h1 className="font-bold">Type</h1>
+                        <p>{type}</p>
+                    </div>
+                    <div className="ml-10 my-7 space-y-2">
+                        <h1 className="font-bold">Number of Tasks</h1>
+                        <p>{numberOfTasks}</p>
+                    </div>
+                    <div className="ml-10 lg:ml-0 my-7 space-y-2">
+                        <h1 className="font-bold">Location</h1>
+                        <p>{location}</p>
+                    </div>
+                    <div className="ml-10 my-7 space-y-2">
+                        <h1 className="font-bold">Difficulty Level</h1>
+                        <p>{difficultyLevel}</p>
+                    </div>
+                    <div className="ml-10 lg:ml-0 my-7 space-y-2">
+                        <h1 className="font-bold">Participants</h1>
+                        <p>{participants}</p>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+const TopAfterStarted = ({take, user}) => {
+    const {title, tasks} = take;
+
+    return (
+        <div className="col-span-3 grid grid-cols-3 gap-14 w-full">
+            <div className="w-1/2">
+                <ChallengeCoverCard take={take}/>
+            </div>
+            <div className="flex flex-col space-y-3">
+                <div className="flex space-x-1">
                     <PrimaryButton>Challenge Taken</PrimaryButton>
                     <TransparentButton>Invite Friends</TransparentButton>
                 </div>
-                <h1 className="text-3xl font-bold">{title}</h1>
-                <h1 className="font-bold text-xl">Task 1</h1>
-                <h1>{task}</h1>
-
+                <h1 className="text-2xl font-bold">{title}</h1>
+                <h1 className="font-bold text-xl">Task {}</h1>
+                <h1>{}</h1>
             </div>
             <Leaderboard take={take}/>
         </div>
@@ -37,7 +106,7 @@ const TopAfterStarted = ({take}) => {
 const Feed = ({placeholderText, messages, task}) => {
     return (
         <>
-            <div >
+            <div>
                 <h1 className="font-extrabold text-3xl">Gallery</h1>
                 <p className="font-bold">Task 1: {task}</p>
             </div>
@@ -69,14 +138,29 @@ const Feed = ({placeholderText, messages, task}) => {
 }
 
 
-export default function TakePage() {
+export default function TakePage({user}) {
+    const [started, setStarted] = useState(false);
+    const [startedChallenges, setStartedChallenges] = useState([]);
+
     const router = useRouter();
     const {id} = router.query;
+
+    useEffect(() => {
+        if (user) {
+            setStartedChallenges(user.startedChallenges);
+        }
+
+        setStarted(startedChallenges.find(takeBeingChecked => {
+            //TODO: Why are the types different?!?!
+            return takeBeingChecked.id == id;
+        }));
+    },  [startedChallenges, id]);
+
 
     // Check if the router has the required data
     if (!id) {
         return (
-            <div className="flex justify-center items-center h-96">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
                 <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue"/>
             </div>
         );
@@ -90,8 +174,8 @@ export default function TakePage() {
         return null;
     }
 
+
     const {
-        started,
         messages,
         placeholderText,
         info,
@@ -100,12 +184,7 @@ export default function TakePage() {
         impact,
         task,
         description,
-        type,
-        numberOfTasks,
-        location,
-        difficultyLevel,
         participants,
-        duration
     } = take;
 
     const impactCases = impact.cases;
@@ -119,6 +198,8 @@ export default function TakePage() {
         switch (impactCases[0]) {
             case 'CO2':
                 return <Co2Icon className="text-6xl"/>;
+            case 'Happy':
+                return <InsertEmoticonIcon className="text-6xl"/>;
         }
     };
 
@@ -151,67 +232,14 @@ export default function TakePage() {
         );
     }
 
-    const getDurationText = () => {
-        if (duration < 60) {
-            return `${duration} Minutes`;
-        } else if (duration < 1440) {
-            if (duration === 60) {
-                return "One Hour";
-            }
-            return `${duration / 60} Hours`;
-        } else if (duration < 10080) {
-            if (duration === 1440) {
-                return "One Day";
-            }
-            return `${duration / 1440} Days`;
-        } else {
-            if (duration === 10080) {
-                return "One Week";
-            }
-            return `${duration / 10080} Weeks`;
-        }
-    }
 
     return (
         <>
             <div className="grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20">
-                <TopAfterStarted take={take}/>
+                {started ? <TopAfterStarted take={take} user={user}/> : <TopBeforeStarted take={take} user={user} id={id}
+                                                                                          setStartedChallenges={setStartedChallenges}/>}
                 {/*TODO: Check why the col-span-2 doesn't work*/}
-                <ChallengeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>
 
-                {/*Important details container*/}
-                <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
-                    <div className="flex space-x-1 text-2xl">
-                        <PrimaryButton>Take Challenge</PrimaryButton>
-                        <TransparentButton>Invite Friends</TransparentButton>
-                    </div>
-                    <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2">
-                        <div className="ml-10 my-7 space-y-2">
-                            <h1 className="font-bold">Duration</h1>
-                            <p>{getDurationText()}</p>
-                        </div>
-                        <div className="ml-10 lg:ml-0 my-7 space-y-2">
-                            <h1 className="font-bold">Type</h1>
-                            <p>{type}</p>
-                        </div>
-                        <div className="ml-10 my-7 space-y-2">
-                            <h1 className="font-bold">Number of Tasks</h1>
-                            <p>{numberOfTasks}</p>
-                        </div>
-                        <div className="ml-10 lg:ml-0 my-7 space-y-2">
-                            <h1 className="font-bold">Location</h1>
-                            <p>{location}</p>
-                        </div>
-                        <div className="ml-10 my-7 space-y-2">
-                            <h1 className="font-bold">Difficulty Level</h1>
-                            <p>{difficultyLevel}</p>
-                        </div>
-                        <div className="ml-10 lg:ml-0 my-7 space-y-2">
-                            <h1 className="font-bold">Participants</h1>
-                            <p>{participants}</p>
-                        </div>
-                    </div>
-                </div>
 
                 {started ? <Feed placeholderText={placeholderText} messages={messages} task={task}/> : <></>}
 
@@ -228,25 +256,27 @@ export default function TakePage() {
                     <h1 className="font-bold">Impact</h1>
                     <p>{getImpactGraphic()}</p>
                 </div> : <></>}
-                {tips ? <div className="space-y-5">
-                    <h1 className="font-bold">Tips</h1>
-                    {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
-                    <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}>{tip}</li>)}</ul>
-                </div> : <></>}
-                {reward ? <div className="space-y-5">
-                    <h1 className="font-bold">Reward</h1>
-                    <ul className="space-y-2">{reward.map(reward =>
-                        <div className="flex space-x-4">
-                            <div className="flex flex-col justify-center items-center bg-white
+                {tips ?
+                    <div className="space-y-5">
+                        <h1 className="font-bold">Tips</h1>
+                        {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
+                        <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}>{tip}</li>)}</ul>
+                    </div> : <></>}
+                {reward ?
+                    <div className="space-y-5">
+                        <h1 className="font-bold">Reward</h1>
+                        <ul className="space-y-2">{reward.map(reward =>
+                            <div className="flex space-x-4">
+                                <div className="flex flex-col justify-center items-center bg-white
             border-solid border-2 border-blue rounded-full p-1 min-w-[80px] h-20 text-blue">
-                                <StarIcon/>
-                                <p className="text-xs">{reward[0]}</p>
+                                    <StarIcon/>
+                                    <p className="text-xs">{reward[0]}</p>
+                                </div>
+                                <p className="text-sm text-gray">{reward[1]}</p>
                             </div>
-                            <p className="text-sm text-gray">{reward[1]}</p>
-                        </div>
-                    )
-                    }</ul>
-                </div> : <></>}
+                        )
+                        }</ul>
+                    </div> : <></>}
                 {participants ? <div className="space-y-5">
                     <h1 className="font-bold">Participants ({participants})</h1>
                     <div className="grid grid-cols-6 gap-2 w-max">

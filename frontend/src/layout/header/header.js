@@ -5,11 +5,14 @@ import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import StarIcon from '@mui/icons-material/Star';
 import users from "@components/users";
 
-const Header = () => {
-    const userId = sessionStorage.getItem('userId');
-    const user = users.find(user => user.id === userId);
-    console.log(user);
+const Header = ({user}) => {
+
     const profilePhotoURL = `/assets/PNG/${user.profileImage}`;
+
+
+    const handleProfileClick = () => {
+        window.location.href = `/dashboard/${user.id}`;
+    }
 
     return (
         <div className="flex items-center justify-between p-4">
@@ -37,7 +40,8 @@ const Header = () => {
                     <StarIcon className="text-blue"/>
                     <p>100</p>
                 </div>
-                <img src={profilePhotoURL} alt="Profile" className="w-14 h-14 rounded-full
+                <img  onClick={handleProfileClick}
+                    src={profilePhotoURL} alt="Profile" className="w-14 h-14 rounded-full
                 outline outline-2 outline-offset-1 outline-blue object-cover transition-all duration-500
                 hover:scale-110"
                 />
