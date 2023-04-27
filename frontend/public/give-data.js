@@ -117,29 +117,29 @@ const giveData = [
     },
     {
         id: 21,
-        title: '',
+        title: 'Help us buy heating lamps for our animal shelter.',
         coverImage: '',
-        type: '', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
-        author: '',
-        about: '', //About the NGO or the Give
-        description: '',
+        type: 'Fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        author: 'צער בעלי חיים',
+        about: "The animals in our shelters need your help to get through the winter in peace and warmth. We are at the beginning of winter and in much need of your donations.", //About the NGO or the Give
+        description: "Come enlist and do good to all the animals in the shelter, helping fund heating lamps.A heating lamp can cost up to NIS 200 per unit, regardless of the high cost of electricity it consumes.Thanks to your donations, we are able to keep our heads above water and prevent the facility from closing down. Donations for animals also allow us to operate our clinic for longer hours, subsidize various surgeries and treatments, improve the conditions of the animals in our care, operate more rescue vehicles to assist animals in need, conduct educational activities for future generations, and more. Come and do good by donating from the bottom of your heart.",
         skillBased: false,
         skills: ['Coding', 'Teaching'],
         location: '',
         contactDetails:
             {
-                email: '',
-                phone: '',
-                name: '',
+                name: 'Chaya',
+                email: 'https://spca.co.il/',
+                phone: '053-1234567',
             },
         reward: '',
         requirements: [''],
-        impactType: '',
-        impactReward: '',
-        impact: [''],
+        impactType: 'Socail',
+        impactReward: 'Money Bills- Money donated.',
+        impact: ['Animals welfare.'],
         timeDetails:
             {
-                endDate: '',
+                endDate: 'Ongoing',
                 frequency: '',
                 duration: '',
             },
