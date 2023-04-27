@@ -22,6 +22,7 @@ export default function Login({setLoggedIn}) {
             if (user.email === email && user.password === password) {
                 setLoggedIn(true);
                 sessionStorage.setItem("loggedIn", "true");
+                sessionStorage.setItem("userId", user.id);
                 window.location.href = '/take';
             }
         }
