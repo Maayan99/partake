@@ -4,8 +4,11 @@ import Footer from "@components/layout/footer/footer";
 import Nav from "@components/layout/nav/nav";
 import UnloggedHeader from "@components/layout/unloggedHeader/unloggedHeader";
 import React, {useEffect, useState} from "react";
-import {UserProvider} from "@components/components/userContext/userContext";
 
+
+//TODO:  Add a loading screen
+//TODO: Confetti screen
+//TODO:
 
 export default function App({Component, pageProps}) {
     const [loggedIn, setLoggedIn] = useState(false);
@@ -20,10 +23,10 @@ export default function App({Component, pageProps}) {
 
 
     return (
-        <UserProvider loggedIn={loggedIn}>
+        <>
             {loggedIn ? <Header/> : <UnloggedHeader/>}
             {loggedIn ? <Nav/> : <></>}
             <Component loggedIn={loggedIn} setLoggedIn={setLoggedIn} {...pageProps} />
             <Footer/>
-        </UserProvider>)
+        </>)
 }

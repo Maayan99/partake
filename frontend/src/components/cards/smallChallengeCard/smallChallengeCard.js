@@ -1,23 +1,21 @@
 import React from 'react';
-import {Card, CardContent, Typography, LinearProgress} from '@mui/material';
+import {Card, CardContent, LinearProgress} from '@mui/material';
 
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
 import BlueButton from "@components/components/common/blueButton";
 import ParticipantsRow from "@components/components/participantsRow/participantsRow";
-import {useUser} from "@components/components/userContext/userContext";
 
 const SmallChallengeCard = ({take}) => {
     const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription} = take;
-    const {user, setUser} = useUser();
 
-    const userProgress = user ? (progress[user.id] ? progress[user.id] : 0) : 0;
+    const userProgress = 50;
 
     const handleClick = () => {
         window.location.href = `take/${id}`
     }
 
     return (
-        <Card className="w-72 h-[200px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
+        <Card className="group w-72 h-[200px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
          hover:h-[280px] hover:-mb-20 hover:scale-110 hover:rounded-lg hover:z-10 text-xs" onClick={handleClick}>
             {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
             <CardContent sx={{padding: "0px"}}>
@@ -40,7 +38,7 @@ const SmallChallengeCard = ({take}) => {
                         backgroundColor: '#0082FE'
                     }
                 }}/>
-                <div className="flex flex-col content-center">
+                <div className="opacity-0 flex flex-col content-center transition-all duration-75 group-hover:opacity-100">
                     <p className="text-center m-1.5">{shortDescription}</p>
                     <div className="flex justify-between px-2.5">
                         <ParticipantsRow/>

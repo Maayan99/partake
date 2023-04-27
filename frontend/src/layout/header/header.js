@@ -4,17 +4,14 @@ import PeopleIcon from '@mui/icons-material/People';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import StarIcon from '@mui/icons-material/Star';
 import users from "@components/users";
-import {useUser} from "@components/components/userContext/userContext";
 
 const Header = () => {
 
-    const {user, setUser} = useUser();
-
-    const profilePhotoURL = `/assets/PNG/${user.profileImage}`;
+    const profilePhotoURL = `/assets/PNG/profile_image_1`;
 
 
     const handleProfileClick = () => {
-        window.location.href = `/dashboard/${user.id}`;
+        window.location.href = `/dashboard/ashiukhdsaj`;
     }
 
     return (

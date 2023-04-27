@@ -11,7 +11,7 @@ const ChallengeCoverCard = ({take}) => {
          text-xs">
             {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
             <CardContent sx={{padding: "0px"}}>
-                <div className="w-full h-[420px] flex flex-col justify-between bg-cover"
+                <div className="h-[420px] flex flex-col justify-between bg-cover object-cover"
                      style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>
                     <ChallengeIcons duration={duration} impactType={impactType} coins={coins}/>
                     <div className="text-white ml-2.5 mb-2.5">

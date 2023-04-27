@@ -13,10 +13,8 @@ import PublicIcon from "@mui/icons-material/Public";
 import Co2Icon from '@mui/icons-material/Co2';
 import InfoIcon from '@mui/icons-material/Info';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
-import {useUser} from "@components/components/userContext/userContext";
 
-const TopBeforeStarted = ({take, setStartedChallenges, id}) => {
-    const {user, setUser} = useUser();
+const TopBeforeStarted = ({take, setStarted, id}) => {
 
     const {
         type,
@@ -28,19 +26,7 @@ const TopBeforeStarted = ({take, setStartedChallenges, id}) => {
     } = take;
 
     const handleStartChallenge = () => {
-        console.log(user);
-        user.startedChallenges.push(
-            {
-                id: id,
-            }
-        )
-        console.log(user.startedChallenges);
-        setStartedChallenges(prevStartedChallenges => [
-            ...prevStartedChallenges,
-            {
-                id: id,
-            },
-        ]);
+        setStarted(true);
     };
 
     return (
@@ -143,22 +129,9 @@ const Feed = ({placeholderText, messages, task}) => {
 
 export default function TakePage({user}) {
     const [started, setStarted] = useState(false);
-    const [startedChallenges, setStartedChallenges] = useState([]);
 
     const router = useRouter();
     const {id} = router.query;
-
-    useEffect(() => {
-        if (user) {
-            setStartedChallenges(user.startedChallenges);
-        }
-
-        setStarted(startedChallenges.find(takeBeingChecked => {
-            //TODO: Why are the types different?!?!
-            return takeBeingChecked.id == id;
-        }));
-    },  [startedChallenges, id]);
-
 
     // Check if the router has the required data
     if (!id) {
@@ -240,7 +213,7 @@ export default function TakePage({user}) {
         <>
             <div className="grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20">
                 {started ? <TopAfterStarted take={take} user={user}/> : <TopBeforeStarted take={take} user={user} id={id}
-                                                                                          setStartedChallenges={setStartedChallenges}/>}
+                                                                                          setStarted={setStarted}/>}
                 {/*TODO: Check why the col-span-2 doesn't work*/}
 
 
