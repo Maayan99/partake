@@ -24,6 +24,81 @@ const template = {
 };
 
 const takeData = [
+{
+     id: "12",
+    title: '',
+    coverImage: '',
+    type: '',
+    onboarding: '',
+    description: '',
+    difficultyLevel: '',
+    duration: 1440,
+    location: '',
+    coins: 100,
+    tasks: '',
+    tasksValidation: [''],
+    tips: [''],
+    impact: {
+        cases: [],
+        type: '',
+    },
+    breed: '',
+    info: {
+        text: '',
+        link: '',
+    },
+
+},
+{
+    id: "13",
+    title: '',
+    coverImage: '',
+    type: '',
+    onboarding: '',
+    description: '',
+    difficultyLevel: '',
+    duration: 1440,
+    location: '',
+    coins: 100,
+    tasks: '',
+    tasksValidation: [''],
+    tips: [''],
+    impact: {
+        cases: [],
+        type: '',
+    },
+    breed: '',
+    info: {
+        text: '',
+        link: '',
+    },
+},    
+{
+        id: "14",
+    title: '',
+    coverImage: '',
+    type: '',
+    onboarding: '',
+    description: '',
+    difficultyLevel: '',
+    duration: 1440,
+    location: '',
+    coins: 100,
+    tasks: '',
+    tasksValidation: [''],
+    tips: [''],
+    impact: {
+        cases: [],
+        type: '',
+    },
+    breed: '',
+    info: {
+        text: '',
+        link: '',
+    },
+
+},
+    
     {
         id: "11",
         messages: [
