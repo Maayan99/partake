@@ -13,8 +13,11 @@ import PublicIcon from "@mui/icons-material/Public";
 import Co2Icon from '@mui/icons-material/Co2';
 import InfoIcon from '@mui/icons-material/Info';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
+import {useUser} from "@components/components/userContext/userContext";
 
-const TopBeforeStarted = ({take, user, setStartedChallenges, id}) => {
+const TopBeforeStarted = ({take, setStartedChallenges, id}) => {
+    const {user, setUser} = useUser();
+
     const {
         type,
         numberOfTasks,

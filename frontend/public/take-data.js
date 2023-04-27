@@ -66,7 +66,11 @@ const takeData = [
         moreInformation: 'Did you know that every year, the world’s data centers consume more energy than the entire United Kingdom? And did you know that a single email produces an average of 4 grams of CO2 emissions? It’s time to take action and reduce our digital footprint.',
         coins: 200,
         reward: [[100, 'You will receive 1 point for each email you delete, for a maximum of 100 points.'], [100, 'Additionally, every 50 emails deleted will get you another 10 points, for a maximum of 100 points.']],
-        progress: 0,
+        progress: {
+            oiuadsfhli1u32e: 90,
+            oiuaasfhli1u32e: 90,
+            oiuadsfhli1u31e: 90,
+        },
         duration: 1440,
         numberOfTasks: 1,
         location: 'Online',
@@ -87,7 +91,11 @@ const takeData = [
         shortDescription: 'Reduce unnecessary energy usage in seconds',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut mollis tellus, ut bibendum odio. Sed ut turpis libero. Pellentesque viverra elit sed metus tempor aliquet. Sed iaculis tincidunt ex lacinia venenatis. Mauris vehicula mauris in ligula auctor, in elementum velit viverra. Etiam erat risus, vehicula dignissim dui ac, laoreet rutrum magna. Aenean odio ante, convallis at metus sed, bibendum sagittis dolor. Suspendisse in purus in ex mattis dignissim at quis augue. Nam tempor dui sed nulla tempus molestie. Nunc semper volutpat euismod. Quisque sodales scelerisque laoreet. Mauris eleifend, libero in condimentum tempor, arcu mauris pellentesque nunc, ac volutpat ex enim ut neque.',
         coins: 300,
-        progress: 60,
+        progress: {
+            oiuadsfhli1u32e: 10,
+            oiuaasfhli1u32e: 10,
+            oiuadsfhli1u31e: 10,
+        },
         category: 'Popular',
         duration: 10080,
         numberOfTasks: 7,
@@ -95,6 +103,10 @@ const takeData = [
         difficultyLevel: 'Hard',
         participants: 1,
     },
+
+
+
+
     {
         messages: [
             {

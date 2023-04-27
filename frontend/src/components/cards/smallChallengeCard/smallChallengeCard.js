@@ -4,9 +4,13 @@ import {Card, CardContent, Typography, LinearProgress} from '@mui/material';
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
 import BlueButton from "@components/components/common/blueButton";
 import ParticipantsRow from "@components/components/participantsRow/participantsRow";
+import {useUser} from "@components/components/userContext/userContext";
 
 const SmallChallengeCard = ({take}) => {
     const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription} = take;
+    const {user, setUser} = useUser();
+
+    const userProgress = user ? (progress[user.id] ? progress[user.id] : 0) : 0;
 
     const handleClick = () => {
         window.location.href = `take/${id}`
@@ -30,7 +34,7 @@ const SmallChallengeCard = ({take}) => {
                         </p>
                     </div>
                 </div>
-                <LinearProgress variant="determinate" value={progress} className="w-full h-2.5" sx={{
+                <LinearProgress variant="determinate" value={userProgress} className="w-full h-2.5" sx={{
                     backgroundColor: '#E5E5E5',
                     '& .MuiLinearProgress-bar': {
                         backgroundColor: '#0082FE'
