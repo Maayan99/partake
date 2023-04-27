@@ -35,7 +35,7 @@ const takeData = [
     duration: 10,
     location: 'Online',
     coins: 100,
-    tasks: "Delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before  and another one  after.Don't forget to encourage your coworkers to participate as well!"
+    tasks: "Delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before  and another one  after.Don't forget to encourage your coworkers to participate as well!",
     tasksValidation: ['Share the screenshot in the challenge feed'],
     tips: ["1. Don’t forget to delete spam or sale emails.",'2. Unsubscribe from unnecessary emails you no longer need or want.','3. Use labels to help you organize your email by category such as “work” or “personal”.',"Remember, even small actions can make a big impact on the environment."],
     impact: {
