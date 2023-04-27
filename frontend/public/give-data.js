@@ -146,31 +146,31 @@ const giveData = [
     },
     {
         id: 22,
-        title: '',
+        title: 'English Teacher for at-risk high school students.',
         coverImage: '',
-        type: '', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
-        author: '',
-        about: '', //About the NGO or the Give
-        description: '',
-        skillBased: false,
-        skills: ['Coding', 'Teaching'],
-        location: '',
+        type: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        author: 'Kidum Noar- Kiryat Gat',
+        about: '“Kidum-Noar" is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.', //About the NGO or the Give
+        description: 'We are seeking volunteers for personal and educational mentoring in English for these students. Upon arrival at the center, you will establish a personal relationship with the teenager. The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied. Volunteering takes place on Sundays through Thursdays  from 6:00 PM to 8:00 PM, for at least two hours per week. The commitment is until the end of the academic year.',
+        skillBased: true,
+        skills: ['English', 'Teaching','Mentoring','Coomunication'],
+        location: '1 Ha’yasmin st., Kiryat Gat',
         contactDetails:
             {
-                email: 'example@email.com',
-                phone: '',
-                name: '',
+                name: 'Maya Cohen, Volunteer Coordinator',
+                email: 'maya.cohen@Kidum-Noar.org',
+                phone: '+972-123456789',
             },
         reward: '',
-        requirements: [''],
-        impactType: '',
-        impactReward: '',
-        impact: [''],
+        requirements: ['Languges:','English','Hebrew','Russian','Arabic','Amharic'],
+        impactType: 'Social',
+        impactReward: 'clock-  10-20  hours of volunteering',
+        impact: ['Education','Children and Youth','Strengthen Local community','Mentoring'],
         timeDetails:
             {
-                endDate: '',
-                frequency: '',
-                duration: '',
+                endDate: 'Until the end of the academic year',
+                frequency: 'Once a week,',
+                duration: '10-20 hours',
             },
     },
     {
