@@ -7,41 +7,4 @@
     h1 {
         @apply text-2xl;
     }
-    h2 {
-        @apply text-xl;
-    }
-    h3 {
-        @apply text-lg;
-    }
-}
-
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-}
-
-h2 {
-    font-family: 'Roboto', sans-serif;
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-}
-
-
-@media screen and (min-width: 1440px) {
-    .card-title {
-        font-size: 21.5pt;
-    }
-
-    .card-author {
-        font-size: 17pt;
-    }
 }

@@ -13,8 +13,8 @@ module.exports = {
         },
         extend: {
             animation: {
-                scroll: 'scroll 10s linear infinite',
-                scroll2: 'scroll2 10s linear infinite',
+                scroll: 'scroll 20s linear infinite',
+                scroll2: 'scroll2 20s linear infinite',
             },
             keyframes: {
                 scroll: {
@@ -22,8 +22,8 @@ module.exports = {
                     '100%': { transform: 'translateX(-102%)' },
                 },
                 scroll2: {
-                    '0%': { transform: 'translateX(102%) translateY(-100%)' },
-                    '100%': { transform: 'translateX(0%)  translateY(-100%)' },
+                    '0%': { transform: 'translateX(102%)' },
+                    '100%': { transform: 'translateX(0%)' },
                 },
             },
             colors: {

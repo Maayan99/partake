@@ -11,6 +11,9 @@ import PublicIcon from "@mui/icons-material/Public";
 import Co2Icon from '@mui/icons-material/Co2';
 import InfoIcon from '@mui/icons-material/Info';
 
+
+
+
 export default function TakePage() {
     const router = useRouter();
     const {id} = router.query;

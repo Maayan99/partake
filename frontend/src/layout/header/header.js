@@ -5,7 +5,7 @@ import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import StarIcon from '@mui/icons-material/Star';
 
 const Header = () => {
-    const profilePhotoURL = 'https://unsplash.it/200'; // Replace with the user's profile photo URL later
+    const profilePhotoURL = '/assets/PNG/profile_image_1.jpeg'; // Replace with the user's profile photo URL later
 
     return (
         <div className="flex items-center justify-between p-4">
@@ -33,8 +33,8 @@ const Header = () => {
                     <StarIcon className="text-blue"/>
                     <p>100</p>
                 </div>
-                <img src={profilePhotoURL} alt="Profile" className="w-10 h-10 rounded-full
-                outline outline-2 outline-offset-1 outline-blue"
+                <img src={profilePhotoURL} alt="Profile" className="w-14 h-14 rounded-full
+                outline outline-2 outline-offset-1 outline-blue  object-cover"
                 />
             </div>
         </div>
