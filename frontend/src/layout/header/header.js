@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PublicIcon from '@mui/icons-material/Public';
 import PeopleIcon from '@mui/icons-material/People';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import StarIcon from '@mui/icons-material/Star';
+import users from "@components/users";
 
 const Header = () => {
-    const profilePhotoURL = '/assets/PNG/profile_image_1.jpeg'; // Replace with the user's profile photo URL later
+    const userId = sessionStorage.getItem('userId');
+    const user = users.find(user => user.id === userId);
+    console.log(user);
+    const profilePhotoURL = `/assets/PNG/${user.profileImage}`;
 
     return (
         <div className="flex items-center justify-between p-4">
@@ -34,7 +38,8 @@ const Header = () => {
                     <p>100</p>
                 </div>
                 <img src={profilePhotoURL} alt="Profile" className="w-14 h-14 rounded-full
-                outline outline-2 outline-offset-1 outline-blue  object-cover"
+                outline outline-2 outline-offset-1 outline-blue object-cover transition-all duration-500
+                hover:scale-110"
                 />
             </div>
         </div>

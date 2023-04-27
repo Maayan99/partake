@@ -1,8 +1,10 @@
 import takeData from "../../../public/take-data.js"
 import {useRouter} from "next/router";
 import ChallengeCoverCard from "@components/components/cards/challengeCoverCard/challengeCoverCard";
+import Leaderboard from "@components/components/cards/leaderboard/leaderboard";
 import PrimaryButton from "@components/components/common/primaryButton";
 import TransparentButton from "@components/components/common/transparentButton"
+import BlueButton from "@components/components/common/blueButton"
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
 import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
@@ -11,7 +13,60 @@ import PublicIcon from "@mui/icons-material/Public";
 import Co2Icon from '@mui/icons-material/Co2';
 import InfoIcon from '@mui/icons-material/Info';
 
+const TopAfterStarted = ({take}) => {
+    const {title, task} = take;
 
+    return (
+        <div className="col-span-3 grid grid-cols-3 gap-24 w-full">
+            <ChallengeCoverCard take={take}/>
+            <div className="flex flex-col">
+                <div className="flex space-x-1 text-2xl">
+                    <PrimaryButton>Challenge Taken</PrimaryButton>
+                    <TransparentButton>Invite Friends</TransparentButton>
+                </div>
+                <h1 className="text-3xl font-bold">{title}</h1>
+                <h1 className="font-bold text-xl">Task 1</h1>
+                <h1>{task}</h1>
+
+            </div>
+            <Leaderboard take={take}/>
+        </div>
+    )
+};
+
+const Feed = ({placeholderText, messages, task}) => {
+    return (
+        <>
+            <div >
+                <h1 className="font-extrabold text-3xl">Gallery</h1>
+                <p className="font-bold">Task 1: {task}</p>
+            </div>
+            <hr className="left-0 col-span-3 "/>
+            <section className="flex flex-col items-center col-span-3">
+                <form className="flex flex-col items-end">
+                    <input placeholder={placeholderText}
+                           className="px-2 w-96 h-12 rounded-lg border-2 border-gray-300"/>
+                    <BlueButton className="mt-4 w-32">Submit</BlueButton>
+                </form>
+                <div className="grid  grid-cols-3 gap-14 mt-4 w-full">
+                    {messages.map(message => {
+                        return (
+                            <div key={message.id} className="p-4 flex flex-col h-52 rounded-lg bg-important-blue">
+                                {message.text}
+                                <div className="w-full h-full bg-slate-200 mt-3">
+                                    {message.image ?
+                                        <img src={`assets/PNG/${message.image}`} className="w-full h-full"/> : <></>}
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+
+            </section>
+            <hr className="left-0 col-span-3 "/>
+        </>
+    )
+}
 
 
 export default function TakePage() {
@@ -20,7 +75,11 @@ export default function TakePage() {
 
     // Check if the router has the required data
     if (!id) {
-        return null; // TODO: render a loading indicator
+        return (
+            <div className="flex justify-center items-center h-96">
+                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue"/>
+            </div>
+        );
     }
 
     const take = takeData.find(take => {
@@ -32,6 +91,9 @@ export default function TakePage() {
     }
 
     const {
+        started,
+        messages,
+        placeholderText,
         info,
         reward,
         tips,
@@ -113,6 +175,7 @@ export default function TakePage() {
     return (
         <>
             <div className="grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20">
+                <TopAfterStarted take={take}/>
                 {/*TODO: Check why the col-span-2 doesn't work*/}
                 <ChallengeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>
 
@@ -149,6 +212,8 @@ export default function TakePage() {
                         </div>
                     </div>
                 </div>
+
+                {started ? <Feed placeholderText={placeholderText} messages={messages} task={task}/> : <></>}
 
                 {/*Detailed details*/}
                 <div className="space-y-5">

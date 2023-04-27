@@ -26,6 +26,26 @@ const template = {
 const takeData = [
     {
         id: "11",
+        started: true,
+        messages: [
+            {
+                id: "1",
+                text: 'Link to the podcast!',
+            },
+            {
+                id: "2",
+                text: 'Link to the podcast?',
+            },
+            {
+                id: "3",
+                text: 'Link to the podcast.',
+            },
+            {
+                id: "4",
+                text: '{Link to the podcast}',
+            },
+        ],
+        placeholderText: "Paste your podcast's link here",
         coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
         title: 'Clean Inbox, Clear Conscience',
         author: 'Anonymous Bee',
