@@ -4,6 +4,7 @@ import {Card, CardContent, LinearProgress} from '@mui/material';
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
 import BlueButton from "@components/components/common/blueButton";
 import ParticipantsRow from "@components/components/participantsRow/participantsRow";
+import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 const SmallChallengeCard = ({take}) => {
     const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription} = take;
@@ -17,9 +18,10 @@ const SmallChallengeCard = ({take}) => {
     return (
         <div className="bg-white group w-72 h-[200px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
          hover:h-[280px] hover:-mb-20 hover:scale-110 hover:rounded-lg hover:z-10 text-xs" onClick={handleClick}>
-            {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
                 <div className="w-full h-[190px] rounded-t-lg flex flex-col justify-between"
-                     style={{backgroundImage: `linear-gradient(to bottom, transparent 40%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
+                     style={{backgroundImage: `
+                     linear-gradient(to bottom, rgba(2,0,36,0.4) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.65) 100%),
+                      url("/assets/PNG/${coverImage}")`}}>
                     <ChallengeIcons impactType={impactType} coins={coins} duration={duration}/>
 
                     <div className="text-white ml-2.5 mb-2.5">
@@ -31,12 +33,7 @@ const SmallChallengeCard = ({take}) => {
                         </p>
                     </div>
                 </div>
-                <LinearProgress variant="determinate" value={userProgress} className="w-full h-2.5" sx={{
-                    backgroundColor: '#E5E5E5',
-                    '& .MuiLinearProgress-bar': {
-                        backgroundColor: '#0082FE'
-                    }
-                }}/>
+                <ProgressBar percentage={userProgress}/>
                 <div className="opacity-0 flex flex-col content-center transition-all duration-100 group-hover:opacity-100">
                     <p className="text-center m-1.5">{shortDescription}</p>
                     <div className="flex justify-between px-2.5">

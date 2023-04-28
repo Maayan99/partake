@@ -75,7 +75,7 @@ const TopAfterStarted = ({take, user}) => {
 
     return (
         <div className="col-span-3 grid grid-cols-3 gap-14 w-full">
-            <div className="w-1/2">
+            <div className="w-1/2 min-w-[300px]">
                 <ChallengeCoverCard take={take}/>
             </div>
             <div className="flex flex-col space-y-3">

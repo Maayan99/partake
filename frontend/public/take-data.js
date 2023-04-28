@@ -27,7 +27,7 @@ const takeData = [
 {
      id: "12",
     title: 'Clean Inbox, Clean Conscience',
-    coverImage: '',
+    coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
     type: 'Environmental',
     onboarding: 'A single email produces an average of 4 grams of CO2 emissions. While it may not seem like much, the carbon footprint of billions of emails sent every day can quickly add up.',
     description: "In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
