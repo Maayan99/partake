@@ -30,11 +30,10 @@ const SmallGiveCard = ({give}) => {
     };
 
     return (
-        <Card className=" w-80 h-80 min-w-[320px] rounded-lg shadow-md transition-all duration-150
-         hover:scale-110 hover:z-10" elevation={0}>
-            {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
-            <CardContent sx={{padding: "0px"}}>
-                <div className="w-full h-52 rounded-t-lg flex flex-col justify-between" style={{backgroundImage: `url("/assets/PNG/${coverImage}")`}}>
+        <div className="bg-white  w-80 h-80 min-w-[320px] rounded-lg shadow-md transition-all duration-150
+         hover:scale-110 hover:z-10">
+                <div className="w-full h-52 rounded-t-lg flex flex-col justify-between"
+                     style={{backgroundImage: `linear-gradient(to bottom, transparent 10%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
                     <div className="mt-2.5 ml-2.5">
                         <div className="flex bg-white rounded-full w-fit py-1 px-3 items-center">
                             {getActivityIcon()}
@@ -81,8 +80,7 @@ const SmallGiveCard = ({give}) => {
                         <PrimaryButton className="m-2.5">Give help</PrimaryButton>
                     </div>
                 </div>
-            </CardContent>
-        </Card>
+        </div>
     );
 };
 

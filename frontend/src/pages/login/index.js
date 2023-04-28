@@ -1,6 +1,5 @@
 import {useState} from "react";
 import BlueButton from '@components/components/common/blueButton.js'
-import users from "@components/users";
 
 export default function Login({setLoggedIn}) {
     const [email, setEmail] = useState("");
@@ -17,15 +16,8 @@ export default function Login({setLoggedIn}) {
     const handleLogin = (e) => {
         e.preventDefault();
 
-        for (let i = 0; i < users.length; i++) {
-            const user = users[i];
-            if (user.email === email && user.password === password) {
-                setLoggedIn(true);
-                sessionStorage.setItem("loggedIn", "true");
-                sessionStorage.setItem("userId", user.id);
-                window.location.href = '/take';
-            }
-        }
+        sessionStorage.setItem("loggedIn", "true");
+        window.location.href = '/take';
 
         setPassword('');
     };

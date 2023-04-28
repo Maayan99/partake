@@ -15,12 +15,11 @@ const SmallChallengeCard = ({take}) => {
     }
 
     return (
-        <Card className="group w-72 h-[200px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
+        <div className="bg-white group w-72 h-[200px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
          hover:h-[280px] hover:-mb-20 hover:scale-110 hover:rounded-lg hover:z-10 text-xs" onClick={handleClick}>
             {/*TODO: check this weird extra padding that comes out of nowhere in CardContent*/}
-            <CardContent sx={{padding: "0px"}}>
                 <div className="w-full h-[190px] rounded-t-lg flex flex-col justify-between"
-                     style={{backgroundImage: `linear-gradient(to bottom, transparent 30%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
+                     style={{backgroundImage: `linear-gradient(to bottom, transparent 40%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
                     <ChallengeIcons impactType={impactType} coins={coins} duration={duration}/>
 
                     <div className="text-white ml-2.5 mb-2.5">
@@ -38,15 +37,14 @@ const SmallChallengeCard = ({take}) => {
                         backgroundColor: '#0082FE'
                     }
                 }}/>
-                <div className="opacity-0 flex flex-col content-center transition-all duration-75 group-hover:opacity-100">
+                <div className="opacity-0 flex flex-col content-center transition-all duration-100 group-hover:opacity-100">
                     <p className="text-center m-1.5">{shortDescription}</p>
                     <div className="flex justify-between px-2.5">
                         <ParticipantsRow/>
                         <BlueButton className='small-button'>Take Challenge</BlueButton>
                     </div>
                 </div>
-            </CardContent>
-        </Card>
+        </div>
     );
 };
 
