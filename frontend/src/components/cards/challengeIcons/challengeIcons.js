@@ -7,22 +7,22 @@ import PublicIcon from "@mui/icons-material/Public";
 export default function ChallengeIcons({impactType, coins, duration}) {
     const getDurationText = () => {
         if (duration < 60) {
-            return `${duration} Min`;
+            return <p className="text-[7pt] -translate-y-[115%] text-center">{duration} <br/>Min</p>;
         } else if (duration < 1440) {
             if (duration === 60) {
-                return "1 Hour";
+                return <p className="text-[7pt] -translate-y-[110%] text-center">1<br/>Hour</p>
             }
-            return `${duration / 60} Hours`;
+            return <p className="text-[7pt] -translate-y-[110%] text-center">{duration / 60} <br/>Hours</p>;
         } else if (duration < 10080) {
             if (duration === 1440) {
-                return "1 Day";
+                return <p className="text-[7pt] -translate-y-[110%] text-center">1<br/>Days</p>;
             }
-            return `${duration / 1440} Days`;
+            return <p className="text-[7pt] -translate-y-[110%] text-center">{duration / 1440} <br/>Days</p>;
         } else {
             if (duration === 10080) {
-                return "1 Week";
+                return <p className="text-[7pt] -translate-y-[110%] text-center">1<br/>Week</p>;
             }
-            return `${duration / 10080} Weeks`;
+            return <p className="text-[7pt] -translate-y-[110%] text-center">{duration / 10080} <br/>Weeks</p>;
         }
     }
 
@@ -56,7 +56,7 @@ export default function ChallengeIcons({impactType, coins, duration}) {
                         <path
                             d="M133.68,37.545c-0.925-0.925-2.429-0.925-3.353,0c-0.931,0.931-0.931,2.434,0,3.359 C143.334,53.918,150.5,71.216,150.5,89.618c0,37.985-30.902,68.882-68.888,68.882c-37.979,0-68.882-30.902-68.882-68.882 c0-37.788,30.592-68.541,68.303-68.858L67.209,34.58c-0.931,0.925-0.931,2.429,0,3.359c0.459,0.465,1.074,0.698,1.677,0.698 s1.211-0.233,1.677-0.698l18.623-18.623L70.562,0.694c-0.931-0.925-2.429-0.925-3.353,0c-0.931,0.931-0.931,2.434,0,3.359 L79.25,16.088C39.743,17.359,7.987,49.801,7.987,89.606c0,40.605,33.027,73.637,73.631,73.637 c40.611,0,73.637-33.033,73.637-73.631C155.256,69.939,147.588,51.454,133.68,37.545z"/>
                     </svg>
-                    <p className="text-[7pt] -translate-y-[180%] text-center">{getDurationText()}</p>
+                    {getDurationText()}
                 </div>
             : <></>}
         </div>

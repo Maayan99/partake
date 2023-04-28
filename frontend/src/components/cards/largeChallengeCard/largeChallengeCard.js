@@ -4,6 +4,7 @@ import {Card, CardContent, LinearProgress} from '@mui/material';
 import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
 import ParticipantsRow from "@components/components/participantsRow/participantsRow";
 import BlueButton from "@components/components/common/blueButton";
+import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 const LargeChallengeCard = ({take}) => {
     const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription} = take;
@@ -29,12 +30,7 @@ const LargeChallengeCard = ({take}) => {
                     </p>
                 </div>
             </div>
-            <LinearProgress variant="determinate" value={userProgress} className="w-full h-2.5" sx={{
-                backgroundColor: '#E5E5E5',
-                '& .MuiLinearProgress-bar': {
-                    backgroundColor: '#0082FE'
-                }
-            }}/>
+            <ProgressBar percentage={userProgress}/>
             <div className="opacity-0 flex flex-col content-center transition-all duration-100 group-hover:opacity-100">
                 <p className="text-center m-1.5">{shortDescription}</p>
                 <div className="flex justify-between px-2.5">
