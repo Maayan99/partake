@@ -203,9 +203,16 @@ const takeData = [
             type: 'Social'
         },
         tasks: [
-            'Choose a podcast related to your professional or personal interests.',
-            'Listen to at least one full episode of the podcast.',
-            'Share your key takeaways with the team. You can do this in a written format or record a short audio message.'
+            {
+                shortText: 'Choose a podcast related to your professional or personal interests.',
+                longText: 'Attach a link to the podcast you like to listen to the most and describe the reason why you enjoy listening to it.\n 1. Find a link to your favorite podcast. \n 2. Share the link in your response.\n 3. Write a short description of why you enjoy listening to this podcast.',
+            },
+            {
+                shortText: 'Listen to at least one full episode of the podcast.',
+            },
+            {
+                shortText: 'Share your key takeaways with the team. You can do this in a written format or record a short audio message.',
+            },
         ],
         tips: [
             "Choose a podcast that you’ve been wanting to listen to but haven’t had the chance to.",

@@ -13,8 +13,11 @@ import PublicIcon from "@mui/icons-material/Public";
 import Co2Icon from '@mui/icons-material/Co2';
 import InfoIcon from '@mui/icons-material/Info';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
+import ValidationPopUp from "@components/components/cards/validation-pop-up/validation-pop-up";
 
 const ImportantDetails = ({started, take, setStarted}) => {
+
+
     const {
         type,
         numberOfTasks,
@@ -66,8 +69,9 @@ const ImportantDetails = ({started, take, setStarted}) => {
         </>
     );
 };
-const TopAfterStarted = ({take, setStarted}) => {
+const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPopUp}) => {
     const {title, tasks} = take;
+
 
     const handleLeaveChallenge = () => {
         setStarted(false);
@@ -84,20 +88,20 @@ const TopAfterStarted = ({take, setStarted}) => {
                     <TransparentButton>Invite Friends</TransparentButton>
                 </div>
                 <h1 className="text-2xl font-bold">{title}</h1>
-                <h1 className="font-bold text-xl">Task {}</h1>
-                <h1>{}</h1>
+                <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
+                <p>{tasks[currentTask].longText}</p>
             </div>
             <Leaderboard take={take}/>
         </div>
     )
 };
 
-const Feed = ({placeholderText, messages, task}) => {
+const Feed = ({placeholderText, messages, taskNum, task}) => {
     return (
         <>
             <div>
                 <h1 className="font-extrabold text-3xl">Gallery</h1>
-                <p className="font-bold">Task 1: {task}</p>
+                <p className="font-bold">Task {taskNum}: {task}</p>
             </div>
             <hr className="left-0 col-span-3 "/>
             <section className="flex flex-col items-center col-span-3">
@@ -129,6 +133,8 @@ const Feed = ({placeholderText, messages, task}) => {
 
 export default function TakePage({user}) {
     const [started, setStarted] = useState(false);
+    const [displayValidationPopUp, setDisplayValidationPopUp] = useState(false);
+    const [currentTask, setCurrentTask] = useState(0);
 
     const router = useRouter();
     const {id} = router.query;
@@ -159,7 +165,7 @@ export default function TakePage({user}) {
         reward,
         tips,
         impact,
-        task,
+        tasks,
         description,
         participants,
     } = take;
@@ -212,13 +218,14 @@ export default function TakePage({user}) {
 
     return (
         <>
-            <div className="grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20">
+            <ValidationPopUp display={displayValidationPopUp} setDisplay={setDisplayValidationPopUp}/>
+            <div className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
                 {started ?
-                    <TopAfterStarted take={take} setStarted={setStarted}/> :
+                    <TopAfterStarted take={take} setStarted={setStarted} setDisplayValidationPopUp={setDisplayValidationPopUp} currentTask={currentTask}/> :
                     <ChallengeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
 
 
-                {started ? <Feed placeholderText={placeholderText} messages={messages} task={task}/> : <></>}
+                {started && <Feed placeholderText={placeholderText} messages={messages} taskNum={currentTask + 1} task={tasks[currentTask].shortText}/>}
 
                 <ImportantDetails take={take} id={id} setStarted={setStarted} started={started}/>
 
@@ -228,21 +235,21 @@ export default function TakePage({user}) {
                     <h1 className="font-bold">Description</h1>
                     <p>{description}</p>
                 </div>
-                {task ? <div className="space-y-5">
+                {tasks && <div className="space-y-5">
                     <h1 className="font-bold">Task</h1>
-                    <p>{task}</p>
-                </div> : <></>}
-                {impact ? <div className="space-y-5">
+                    <ul className="list-disc pl-4">{tasks.map(task => <li key={task}>{task.shortText}</li>)}</ul>
+                </div>}
+                {impact && <div className="space-y-5">
                     <h1 className="font-bold">Impact</h1>
                     <p>{getImpactGraphic()}</p>
-                </div> : <></>}
-                {tips ?
+                </div>}
+                {tips &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Tips</h1>
                         {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
                         <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}>{tip}</li>)}</ul>
-                    </div> : <></>}
-                {reward ?
+                    </div>}
+                {reward &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Reward</h1>
                         <ul className="space-y-2">{reward.map(reward =>
@@ -256,8 +263,8 @@ export default function TakePage({user}) {
                             </div>
                         )
                         }</ul>
-                    </div> : <></>}
-                {participants ? <div className="space-y-5">
+                    </div>}
+                {participants && <div className="space-y-5">
                     <h1 className="font-bold">Participants ({participants})</h1>
                     <div className="grid grid-cols-6 gap-2 w-max">
                         <img className="rounded-full h-10 w-10" src="https://unsplash.it/200" alt="Profile"/>
@@ -279,7 +286,7 @@ export default function TakePage({user}) {
                         <img className="rounded-full h-10 w-10" src="https://unsplash.it/216" alt="Profile"/>
                         <img className="rounded-full h-10 w-10" src="https://unsplash.it/217" alt="Profile"/>
                     </div>
-                </div> : <></>}
+                </div>}
             </div>
         </>
 
