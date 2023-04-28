@@ -1,33 +1,17 @@
 import {Avatar, Grid} from "@mui/material";
 import React from "react";
-import styles from './participantsRow.module.css';
 
-export default function ParticipantsRow() {
+export default function ParticipantsRow({participants}) {
     return (
-        <Grid container columns={8} className={styles["participants-row"]}>
-            <Grid item sm={1}>
-                <Avatar src="https://unsplash.it/200" alt="Profile"/>
-            </Grid>
-            <Grid item sm={1}>
-                <Avatar src="https://unsplash.it/201" alt="Profile"/>
-            </Grid>
-            <Grid item sm={1}>
-                <Avatar src="https://unsplash.it/202" alt="Profile"/>
-            </Grid>
-            <Grid item sm={1}>
-                <Avatar src="https://unsplash.it/203" alt="Profile"/>
-            </Grid>
-            <Grid item sm={1}>
-                <Avatar src="https://unsplash.it/204" alt="Profile"/>
-            </Grid>
-            <Grid item sm={1}>
-                <Avatar src="https://unsplash.it/205" alt="Profile"/>
-            </Grid>
-            {/*<Grid item sm={3}>
-                <div className={styles["more-icon"]}>
-                    <h1>30+</h1>
-                </div>
-            </Grid>*/}
-        </Grid>
+        <div className="w-32 grid grid-cols-7">
+            <img src="assets/PNG/profile_image_2.jpeg" alt="Profile" className="border border-white rounded-full min-w-[32px] h-8 object-cover"/>
+            <img src="assets/PNG/profile_image_3.jpeg" alt="Profile" className="border border-white rounded-full min-w-[32px] h-8 object-cover"/>
+            <img src="assets/PNG/profile_image_4.jpeg" alt="Profile" className="border border-white rounded-full min-w-[32px] h-8 object-cover"/>
+            <img src="assets/PNG/profile_image_5.jpeg" alt="Profile" className="border border-white rounded-full min-w-[32px] h-8 object-cover"/>
+            <img src="assets/PNG/profile_image_6.jpeg" alt="Profile" className="border border-white rounded-full min-w-[32px] h-8 object-cover"/>
+            <div className="flex justify-center items-center bg-blue min-w-[32px] h-8 rounded-full border-white border">
+                <p className="text-white">{participants - 5}+</p>
+            </div>
+        </div>
     )
 }

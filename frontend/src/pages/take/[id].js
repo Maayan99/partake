@@ -1,7 +1,7 @@
 import takeData from "../../../public/take-data.js"
 import {useRouter} from "next/router";
 import ChallengeCoverCard from "@components/components/cards/challengeCoverCard/challengeCoverCard";
-import Leaderboard from "@components/components/cards/leaderboard/leaderboard";
+import Leaderboard from "@components/components/leaderboard/leaderboard";
 import PrimaryButton from "@components/components/common/primaryButton";
 import TransparentButton from "@components/components/common/transparentButton"
 import BlueButton from "@components/components/common/blueButton"
@@ -14,8 +14,7 @@ import Co2Icon from '@mui/icons-material/Co2';
 import InfoIcon from '@mui/icons-material/Info';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 
-const TopBeforeStarted = ({take, setStarted, id}) => {
-
+const ImportantDetails = ({started, take, setStarted}) => {
     const {
         type,
         numberOfTasks,
@@ -31,14 +30,11 @@ const TopBeforeStarted = ({take, setStarted, id}) => {
 
     return (
         <>
-            <ChallengeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>
-
-            {/*Important details container*/}
             <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
-                <div className="flex space-x-1 text-2xl">
+                {!started ? <div className="flex space-x-1 text-2xl">
                     <PrimaryButton onClick={handleStartChallenge}>Take Challenge</PrimaryButton>
                     <TransparentButton>Invite Friends</TransparentButton>
-                </div>
+                </div> : <></>}
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2">
                     <div className="ml-10 my-7 space-y-2">
                         <h1 className="font-bold">Duration</h1>
@@ -66,12 +62,16 @@ const TopBeforeStarted = ({take, setStarted, id}) => {
                     </div>
                 </div>
             </div>
+            {started ? <div/> : <></>}
         </>
-    )
-}
-
-const TopAfterStarted = ({take, user}) => {
+    );
+};
+const TopAfterStarted = ({take, setStarted}) => {
     const {title, tasks} = take;
+
+    const handleLeaveChallenge = () => {
+        setStarted(false);
+    }
 
     return (
         <div className="col-span-3 grid grid-cols-3 gap-14 w-full">
@@ -80,7 +80,7 @@ const TopAfterStarted = ({take, user}) => {
             </div>
             <div className="flex flex-col space-y-3">
                 <div className="flex space-x-1">
-                    <PrimaryButton>Challenge Taken</PrimaryButton>
+                    <PrimaryButton onClick={handleLeaveChallenge}>Challenge Taken</PrimaryButton>
                     <TransparentButton>Invite Friends</TransparentButton>
                 </div>
                 <h1 className="text-2xl font-bold">{title}</h1>
@@ -136,7 +136,8 @@ export default function TakePage({user}) {
     // Check if the router has the required data
     if (!id) {
         return (
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
+            <div
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
                 <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue"/>
             </div>
         );
@@ -212,12 +213,15 @@ export default function TakePage({user}) {
     return (
         <>
             <div className="grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20">
-                {started ? <TopAfterStarted take={take} user={user}/> : <TopBeforeStarted take={take} user={user} id={id}
-                                                                                          setStarted={setStarted}/>}
-                {/*TODO: Check why the col-span-2 doesn't work*/}
+                {started ?
+                    <TopAfterStarted take={take} setStarted={setStarted}/> :
+                    <ChallengeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
 
 
                 {started ? <Feed placeholderText={placeholderText} messages={messages} task={task}/> : <></>}
+
+                <ImportantDetails take={take} id={id} setStarted={setStarted} started={started}/>
+
 
                 {/*Detailed details*/}
                 <div className="space-y-5">

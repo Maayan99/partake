@@ -7,9 +7,9 @@ import BlueButton from "@components/components/common/blueButton";
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 const LargeChallengeCard = ({take}) => {
-    const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription} = take;
+    const {id, coverImage, title, author, impactType, coins, participants, progress, duration, shortDescription} = take;
 
-    const userProgress = 50;
+    const userProgress = progress;
 
     const handleClick = () => {
         window.location.href = `take/${id}`
@@ -34,7 +34,7 @@ const LargeChallengeCard = ({take}) => {
             <div className="opacity-0 flex flex-col content-center transition-all duration-100 group-hover:opacity-100">
                 <p className="text-center m-1.5">{shortDescription}</p>
                 <div className="flex justify-between px-2.5">
-                    <ParticipantsRow/>
+                    <ParticipantsRow participants={participants}/>
                     <BlueButton className='small-button'>Take Challenge</BlueButton>
                 </div>
             </div>

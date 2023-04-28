@@ -47,6 +47,7 @@ const takeData = [
         text: '',
         link: '',
     },
+    progress: 0,
 
 },
 {
@@ -72,6 +73,7 @@ const takeData = [
         text: '',
         link: '',
     },
+    progress: 0,
 },    
 {
         id: "14",
@@ -96,6 +98,7 @@ const takeData = [
         text: '',
         link: '',
     },
+    progress: 0,
 
 },
     
@@ -141,11 +144,7 @@ const takeData = [
         moreInformation: 'Did you know that every year, the world’s data centers consume more energy than the entire United Kingdom? And did you know that a single email produces an average of 4 grams of CO2 emissions? It’s time to take action and reduce our digital footprint.',
         coins: 200,
         reward: [[100, 'You will receive 1 point for each email you delete, for a maximum of 100 points.'], [100, 'Additionally, every 50 emails deleted will get you another 10 points, for a maximum of 100 points.']],
-        progress: {
-            oiuadsfhli1u32e: 90,
-            oiuaasfhli1u32e: 90,
-            oiuadsfhli1u31e: 90,
-        },
+        progress: 0,
         duration: 1440,
         numberOfTasks: 1,
         location: 'Online',
@@ -166,11 +165,7 @@ const takeData = [
         shortDescription: 'Reduce unnecessary energy usage in seconds',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut mollis tellus, ut bibendum odio. Sed ut turpis libero. Pellentesque viverra elit sed metus tempor aliquet. Sed iaculis tincidunt ex lacinia venenatis. Mauris vehicula mauris in ligula auctor, in elementum velit viverra. Etiam erat risus, vehicula dignissim dui ac, laoreet rutrum magna. Aenean odio ante, convallis at metus sed, bibendum sagittis dolor. Suspendisse in purus in ex mattis dignissim at quis augue. Nam tempor dui sed nulla tempus molestie. Nunc semper volutpat euismod. Quisque sodales scelerisque laoreet. Mauris eleifend, libero in condimentum tempor, arcu mauris pellentesque nunc, ac volutpat ex enim ut neque.',
         coins: 300,
-        progress: {
-            oiuadsfhli1u32e: 10,
-            oiuaasfhli1u32e: 10,
-            oiuadsfhli1u31e: 10,
-        },
+        progress: 0,
         category: 'Popular',
         duration: 10080,
         numberOfTasks: 7,
@@ -236,11 +231,7 @@ const takeData = [
         shortDescription: 'Reduce unnecessary energy usage in seconds',
         description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
         coins: 50,
-        progress: {
-            oiuadsfhli1u32e: 30,
-            oiuaasfhli1u32e: 70,
-            oiuadsfhli1u31e: 40,
-        },
+        progress: 0,
         type: 'Individual',
         category: 'For you',
         numberOfTasks: 5,
@@ -256,7 +247,7 @@ const takeData = [
         impactType: 'Wellness',
         subject: "Wellness",
         coins: 20,
-        progress: 0,
+        progress: 30,
         category: 'For you',
         duration: 20160,
         durationText: '5 days, starting Monday 15/4/2023',
