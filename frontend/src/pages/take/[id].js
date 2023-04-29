@@ -5,7 +5,7 @@ import Leaderboard from "@components/components/leaderboard/leaderboard";
 import PrimaryButton from "@components/components/common/primaryButton";
 import TransparentButton from "@components/components/common/transparentButton"
 import BlueButton from "@components/components/common/blueButton"
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import StarIcon from "@mui/icons-material/Star";
 import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
 import PeopleIcon from "@mui/icons-material/People";
@@ -38,28 +38,28 @@ const ImportantDetails = ({started, take, setStarted}) => {
                     <PrimaryButton onClick={handleStartChallenge}>Take Challenge</PrimaryButton>
                     <TransparentButton>Invite Friends</TransparentButton>
                 </div> : <></>}
-                <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2">
-                    <div className="ml-10 my-7 space-y-2">
+                <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
+                    <div className="ml-10 space-y-2">
                         <h1 className="font-bold">Duration</h1>
                         <p>{durationText}</p>
                     </div>
-                    <div className="ml-10 lg:ml-0 my-7 space-y-2">
+                    <div className="ml-10 lg:ml-0 space-y-2">
                         <h1 className="font-bold">Type</h1>
                         <p>{type}</p>
                     </div>
-                    <div className="ml-10 my-7 space-y-2">
+                    <div className="ml-10 space-y-2">
                         <h1 className="font-bold">Number of Tasks</h1>
                         <p>{numberOfTasks}</p>
                     </div>
-                    <div className="ml-10 lg:ml-0 my-7 space-y-2">
+                    <div className="ml-10 lg:ml-0 space-y-2">
                         <h1 className="font-bold">Location</h1>
                         <p>{location}</p>
                     </div>
-                    <div className="ml-10 my-7 space-y-2">
+                    <div className="ml-10 space-y-2">
                         <h1 className="font-bold">Difficulty Level</h1>
                         <p>{difficultyLevel}</p>
                     </div>
-                    <div className="ml-10 lg:ml-0 my-7 space-y-2">
+                    <div className="ml-10 lg:ml-0 space-y-2">
                         <h1 className="font-bold">Participants</h1>
                         <p>{participants}</p>
                     </div>
@@ -78,8 +78,8 @@ const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPop
     }
 
     return (
-        <div className="col-span-3 grid grid-cols-3 gap-14 w-full">
-            <div className="w-1/2 min-w-[300px]">
+        <div className="col-span-3 flex space-x-14 w-full lg:h-[500px]">
+            <div className="w-1/2 min-w-[370px]">
                 <ChallengeCoverCard take={take}/>
             </div>
             <div className="flex flex-col space-y-3">
@@ -91,7 +91,10 @@ const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPop
                 <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
                 <p>{tasks[currentTask].longText}</p>
             </div>
-            <Leaderboard take={take}/>
+            <div className="min-w-[370px] flex flex-col items-center">
+                <Leaderboard take={take}/>
+                <BlueButton className="mt-4 text-2xl" onClick={() => setDisplayValidationPopUp(true)}>Validate Task {currentTask + 1}</BlueButton>
+            </div>
         </div>
     )
 };
@@ -128,6 +131,52 @@ const Feed = ({placeholderText, messages, taskNum, task}) => {
             <hr className="left-0 col-span-3 "/>
         </>
     )
+}
+
+
+const ImpactGraphic = ({impact, info}) => {
+    const impactCases = impact.cases;
+    const impactText = impact.text;
+    const impactType = impact.type;
+
+    const infoLink = info.link;
+    const infoText = info.text;
+
+    const getImpactCaseIcon = () => {
+        switch (impactCases[0]) {
+            case 'CO2':
+                return <Co2Icon className="text-6xl"/>;
+            case 'Happy':
+                return <InsertEmoticonIcon className="text-6xl"/>;
+        }
+    };
+
+    const getImpactTypeIcon = () => {
+        switch (impactType) {
+            case 'Wellness':
+                return <MonitorHeartIcon className="text-black text-3xl"/>;
+            case 'Social':
+                return <PeopleIcon className="text-black text-3xl"/>;
+            case 'Environment':
+                return <PublicIcon className="text-black text-3xl"/>;
+            default:
+                return null;
+        }
+    };
+
+    return (
+        <div className="flex flex-col justify-between text-sm">
+            <div className="flex text-blue h-24 space-x-7">
+                {getImpactTypeIcon()}
+                {getImpactCaseIcon()}
+                <p>{impactText}</p>
+            </div>
+            <div className="flex space-x-6 items-center">
+                <InfoIcon/>
+                <a href={infoLink} className="text-blue">{infoText}</a>
+            </div>
+        </div>
+    );
 }
 
 
@@ -170,62 +219,20 @@ export default function TakePage({user}) {
         participants,
     } = take;
 
-    const impactCases = impact.cases;
-    const impactText = impact.text;
-    const impactType = impact.type;
-
-    const infoLink = info.link;
-    const infoText = info.text;
-
-    const getImpactCaseIcon = () => {
-        switch (impactCases[0]) {
-            case 'CO2':
-                return <Co2Icon className="text-6xl"/>;
-            case 'Happy':
-                return <InsertEmoticonIcon className="text-6xl"/>;
-        }
-    };
-
-    const getImpactTypeIcon = () => {
-        switch (impactType) {
-            case 'Wellness':
-                return <MonitorHeartIcon className="text-black text-3xl"/>;
-            case 'Social':
-                return <PeopleIcon className="text-black text-3xl"/>;
-            case 'Environment':
-                return <PublicIcon className="text-black text-3xl"/>;
-            default:
-                return null;
-        }
-    };
-
-    const getImpactGraphic = () => {
-        return (
-            <div className="flex flex-col justify-between text-sm">
-                <div className="flex text-blue h-24 space-x-7">
-                    {getImpactTypeIcon()}
-                    {getImpactCaseIcon()}
-                    <p>{impactText}</p>
-                </div>
-                <div className="flex space-x-6 items-center">
-                    <InfoIcon/>
-                    <a href={infoLink} className="text-blue">{infoText}</a>
-                </div>
-            </div>
-        );
-    }
-
 
     return (
         <>
             <ValidationPopUp display={displayValidationPopUp} setDisplay={setDisplayValidationPopUp}/>
-            <div className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
+            <div
+                className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
                 {started ?
-                    <TopAfterStarted take={take} setStarted={setStarted} setDisplayValidationPopUp={setDisplayValidationPopUp} currentTask={currentTask}/> :
+                    <TopAfterStarted take={take} setStarted={setStarted}
+                                     setDisplayValidationPopUp={setDisplayValidationPopUp} currentTask={currentTask}/> :
                     <ChallengeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
 
 
-                {started && <Feed placeholderText={placeholderText} messages={messages} taskNum={currentTask + 1} task={tasks[currentTask].shortText}/>}
+                {started && <Feed placeholderText={placeholderText} messages={messages} taskNum={currentTask + 1}
+                                  task={tasks[currentTask].shortText}/>}
 
                 <ImportantDetails take={take} id={id} setStarted={setStarted} started={started}/>
 
@@ -241,7 +248,7 @@ export default function TakePage({user}) {
                 </div>}
                 {impact && <div className="space-y-5">
                     <h1 className="font-bold">Impact</h1>
-                    <p>{getImpactGraphic()}</p>
+                    <ImpactGraphic impact={impact} info={info}/>
                 </div>}
                 {tips &&
                     <div className="space-y-5">

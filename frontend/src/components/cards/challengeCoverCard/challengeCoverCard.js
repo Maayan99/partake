@@ -8,7 +8,7 @@ const ChallengeCoverCard = ({take}) => {
 
     return (
         <div
-            className="w-full h-[420px]  rounded-lg text-xs
+            className="w-full min-h-[420px] h-full  rounded-lg text-xs
             flex flex-col justify-between bg-cover bg-center"
             style={{backgroundImage: `
             linear-gradient(to bottom, rgba(2,0,36,0.4) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.65) 100%),

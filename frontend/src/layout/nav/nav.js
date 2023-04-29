@@ -47,7 +47,7 @@ const Nav = () => {
                             {capitalizedOptions[option]}
                         </SelectedButton>
                     ) : (
-                        <UnselectedButton className={animateNav && 'bg-transparent'} onClick={() => onOptionClick(option)}>
+                        <UnselectedButton onClick={() => onOptionClick(option)}>
                             {capitalizedOptions[option]}
                         </UnselectedButton>
                     )}

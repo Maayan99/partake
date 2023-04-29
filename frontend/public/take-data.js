@@ -225,6 +225,7 @@ const takeData = [
         reward: [[50, 'You will receive 20 points for listening to the podcast and sharing your key takeaways, and an additional 30 points for coming up with a creative way to share your key takeaways with the team.']],
         bonus: 'For those who want to take it a step further, we challenge you to create your own podcast episode on a topic related to your professional or personal interests. You can record it using your smartphone or any other device you have access to. Share your podcast episode with the team and let us know what you learned from the experience. We can’t wait to hear what you come up with!',
         duration: 1440,
+        durationText: '5 days, starting Monday 15/4/2023',
         info: {
             text: 'Reduce Digital Footprint',
             link: '/hello-world',
