@@ -2,7 +2,7 @@ import '@components/styles/globals.css';
 import Header from "@components/layout/header/header";
 import Footer from "@components/layout/footer/footer";
 import Nav from "@components/layout/nav/nav";
-import UnloggedHeader from "@components/layout/unloggedHeader/unloggedHeader";
+import UnloggedHeader from "@components/layout/unlogged-header/unlogged-header";
 import React, {useEffect, useState} from "react";
 
 

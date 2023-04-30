@@ -9,7 +9,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
 import PrimaryButton from "@components/components/common/primaryButton";
-import ParticipantsRow from "@components/components/participantsRow/participantsRow";
+import ParticipantsRow from "@components/components/participants-row/participants-row";
 
 const SmallGiveCard = ({give}) => {
     const {coverImage, title, author, activityType, duration, donations, location, endDate} = give;

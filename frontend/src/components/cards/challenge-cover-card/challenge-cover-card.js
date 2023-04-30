@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, CardContent, Typography} from '@mui/material';
 
-import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
+import ChallengeIcons from "@components/components/cards/challenge-icons/challenge-icons";
 
 const ChallengeCoverCard = ({take}) => {
     const {coverImage, title, author, impactType, coins, duration} = take;

@@ -1,4 +1,4 @@
-import SmallGiveCard from "@components/components/cards/smallGiveCard/smallGiveCard";
+import SmallGiveCard from "@components/components/cards/small-give-card/small-give-card";
 import Head from "next/head";
 import giveData from "../../../public/give-data.js"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";

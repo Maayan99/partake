@@ -1,8 +1,8 @@
 import React from 'react';
 import {Card, CardContent, LinearProgress} from '@mui/material';
 
-import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
-import ParticipantsRow from "@components/components/participantsRow/participantsRow";
+import ChallengeIcons from "@components/components/cards/challenge-icons/challenge-icons";
+import ParticipantsRow from "@components/components/participants-row/participants-row";
 import BlueButton from "@components/components/common/blueButton";
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 

@@ -1,6 +1,6 @@
 import takeData from "../../../public/take-data.js"
 import {useRouter} from "next/router";
-import ChallengeCoverCard from "@components/components/cards/challengeCoverCard/challengeCoverCard";
+import ChallengeCoverCard from "@components/components/cards/challenge-cover-card/challenge-cover-card";
 import Leaderboard from "@components/components/leaderboard/leaderboard";
 import PrimaryButton from "@components/components/common/primaryButton";
 import TransparentButton from "@components/components/common/transparentButton"

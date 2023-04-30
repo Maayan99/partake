@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ChallengeIcons from "@components/components/cards/challengeIcons/challengeIcons";
+import ChallengeIcons from "@components/components/cards/challenge-icons/challenge-icons";
 import BlueButton from "@components/components/common/blueButton";
-import ParticipantsRow from "@components/components/participantsRow/participantsRow";
+import ParticipantsRow from "@components/components/participants-row/participants-row";
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 const SmallChallengeCard = ({take}) => {
