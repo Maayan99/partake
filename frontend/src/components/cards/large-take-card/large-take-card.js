@@ -1,12 +1,12 @@
 import React from 'react';
 import {Card, CardContent, LinearProgress} from '@mui/material';
 
-import ChallengeIcons from "@components/components/cards/challenge-icons/challenge-icons";
+import TakeIcons from "@components/components/cards/take-icons/take-icons";
 import ParticipantsRow from "@components/components/participants-row/participants-row";
 import BlueButton from "@components/components/common/blueButton";
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 
-const LargeChallengeCard = ({take}) => {
+const LargeTakeCard = ({take}) => {
     const {id, coverImage, title, author, impactType, coins, participants, progress, duration, shortDescription} = take;
 
     const userProgress = progress;
@@ -20,7 +20,7 @@ const LargeChallengeCard = ({take}) => {
          hover:h-[500px] hover:-mb-20 hover:scale-110 hover:rounded-lg hover:z-10 text-xs" onClick={handleClick}>
             <div className="w-full h-[410px] rounded-t-lg flex flex-col justify-between"
                  style={{backgroundImage: `linear-gradient(to bottom, transparent 40%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
-                <ChallengeIcons duration={duration} impactType={impactType} coins={coins}/>
+                <TakeIcons duration={duration} impactType={impactType} coins={coins}/>
                 <div className="text-white ml-2.5 mb-2.5">
                     <h2 className="font-bold text-2xl leading-snug drop-shadow-md">
                         {title}
@@ -42,4 +42,4 @@ const LargeChallengeCard = ({take}) => {
     );
 };
 
-export default LargeChallengeCard;
+export default LargeTakeCard;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import ChallengeIcons from "@components/components/cards/challenge-icons/challenge-icons";
+import TakeIcons from "@components/components/cards/take-icons/take-icons";
 import BlueButton from "@components/components/common/blueButton";
 import ParticipantsRow from "@components/components/participants-row/participants-row";
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 
-const SmallChallengeCard = ({take}) => {
+const SmallTakeCard = ({take}) => {
     const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription, participants} = take;
 
     const userProgress = progress;
@@ -21,7 +21,7 @@ const SmallChallengeCard = ({take}) => {
                      style={{backgroundImage: `
                      linear-gradient(to bottom, rgba(2,0,36,0.4) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.65) 100%),
                       url("/assets/PNG/${coverImage}")`}}>
-                    <ChallengeIcons impactType={impactType} coins={coins} duration={duration}/>
+                    <TakeIcons impactType={impactType} coins={coins} duration={duration}/>
 
                     <div className="text-white ml-2.5 mb-2.5">
                         <h2 className="font-bold text-2xl leading-snug drop-shadow-md">
@@ -44,4 +44,4 @@ const SmallChallengeCard = ({take}) => {
     );
 };
 
-export default SmallChallengeCard;
+export default SmallTakeCard;

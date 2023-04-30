@@ -4,7 +4,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import PublicIcon from "@mui/icons-material/Public";
 
 
-export default function ChallengeIcons({impactType, coins, duration}) {
+export default function TakeIcons({impactType, coins, duration}) {
     const getDurationText = () => {
         if (duration < 60) {
             return <p className="text-[7pt] -translate-y-[132%] leading-3 text-center">{duration}<br/>Min</p>;

@@ -1,6 +1,6 @@
 import takeData from "../../../public/take-data.js"
 import {useRouter} from "next/router";
-import ChallengeCoverCard from "@components/components/cards/challenge-cover-card/challenge-cover-card";
+import TakeCoverCard from "@components/components/cards/take-cover-card/take-cover-card";
 import Leaderboard from "@components/components/leaderboard/leaderboard";
 import PrimaryButton from "@components/components/common/primaryButton";
 import TransparentButton from "@components/components/common/transparentButton"
@@ -80,7 +80,7 @@ const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPop
     return (
         <div className="col-span-3 flex space-x-14 w-full lg:h-[500px]">
             <div className="w-1/2 min-w-[370px]">
-                <ChallengeCoverCard take={take}/>
+                <TakeCoverCard take={take}/>
             </div>
             <div className="flex flex-col space-y-3">
                 <div className="flex space-x-1">
@@ -228,7 +228,7 @@ export default function TakePage({user}) {
                 {started ?
                     <TopAfterStarted take={take} setStarted={setStarted}
                                      setDisplayValidationPopUp={setDisplayValidationPopUp} currentTask={currentTask}/> :
-                    <ChallengeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
+                    <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
 
 
                 {started && <Feed placeholderText={placeholderText} messages={messages} taskNum={currentTask + 1}

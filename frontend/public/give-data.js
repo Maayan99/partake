@@ -31,7 +31,7 @@ const template = {
 
 const giveData = [
     {
-        id: 18,
+        id: "18",
         title: 'Goods donation for families in need',
         coverImage: '',
         type: 'Goods Donation', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
@@ -62,7 +62,7 @@ const giveData = [
     },
 
     {
-        id: 19,
+        id: "19",
         title: 'Online Computer Skills Tutoring for Holocaust Survivors',
         coverImage: '',
         type: 'Online Voluneering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
@@ -90,7 +90,7 @@ const giveData = [
             },
     },
     {
-        id: 20,
+        id: "20",
         title: 'Ein-Gedi national Park cleaning day',
         coverImage: '',
         type: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
@@ -116,7 +116,7 @@ const giveData = [
             },
     },
     {
-        id: 21,
+        id: '21',
         title: 'Help us buy heating lamps for our animal shelter.',
         coverImage: '',
         type: 'Fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
@@ -145,7 +145,7 @@ const giveData = [
             },
     },
     {
-        id: 22,
+        id: '22',
         title: 'English Teacher for at-risk high school students.',
         coverImage: '',
         type: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
@@ -174,7 +174,7 @@ const giveData = [
             },
     },
     {
-        id: 1,
+        id: '1',
         title: 'Shekel Hamzion Donations',
         author: 'Shekel',
         duration: 3,
@@ -190,7 +190,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 2,
+        id: '2',
         title: 'Ein-Gedi national Park cleaning day',
         author: 'Israel Nature and Parks Authority and Abraham Hostel',
         duration: 10,
@@ -206,7 +206,7 @@ const giveData = [
         sponsors: ['kkl.png', 'aroma.png'],
     },
     {
-        id: 3,
+        id: '3',
         title: 'Online Volunteer Digital Marketing Tutors Needed',
         author: 'Clean Coin',
         duration: 8,
@@ -222,7 +222,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 4,
+        id: '4',
         title: 'Food Collection and Distribution',
         author: 'Leket Israel',
         duration: 4,
@@ -238,7 +238,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 5,
+        id: '5',
         title: 'Autistic Children Give',
         author: 'ALUT',
         duration: 3,
@@ -254,7 +254,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 6,
+        id: '6',
         title: 'At-Risk Youth Field Give',
         author: 'Helping Hands Association',
         duration: 10,
@@ -270,7 +270,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 7,
+        id: '7',
         title: 'Volunteering with Elderly People',
         author: 'Yad Sarah',
         duration: 8,
@@ -286,7 +286,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 8,
+        id: '8',
         title: 'Sustainable Farming Volunteer',
         author: 'Hazon',
         duration: 4,
@@ -302,7 +302,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 9,
+        id: '9',
         title: 'Food Rescue Mission',
         author: 'Food Savers',
         duration: 3,
@@ -318,7 +318,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 10,
+        id: '10',
         title: 'Renovation Day for a Holocaust Survivor’s Home',
         author: 'Helping Hands Association',
         duration: 10,
@@ -334,7 +334,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 11,
+        id: '11',
         title: 'Food Basket Distribution',
         author: 'Yad Sarah',
         duration: 8,
@@ -350,7 +350,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 12,
+        id: '12',
         title: 'Environmental Restoration Day',
         author: 'Leket Israel',
         duration: 4,
@@ -366,7 +366,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 13,
+        id: '13',
         title: 'Empowering Women and Children in Underprivileged Communities',
         author: 'Rakefet Group',
         donations: false,
@@ -380,7 +380,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 14,
+        id: '14',
         title: 'Help PTSD Victims in Israel',
         author: 'NATAL',
         donations: true,
@@ -394,7 +394,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 15,
+        id: '15',
         title: 'Helping Children with Cancer',
         author: 'ICA',
         location: 'Online',
@@ -409,7 +409,7 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: 16,
+        id: '16',
         title: 'Environmental Restoration Day',
         author: 'Leket Israel',
         donations: false,

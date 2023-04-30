@@ -12,7 +12,7 @@ import PrimaryButton from "@components/components/common/primaryButton";
 import ParticipantsRow from "@components/components/participants-row/participants-row";
 
 const SmallGiveCard = ({give}) => {
-    const {coverImage, title, author, activityType, duration, donations, location, endDate} = give;
+    const {id, coverImage, title, author, activityType, duration, donations, location, endDate} = give;
 
     const getActivityIcon = () => {
         switch (activityType) {
@@ -29,9 +29,14 @@ const SmallGiveCard = ({give}) => {
         }
     };
 
+    const handleClick = () => {
+        window.location.href = `give/${id}`
+    }
+
+
     return (
         <div className="bg-white  w-80 h-80 min-w-[320px] rounded-lg shadow-md transition-all duration-150
-         hover:scale-110 hover:z-10">
+         hover:scale-110 hover:z-10" onClick={handleClick}>
                 <div className="w-full h-52 rounded-t-lg flex flex-col justify-between"
                      style={{backgroundImage: `linear-gradient(to bottom, transparent 10%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
                     <div className="mt-2.5 ml-2.5">

@@ -1,8 +1,8 @@
-import SmallChallengeCard from "@components/components/cards/smallChallengeCard/smallChallengeCard";
+import SmallTakeCard from "@components/components/cards/small-take-card/small-take-card";
 import takeData from "../../../public/take-data.js"
 import Head from "next/head";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import LargeChallengeCard from "@components/components/cards/large-challenge-card/large-challenge-card";
+import LargeTakeCard from "@components/components/cards/large-take-card/large-take-card";
 import PrimaryButton from "@components/components/common/primaryButton";
 import {useState} from "react";
 import AddIcon from "@mui/icons-material/Add";
@@ -97,10 +97,10 @@ const BeforeSearch = () => {
                     <h1 className="text-3xl font-bold">Featured</h1>
                 </div>
                 <div className="ml-36 flex space-x-6">
-                    <LargeChallengeCard take={featuredChallenge}/>
+                    <LargeTakeCard take={featuredChallenge}/>
                     <div className="flex flex-col gap-y-5">
-                        <SmallChallengeCard take={takeData[1]}/>
-                        <SmallChallengeCard take={takeData[2]}/>
+                        <SmallTakeCard take={takeData[1]}/>
+                        <SmallTakeCard take={takeData[2]}/>
                     </div>
                     <div className="flex flex-col justify-evenly py-10 w-80 text-2xl">
                         <h1>Try the {featuredChallenge.title} challenge</h1>
@@ -117,7 +117,7 @@ const BeforeSearch = () => {
                         <ArrowForwardIosIcon/>
                     </div>
                     <div className="flex pl-36 pt-5 space-x-5 overflow-y-visible">
-                        {categoriesDictionary[category].map(take => <SmallChallengeCard key={take.id} take={take}/>)}
+                        {categoriesDictionary[category].map(take => <SmallTakeCard key={take.id} take={take}/>)}
                     </div>
                 </div>)}
         </>
@@ -160,7 +160,7 @@ const AfterSearch = ({search, type, subject, duration}) => {
             {/*TODO: Make grid responsive*/}
             {filtered.map(take =>
                 <div className="m-3">
-                    <SmallChallengeCard key={take.id} take={take}/>
+                    <SmallTakeCard key={take.id} take={take}/>
                 </div>)}
         </div>
     )
