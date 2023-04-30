@@ -17,16 +17,17 @@ const template = {
             website: '',
         },
     reward: '',
-    requirements:  ['','',''],
+    requirements: ['', '', ''],
     impactType: '',
     impactReward: '',
-    impact: ['','','',''],
+    impact: ['', '', '', ''],
     timeDetails:
         {
             endDate: '',
             frequency: '',
             duration: '',
         },
+    dateTime: '',
 };
 
 const giveData = [
@@ -49,15 +50,23 @@ const giveData = [
                 website: 'layaad.org.il',
             },
         reward: '',
-        requirements:  ['We deliver only furniture, electricity products and baby products','furniture and baby products must be in good condition','All electricity products must be working.'],
-        impactType: 'Social',
-        impactReward: 'Bag- items donated',
-        impact: ['People in need','Children and Youth','Strengthen Local community','waste reduction','Re-use',],
+        requirements: ['We deliver only furniture, electricity products and baby products', 'furniture and baby products must be in good condition', 'All electricity products must be working.'],
+        impact:
+            {
+                cases: ['People in need', 'Children and Youth', 'Strengthen Local community', 'waste reduction', 'Re-use',],
+                type: 'social',
+                reward: 'Bag- items donated',
+            },
         timeDetails:
             {
                 endDate: '',
                 frequency: '',
                 duration: '',
+            },
+        info:
+            {
+                link: 'hello-world',
+                text: 'Hello World',
             },
     },
 
@@ -70,7 +79,7 @@ const giveData = [
         about: 'The Foundation for the welfare of holocaust victims”  is the central association for the care of Holocaust survivors in Israel. The foundation was established in 1994 by Holocaust survivors with the aim of assisting Holocaust survivors in Israel in all areas of welfare and providing them with medical, social, psychological and economic assistance so that they can live with dignity and improve their later years. ', //About the NGO or the Give
         description: 'The program helps Holocaust survivors acquire tablet usage skills with the assistance of volunteers. We are looking for a volunteer to visit a survivor once a week and guide them on various tablet uses based on their specific needs for about an hour. We also encourage social contact between the survivor and the volunteer, which can continue beyond the initial 5 months if both parties agree. A commitment of 5 months is required, which includes 3 weeks of online training, one session per week.',
         skillBased: true,
-        skills: ['Basic computer and tablet skills.', 'Teaching.','Communication.'],
+        skills: ['Basic computer and tablet skills.', 'Teaching.', 'Communication.'],
         location: 'Online',
         contactDetails:
             {
@@ -82,7 +91,7 @@ const giveData = [
         requirements: [''],
         impactType: 'Social',
         impactReward: 'Clock- 20 hours of volunteering',
-        impact: ['Seniors','Strengthen Local community.','Companionship.'],
+        impact: ['Seniors', 'Strengthen Local community.', 'Companionship.'],
         timeDetails:
             {
                 frequency: 'Once a week',
@@ -102,17 +111,17 @@ const giveData = [
         contactDetails:
             {
                 name: 'Shiri Buzaglo,HR Department',
-                phone: '054-12345678', 
+                phone: '054-12345678',
             },
         reward: '',
-        requirements: ['Minimum 10 volunteers.',"Don’t forget to bring hiking essentials:",'1.3L water for each participant','2. Sun Protection: Sunscreen, hat and sunglasses.','3. First aid kit such as band-aids, antiseptic and pain relievers.','4. Water shoes or hiking sandals for hiking in water.','5. Optional: bathing suit.','*Food and snacks will be provided by the sponsor “clean coin”.'],
+        requirements: ['Minimum 10 volunteers.', "Don’t forget to bring hiking essentials:", '1.3L water for each participant', '2. Sun Protection: Sunscreen, hat and sunglasses.', '3. First aid kit such as band-aids, antiseptic and pain relievers.', '4. Water shoes or hiking sandals for hiking in water.', '5. Optional: bathing suit.', '*Food and snacks will be provided by the sponsor “clean coin”.'],
         impactType: 'Social, Environmental',
         impactReward: 'clock- 5 hours of volunteering',
-        impact: ['Cleaning or rehabilitating natural areas.','Protecting wildlife.'],
+        impact: ['Cleaning or rehabilitating natural areas.', 'Protecting wildlife.'],
         timeDetails:
             {
-                Date: 'Saturday, May 21st', 
-                duration: ['5 hours','9am - 2 pm']
+                Date: 'Saturday, May 21st',
+                duration: ['5 hours', '9am - 2 pm']
             },
     },
     {
@@ -153,7 +162,7 @@ const giveData = [
         about: '“Kidum-Noar" is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.', //About the NGO or the Give
         description: 'We are seeking volunteers for personal and educational mentoring in English for these students. Upon arrival at the center, you will establish a personal relationship with the teenager. The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied. Volunteering takes place on Sundays through Thursdays  from 6:00 PM to 8:00 PM, for at least two hours per week. The commitment is until the end of the academic year.',
         skillBased: true,
-        skills: ['English', 'Teaching','Mentoring','Coomunication'],
+        skills: ['English', 'Teaching', 'Mentoring', 'Coomunication'],
         location: '1 Ha’yasmin st., Kiryat Gat',
         contactDetails:
             {
@@ -162,10 +171,10 @@ const giveData = [
                 phone: '+972-123456789',
             },
         reward: '',
-        requirements: ['Languges:','English','Hebrew','Russian','Arabic','Amharic'],
+        requirements: ['Languges:', 'English', 'Hebrew', 'Russian', 'Arabic', 'Amharic'],
         impactType: 'Social',
         impactReward: 'clock-  10-20  hours of volunteering',
-        impact: ['Education','Children and Youth','Strengthen Local community','Mentoring'],
+        impact: ['Education', 'Children and Youth', 'Strengthen Local community', 'Mentoring'],
         timeDetails:
             {
                 endDate: 'Until the end of the academic year',

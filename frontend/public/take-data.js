@@ -205,7 +205,7 @@ const takeData = [
         tasks: [
             {
                 shortText: 'Choose a podcast related to your professional or personal interests.',
-                longText: 'Attach a link to the podcast you like to listen to the most and describe the reason why you enjoy listening to it.\n 1. Find a link to your favorite podcast. \n 2. Share the link in your response.\n 3. Write a short description of why you enjoy listening to this podcast.',
+                longText: 'Attach a link to the podcast you like to listen to the most and describe the reason why you enjoy listening to it. 1. Find a link to your favorite podcast. \n 2. Share the link in your response.\n 3. Write a short description of why you enjoy listening to this podcast.',
             },
             {
                 shortText: 'Listen to at least one full episode of the podcast.',

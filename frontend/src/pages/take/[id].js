@@ -7,17 +7,10 @@ import TransparentButton from "@components/components/common/transparentButton"
 import BlueButton from "@components/components/common/blueButton"
 import React, {useState} from "react";
 import StarIcon from "@mui/icons-material/Star";
-import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
-import PeopleIcon from "@mui/icons-material/People";
-import PublicIcon from "@mui/icons-material/Public";
-import Co2Icon from '@mui/icons-material/Co2';
-import InfoIcon from '@mui/icons-material/Info';
-import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import ValidationPopUp from "@components/components/cards/validation-pop-up/validation-pop-up";
+import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 
 const ImportantDetails = ({started, take, setStarted}) => {
-
-
     const {
         type,
         numberOfTasks,
@@ -34,10 +27,10 @@ const ImportantDetails = ({started, take, setStarted}) => {
     return (
         <>
             <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
-                {!started ? <div className="flex space-x-1 text-2xl">
+                {!started && <div className="flex space-x-1 text-2xl">
                     <PrimaryButton onClick={handleStartChallenge}>Take Challenge</PrimaryButton>
                     <TransparentButton>Invite Friends</TransparentButton>
-                </div> : <></>}
+                </div>}
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
                     <div className="ml-10 space-y-2">
                         <h1 className="font-bold">Duration</h1>
@@ -65,7 +58,7 @@ const ImportantDetails = ({started, take, setStarted}) => {
                     </div>
                 </div>
             </div>
-            {started ? <div/> : <></>}
+            {started && <div/>}
         </>
     );
 };
@@ -134,50 +127,7 @@ const Feed = ({placeholderText, messages, taskNum, task}) => {
 }
 
 
-const ImpactGraphic = ({impact, info}) => {
-    const impactCases = impact.cases;
-    const impactText = impact.text;
-    const impactType = impact.type;
 
-    const infoLink = info.link;
-    const infoText = info.text;
-
-    const getImpactCaseIcon = () => {
-        switch (impactCases[0]) {
-            case 'CO2':
-                return <Co2Icon className="text-6xl"/>;
-            case 'Happy':
-                return <InsertEmoticonIcon className="text-6xl"/>;
-        }
-    };
-
-    const getImpactTypeIcon = () => {
-        switch (impactType) {
-            case 'Wellness':
-                return <MonitorHeartIcon className="text-black text-3xl"/>;
-            case 'Social':
-                return <PeopleIcon className="text-black text-3xl"/>;
-            case 'Environment':
-                return <PublicIcon className="text-black text-3xl"/>;
-            default:
-                return null;
-        }
-    };
-
-    return (
-        <div className="flex flex-col justify-between text-sm">
-            <div className="flex text-blue h-24 space-x-7">
-                {getImpactTypeIcon()}
-                {getImpactCaseIcon()}
-                <p>{impactText}</p>
-            </div>
-            <div className="flex space-x-6 items-center">
-                <InfoIcon/>
-                <a href={infoLink} className="text-blue">{infoText}</a>
-            </div>
-        </div>
-    );
-}
 
 
 export default function TakePage({user}) {
@@ -234,7 +184,7 @@ export default function TakePage({user}) {
                 {started && <Feed placeholderText={placeholderText} messages={messages} taskNum={currentTask + 1}
                                   task={tasks[currentTask].shortText}/>}
 
-                <ImportantDetails take={take} id={id} setStarted={setStarted} started={started}/>
+                <ImportantDetails take={take} setStarted={setStarted} started={started}/>
 
 
                 {/*Detailed details*/}
@@ -296,6 +246,5 @@ export default function TakePage({user}) {
                 </div>}
             </div>
         </>
-
     )
 }
