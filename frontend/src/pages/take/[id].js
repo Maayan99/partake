@@ -7,8 +7,9 @@ import TransparentButton from "@components/components/common/transparentButton"
 import BlueButton from "@components/components/common/blueButton"
 import React, {useState} from "react";
 import StarIcon from "@mui/icons-material/Star";
-import ValidationPopUp from "@components/components/cards/validation-pop-up/validation-pop-up";
+import ValidationPopUp from "@components/components/pop-ups/validation-pop-up/validation-pop-up";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
+import Gallery from "@components/components/gallery/gallery";
 
 const ImportantDetails = ({started, take, setStarted}) => {
     const {
@@ -92,40 +93,6 @@ const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPop
     )
 };
 
-const Feed = ({placeholderText, messages, taskNum, task}) => {
-    return (
-        <>
-            <div>
-                <h1 className="font-extrabold text-3xl">Gallery</h1>
-                <p className="font-bold">Task {taskNum}: {task}</p>
-            </div>
-            <hr className="left-0 col-span-3 "/>
-            <section className="flex flex-col items-center col-span-3">
-                <form className="flex flex-col items-end">
-                    <input placeholder={placeholderText}
-                           className="px-2 w-96 h-12 rounded-lg border-2 border-gray-300"/>
-                    <BlueButton className="mt-4 w-32">Submit</BlueButton>
-                </form>
-                <div className="grid  grid-cols-3 gap-14 mt-4 w-full">
-                    {messages.map(message => {
-                        return (
-                            <div key={message.id} className="p-4 flex flex-col h-52 rounded-lg bg-important-blue">
-                                {message.text}
-                                <div className="w-full h-full bg-slate-200 mt-3">
-                                    {message.image ?
-                                        <img src={`assets/PNG/${message.image}`} className="w-full h-full"/> : <></>}
-                                </div>
-                            </div>
-                        )
-                    })}
-                </div>
-
-            </section>
-            <hr className="left-0 col-span-3 "/>
-        </>
-    )
-}
-
 
 
 
@@ -181,7 +148,7 @@ export default function TakePage({user}) {
                     <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
 
 
-                {started && <Feed placeholderText={placeholderText} messages={messages} taskNum={currentTask + 1}
+                {started && <Gallery placeholderText={placeholderText} messages={messages} taskNum={currentTask + 1}
                                   task={tasks[currentTask].shortText}/>}
 
                 <ImportantDetails take={take} setStarted={setStarted} started={started}/>

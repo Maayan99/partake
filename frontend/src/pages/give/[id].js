@@ -3,7 +3,7 @@ import TransparentButton from "@components/components/common/transparentButton";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import {useRouter} from "next/router";
 import giveData from "../../../public/give-data";
-import ValidationPopUp from "@components/components/cards/validation-pop-up/validation-pop-up";
+import ValidationPopUp from "@components/components/pop-ups/validation-pop-up/validation-pop-up";
 import TakeCoverCard from "@components/components/cards/take-cover-card/take-cover-card";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import StarIcon from "@mui/icons-material/Star";

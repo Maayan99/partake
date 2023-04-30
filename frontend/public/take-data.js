@@ -182,18 +182,30 @@ const takeData = [
             {
                 id: "1",
                 text: 'Link to the podcast!',
+                image: 'give_card_renovation_day_home.png'
             },
             {
                 id: "2",
                 text: 'Link to the podcast?',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    name: 'Someone',
+                    profileImage: 'profile_image_3.jpeg'
+                },
             },
             {
                 id: "3",
                 text: 'Link to the podcast.',
+                image: 'online_computer_skills_tutoring.png',
             },
             {
                 id: "4",
                 text: '{Link to the podcast}',
+                image: 'take_card_crave_for_health.png',
+                user: {
+                    name: 'Muhamad Ali',
+                    profileImage: 'profile_image_4.jpeg'
+                },
             },
         ],
         placeholderText: "Paste your podcast's link here",
