@@ -1,66 +1,52 @@
 const users = [
     {
-        id: 'oiuaasfhli1u32e',
-        username: 'a',
-        email: 'a@a.a',
-        password: 'a',
-        profileImage: 'profile_image_1.jpeg',
-        startedChallenges: [
-            {
-                id: "2",
-            }
-        ],
-    },
-    {
         id: 'oiuadsfhli1u32e',
-        username: 'evithar99',
+        username: 'Evyatar99',
         email: 'evithar1310@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_2.jpeg',
-        startedChallenges: [
-            {
-                id: "1",
-            },
-            {
-                id: "11",
-            },
-        ],
     },
     {
         id: 'oiuadsfhli1u31e',
-        username: 'nitai99',
+        username: 'Nitai99',
         email: 'doarnitai@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_3.jpeg',
-        startedChallenges: [
-        ],
     },
     {
         id: 'owuadsfhli1u32e',
-        username: 'hillel99',
+        username: 'Hillel99',
         email: 'hil472@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_4.jpeg',
-        startedChallenges: [
-        ],
     },
     {
         id: 'oiuadsfhli1u32d',
-        username: 'ofer99',
+        username: 'Ofer99',
         email: 'ofergetz@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_5.jpeg',
-        startedChallenges: [
-        ],
     },
     {
-        id: 'aiuadsfhli1u32e',
-        username: 'osnat99',
+        id: 'aiuadsfhvefwli1u32e',
+        username: 'Osnat99',
         email: 'osnat479@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_6.jpeg',
-        startedChallenges: [
-        ],
+    },
+    {
+        id: 'aiuads1hvefwli1u32e',
+        username: 'Jela Tean 99',
+        email: 'gelatin@gmail.com',
+        password: 'helloworld',
+        profileImage: 'profile_image_6.jpeg',
+    },
+    {
+        id: 'aiua123hvefwli1u32e',
+        username: 'Muhamad Ali 99',
+        email: 'muhamad@gmail.com',
+        password: 'helloworld',
+        profileImage: 'profile_image_6.jpeg',
     },
 ]
 

@@ -18,12 +18,12 @@ module.exports = {
             },
             keyframes: {
                 scroll: {
-                    '0%': { transform: 'translateX(0%)' },
-                    '100%': { transform: 'translateX(-102%)' },
+                    '0%': {transform: 'translateX(0%)'},
+                    '100%': {transform: 'translateX(-102%)'},
                 },
                 scroll2: {
-                    '0%': { transform: 'translateX(102%)' },
-                    '100%': { transform: 'translateX(0%)' },
+                    '0%': {transform: 'translateX(102%)'},
+                    '100%': {transform: 'translateX(0%)'},
                 },
             },
             colors: {

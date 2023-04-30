@@ -10,8 +10,9 @@ import StarIcon from "@mui/icons-material/Star";
 import ValidationPopUp from "@components/components/pop-ups/validation-pop-up/validation-pop-up";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import Gallery from "@components/components/gallery/gallery";
+import InvitePopUp from "@components/components/pop-ups/invite-pop-up/invite-pop-up";
 
-const ImportantDetails = ({started, take, setStarted}) => {
+const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) => {
     const {
         type,
         numberOfTasks,
@@ -25,12 +26,16 @@ const ImportantDetails = ({started, take, setStarted}) => {
         setStarted(true);
     };
 
+    const handleInviteFriends = () => {
+        setDisplayInvitePopUp(true);
+    }
+
     return (
         <>
             <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
                 {!started && <div className="flex space-x-1 text-2xl">
                     <PrimaryButton onClick={handleStartChallenge}>Take Challenge</PrimaryButton>
-                    <TransparentButton>Invite Friends</TransparentButton>
+                    <TransparentButton onClick={handleInviteFriends}>Invite Friends</TransparentButton>
                 </div>}
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
                     <div className="ml-10 space-y-2">
@@ -63,12 +68,16 @@ const ImportantDetails = ({started, take, setStarted}) => {
         </>
     );
 };
-const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPopUp}) => {
+const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPopUp, setDisplayInvitePopUp}) => {
     const {title, tasks} = take;
 
 
     const handleLeaveChallenge = () => {
         setStarted(false);
+    }
+
+    const handleInviteFriends = () => {
+        setDisplayInvitePopUp(true);
     }
 
     return (
@@ -79,7 +88,7 @@ const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPop
             <div className="flex flex-col space-y-3">
                 <div className="flex space-x-1">
                     <PrimaryButton onClick={handleLeaveChallenge}>Challenge Taken</PrimaryButton>
-                    <TransparentButton>Invite Friends</TransparentButton>
+                    <TransparentButton onClick={handleInviteFriends}>Invite Friends</TransparentButton>
                 </div>
                 <h1 className="text-2xl font-bold">{title}</h1>
                 <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
@@ -101,6 +110,7 @@ export default function TakePage({user}) {
     const [started, setStarted] = useState(false);
     const [displayValidationPopUp, setDisplayValidationPopUp] = useState(false);
     const [currentTask, setCurrentTask] = useState(0);
+    const [displayInvitePopUp, setDisplayInvitePopUp] = useState(false);
 
     const router = useRouter();
     const {id} = router.query;
@@ -125,7 +135,7 @@ export default function TakePage({user}) {
 
 
     const {
-        messages,
+        galleryItems,
         placeholderText,
         info,
         reward,
@@ -139,19 +149,20 @@ export default function TakePage({user}) {
 
     return (
         <>
+            <InvitePopUp display={displayInvitePopUp} setDisplay={setDisplayInvitePopUp}/>
             <ValidationPopUp display={displayValidationPopUp} setDisplay={setDisplayValidationPopUp}/>
             <div
                 className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
                 {started ?
-                    <TopAfterStarted take={take} setStarted={setStarted}
+                    <TopAfterStarted take={take} setStarted={setStarted} setDisplayInvitePopUp={setDisplayInvitePopUp}
                                      setDisplayValidationPopUp={setDisplayValidationPopUp} currentTask={currentTask}/> :
                     <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
 
 
-                {started && <Gallery placeholderText={placeholderText} messages={messages} taskNum={currentTask + 1}
+                {started && <Gallery placeholderText={placeholderText} items={galleryItems} taskNum={currentTask + 1}
                                   task={tasks[currentTask].shortText}/>}
 
-                <ImportantDetails take={take} setStarted={setStarted} started={started}/>
+                <ImportantDetails take={take} setStarted={setStarted} started={started} setDisplayInvitePopUp={setDisplayInvitePopUp}/>
 
 
                 {/*Detailed details*/}

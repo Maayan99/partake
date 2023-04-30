@@ -178,7 +178,7 @@ const takeData = [
 
 
     {
-        messages: [
+        galleryItems: [
             {
                 id: "1",
                 text: 'Link to the podcast!',
@@ -207,6 +207,35 @@ const takeData = [
                     profileImage: 'profile_image_4.jpeg'
                 },
             },
+            {
+                id: "5",
+                text: '{Link to the podcast haha}',
+                image: 'take_card_gift_card_survey.png',
+                user: {
+                    name: 'Jela Tean',
+                    profileImage: 'profile_image_2.jpeg'
+                },
+            },
+            {
+                id: "6",
+                text: '{Link to the podcast haha}',
+                image: 'happy_employees.jpeg',
+                user: {
+                    name: 'Evyatar Cohen',
+                    profileImage: 'profile_image_5.jpeg'
+                },
+            },
+            {
+                id: "6",
+                text: '{Link to the podcast haha}',
+                image: 'give_card_help_PTSD.png',
+                user: {
+                    name: 'Hillel Sonnenfeld',
+                    profileImage: 'profile_image_6.jpeg'
+                },
+            },
+
+
         ],
         placeholderText: "Paste your podcast's link here",
         impact: {

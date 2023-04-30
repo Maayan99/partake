@@ -3,7 +3,7 @@ import PublicIcon from '@mui/icons-material/Public';
 import PeopleIcon from '@mui/icons-material/People';
 import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
 import StarIcon from '@mui/icons-material/Star';
-import users from "@components/users";
+import users from "../../../public/users";
 
 const Header = () => {
 
@@ -42,7 +42,7 @@ const Header = () => {
                 </div>
                 <img  onClick={handleProfileClick}
                     src={profilePhotoURL} alt="Profile" className="w-14 h-14 rounded-full
-                outline outline-2 outline-offset-1 outline-blue object-cover transition-all duration-500
+                outline outline-2 outline-offset-1 outline-blue object-cover transition-all duration-150
                 hover:scale-110"
                 />
             </div>

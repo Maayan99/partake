@@ -23,12 +23,12 @@ const FilterBar = ({search, setSearch, type, setType, cause, setCause, duration,
     };
 
     return (
-        <div className="flex ml-36 h-24 items-center space-x-8 mb-10">
-            <div className="flex h-10 focus-within:shadow">
-                <input placeholder="Search" className="w-72 pl-1 border border-1 border-gray-500
+        <div className="flex ml-36 h-24 items-center space-x-8 mb-10 ">
+            <div className="flex h-10 focus-within:shadow ">
+                <input placeholder="Search" className="w-72 pl-1 border border-1 border-gray-500 bg-slate-200
                 rounded-none border-r-0 focus:outline-none" onChange={handleSearchChange} value={search}/>
                 <select onChange={handleTypeChange} placeholder="Type" value={type}
-                        className="w-52 border border-1 border-gray-500
+                        className="w-52 border border-1 border-gray-500 bg-slate-200
                 rounded-none border-r-0 focus:outline-none">
                     <option value="">Type</option>
                     <option value="Environment">Environment</option>
@@ -36,7 +36,7 @@ const FilterBar = ({search, setSearch, type, setType, cause, setCause, duration,
                     <option value="Wellness">Well-Being</option>
                 </select>
                 <select onChange={handleCauseChange} value={cause}
-                        className="w-52 border border-1 border-gray-500
+                        className="w-52 border border-1 border-gray-500 bg-slate-200
                 rounded-none border-r-0 focus:outline-none">
                     <option value="">Cause</option>
                     <option value="Sustainability">Sustainability</option>
@@ -46,7 +46,7 @@ const FilterBar = ({search, setSearch, type, setType, cause, setCause, duration,
                     <option value="Diversity and Inclusion">Diversity and Inclusion</option>
                 </select>
                 <select onChange={handleDurationChange} value={duration}
-                        className="w-52 border border-1 border-gray-500
+                        className="w-52 border border-1 border-gray-500 bg-slate-200
                 rounded-none focus:outline-none">
                     <option value="">Duration</option>
                     <option value="15">Longer than 15 Minutes</option>
