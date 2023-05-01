@@ -2,9 +2,10 @@ import {useEffect, useState} from "react";
 import SelectedButton from "@components/components/common/selectedButton";
 import UnselectedButton from "@components/components/common/unselectedButton";
 
-const Nav = () => {
+const Nav = ({isAdmin}) => {
     const [selected, setSelected] = useState("");
     const [animateNav, setAnimateNav] = useState(false);
+    const [options, setOptions] = useState(['give', 'take', 'make', 'get'])
 
 
     useEffect(() => {
@@ -19,13 +20,22 @@ const Nav = () => {
         };
     }, []);
 
-    const options = ['give', 'take', 'make'];
+    useEffect(() => {
+        if (isAdmin) {
+            setOptions( ['admin', 'give', 'take', 'make']);
+        } else {
+            setOptions(['give', 'take', 'make', 'get']);
+        }
+    }, [isAdmin]);
+
 
     const capitalizedOptions =
         {
             give: 'Give',
             take: 'Take',
             make: 'Make',
+            get: 'Get',
+            admin: 'Admin',
         };
 
     useEffect(() => {

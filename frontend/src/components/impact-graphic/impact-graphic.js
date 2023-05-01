@@ -44,9 +44,10 @@ export default function ImpactGraphic({impact, info}){
                 <ImpactCaseIcon impactCases={impactCases}/>
                 <p>{impactText}</p>
             </div>
-            <div className="flex space-x-6 items-center">
+            <div className="flex space-x-6 items-center group">
                 <InfoIcon/>
                 <a href={infoLink} className="text-blue">{infoText}</a>
+
             </div>
         </div>
     );

@@ -34,7 +34,7 @@ const SmallTakeCard = ({take}) => {
                 </div>
                 <ProgressBar percentage={userProgress}/>
                 <div className="opacity-0 flex flex-col content-center transition-all duration-100 group-hover:opacity-100">
-                    <p className="text-center m-1.5">{shortDescription}</p>
+                    <p className="text-center  m-1.5">{shortDescription}</p>
                     <div className="flex justify-between px-2.5">
                         <ParticipantsRow participants={participants}/>
                         <BlueButton className='small-button'>Take Challenge</BlueButton>

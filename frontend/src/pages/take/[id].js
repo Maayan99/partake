@@ -90,9 +90,10 @@ const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPop
                     <PrimaryButton onClick={handleLeaveChallenge}>Challenge Taken</PrimaryButton>
                     <TransparentButton onClick={handleInviteFriends}>Invite Friends</TransparentButton>
                 </div>
+
                 <h1 className="text-2xl font-bold">{title}</h1>
                 <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
-                <p>{tasks[currentTask].longText}</p>
+                <div dangerouslySetInnerHTML={{__html: tasks[currentTask].longText}}></div>
             </div>
             <div className="min-w-[370px] flex flex-col items-center">
                 <Leaderboard take={take}/>
@@ -150,7 +151,7 @@ export default function TakePage({user}) {
     return (
         <>
             <InvitePopUp display={displayInvitePopUp} setDisplay={setDisplayInvitePopUp}/>
-            <ValidationPopUp display={displayValidationPopUp} setDisplay={setDisplayValidationPopUp}/>
+            <ValidationPopUp display={displayValidationPopUp} setDisplay={setDisplayValidationPopUp} question={tasks[currentTask].validateText}/>
             <div
                 className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
                 {started ?
@@ -172,7 +173,7 @@ export default function TakePage({user}) {
                 </div>
                 {tasks && <div className="space-y-5">
                     <h1 className="font-bold">Task</h1>
-                    <ul className="list-disc pl-4">{tasks.map(task => <li key={task}>{task.shortText}</li>)}</ul>
+                    <ul className="list-disc pl-4">{tasks.map(task => <li key={task.id}>{task.shortText}</li>)}</ul>
                 </div>}
                 {impact && <div className="space-y-5">
                     <h1 className="font-bold">Impact</h1>
@@ -182,7 +183,7 @@ export default function TakePage({user}) {
                     <div className="space-y-5">
                         <h1 className="font-bold">Tips</h1>
                         {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
-                        <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}>{tip}</li>)}</ul>
+                        <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}>{tip.text}</li>)}</ul>
                     </div>}
                 {reward &&
                     <div className="space-y-5">
