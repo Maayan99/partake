@@ -1,5 +1,5 @@
-import PrimaryButton from "@components/components/common/primaryButton";
-import TransparentButton from "@components/components/common/transparentButton";
+import PrimaryButton from "@components/components/common/primary-button";
+import TransparentButton from "@components/components/common/transparent-button";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import {useRouter} from "next/router";
 import giveData from "../../../public/give-data";

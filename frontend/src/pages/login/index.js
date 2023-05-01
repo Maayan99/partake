@@ -1,5 +1,5 @@
 import {useState} from "react";
-import BlueButton from '@components/components/common/blueButton.js'
+import BlueButton from '@components/components/common/blue-button.js'
 
 export default function Login({setLoggedIn}) {
     const [email, setEmail] = useState("");

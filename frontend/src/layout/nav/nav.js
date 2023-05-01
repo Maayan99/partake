@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-import SelectedButton from "@components/components/common/selectedButton";
-import UnselectedButton from "@components/components/common/unselectedButton";
+import SelectedButton from "@components/components/common/selected-button";
+import UnselectedButton from "@components/components/common/unselected-button";
 
 const Nav = ({isAdmin}) => {
     const [selected, setSelected] = useState("");

@@ -8,7 +8,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
-import PrimaryButton from "@components/components/common/primaryButton";
+import PrimaryButton from "@components/components/common/primary-button";
 import ParticipantsRow from "@components/components/participants-row/participants-row";
 
 const SmallGiveCard = ({give}) => {

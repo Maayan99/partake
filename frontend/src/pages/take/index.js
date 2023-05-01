@@ -3,7 +3,7 @@ import takeData from "../../../public/take-data.js"
 import Head from "next/head";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import LargeTakeCard from "@components/components/cards/large-take-card/large-take-card";
-import PrimaryButton from "@components/components/common/primaryButton";
+import PrimaryButton from "@components/components/common/primary-button";
 import {useState} from "react";
 import AddIcon from "@mui/icons-material/Add";
 
@@ -32,7 +32,7 @@ const FilterBar = ({search, setSearch, type, setType, subject, setSubject, durat
                 rounded-none border-r-0 focus:outline-none" onChange={handleSearchChange} value={search}/>
                 <select onChange={handleTypeChange} placeholder="Type" value={type}
                         className="w-52 border border-1 border-gray-500 bg-slate-200
-                rounded-none border-r-0 focus:outline-none">
+                rounded-none border-r-0 focus:outline-none after:pr-2">
                     <option value="">Type</option>
                     <option value="Environment">Environment</option>
                     <option value="Social">Social</option>

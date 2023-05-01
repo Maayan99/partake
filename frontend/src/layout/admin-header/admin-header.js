@@ -1,4 +1,4 @@
-import BlueButton from "@components/components/common/blueButton";
+import BlueButton from "@components/components/common/blue-button";
 
 export default function AdminHeader({setIsAdmin}) {
     return (

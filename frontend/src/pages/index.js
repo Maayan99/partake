@@ -1,5 +1,5 @@
 import React from "react";
-import PrimaryButton from "@components/components/common/primaryButton";
+import PrimaryButton from "@components/components/common/primary-button";
 
 export default function Home() {
     return (

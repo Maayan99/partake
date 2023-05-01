@@ -1,5 +1,5 @@
 import React from 'react';
-import BlueButton from '@components/components/common/blueButton'
+import BlueButton from '@components/components/common/blue-button'
 
 const UnloggedHeader = () => {
     return (

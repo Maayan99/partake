@@ -2,15 +2,16 @@ import takeData from "../../../public/take-data.js"
 import {useRouter} from "next/router";
 import TakeCoverCard from "@components/components/cards/take-cover-card/take-cover-card";
 import Leaderboard from "@components/components/leaderboard/leaderboard";
-import PrimaryButton from "@components/components/common/primaryButton";
-import TransparentButton from "@components/components/common/transparentButton"
-import BlueButton from "@components/components/common/blueButton"
-import React, {useState} from "react";
+import PrimaryButton from "@components/components/common/primary-button";
+import TransparentButton from "@components/components/common/transparent-button"
+import BlueButton from "@components/components/common/blue-button"
+import React, {useEffect, useState} from "react";
 import StarIcon from "@mui/icons-material/Star";
 import ValidationPopUp from "@components/components/pop-ups/validation-pop-up/validation-pop-up";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import Gallery from "@components/components/gallery/gallery";
 import InvitePopUp from "@components/components/pop-ups/invite-pop-up/invite-pop-up";
+import CongratsPopUp from "@components/components/pop-ups/congrats-pop-up/congrats-pop-up";
 
 const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) => {
     const {
@@ -97,14 +98,12 @@ const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPop
             </div>
             <div className="min-w-[370px] flex flex-col items-center">
                 <Leaderboard take={take}/>
-                <BlueButton className="mt-4 text-2xl" onClick={() => setDisplayValidationPopUp(true)}>Validate Task {currentTask + 1}</BlueButton>
+                <BlueButton className="mt-4 text-2xl" onClick={() => setDisplayValidationPopUp(true)}>Validate
+                    Task {currentTask + 1}</BlueButton>
             </div>
         </div>
     )
 };
-
-
-
 
 
 export default function TakePage({user}) {
@@ -112,9 +111,20 @@ export default function TakePage({user}) {
     const [displayValidationPopUp, setDisplayValidationPopUp] = useState(false);
     const [currentTask, setCurrentTask] = useState(0);
     const [displayInvitePopUp, setDisplayInvitePopUp] = useState(false);
+    const [displayCongratsPopUp, setDisplayCongratsPopUp] = useState(false);
 
     const router = useRouter();
     const {id} = router.query;
+
+    useEffect(() => {
+        if (id) {
+            if (currentTask + 1 === numberOfTasks) {
+                setDisplayCongratsPopUp(true);
+                setCurrentTask(0);
+            }
+        }
+    }, [currentTask])
+
 
     // Check if the router has the required data
     if (!id) {
@@ -145,13 +155,18 @@ export default function TakePage({user}) {
         tasks,
         description,
         participants,
+        numberOfTasks,
     } = take;
+
+
 
 
     return (
         <>
             <InvitePopUp display={displayInvitePopUp} setDisplay={setDisplayInvitePopUp}/>
-            <ValidationPopUp display={displayValidationPopUp} setDisplay={setDisplayValidationPopUp} question={tasks[currentTask].validateText}/>
+            <ValidationPopUp setCurrentTask={setCurrentTask} display={displayValidationPopUp}
+                             setDisplay={setDisplayValidationPopUp} question={tasks[currentTask].validateText}/>
+            <CongratsPopUp display={displayCongratsPopUp} setDisplay={setDisplayCongratsPopUp}/>
             <div
                 className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
                 {started ?
@@ -161,9 +176,10 @@ export default function TakePage({user}) {
 
 
                 {started && <Gallery placeholderText={placeholderText} items={galleryItems} taskNum={currentTask + 1}
-                                  task={tasks[currentTask].shortText}/>}
+                                     task={tasks[currentTask].shortText}/>}
 
-                <ImportantDetails take={take} setStarted={setStarted} started={started} setDisplayInvitePopUp={setDisplayInvitePopUp}/>
+                <ImportantDetails take={take} setStarted={setStarted} started={started}
+                                  setDisplayInvitePopUp={setDisplayInvitePopUp}/>
 
 
                 {/*Detailed details*/}

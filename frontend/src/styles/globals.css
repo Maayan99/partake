@@ -7,4 +7,14 @@
     h1 {
         @apply text-2xl;
     }
+
+    select {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b6/Eo_circle_blue_arrow-down.svg");
+        background-repeat: no-repeat;
+        background-size: 1.5EM 1EM;
+        background-position: right center;
+        background-clip: border-box;
+        appearance: none;
+        padding-left: 4px;
+    }
 }

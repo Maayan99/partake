@@ -4,7 +4,7 @@ import IconButton from "@components/components/common/icon-button";
 import {useEffect, useState} from "react";
 import users from "../../../../public/users";
 import giveData from "../../../../public/give-data";
-import BlueButton from "@components/components/common/blueButton";
+import BlueButton from "@components/components/common/blue-button";
 
 const UserRow = ({user, selected, setSelected}) => {
     const {profileImage, username, id} = user;

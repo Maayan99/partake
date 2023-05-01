@@ -1,11 +1,12 @@
 import CloseIcon from '@mui/icons-material/Close';
 import PopUp from "@components/components/pop-ups/basic-pop-up/pop-up";
 import IconButton from "@components/components/common/icon-button";
-import BlueButton from "@components/components/common/blueButton";
+import BlueButton from "@components/components/common/blue-button";
 
-export default function ValidationPopUp({display, setDisplay, question}) {
+export default function ValidationPopUp({setCurrentTask, display, setDisplay, question}) {
     const handleValidate =() => {
         setDisplay(false);
+        setCurrentTask(prev => prev + 1);
     }
 
     return (
@@ -18,7 +19,7 @@ export default function ValidationPopUp({display, setDisplay, question}) {
             </div>
             <div className="p-8 flex flex-col items-center space-y-4">
                 <h1 className="text-xl">{question}</h1>
-                <input className="w-full placeholder:italic resize-none bg-slate-200 rounded-lg p-2" placeholder="Enter text"/>
+                <input className="w-full placeholder:italic bg-slate-200 rounded-lg p-2" placeholder="Enter text"/>
                 <BlueButton onClick={handleValidate}>Validate</BlueButton>
             </div>
 
