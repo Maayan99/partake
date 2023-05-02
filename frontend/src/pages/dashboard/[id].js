@@ -1,13 +1,58 @@
 import BlueButton from "@components/components/common/blue-button";
 import {useEffect, useRef} from "react";
-
 import LSystem from 'lindenmayer';
+
+const presets = [
+    {
+        name: 'Basic',
+        axiom: 'X',
+        productions: {
+            'F': 'FF',
+            'X': 'F-[[X]+X]+FL[+FX]-X',
+        },
+    },
+    {
+        name: 'Leaf galore',
+        axiom: 'X',
+        productions: {
+            'F': 'FF',
+            'X': 'F-L[[X]+X]+FL[+FX]-XL',
+        },
+    },
+    {
+        name: 'The lone woves',
+        axiom: 'X',
+        productions: {
+            'F': 'FF',
+            'X': 'F-L[[FX]+FX]+FL[+FX]-XL',
+        },
+    },
+    {
+        name: 'Leaf galore',
+        axiom: 'X',
+        productions: {
+            'F': 'FF',
+            'X': 'F-L[[X]+X]+FL[+FX]-XL',
+        },
+    },
+];
+
 
 export default function Dashboard() {
     const canvasRef = useRef(null);
 
 
+
     useEffect(() => {
+        const weights = {
+            complexity: 1,
+            leaf: 2,
+            branch: 4,
+            left: 3,
+            right: 3,
+            pop: 2
+        }
+
         if (!canvasRef.current) return; // Exit if canvas is not ready
 
         const canvas = canvasRef.current;
@@ -25,12 +70,13 @@ export default function Dashboard() {
         const branchColor = '#5C4033';
 
 
+        const preset = presets[0];
+
+
+
         const tree = new LSystem({
-            axiom: 'X',
-            productions: {
-                'F': 'FF',
-                'X': 'F-[[X]+X]+FL[+FX]-X',
-            },
+            axiom: preset.axiom,
+            productions: preset.productions,
             finals: {
                 '+': () => {
                     ctx.rotate((Math.PI / 180) * 28);
@@ -39,7 +85,7 @@ export default function Dashboard() {
                     ctx.rotate((Math.PI / 180) * -28);
                 },
                 'F': () => {
-                    const shouldDraw = tree.iterations*age > branchTiers[branchIndex];
+                    const shouldDraw = shouldDrawBranches[branchIndex];
 
                     if (shouldDraw) {
                         ctx.strokeStyle = branchColor;
@@ -48,8 +94,9 @@ export default function Dashboard() {
                         ctx.lineTo(0, 50 / (tree.iterations + 1));
                         ctx.stroke()
                         ctx.translate(0, 50 / (tree.iterations + 1));
-                        branchIndex++;
                     }
+
+                    branchIndex++;
                 },
                 'L': () => {
                     const shouldDraw = leaves[leafIndex];
@@ -84,11 +131,12 @@ export default function Dashboard() {
         const treeString = tree.iterate(4);
 
         const numOfLeaves = treeString.split('L').length - 1;
+        const numOfBranches = treeString.split('F').length - 1;
 
         const branches = treeString.match(/(F)\1*/g);
 
 
-        let branchTiers = [];
+        const branchTiers = [];
 
         branches.map(branch => {
             const tier = 4 - Math.log2(branch.length);
@@ -97,7 +145,6 @@ export default function Dashboard() {
             }
         });
 
-        console.log(branchTiers);
 
         const leaves = [];
 
@@ -105,12 +152,14 @@ export default function Dashboard() {
             leaves[i] = false;
         }
 
+        const shouldDrawBranches = [];
+
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.translate(canvas.width / 2, canvas.height)
             ctx.rotate((Math.PI / 180) * 180);
             ctx.lineWidth = age * age * 2.2;
-            // ctx.scale(age * age, age * age);
+            ctx.scale(age * age, age * age);
             tree.final();
             ctx.setTransform(1, 0, 0, 1, 0, 0);
 
@@ -123,11 +172,20 @@ export default function Dashboard() {
                     }
                 }
 
+                for (let i = 0; i < numOfBranches; i++) {
+                    if (!shouldDrawBranches[i]) {
+                        if (branchTiers[i] < (age * tree.iterations) + 1) {
+                            shouldDrawBranches[i] = Math.random() > 0.9;
+                        }
+                    }
+                }
+
                 requestAnimationFrame(function () {
                     animate(age);
                 });
 
                 leafIndex = 0;
+                branchIndex = 0;
             }
         }
 
