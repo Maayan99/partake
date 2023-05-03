@@ -1,11 +1,20 @@
+import users from "../../../public/users";
+
 const GalleryItem = ({item}) => {
-    const {user, text, image} = item;
+    const {text, image} = item;
+    let {user} = item;
+
+    if (user) {
+        const id= user.id;
+        user = users.filter(user => user.id === id)[0];
+        console.log(user);
+    }
 
     return (
         <div className="p-4 flex flex-col min-h-62 space-y-2 h-min">
-            {item.user && <div className="flex items-center space-x-3">
+            {user && <div className="flex items-center space-x-3">
                 <img src={`/assets/PNG/${user.profileImage}`} className="w-12 h-12 rounded-full object-cover"/>
-                <span>{user.name}</span>
+                <span>{user.username}</span>
             </div>}
             <div className="w-full h-full bg-slate-200 mt-3">
                 {image &&
@@ -39,7 +48,7 @@ export default function Gallery({items, taskNum, task}) {
     }
 
     return (
-        <div className="bg-slate-200 col-span-3 rounded-lg p-4">
+        <div className="bg-light-gray col-span-3 rounded-lg p-4 max-h-screen overflow-auto">
             <div className="flex flex-col items-center">
                 <h1 className="font-extrabold text-3xl">Gallery</h1>
                 <p className="font-bold">Task {taskNum}: {task}</p>

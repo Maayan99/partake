@@ -1,6 +1,274 @@
 const template =
     {
         id: "3",
+        coverImage: '.png',
+        title: '',
+        author: '',
+        impactType: '',
+        subject: "",
+        shortDescription: '',
+        description: '',
+        coins: 300,
+        progress: 20,
+        category: 'For you',
+        duration: 7200,
+        durationText: '5 days, starting Monday 15/4/2023',
+        numberOfTasks: 5,
+        location: 'Online',
+        difficultyLevel: 'Hard',
+        participants: 123,
+
+
+        tasks: [
+            {
+                id: 1,
+                validateText: 'How do you feel after 15 minutes of meditation?',
+                shortText: 'Have a 15-minute meditation',
+                longText: '',
+            },
+        ],
+
+
+        galleryItems: [
+            {
+                id: "1",
+                text: 'Link to the podcast!',
+                image: 'give_card_renovation_day_home.png'
+            },
+            {
+                id: "2",
+                text: 'Link to the podcast?',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    name: 'Someone',
+                    profileImage: 'profile_image_3.jpeg'
+                },
+            },
+        ],
+
+        impact: {
+            causes: [
+                {
+                    id: 1,
+                    text: 'Happy',
+                    icon: 'happy',
+                    infoText: 'Happy',
+                    boldText: '',
+                    largeText: '',
+                },
+            ],
+            text: 'Emotional Well-Being',
+            type: 'Social'
+        },
+
+        tips: [
+            {
+                text: "",
+                id: 1,
+            },
+        ],
+
+        reward: [
+            {
+                amount: 50,
+                text: ''
+            }
+        ],
+
+        bonus: '',
+    };
+
+const cardOnlyTemplate = {
+    id: '',
+    title: '',
+    author: '',
+    coverImage: '.png',
+    subject: '',
+    category: '',
+    impact:
+        {
+            type: 'social'
+        },
+    coins: 100,
+    progress: 0,
+    duration: 60,
+    participants: 123,
+};
+
+
+
+
+
+const takeData = [
+    {
+        id: "b1c7051da1bc43ad",
+        coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
+        title: 'Clean Inbox, Clear Conscience',
+        author: 'Anonymous Bee',
+        impactType: 'environmental',
+        subject: "Wellness",
+        shortDescription: 'Reduce unnecessary energy usage in seconds',
+        description: "Have you ever thought about the impact that deleting old emails can have on the environment? Every time you delete an email, you're reducing the amount of storage space needed on the server, which ultimately leads to lower energy consumption and carbon emissions. In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
+        coins: 100,
+        progress: 20,
+        category: '',
+        durationText: 'Ongoing',
+        numberOfTasks: 1,
+        location: 'Online',
+        difficultyLevel: 'Easy',
+        participants: 568,
+
+
+        onboarding: 'Did you know that every year, the world\'s data centers consume more energy than the entire United Kingdom? And did you know that a single email produces an average of 4 grams of CO2 emissions? It\'s time to take action and reduce our digital footprint',
+
+        whatToDo: "Take a few minutes to go through your inbox and delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before and after. Don't forget to encourage your coworkers to participate as well!",
+
+        tasks: [
+            {
+                id: "29f10a8ec96751af",
+                validateText: 'How many emails have you deleted?',
+                shortText: 'Delete as many emails as possible',
+                longText: "Take a few minutes to go through your inbox and delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before and after. Don't forget to encourage your coworkers to participate as well!",
+            },
+        ],
+
+
+        galleryItems: [
+            {
+                id: "12ffbbb28978fef6",
+                text: 'Look how many emails I deleted!',
+                image: 'give_card_renovation_day_home.png'
+            },
+            {
+                id: "faa623ba3bff7565",
+                text: 'This felt so refreshing',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    id: 'owuadsfhli1u32e',
+                },
+            },
+            {
+                id: "d0d057f3401ed49b",
+                text: 'This felt so refreshing',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    id: 'oiuadsfhli1u31e',
+                },
+            },
+            {
+                id: "db2fd9d5f571b962",
+                text: 'This felt so refreshing',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    id: 'aiua123hvefwli1u32e',
+                },
+            },
+            {
+                id: "928966f939ccd19f",
+                text: 'This felt so refreshing',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    id: 'oiuadsfhli1u32d',
+                },
+            },
+            {
+                id: "d16b1f3f061a9e62",
+                text: 'This felt so refreshing',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    id: 'oiuadsfhli1u32d',
+                },
+            },
+            {
+                id: "76ef74ccdbfdeaa1",
+                text: 'This felt so refreshing',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    id: 'oiuadsfhli1u32d',
+                },
+            },
+            {
+                id: "8234dabb7bfbc1ae",
+                text: 'This felt so refreshing',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    id: 'oiuadsfhli1u32d',
+                },
+            },
+            {
+                id: "9958b72228e7a462",
+                text: 'This felt so refreshing',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    id: 'oiuadsfhli1u32d',
+                },
+            },
+
+        ],
+
+        impact: {
+            causes: [
+                {
+                    id: "8968f465b14a6b70",
+                    text: 'saves 4 grams of CO2.',
+                    icon: 'digital-footprint',
+                    infoText: 'Does this matter?',
+                    boldText: '1 deleted Email ',
+                    largeText: 'Deleting old or unnecessary emails can reduce the amount of storage space needed on servers, leading to lower energy consumption and carbon emissions. With a single email producing an average of 4 grams of CO2 emissions',
+                },
+            ],
+            type: 'environmental'
+        },
+
+        tips: [
+            {
+                id: "ddc6ce14bd798f60",
+                text: "Make it a habit to delete old emails regularly to reduce your carbon footprint and contribute to a more sustainable future.",
+            },
+            {
+                id: "055060e5408fcf25",
+                text: "Remember, even small actions can make a big impact on the environment.",
+            },
+            {
+                id: "17b75b356a1e021b",
+                text: "Make it a habit to delete old emails regularly to reduce your carbon footprint and contribute to a more sustainable future.\n",
+            },
+        ],
+
+        reward: [
+            {
+                amount: 100,
+                text: 'You will receive 1 point for each email you delete, for a maximum of 100 points.',
+            },
+            {
+                amount: 100,
+                text: 'Additionally, every 50 emails deleted will get you another 10 points, for a maximum of 100 points.',
+            },
+        ],
+
+        moreInformation: 'Did you know that every year, the world\'s data centers consume more energy than the entire United Kingdom? And did you know that a single email produces an average of 4 grams of CO2 emissions? It\'s time to take action and reduce our digital footprint.',
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        id: "3",
         coverImage: 'take_card_mindful_moment.png',
         title: 'Mindful Moment',
         author: 'Anonymous Bee',
@@ -78,31 +346,308 @@ const template =
         ],
 
         bonus: '',
-    };
-
-const cardOnlyTemplate = {
-    id: '',
-    title: '',
-    author: '',
-    coverImage: '.png',
-    subject: '',
-    category: '',
-    impact:
-        {
-            type: 'social'
-        },
-    coins: 100,
-    progress: 0,
-    duration: 60,
-    participants: 123,
-};
+    },
 
 
 
 
 
-const takeData = [
+
     {
+        id: "3",
+        coverImage: 'take_card_mindful_moment.png',
+        title: 'Mindful Moment',
+        author: 'Anonymous Bee',
+        impactType: 'Wellness',
+        subject: "Wellness",
+        shortDescription: 'Reduce unnecessary energy usage in seconds',
+        description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
+        coins: 300,
+        progress: 20,
+        category: 'For you',
+        duration: 7200,
+        durationText: '5 days, starting Monday 15/4/2023',
+        numberOfTasks: 5,
+        location: 'Online',
+        difficultyLevel: 'Hard',
+        participants: 123,
+
+
+        tasks: [
+            {
+                id: 1,
+                validateText: 'How do you feel after 15 minutes of meditation?',
+                shortText: 'Have a 15-minute meditation',
+                longText: '',
+            },
+        ],
+
+
+        galleryItems: [
+            {
+                id: "1",
+                text: 'Link to the podcast!',
+                image: 'give_card_renovation_day_home.png'
+            },
+            {
+                id: "2",
+                text: 'Link to the podcast?',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    name: 'Someone',
+                    profileImage: 'profile_image_3.jpeg'
+                },
+            },
+        ],
+
+        impact: {
+            causes: [
+                {
+                    id: 1,
+                    text: 'Happy',
+                    icon: 'happy',
+                    infoText: 'Happy',
+                    boldText: '',
+                    largeText: '',
+                },
+            ],
+            text: 'Emotional Well-Being',
+            type: 'Social'
+        },
+
+        tips: [
+            {
+                text: "",
+                id: 1,
+            },
+        ],
+
+        moreInformation: '',
+
+        reward: [
+            {
+                amount: 50,
+                text: ''
+            }
+        ],
+
+        bonus: '',
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        id: "3",
+        coverImage: 'take_card_mindful_moment.png',
+        title: 'Mindful Moment',
+        author: 'Anonymous Bee',
+        impactType: 'Wellness',
+        subject: "Wellness",
+        shortDescription: 'Reduce unnecessary energy usage in seconds',
+        description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
+        coins: 300,
+        progress: 20,
+        category: 'For you',
+        duration: 7200,
+        durationText: '5 days, starting Monday 15/4/2023',
+        numberOfTasks: 5,
+        location: 'Online',
+        difficultyLevel: 'Hard',
+        participants: 123,
+
+
+        tasks: [
+            {
+                id: 1,
+                validateText: 'How do you feel after 15 minutes of meditation?',
+                shortText: 'Have a 15-minute meditation',
+                longText: '',
+            },
+        ],
+
+
+        galleryItems: [
+            {
+                id: "1",
+                text: 'Link to the podcast!',
+                image: 'give_card_renovation_day_home.png'
+            },
+            {
+                id: "2",
+                text: 'Link to the podcast?',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    name: 'Someone',
+                    profileImage: 'profile_image_3.jpeg'
+                },
+            },
+        ],
+
+        impact: {
+            causes: [
+                {
+                    id: 1,
+                    text: 'Happy',
+                    icon: 'happy',
+                    infoText: 'Happy',
+                    boldText: '',
+                    largeText: '',
+                },
+            ],
+            text: 'Emotional Well-Being',
+            type: 'Social'
+        },
+
+        tips: [
+            {
+                text: "",
+                id: 1,
+            },
+        ],
+
+        moreInformation: '',
+
+        reward: [
+            {
+                amount: 50,
+                text: ''
+            }
+        ],
+
+        bonus: '',
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+        id: "3",
+        coverImage: 'take_card_mindful_moment.png',
+        title: 'Mindful Moment',
+        author: 'Anonymous Bee',
+        impactType: 'Wellness',
+        subject: "Wellness",
+        shortDescription: 'Reduce unnecessary energy usage in seconds',
+        description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
+        coins: 300,
+        progress: 20,
+        category: 'For you',
+        duration: 7200,
+        durationText: '5 days, starting Monday 15/4/2023',
+        numberOfTasks: 5,
+        location: 'Online',
+        difficultyLevel: 'Hard',
+        participants: 123,
+
+
+        tasks: [
+            {
+                id: 1,
+                validateText: 'How do you feel after 15 minutes of meditation?',
+                shortText: 'Have a 15-minute meditation',
+                longText: '',
+            },
+        ],
+
+
+        galleryItems: [
+            {
+                id: "1",
+                text: 'Link to the podcast!',
+                image: 'give_card_renovation_day_home.png'
+            },
+            {
+                id: "2",
+                text: 'Link to the podcast?',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    name: 'Someone',
+                    profileImage: 'profile_image_3.jpeg'
+                },
+            },
+        ],
+
+        impact: {
+            causes: [
+                {
+                    id: 1,
+                    text: 'Happy',
+                    icon: 'happy',
+                    infoText: 'Happy',
+                    boldText: '',
+                    largeText: '',
+                },
+            ],
+            text: 'Emotional Well-Being',
+            type: 'Social'
+        },
+
+        tips: [
+            {
+                text: "",
+                id: 1,
+            },
+        ],
+
+        moreInformation: '',
+
+        reward: [
+            {
+                amount: 50,
+                text: ''
+            }
+        ],
+
+        bonus: '',
+    },
+
+
+
+
+
+
+];
+
+/* {
         breed: 'Individual', // Either competition, Individual, or Group Challenge.
         onboarding: 'A single email produces an average of 4 grams of CO2 emissions. While it may not seem like much, the carbon footprint of billions of emails sent every day can quickly add up.',
         id: "11",
@@ -583,6 +1128,6 @@ const takeData = [
         difficultyLevel: 'Hard',
         participants: 31,
     }
-];
+ */
 
 export default takeData;

@@ -96,8 +96,9 @@ const TopAfterStarted = ({
                 </div>
 
                 <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
-                <div dangerouslySetInnerHTML={{__html: tasks[currentTask].longText}}></div>
-                <ExpandedProgressBar numberOfTasks={numberOfTasks} numberOfFulfilledTasks={currentTask + 1} viewedTask={currentTask}/>
+                <div dangerouslySetInnerHTML={{__html: tasks[currentTask]?.longText}}></div>
+                <ExpandedProgressBar numberOfTasks={numberOfTasks} numberOfFulfilledTasks={currentTask + 1}
+                                     viewedTask={currentTask}/>
             </div>
             <div className="min-w-[370px] flex flex-col items-center">
                 <Leaderboard take={take}/>
@@ -121,7 +122,7 @@ export default function TakePage({user}) {
 
     useEffect(() => {
         if (id) {
-            if (currentTask + 1 === numberOfTasks) {
+            if (currentTask === numberOfTasks) {
                 setDisplayCongratsPopUp(true);
                 setCurrentTask(0);
             }
@@ -162,11 +163,13 @@ export default function TakePage({user}) {
         info,
         reward,
         tips,
+        whatToDo,
         impact,
         tasks,
         description,
         participants,
         numberOfTasks,
+        moreInformation,
     } = take;
 
 
@@ -174,7 +177,7 @@ export default function TakePage({user}) {
         <>
             <InvitePopUp display={displayInvitePopUp} setDisplay={setDisplayInvitePopUp}/>
             <ValidationPopUp setCurrentTask={setCurrentTask} display={displayValidationPopUp}
-                             setDisplay={setDisplayValidationPopUp} question={tasks[currentTask].validateText}/>
+                             setDisplay={setDisplayValidationPopUp} question={tasks[currentTask]?.validateText}/>
             <CongratsPopUp display={displayCongratsPopUp} setDisplay={setDisplayCongratsPopUp}/>
             <div
                 className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
@@ -186,7 +189,7 @@ export default function TakePage({user}) {
 
 
                 {started && <Gallery placeholderText={placeholderText} items={galleryItems} taskNum={currentTask + 1}
-                                     task={tasks[currentTask].shortText}/>}
+                                     task={tasks[currentTask]?.shortText}/>}
 
                 <ImportantDetails take={take} setStarted={setStarted} started={started}
                                   setDisplayInvitePopUp={setDisplayInvitePopUp}/>
@@ -195,11 +198,11 @@ export default function TakePage({user}) {
                 {/*Detailed details*/}
                 <div className="space-y-5">
                     <h1 className="font-bold">Description</h1>
-                    <p>{description}</p>
+                    <p className="text-gray">{description}</p>
                 </div>
-                {tasks && <div className="space-y-5">
-                    <h1 className="font-bold">Task</h1>
-                    <ul className="list-disc pl-4">{tasks.map(task => <li key={task.id}>{task.shortText}</li>)}</ul>
+                {whatToDo && <div className="space-y-5">
+                    <h1 className="font-bold">What to do?</h1>
+                    <p className="text-gray">{whatToDo}</p>
                 </div>}
                 {impact && <div className="space-y-5">
                     <h1 className="font-bold">Impact</h1>
@@ -209,7 +212,7 @@ export default function TakePage({user}) {
                     <div className="space-y-5">
                         <h1 className="font-bold">Tips</h1>
                         {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
-                        <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}>{tip.text}</li>)}</ul>
+                        <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}  className="text-gray">{tip.text}</li>)}</ul>
                     </div>}
                 {reward &&
                     <div className="space-y-5">
@@ -271,6 +274,10 @@ export default function TakePage({user}) {
                         </div>
                         <TransparentButton className="text-sm mt-2">See more</TransparentButton>
                     </div>}
+                {moreInformation && <div className="space-y-5">
+                    <h1 className="font-bold">More Information</h1>
+                    <p className="text-gray">{moreInformation}</p>
+                </div>}
             </div>
         </>
     )
