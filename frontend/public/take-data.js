@@ -175,6 +175,13 @@ const takeData = [
     },
 
 
+
+
+
+
+
+
+
     {
         galleryItems: [
             {
@@ -235,7 +242,6 @@ const takeData = [
 
 
         ],
-        placeholderText: "Paste your podcast's link here",
         impact: {
             causes: ['Happy'],
             text: 'Emotional Well-Being',
@@ -303,6 +309,18 @@ const takeData = [
         difficultyLevel: 'Easy',
         participants: 30,
     },
+
+
+
+
+
+
+
+
+
+
+
+
     {
         galleryItems: [
             {
@@ -363,38 +381,46 @@ const takeData = [
         ],
         placeholderText: "Paste your podcast's link here",
         impact: {
-            causes: ['Happy'],
+            causes: [
+                {
+                    id: 1,
+                    text: 'Happy',
+                    icon: 'happy',
+                    link: 'odsjsa',
+                    infoText: 'Happy',
+                },
+            ],
             text: 'Emotional Well-Being',
             type: 'Social'
         },
         tasks: [
             {
                 id: 1,
-                validateText: 'How do you feel after 15 minutes of mediation?',
+                validateText: 'How do you feel after 15 minutes of meditation?',
                 shortText: 'Have a 15-minute meditation',
                 longText: 'Day 1: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 1" and answer a short question.',
             },
             {
                 id: 2,
-                validateText: 'How do you feel after 15 minutes of mediation?',
+                validateText: 'How do you feel after 15 minutes of meditation?',
                 shortText: 'Have a 15-minute meditation',
                 longText: 'Day 2: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 2" and answer a short question.',
             },
             {
                 id: 3,
-                validateText: 'How do you feel after 15 minutes of mediation?',
+                validateText: 'How do you feel after 15 minutes of meditation?',
                 shortText: 'Have a 15-minute meditation',
                 longText: 'Day 3: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 3" and answer a short question.',
             },
             {
                 id: 4,
-                validateText: 'How do you feel after 15 minutes of mediation?',
+                validateText: 'How do you feel after 15 minutes of meditation?',
                 shortText: 'Have a 15-minute meditation',
                 longText: 'Day 4: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 4" and answer a short question.',
             },
             {
                 id: 5,
-                validateText: 'How do you feel after 15 minutes of mediation?',
+                validateText: 'How do you feel after 15 minutes of meditation?',
                 shortText: 'Have a 15-minute meditation',
                 longText: 'Day 5: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 5" and answer a short question.',
             },
@@ -446,6 +472,19 @@ const takeData = [
         difficultyLevel: 'Hard',
         participants: 123,
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
     {
         id: "4",
         coverImage: 'take_card_recycling_marathon.png',

@@ -12,6 +12,7 @@ import ImpactGraphic from "@components/components/impact-graphic/impact-graphic"
 import Gallery from "@components/components/gallery/gallery";
 import InvitePopUp from "@components/components/pop-ups/invite-pop-up/invite-pop-up";
 import CongratsPopUp from "@components/components/pop-ups/congrats-pop-up/congrats-pop-up";
+import ExpandedProgressBar from "@components/components/expanded-progress-bar/expanded-progress-bar";
 
 const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) => {
     const {
@@ -71,13 +72,12 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
 };
 const TopAfterStarted = ({
                              take,
-                             setStarted,
                              currentTask,
                              setDisplayValidationPopUp,
                              handleLeaveChallenge,
                              handleInviteFriends
                          }) => {
-    const {title, tasks} = take;
+    const {tasks, numberOfTasks} = take;
 
 
     return (
@@ -91,9 +91,9 @@ const TopAfterStarted = ({
                     <TransparentButton className="px-2" onClick={handleInviteFriends}>Invite Friends</TransparentButton>
                 </div>
 
-                <h1 className="text-2xl font-bold">{title}</h1>
                 <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
                 <div dangerouslySetInnerHTML={{__html: tasks[currentTask].longText}}></div>
+                <ExpandedProgressBar numberOfTasks={numberOfTasks} numberOfFulfilledTasks={currentTask + 1} viewedTask={currentTask}/>
             </div>
             <div className="min-w-[370px] flex flex-col items-center">
                 <Leaderboard take={take}/>

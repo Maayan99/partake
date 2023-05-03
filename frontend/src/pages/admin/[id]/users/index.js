@@ -87,7 +87,7 @@ export default function AdminUsers() {
 
                 <tr className="bg-important-blue">
                     <td>
-                        <input type="checkbox" onClick={handleSelectAll}/>
+                        <input type="checkbox" onClick={handleSelectAll} checked={selected.length === filtered.length && selected.length !== 0}/>
                     </td>
                     <td>
                         <div className="flex">
