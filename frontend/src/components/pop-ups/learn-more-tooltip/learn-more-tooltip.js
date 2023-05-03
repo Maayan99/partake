@@ -1,7 +1,6 @@
 import IconButton from "@components/components/common/icon-button";
 import Icon from "@components/components/common/icon/icon";
 import CloseIcon from "@mui/icons-material/Close";
-import {useEffect, useRef} from "react";
 
 export default function LearnMoreTooltip({display, setDisplay, text}) {
     return (

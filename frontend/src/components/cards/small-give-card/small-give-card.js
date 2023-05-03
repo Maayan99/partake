@@ -10,29 +10,22 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
 import PrimaryButton from "@components/components/common/primary-button";
 import ParticipantsRow from "@components/components/participants-row/participants-row";
+import Icon from "@components/components/common/icon/icon";
 
 const SmallGiveCard = ({give}) => {
-    const {id, coverImage, title, author, activityType, duration, donations, location, endDate} = give;
-
-    const getActivityIcon = () => {
-        switch (activityType) {
-            case 'Field':
-                return <PetsIcon style={{color: "sandybrown"}}/>;
-            case 'Online':
-                return <SignalWifiStatusbar4BarIcon style={{color: "teal"}}/>;
-            case 'Goods Donation':
-                return <ShoppingBasketIcon style={{color: "red"}}/>
-            case 'Fundraising':
-                return <MonetizationOnIcon style={{color: "red"}}/>
-            default:
-                return null;
-        }
-    };
+    const {id, coverImage, title, author, activityType, duration, donations, location, endDate, participants} = give;
 
     const handleClick = () => {
         window.location.href = `give/${id}`
     }
 
+    const activityTypeDictionary =
+        {
+            online: 'Online Volunteering',
+            field: 'Field Volunteering',
+            donation: 'Donation',
+            goods_donation: 'Goods Donation'
+        };
 
     return (
         <div className="bg-white  w-80 h-80 min-w-[320px] rounded-lg shadow-md transition-all duration-150
@@ -41,8 +34,8 @@ const SmallGiveCard = ({give}) => {
                      style={{backgroundImage: `linear-gradient(to bottom, transparent 10%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
                     <div className="mt-2.5 ml-2.5">
                         <div className="flex bg-white rounded-full w-fit py-1 px-3 items-center">
-                            {getActivityIcon()}
-                            <p className="ml-2.5 text-xs">{activityType}</p>
+                            <Icon name={activityType} className="h-5"/>
+                            <p className="ml-2.5 text-xs">{activityTypeDictionary[activityType]}</p>
                         </div>
                     </div>
 
@@ -59,29 +52,28 @@ const SmallGiveCard = ({give}) => {
                 <div>
                     <div className="flex justify-around p-2.5">
                         <div className="flex gap-2 items-center">
-                            <div className="flex flex-col justify-center items-center border-solid border-2
+                            {duration && <div className="flex flex-col justify-center items-center border-solid border-2
                             border-blue rounded-full p-1.5 w-9 h-9 text-blue">
                                 <AccessTimeIcon fontSize="8pt"/>
                                 <p className="text-xs">{duration}</p>
-                            </div>
-                            {donations ?
+                            </div>}
+                            {donations &&
                                 <div className="flex flex-col justify-center items-center border-solid border-2
                             border-blue rounded-full p-1.5 w-9 h-9 text-blue">
                                     <ShoppingBasketIcon/>
-                                </div> : <div/>
-                            }
+                                </div>}
                         </div>
-                        <div className="flex items-center text-gray">
+                        {location && <div className="flex items-center text-gray">
                             <LocationOnIcon/>
                             <p className="text-xs">{location}</p>
-                        </div>
+                        </div>}
                         <div className="flex items-center text-gray">
                             <CalendarMonthIcon/>
                             <p className="text-xs">{endDate}</p>
                         </div>
                     </div>
                     <div className="flex justify-between">
-                        <ParticipantsRow/>
+                        {participants ? <ParticipantsRow/> : <div></div>}
                         <PrimaryButton className="m-2.5">Give help</PrimaryButton>
                     </div>
                 </div>
