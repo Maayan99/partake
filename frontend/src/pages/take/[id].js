@@ -80,6 +80,10 @@ const TopAfterStarted = ({
     const {tasks, numberOfTasks} = take;
 
 
+    const handleShowValidation = () => {
+        setDisplayValidationPopUp(true)
+    }
+
     return (
         <div className="col-span-3 flex space-x-14 w-full lg:h-[500px]">
             <div className="w-1/2 min-w-[370px]">
@@ -97,7 +101,7 @@ const TopAfterStarted = ({
             </div>
             <div className="min-w-[370px] flex flex-col items-center">
                 <Leaderboard take={take}/>
-                <BlueButton className="mt-4 text-2xl" onClick={() => setDisplayValidationPopUp(true)}>Validate
+                <BlueButton className="mt-4 text-2xl" onClick={handleShowValidation}>Validate
                     Task {currentTask + 1}</BlueButton>
             </div>
         </div>

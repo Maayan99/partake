@@ -204,6 +204,7 @@ export default function Dashboard() {
                 text: 'Of CO2 Reduction',
                 icon: 'carbon',
                 infoText: 'Carbon emissions info',
+                largeText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at aliquet nisi, sed aliquet ipsum. Sed at aliquet nisi, sed aliquet ipsum. Sed at aliquet nisi, sed aliquet ipsum',
                 link: 'uhisdkd',
             },
             {
