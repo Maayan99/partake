@@ -6,6 +6,7 @@ import UnloggedHeader from "@components/layout/unlogged-header/unlogged-header";
 import React, {useEffect, useState} from "react";
 import AdminHeader from "@components/layout/admin-header/admin-header";
 import EmployeeHeader from "@components/layout/employee-header/employee-header";
+import ModeTooltip from "@components/layout/mode-header/mode-tooltip";
 
 
 export default function App({Component, pageProps}) {
@@ -40,7 +41,7 @@ export default function App({Component, pageProps}) {
 
     return (
         <>
-            {isAdmin ? <AdminHeader setIsAdmin={setIsAdmin}/> : <EmployeeHeader setIsAdmin={setIsAdmin}/>}
+            <ModeTooltip setIsAdmin={setIsAdmin} isAdmin={isAdmin}/>
             {loggedIn ? <Header/> : <UnloggedHeader/>}
             {loggedIn && <Nav isAdmin={isAdmin}/>}
             <Component loggedIn={loggedIn} setLoggedIn={setLoggedIn} {...pageProps} />

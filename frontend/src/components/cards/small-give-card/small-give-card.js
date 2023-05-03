@@ -50,7 +50,7 @@ const SmallGiveCard = ({give}) => {
                 </div>
 
                 <div>
-                    <div className="flex justify-around p-2.5">
+                    <div className="flex justify-around p-2.5 space-x-2">
                         <div className="flex gap-2 items-center">
                             {duration && <div className="flex flex-col justify-center items-center border-solid border-2
                             border-blue rounded-full p-1.5 w-9 h-9 text-blue">
@@ -63,14 +63,14 @@ const SmallGiveCard = ({give}) => {
                                     <ShoppingBasketIcon/>
                                 </div>}
                         </div>
-                        {location && <div className="flex items-center text-gray">
-                            <LocationOnIcon/>
+                        {location && <div className="flex items-center text-gray space-x-2">
+                            <Icon name="location"/>
                             <p className="text-xs">{location}</p>
                         </div>}
-                        <div className="flex items-center text-gray">
+                        {endDate && <div className="flex items-center text-gray">
                             <CalendarMonthIcon/>
                             <p className="text-xs">{endDate}</p>
-                        </div>
+                        </div>}
                     </div>
                     <div className="flex justify-between">
                         {participants ? <ParticipantsRow/> : <div></div>}

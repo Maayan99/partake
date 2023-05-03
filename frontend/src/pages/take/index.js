@@ -116,7 +116,8 @@ const BeforeSearch = () => {
                         <h1 className="text-3xl font-bold">{categoriesTitleDictionary[category]}</h1>
                         <ArrowForwardIosIcon/>
                     </div>
-                    <div className="flex pl-36 pt-5 space-x-5 overflow-y-visible">
+                    {/*pb-24 -mb-24 for overflow reasons*/}
+                    <div className="flex pl-36 pt-5 pb-24 -mb-24 space-x-5 overflow-x-auto">
                         {categoriesDictionary[category].map(take => <SmallTakeCard key={take.id} take={take}/>)}
                     </div>
                 </div>)}
