@@ -390,6 +390,22 @@ const takeData = [
 
 
 
+    // Third featured take
+    {
+        id: "0b395cd505248fa2",
+        coverImage: 'take_card_equality_diversity_inclusion.png',
+        title: 'Equality, Diversity, Inclusion',
+        author: 'Anonymous Bee',
+        subject: 'Diversity and Inclusion',
+        coins: 1000,
+        progress: 0,
+        category: 'Learning and Surveys',
+        duration: 60,
+        participants: 31,
+    },
+
+
+    // For you challenges
     {
         id: "3",
         coverImage: 'take_card_mindful_moment.png',
@@ -736,18 +752,6 @@ const takeData = [
         category: 'Learning and Surveys',
         duration: 30,
         participants: 164,
-    },
-    {
-        id: "0b395cd505248fa2",
-        coverImage: 'take_card_equality_diversity_inclusion.png',
-        title: 'Equality, Diversity, Inclusion',
-        author: 'Anonymous Bee',
-        subject: 'Diversity and Inclusion',
-        coins: 1000,
-        progress: 0,
-        category: 'Learning and Surveys',
-        duration: 60,
-        participants: 31,
     },
     {
         id: "948fe332bf68fb37",
