@@ -8,19 +8,35 @@ import AdminHeader from "@components/layout/admin-header/admin-header";
 import EmployeeHeader from "@components/layout/employee-header/employee-header";
 
 
-
 export default function App({Component, pageProps}) {
     const [loggedIn, setLoggedIn] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        if (sessionStorage.getItem("loggedIn") === "true") {
-            setLoggedIn(true);
-        } else {
-            setLoggedIn(false);
+        const load = async () => {
+            if (sessionStorage.getItem("loggedIn") === "true") {
+                setLoggedIn(true);
+            } else {
+                setLoggedIn(false);
+            }
+
+            if (sessionStorage.getItem("isAdmin") === "true") {
+                setIsAdmin(true);
+            } else {
+                setIsAdmin(false);
+            }
         }
+
+        load();
+        setLoaded(true);
+
     }, []);
 
+
+    if (!loaded) {
+        return <></>
+    }
 
     return (
         <>
@@ -29,5 +45,6 @@ export default function App({Component, pageProps}) {
             {loggedIn && <Nav isAdmin={isAdmin}/>}
             <Component loggedIn={loggedIn} setLoggedIn={setLoggedIn} {...pageProps} />
             <Footer/>
-        </>)
+        </>
+    )
 }

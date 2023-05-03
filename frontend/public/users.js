@@ -5,6 +5,9 @@ const users = [
         email: 'evithar1310@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_2.jpeg',
+        department: 'CEO',
+        impact: '2144',
+        coins: '312',
     },
     {
         id: 'oiuadsfhli1u31e',
@@ -12,6 +15,9 @@ const users = [
         email: 'doarnitai@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_3.jpeg',
+        department: 'Dev',
+        impact: '44',
+        coins: '12',
     },
     {
         id: 'owuadsfhli1u32e',
@@ -19,6 +25,9 @@ const users = [
         email: 'hil472@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_4.jpeg',
+        department: 'Dev',
+        impact: '8419',
+        coins: '123'
     },
     {
         id: 'oiuadsfhli1u32d',
@@ -26,6 +35,9 @@ const users = [
         email: 'ofergetz@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_5.jpeg',
+        department: 'Design',
+        impact: '23434',
+        coins: '2143'
     },
     {
         id: 'aiuadsfhvefwli1u32e',
@@ -33,6 +45,9 @@ const users = [
         email: 'osnat479@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_6.jpeg',
+        department: 'Content',
+        impact: '2144',
+        coins: '312',
     },
     {
         id: 'aiuads1hvefwli1u32e',
@@ -40,6 +55,9 @@ const users = [
         email: 'gelatin@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_6.jpeg',
+        department: 'Deparment.js',
+        impact: '1243',
+        coins: '213'
     },
     {
         id: 'aiua123hvefwli1u32e',
@@ -47,6 +65,9 @@ const users = [
         email: 'muhamad@gmail.com',
         password: 'helloworld',
         profileImage: 'profile_image_6.jpeg',
+        department: 'Boxing',
+        impact: '2144',
+        coins: '312'
     },
 ]
 

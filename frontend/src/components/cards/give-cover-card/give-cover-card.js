@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, CardContent, Typography} from '@mui/material';
 
-import TakeIcons from "@components/components/cards/take-icons/take-icons";
+import TakeIcons from "@components/components/take-icons/take-icons";
 
 const GiveCoverCard = ({give}) => {
     const {coverImage, title, author, impactType, coins, duration} = give;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TakeIcons from "@components/components/cards/take-icons/take-icons";
+import TakeIcons from "@components/components/take-icons/take-icons";
 import BlueButton from "@components/components/common/blue-button";
 import ParticipantsRow from "@components/components/participants-row/participants-row";
 import ProgressBar from "@components/components/progress-bar/progress-bar";

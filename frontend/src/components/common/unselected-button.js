@@ -5,7 +5,7 @@ const UnselectedButton = (props) => {
 
     return (
         <button className={`${className} bg-transparent text-black py-2 px-6 rounded-full cursor-pointer
-        transition-all duration-300 hover:bg-blue hover:text-white text-3xl mx-2`} {...otherProps}>
+        transition-all duration-300 hover:scale-110 text-3xl mx-2`} {...otherProps}>
             {children}
         </button>
     );

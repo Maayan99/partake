@@ -1,7 +1,5 @@
 import StarIcon from "@mui/icons-material/Star";
-import MonitorHeartIcon from "@mui/icons-material/MonitorHeart";
-import PeopleIcon from "@mui/icons-material/People";
-import PublicIcon from "@mui/icons-material/Public";
+import Icon from "@components/components/common/icon/icon";
 
 
 export default function TakeIcons({impactType, coins, duration}) {
@@ -30,11 +28,11 @@ export default function TakeIcons({impactType, coins, duration}) {
     const getImpactIcon = () => {
         switch (impactType) {
             case 'Wellness':
-                return <MonitorHeartIcon/>;
+                return <Icon name="wellness"/>
             case 'Social':
-                return <PeopleIcon/>;
+                return <Icon name="social"/>;
             case 'Environment':
-                return <PublicIcon/>;
+                return <Icon name="environmental"/>;
             default:
                 return null;
         }
@@ -44,7 +42,7 @@ export default function TakeIcons({impactType, coins, duration}) {
     return (
         <div className="mt-2.5 ml-2.5 flex gap-2">
             {impactType ? <div className="flex flex-col justify-center items-center bg-white
-            border-solid border-2 border-blue rounded-full p-1 w-12 h-12 text-blue">{getImpactIcon()}</div> : <></>}
+            border-solid border-2 border-blue rounded-full p-2 w-12 h-12 text-blue">{getImpactIcon()}</div> : <></>}
             <div className="flex flex-col justify-center items-center bg-white
             border-solid border-2 border-blue rounded-full p-1 w-12 h-12 text-blue">
                 <StarIcon/>

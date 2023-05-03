@@ -8,6 +8,16 @@
         @apply text-2xl;
     }
 
+
+    th {
+        padding: 12px 20px 12px 20px;
+        text-align: left;
+    }
+
+    td {
+        padding: 12px 20px 12px 20px;
+    }
+
     select {
         background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b6/Eo_circle_blue_arrow-down.svg");
         background-repeat: no-repeat;
