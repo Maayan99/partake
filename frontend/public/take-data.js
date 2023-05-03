@@ -100,6 +100,7 @@ const cardOnlyTemplate = {
 
 
 const takeData = [
+    // First featured take (big card)
     {
         id: "b1c7051da1bc43ad",
         coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
@@ -266,16 +267,16 @@ const takeData = [
 
 
 
-
+    //Second featured take
     {
-        id: "3",
+        id: "a6289983652a8ef8",
         coverImage: 'take_card_mindful_moment.png',
         title: 'Mindful Moment',
         author: 'Anonymous Bee',
         impactType: 'Wellness',
         subject: "Wellness",
-        shortDescription: 'Reduce unnecessary energy usage in seconds',
-        description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
+        shortDescription: 'Regular meditation in a workplace can help to reduce stress and promote relaxation.',
+        description: 'Taking a few minutes to meditate can help you calm your mind and refocus your energy. In this challenge, we encourage you to take a mindful moment every day for the next week.',
         coins: 300,
         progress: 20,
         category: 'For you',
@@ -284,7 +285,7 @@ const takeData = [
         numberOfTasks: 5,
         location: 'Online',
         difficultyLevel: 'Hard',
-        participants: 123,
+        participants: 243,
 
 
         tasks: [
@@ -292,7 +293,31 @@ const takeData = [
                 id: 1,
                 validateText: 'How do you feel after 15 minutes of meditation?',
                 shortText: 'Have a 15-minute meditation',
-                longText: '',
+                longText: 'Day 1: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 1" and answer a short question.',
+            },
+            {
+                id: 2,
+                validateText: 'How do you feel after 15 minutes of meditation?',
+                shortText: 'Have a 15-minute meditation',
+                longText: 'Day 2: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 2" and answer a short question.',
+            },
+            {
+                id: 3,
+                validateText: 'How do you feel after 15 minutes of meditation?',
+                shortText: 'Have a 15-minute meditation',
+                longText: 'Day 3: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 3" and answer a short question.',
+            },
+            {
+                id: 4,
+                validateText: 'How do you feel after 15 minutes of meditation?',
+                shortText: 'Have a 15-minute meditation',
+                longText: 'Day 4: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 4" and answer a short question.',
+            },
+            {
+                id: 5,
+                validateText: 'How do you feel after 15 minutes of meditation?',
+                shortText: 'Have a 15-minute meditation',
+                longText: 'Day 5: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 5" and answer a short question.',
             },
         ],
 
@@ -331,21 +356,33 @@ const takeData = [
 
         tips: [
             {
-                text: "",
-                id: 1,
+                id: "3c7c28290fa0b40c",
+                text: "Choose a time of day when you can dedicate a few minutes to yourself without interruption.",
+            },
+            {
+                id: "44e3e1aadb502387",
+                text: "Find a quiet place where you can meditate comfortably.",
+            },
+            {
+                id: "842fe8e029d688b2",
+                text: "Don't worry if your mind wanders during meditation, it's normal. Simply acknowledge your thoughts and refocus your attention on your breath.",
+            },
+            {
+                id: "dc622a83dbabc447",
+                text: "Experiment with different types of meditations offered by the Headspace app to find what works best for you.",
+            },
+            {
+                id: "a6abbb6462008676",
+                text: "Encourage your colleagues to participate and share their experience. Together, we can create a more mindful workplace!",
             },
         ],
 
-        moreInformation: '',
-
         reward: [
             {
-                amount: 50,
-                text: ''
+                amount: 140,
+                text: 'You will receive 10 points for each day that you meditate using the Headspace app, for a total of 140 points.'
             }
         ],
-
-        bonus: '',
     },
 
 
@@ -643,6 +680,104 @@ const takeData = [
 
 
 
+
+    {
+        id: "73018c53b97334d9",
+        coverImage: 'take_card_recycling_marathon.png',
+        title: "Recycling Marathon",
+        author: 'Anonymous Bee',
+        impact: {
+            type: 'environmental'
+        },
+        subject: 'Sustainability',
+        coins: 300,
+        progress: 0,
+        category: 'For you',
+        duration: 20160,
+        participants: 100,
+    },
+    {
+        id: "416171eef1bf987b",
+        coverImage: 'take_card_fun_facts.png',
+        title: 'Fun Facts',
+        author: 'Anonymous Bee',
+        impact: {
+            type: 'wellness'
+        },
+        subject: 'Wellness',
+        coins: 50,
+        progress: 0,
+        category: 'Popular',
+        duration: 10,
+        participants: 500,
+    },
+    {
+        id: "8b5906d96ec1cbb7",
+        coverImage: 'take_card_pub_quiz.png',
+        title: 'Pub Quiz',
+        author: 'Anonymous Bee',
+        impact: {
+            type: 'wellness',
+        },
+        subject: 'Social Connection',
+        coins: 300,
+        progress: 0,
+        category: 'Popular',
+        participants: 20,
+    },
+    {
+        id: "460bd61f793c16bd",
+        coverImage: 'take_card_cyber_security.png',
+        title: 'Cyber Security',
+        author: 'Anonymous Bee',
+        subject: 'Training and Development',
+        coins: 500,
+        progress: 0,
+        category: 'Learning and Surveys',
+        duration: 30,
+        participants: 164,
+    },
+    {
+        id: "0b395cd505248fa2",
+        coverImage: 'take_card_equality_diversity_inclusion.png',
+        title: 'Equality, Diversity, Inclusion',
+        author: 'Anonymous Bee',
+        subject: 'Diversity and Inclusion',
+        coins: 1000,
+        progress: 0,
+        category: 'Learning and Surveys',
+        duration: 60,
+        participants: 31,
+    },
+    {
+        id: "948fe332bf68fb37",
+        coverImage: 'take_card_office_flex.png',
+        title: 'Office Flex',
+        author: 'Anonymous Bee',
+        impact: {
+            type: 'wellness',
+        },
+        subject: 'Social Connection',
+        coins: 200,
+        progress: 0,
+        category: 'For you',
+        participants: 31,
+    },
+    {
+        id: "8ef17a519c62a6b5",
+        coverImage: 'take_card_crave_for_health.png',
+        title: 'Crave for Health',
+        author: 'Anonymous Bee',
+        impact: {
+            type: 'wellness',
+        },
+        subject: 'Wellness',
+        coins: 50,
+        progress: 0,
+        category: 'Popular',
+        duration: 1440,
+        participants: 31,
+    }
 
 
 ];
@@ -939,38 +1074,7 @@ const takeData = [
             text: 'Emotional Well-Being',
             type: 'Social'
         },
-        tasks: [
-            {
-                id: 1,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 1: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 1" and answer a short question.',
-            },
-            {
-                id: 2,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 2: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 2" and answer a short question.',
-            },
-            {
-                id: 3,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 3: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 3" and answer a short question.',
-            },
-            {
-                id: 4,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 4: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 4" and answer a short question.',
-            },
-            {
-                id: 5,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 5: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 5" and answer a short question.',
-            },
-        ],
+
         tips: [
             {
                 text: "Choose a podcast that you’ve been wanting to listen to but haven’t had the chance to.",

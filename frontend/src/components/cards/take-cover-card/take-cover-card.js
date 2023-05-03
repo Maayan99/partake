@@ -4,7 +4,9 @@ import {Card, CardContent, Typography} from '@mui/material';
 import TakeIcons from "@components/components/take-icons/take-icons";
 
 const TakeCoverCard = ({take}) => {
-    const {coverImage, title, author, impactType, coins, duration} = take;
+    const {coverImage, title, author, impact, coins, duration} = take;
+
+    const impactType = impact.type;
 
     return (
         <div

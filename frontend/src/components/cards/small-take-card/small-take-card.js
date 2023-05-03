@@ -6,9 +6,9 @@ import ParticipantsRow from "@components/components/participants-row/participant
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 const SmallTakeCard = ({take}) => {
-    const {id, coverImage, title, author, impactType, coins, progress, duration, shortDescription, participants} = take;
+    const {id, coverImage, title, author, impact, coins, progress, duration, shortDescription, participants} = take;
 
-    const userProgress = progress;
+    const impactType = impact?.type;
 
     const handleClick = () => {
         window.location.href = `take/${id}`
@@ -32,7 +32,7 @@ const SmallTakeCard = ({take}) => {
                         </p>
                     </div>
                 </div>
-                <ProgressBar percentage={userProgress}/>
+                <ProgressBar percentage={progress}/>
                 <div className="opacity-0 flex flex-col content-center transition-all duration-100 group-hover:opacity-100">
                     <p className="text-center  m-1.5">{shortDescription}</p>
                     <div className="flex justify-between px-2.5">
