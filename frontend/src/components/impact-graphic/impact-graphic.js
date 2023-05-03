@@ -8,7 +8,7 @@ const ImpactCause = ({impactCause}) => {
     const [keepDisplayingTooltip, setKeepDisplayingTooltip] = useState(false);
 
     return (
-        <div className="flex flex-col items-center justify-between space-y-3">
+        <div className="flex flex-col items-center justify-between">
             <Icon name={impactCause.icon} className="w-12 h-12"/>
             {impactCause.boldText && <span className="font-bold text-xl">{impactCause.boldText}</span>}
             <p className='mb-5'>{impactCause.text}</p>

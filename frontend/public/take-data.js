@@ -1,108 +1,110 @@
-const template = {
-    id: "12",
+const template =
+    {
+        id: "3",
+        coverImage: 'take_card_mindful_moment.png',
+        title: 'Mindful Moment',
+        author: 'Anonymous Bee',
+        impactType: 'Wellness',
+        subject: "Wellness",
+        shortDescription: 'Reduce unnecessary energy usage in seconds',
+        description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
+        coins: 300,
+        progress: 20,
+        category: 'For you',
+        duration: 7200,
+        durationText: '5 days, starting Monday 15/4/2023',
+        numberOfTasks: 5,
+        location: 'Online',
+        difficultyLevel: 'Hard',
+        participants: 123,
+
+
+        tasks: [
+            {
+                id: 1,
+                validateText: 'How do you feel after 15 minutes of meditation?',
+                shortText: 'Have a 15-minute meditation',
+                longText: '',
+            },
+        ],
+
+
+        galleryItems: [
+            {
+                id: "1",
+                text: 'Link to the podcast!',
+                image: 'give_card_renovation_day_home.png'
+            },
+            {
+                id: "2",
+                text: 'Link to the podcast?',
+                image: 'give_card_sustainable_farming_volunteer.png',
+                user: {
+                    name: 'Someone',
+                    profileImage: 'profile_image_3.jpeg'
+                },
+            },
+        ],
+
+        impact: {
+            causes: [
+                {
+                    id: 1,
+                    text: 'Happy',
+                    icon: 'happy',
+                    infoText: 'Happy',
+                    boldText: '',
+                    largeText: '',
+                },
+            ],
+            text: 'Emotional Well-Being',
+            type: 'Social'
+        },
+
+        tips: [
+            {
+                text: "",
+                id: 1,
+            },
+        ],
+
+        moreInformation: '',
+
+        reward: [
+            {
+                amount: 50,
+                text: ''
+            }
+        ],
+
+        bonus: '',
+    };
+
+const cardOnlyTemplate = {
+    id: '',
     title: '',
-    coverImage: '',
-    type: '',
-    onboarding: '',
-    description: '',
-    difficultyLevel: '',
-    duration: 1440,
-    location: '',
+    author: '',
+    coverImage: '.png',
+    subject: '',
+    category: '',
+    impact:
+        {
+            type: 'social'
+        },
     coins: 100,
-    tasks: '',
-    tasksValidation: [''],
-    tips: [''],
-    impact: {
-        causes: [],
-        type: '',
-    },
-    breed: '', // Either competition, Individual, or Group Challenge.
-    info: {
-        text: '',
-        link: '',
-    },
+    progress: 0,
+    duration: 60,
+    participants: 123,
 };
+
+
+
+
 
 const takeData = [
     {
-        id: "12",
-        title: 'Clean Inbox, Clean Conscience',
-        coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
-        type: 'Environmental',
-        onboarding: 'A single email produces an average of 4 grams of CO2 emissions. While it may not seem like much, the carbon footprint of billions of emails sent every day can quickly add up.',
-        description: "In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
-        difficultyLevel: 'Easy',
-        duration: 10,
-        location: 'Online',
-        coins: 100,
-        tasks: "Delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before  and another one  after.Don't forget to encourage your coworkers to participate as well!",
-        tasksValidation: ['Share the screenshot in the challenge feed'],
-        tips: ["1. Don’t forget to delete spam or sale emails.", '2. Unsubscribe from unnecessary emails you no longer need or want.', '3. Use labels to help you organize your email by category such as “work” or “personal”.', "Remember, even small actions can make a big impact on the environment."],
-        impact: {
-            type: 'Co2',
-            casues: ['Computer emissions'],
-        },
         breed: 'Individual', // Either competition, Individual, or Group Challenge.
-        info: {
-            text: '',
-            link: '',
-        },
-        progress: 0,
-
-    },
-    {
-        id: "13",
-        title: '',
-        coverImage: '',
-        type: '',
-        onboarding: '',
-        description: '',
-        difficultyLevel: '',
-        duration: 1440,
-        location: '',
-        coins: 100,
-        tasks: '',
-        tasksValidation: [''],
-        tips: [''],
-        impact: {
-            causes: [],
-            type: '',
-        },
-        breed: '',
-        info: {
-            text: '',
-            link: '',
-        },
-        progress: 0,
-    },
-    {
-        id: "14",
-        title: '',
-        coverImage: '',
-        type: '',
-        onboarding: '',
-        description: '',
-        difficultyLevel: '',
-        duration: 1440,
-        location: '',
-        coins: 100,
-        tasks: '',
-        tasksValidation: [''],
-        tips: [''],
-        impact: {
-            causes: [],
-            type: '',
-        },
-        breed: '',
-        info: {
-            text: '',
-            link: '',
-        },
-        progress: 0,
-
-    },
-
-    {
+        onboarding: 'A single email produces an average of 4 grams of CO2 emissions. While it may not seem like much, the carbon footprint of billions of emails sent every day can quickly add up.',
         id: "11",
         messages: [
             {
@@ -127,7 +129,7 @@ const takeData = [
         title: 'Clean Inbox, Clear Conscience',
         author: 'Anonymous Bee',
         impact: {
-            causes: ['CO2'],
+            causes: ['CO2', 'Computer emissions'],
             text: '1 deleted Email saves 4 grams of CO2',
             type: 'Environment'
         },
@@ -175,11 +177,20 @@ const takeData = [
     },
 
 
+    {
+        id: "jkasdn",
+        coverImage: 'take_card_stop_and_stare.png',
+        impactType: 'Wellness',
+        title: 'Stop and Stare',
+        author: 'Anonymous Bee',
+        progress: '10',
+        participants: 400,
+        numberOfTasks: 9,
+        coins: 200,
+        duration: 1440,
+        shortDescription: 'Staring sometimes is important for you mental health!'
 
-
-
-
-
+    },
 
 
     {
@@ -309,16 +320,6 @@ const takeData = [
         difficultyLevel: 'Easy',
         participants: 30,
     },
-
-
-
-
-
-
-
-
-
-
 
 
     {
@@ -472,17 +473,6 @@ const takeData = [
         difficultyLevel: 'Hard',
         participants: 123,
     },
-
-
-
-
-
-
-
-
-
-
-
 
 
     {

@@ -219,9 +219,9 @@ export default function TakePage({user}) {
                                 <div className="flex flex-col justify-center items-center bg-white
             border-solid border-2 border-blue rounded-full p-1 min-w-[80px] h-20 text-blue">
                                     <StarIcon/>
-                                    <p className="text-xs">{reward[0]}</p>
+                                    <p className="text-xs">{reward.amount}</p>
                                 </div>
-                                <p className="text-sm text-gray">{reward[1]}</p>
+                                <p className="text-sm text-gray">{reward.text}</p>
                             </div>
                         )
                         }</ul>

@@ -1,9 +1,6 @@
-import React, {useEffect} from 'react';
-import PublicIcon from '@mui/icons-material/Public';
-import PeopleIcon from '@mui/icons-material/People';
-import MonitorHeartIcon from '@mui/icons-material/MonitorHeart';
+import React from 'react';
 import StarIcon from '@mui/icons-material/Star';
-import users from "../../../public/users";
+import Icon from "@components/components/common/icon/icon";
 
 const Header = () => {
 
@@ -19,18 +16,18 @@ const Header = () => {
             <p>partake</p>
 
             <div className='flex items-center space-x-7'>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-7">
                     <p>My impact</p>
                     <div className="flex items-center space-x-3">
-                        <PublicIcon className="text-blue"/>
+                        <Icon name="environmental" className="h-5"/>
                         <p>1000</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                        <PeopleIcon className="text-blue"/>
+                        <Icon name="social-blue" className="h-5"/>
                         <p>2000</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                        <MonitorHeartIcon className="text-blue"/>
+                        <Icon name="wellness" className="h-5"/>
                         <p>491</p>
                     </div>
                 </div>
