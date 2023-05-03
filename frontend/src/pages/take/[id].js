@@ -36,7 +36,7 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
             <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
                 {!started && <div className="flex space-x-1 text-2xl">
                     <PrimaryButton onClick={handleStartChallenge}>Take Challenge</PrimaryButton>
-                    <TransparentButton onClick={handleInviteFriends}>Invite Friends</TransparentButton>
+                    <TransparentButton className="px-2" onClick={handleInviteFriends}>Invite Friends</TransparentButton>
                 </div>}
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
                     <div className="ml-10 space-y-2">
@@ -69,17 +69,16 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
         </>
     );
 };
-const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPopUp, setDisplayInvitePopUp}) => {
+const TopAfterStarted = ({
+                             take,
+                             setStarted,
+                             currentTask,
+                             setDisplayValidationPopUp,
+                             handleLeaveChallenge,
+                             handleInviteFriends
+                         }) => {
     const {title, tasks} = take;
 
-
-    const handleLeaveChallenge = () => {
-        setStarted(false);
-    }
-
-    const handleInviteFriends = () => {
-        setDisplayInvitePopUp(true);
-    }
 
     return (
         <div className="col-span-3 flex space-x-14 w-full lg:h-[500px]">
@@ -89,7 +88,7 @@ const TopAfterStarted = ({take, setStarted, currentTask, setDisplayValidationPop
             <div className="flex flex-col space-y-3">
                 <div className="flex space-x-1">
                     <PrimaryButton onClick={handleLeaveChallenge}>Challenge Taken</PrimaryButton>
-                    <TransparentButton onClick={handleInviteFriends}>Invite Friends</TransparentButton>
+                    <TransparentButton className="px-2" onClick={handleInviteFriends}>Invite Friends</TransparentButton>
                 </div>
 
                 <h1 className="text-2xl font-bold">{title}</h1>
@@ -144,6 +143,14 @@ export default function TakePage({user}) {
         return null;
     }
 
+    const handleLeaveChallenge = () => {
+        setStarted(false);
+    }
+
+    const handleInviteFriends = () => {
+        setDisplayInvitePopUp(true);
+    }
+
 
     const {
         galleryItems,
@@ -159,8 +166,6 @@ export default function TakePage({user}) {
     } = take;
 
 
-
-
     return (
         <>
             <InvitePopUp display={displayInvitePopUp} setDisplay={setDisplayInvitePopUp}/>
@@ -170,7 +175,8 @@ export default function TakePage({user}) {
             <div
                 className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
                 {started ?
-                    <TopAfterStarted take={take} setStarted={setStarted} setDisplayInvitePopUp={setDisplayInvitePopUp}
+                    <TopAfterStarted take={take} setStarted={setStarted} handleLeaveChallenge={handleLeaveChallenge}
+                                     handleInviteFriends={handleInviteFriends}
                                      setDisplayValidationPopUp={setDisplayValidationPopUp} currentTask={currentTask}/> :
                     <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
 
@@ -216,29 +222,51 @@ export default function TakePage({user}) {
                         )
                         }</ul>
                     </div>}
-                {participants && <div className="space-y-5">
-                    <h1 className="font-bold">Participants ({participants})</h1>
-                    <div className="grid grid-cols-6 gap-2 w-max">
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/200" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/201" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/202" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/203" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/204" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/205" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/206" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/207" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/208" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/209" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/210" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/211" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/212" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/213" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/214" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/215" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/216" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/217" alt="Profile"/>
-                    </div>
-                </div>}
+                {participants &&
+                    <div>
+                        <h1 className="font-bold">Participants ({participants})</h1>
+                        <TransparentButton className="text-sm mb-6 font-semibold" onClick={handleInviteFriends}>Invite
+                            Friends</TransparentButton>
+                        <div className="grid grid-cols-6 gap-2 w-max">
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_6.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_2.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_3.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_4.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_5.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_6.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_2.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_3.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_4.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_5.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_6.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_2.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_3.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_4.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_5.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_6.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_2.jpeg"
+                                 alt="Profile"/>
+                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile_image_3.jpeg"
+                                 alt="Profile"/>
+                        </div>
+                        <TransparentButton className="text-sm mt-2">See more</TransparentButton>
+                    </div>}
             </div>
         </>
     )

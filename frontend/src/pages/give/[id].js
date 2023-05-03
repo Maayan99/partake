@@ -70,7 +70,6 @@ const ImportantDetails = ({give}) => {
 
 
 export default function GivePage() {
-    const [displayValidationPopUp, setDisplayValidationPopUp] = useState(false);
 
     const router = useRouter();
     const {id} = router.query;
@@ -108,9 +107,7 @@ export default function GivePage() {
 
     return (
         <>
-            <ValidationPopUp display={displayValidationPopUp} setDisplay={setDisplayValidationPopUp}/>
-            <div
-                className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
+            <div className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20`}>
                 <GiveCoverCard className="md:col-span-2 lg:col-span-1" give={give}/>
 
 

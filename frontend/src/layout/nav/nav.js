@@ -43,8 +43,14 @@ const Nav = ({isAdmin}) => {
         setSelected(option);
     }, []);
 
-    const onOptionClick = (option) => {
-        window.location.href = '/' + option;
+    const handleOptionClick = (option) => {
+        if (option === 'admin') {
+            if (isAdmin) {
+                window.location.href = '/admin/oiuadsfhli1u32e/dashboard';
+            }
+        } else {
+            window.location.href = '/' + option;
+        }
     };
 
     return (
@@ -53,11 +59,11 @@ const Nav = ({isAdmin}) => {
             {options.map((option) => (
                 <div key={option}>
                     {selected === option ? (
-                        <SelectedButton onClick={() => onOptionClick(option)}>
+                        <SelectedButton onClick={() => handleOptionClick(option)}>
                             {capitalizedOptions[option]}
                         </SelectedButton>
                     ) : (
-                        <UnselectedButton onClick={() => onOptionClick(option)}>
+                        <UnselectedButton onClick={() => handleOptionClick(option)}>
                             {capitalizedOptions[option]}
                         </UnselectedButton>
                     )}

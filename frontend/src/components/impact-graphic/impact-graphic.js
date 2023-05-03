@@ -5,8 +5,8 @@ import PeopleIcon from "@mui/icons-material/People";
 import PublicIcon from "@mui/icons-material/Public";
 import InfoIcon from "@mui/icons-material/Info";
 
-const ImpactCaseIcon = ({impactCase}) => {
-    switch (impactCase) {
+const ImpactCauseIcon = ({impactCause}) => {
+    switch (impactCause) {
         case 'CO2':
             return <Co2Icon className="text-6xl"/>;
         case 'Happy':
@@ -28,7 +28,7 @@ const ImpactTypeIcon = ({impactType}) => {
 };
 
 export default function ImpactGraphic({impact, info}){
-    const impactCases = impact.cases;
+    const impactCauses = impact.causes;
     const impactText = impact.text;
     const impactType = impact.type;
 
@@ -41,7 +41,7 @@ export default function ImpactGraphic({impact, info}){
         <div className="flex flex-col justify-between text-sm">
             <div className="flex text-blue h-24 space-x-7">
                 <ImpactTypeIcon impactType={impactType}/>
-                {impactCases.map(impactCase => <ImpactCaseIcon key={impactCase} impactCase={impactCase}/>)}
+                {impactCauses.map(impactCause => <ImpactCauseIcon key={impactCause} impactCause={impactCause}/>)}
                 <p>{impactText}</p>
             </div>
             <div className="flex space-x-6 items-center group">
