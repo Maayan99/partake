@@ -4,7 +4,7 @@ import {Card, CardContent, Typography} from '@mui/material';
 import TakeIcons from "@components/components/take-icons/take-icons";
 
 const GiveCoverCard = ({give}) => {
-    const {coverImage, title, author, impactType, coins, duration} = give;
+    const {coverImage, title, author, impactType, coins, duration, sponsors} = give;
 
     return (
         <div
@@ -21,6 +21,11 @@ const GiveCoverCard = ({give}) => {
                 <p className="font-italics text-xl leading-snug drop-shadow-md">
                     by <em>{author}</em>
                 </p>
+                {sponsors && <div className='flex space-x-2'>
+                    {sponsors.map(sponsor => <img key={sponsor.id}
+                                                  src={`/assets/PNG/${sponsor.image}`} alt={sponsor.name}
+                    className="rounded-full object-cover h-10 w-10 bg-white"/>)}
+                </div>}
             </div>
         </div>
     );

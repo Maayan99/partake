@@ -6,7 +6,6 @@ const template = {
     author: '',
     about: '', //About the NGO or the Give
     description: "",
-    skillBased: false,
     skills: ['Coding', 'Teaching'],
     location: '',
     contactDetails:
@@ -39,7 +38,6 @@ const giveData = [
         author: 'מיד ליעד',
         about: 'Our charity collects donations of electricity products, furniture, and baby products to distribute to those who are struggling.', //About the NGO or the Give
         description: "If you want to make a difference in someone's life, simply call us and arrange a date for us to pick up your donations. We will ensure that your items go to a family that truly needs them, providing them with essential household items that they might not otherwise be able to afford. By donating to our charity, you can make a meaningful impact on the lives of those who are less fortunate, while also promoting sustainability by reducing waste. Contact us today to schedule your donation and help us make a positive difference in the world.",
-        skillBased: false,
         skills: ['', ''],
         location: 'Gush-Dan area',
         contactDetails:
@@ -50,7 +48,6 @@ const giveData = [
                 website: 'layaad.org.il',
             },
         reward: '',
-        category: 'For you',
         requirements: ['We deliver only furniture, electricity products and baby products', 'furniture and baby products must be in good condition', 'All electricity products must be working.'],
         impact:
             {
@@ -79,7 +76,6 @@ const giveData = [
         author: 'The Foundation for the welfare of holocaust victims',
         about: 'The Foundation for the welfare of holocaust victims”  is the central association for the care of Holocaust survivors in Israel. The foundation was established in 1994 by Holocaust survivors with the aim of assisting Holocaust survivors in Israel in all areas of welfare and providing them with medical, social, psychological and economic assistance so that they can live with dignity and improve their later years. ', //About the NGO or the Give
         description: 'The program helps Holocaust survivors acquire tablet usage skills with the assistance of volunteers. We are looking for a volunteer to visit a survivor once a week and guide them on various tablet uses based on their specific needs for about an hour. We also encourage social contact between the survivor and the volunteer, which can continue beyond the initial 5 months if both parties agree. A commitment of 5 months is required, which includes 3 weeks of online training, one session per week.',
-        skillBased: true,
         skills: ['Basic computer and tablet skills.', 'Teaching.', 'Communication.'],
         location: 'Online',
         contactDetails:
@@ -106,7 +102,6 @@ const giveData = [
         type: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'רשות הטבע והגנים & Clean Coin.',
         about: "Ein Gedi National Park is a nature reserve located in the Judean Desert of Israel, near the Dead Sea. The park features a lush oasis with waterfalls and streams, surrounded by dry desert mountains.The park is home to a variety of flora and fauna, including ibex, hyrax, and many species of birds. Ein Gedi is a popular destination for nature lovers, hikers, offering a unique and stunning contrast between the desert and oasis environments.Abraham Hostel's HR department is proud to partner with in and, “Israel Nature and Parks Authority” (רשות הטבע והגנים), to organize a day of hiking and cleaning one of Israel’s most unique places.", //About the NGO or the Givedescription: " Cleaning natural resort and national parks helps to reduce litter and waste, protect local wildlife, prevent pollution and enhance natural beauty of the park for visitors,Together, as volunteers we can make a positive impact, learn about the Ein-Gedi’s environment, wildlife and history. Ein-Gedi is a stunning natural reserve that can be enjoyed and preserved through volunteer efforts.",
-        skillBased: false,
         skills: ['Coding', 'Teaching'],
         location: 'Ein Gedi National Park',
         contactDetails:
@@ -133,7 +128,6 @@ const giveData = [
         author: 'צער בעלי חיים',
         about: "The animals in our shelters need your help to get through the winter in peace and warmth. We are at the beginning of winter and in much need of your donations.", //About the NGO or the Give
         description: "Come enlist and do good to all the animals in the shelter, helping fund heating lamps.A heating lamp can cost up to NIS 200 per unit, regardless of the high cost of electricity it consumes.Thanks to your donations, we are able to keep our heads above water and prevent the facility from closing down. Donations for animals also allow us to operate our clinic for longer hours, subsidize various surgeries and treatments, improve the conditions of the animals in our care, operate more rescue vehicles to assist animals in need, conduct educational activities for future generations, and more. Come and do good by donating from the bottom of your heart.",
-        skillBased: false,
         skills: ['Coding', 'Teaching'],
         location: '',
         contactDetails:
@@ -162,7 +156,6 @@ const giveData = [
         author: 'Kidum Noar- Kiryat Gat',
         about: '“Kidum-Noar" is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.', //About the NGO or the Give
         description: 'We are seeking volunteers for personal and educational mentoring in English for these students. Upon arrival at the center, you will establish a personal relationship with the teenager. The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied. Volunteering takes place on Sundays through Thursdays  from 6:00 PM to 8:00 PM, for at least two hours per week. The commitment is until the end of the academic year.',
-        skillBased: true,
         skills: ['English', 'Teaching', 'Mentoring', 'Coomunication'],
         location: '1 Ha’yasmin st., Kiryat Gat',
         contactDetails:
@@ -173,15 +166,30 @@ const giveData = [
             },
         reward: '',
         requirements: ['Languges:', 'English', 'Hebrew', 'Russian', 'Arabic', 'Amharic'],
-        impactType: 'Social',
-        impactReward: 'clock-  10-20  hours of volunteering',
-        impact: ['Education', 'Children and Youth', 'Strengthen Local community', 'Mentoring'],
+        impact: {
+            type: 'Social',
+            reward: 'clock-  10-20  hours of volunteering',
+            causes: ['Education', 'Children and Youth', 'Strengthen Local community', 'Mentoring'],
+        },
+
         timeDetails:
             {
                 endDate: 'Until the end of the academic year',
                 frequency: 'Once a week,',
                 duration: '10-20 hours',
             },
+        sponsors: [
+            {
+                id: '1',
+                name: 'Aroma',
+                image: 'aroma.png',
+            },
+            {
+                id: '1',
+                name: 'Reshut Hateva Vehaganim',
+                image: 'teva-ganim.jpeg',
+            },
+        ],
     },
     {
         id: '1',

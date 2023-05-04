@@ -94,8 +94,6 @@ export default function GivePage() {
 
 
     const {
-        messages,
-        placeholderText,
         info,
         reward,
         tips,
