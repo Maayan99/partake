@@ -178,18 +178,59 @@ const giveData = [
                 frequency: 'Once a week,',
                 duration: '10-20 hours',
             },
-        sponsors: [
+        sponsors:
             {
-                id: '1',
-                name: 'Aroma',
-                image: 'aroma.png',
+                text: 'Let the Animals Live is a non-profit organization that relies on the support of donations to continue our work in rescuing and rehabilitating animals in need. We do not receive any government funding and rely solely on the generosity of individuals and businesses to support our mission. Thank you for your support!',
+                array: [
+                    {
+                        id: '1',
+                        name: 'Aroma',
+                        image: 'aroma.png',
+                    },
+                    {
+                        id: '1',
+                        name: 'Reshut Hateva Vehaganim',
+                        image: 'teva-ganim.jpeg',
+                    },
+                ]
             },
-            {
-                id: '1',
-                name: 'Reshut Hateva Vehaganim',
-                image: 'teva-ganim.jpeg',
-            },
-        ],
+
+        additionalInfo: {
+            text: 'Don’t forget to bring hiking essentials:',
+            array: [
+                {
+                    id: "dasdsadsdaasd",
+                    text: '3 liters of water at least.',
+                },
+                {
+                    id: "fewhjlhjlfew",
+                    text: 'Sun Protection: Sunscreen, hat and sunglasses.',
+                },
+                {
+                    id: "bjkdvsjefwln",
+                    text: 'First aid kit such as band-aids, antiseptic and pain relievers.',
+                },
+                {
+                    id: "njkefsnasnl",
+                    text: 'Water shoes or hiking sandals for hiking in water.',
+                },
+                {
+                    id: "23h9r8ou8osdul",
+                    text: 'Optional: bathing suit.',
+                },
+                {
+                    id: "h23ru0soajsal",
+                    text: 'Food and snacks will be provided by the sponsor “clean coin”.',
+                },
+            ]
+        },
+
+        aboutTheCause: 'Cleaning natural resort and national parks helps to reduce litter and waste, protect local wildlife, prevent pollution and enhance natural beauty of the park for visitors, Together, as volunteers we can make a positive impact, learn about the Ein-Gedi’s environment, wildlife and history. Ein-Gedi is a stunning natural reserve that can be enjoyed and preserved through volunteer efforts.',
+
+
+        organizer: 'The event will be organized by “Israel Nature and Parks Authority“ ,(רשות הטבע והגנים) <br/> <a href="https://www.parks.org.il/"><span class="text-blue">https://www.parks.org.il/</span></a><br/> for any information please contact Shiri from the HR Department.',
+
+        participants: 421,
     },
     {
         id: '1',

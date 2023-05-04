@@ -94,13 +94,14 @@ export default function GivePage() {
 
 
     const {
-        info,
-        reward,
-        tips,
         impact,
         tasks,
         description,
         participants,
+        aboutTheCause,
+        additionalInfo,
+        organizer,
+        sponsors,
     } = give;
 
     return (
@@ -115,36 +116,35 @@ export default function GivePage() {
                 {/*Detailed details*/}
                 <div className="space-y-5">
                     <h1 className="font-bold">Description</h1>
-                    <p>{description}</p>
+                    <p className="text-gray">{description}</p>
                 </div>
                 {tasks && <div className="space-y-5">
                     <h1 className="font-bold">Task</h1>
-                    <ul className="list-disc pl-4">{tasks.map(task => <li key={task}>{task.shortText}</li>)}</ul>
+                    <ul className="list-disc pl-4">{tasks.map(task => <li key={task.id} className="text-gray">{task.shortText}</li>)}</ul>
                 </div>}
-                {impact && <div className="space-y-5">
-                    <h1 className="font-bold">Impact</h1>
-                    <ImpactGraphic impact={impact} info={info}/>
+                {aboutTheCause && <div className="space-y-5">
+                    <h1 className="font-bold">About the Cause</h1>
+                    <p className="text-gray">{aboutTheCause}</p>
                 </div>}
-                {tips &&
+                {sponsors &&
                     <div className="space-y-5">
-                        <h1 className="font-bold">Tips</h1>
-                        {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
-                        <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}>{tip}</li>)}</ul>
+                        <h1 className="font-bold">Sponsors</h1>
+                        <div className="flex">{sponsors.array.map(sponsor =>
+                            <img key={sponsor.id} src={`/assets/PNG/${sponsor.image}`}
+                                 className="h-16 w-16 rounded-full object-cover"/>)}</div>
+                        <p className="text-gray">{sponsors.text}</p>
                     </div>}
-                {reward &&
+                {impact && <ImpactGraphic impact={impact}/>}
+                {additionalInfo &&
                     <div className="space-y-5">
-                        <h1 className="font-bold">Reward</h1>
-                        <ul className="space-y-2">{reward.map(reward =>
-                            <div className="flex space-x-4">
-                                <div className="flex flex-col justify-center items-center bg-white
-            border-solid border-2 border-blue rounded-full p-1 min-w-[80px] h-20 text-blue">
-                                    <StarIcon/>
-                                    <p className="text-xs">{reward[0]}</p>
-                                </div>
-                                <p className="text-sm text-gray">{reward[1]}</p>
-                            </div>
-                        )
-                        }</ul>
+                        <h1 className="font-bold">Additional Information</h1>
+                        <p className="font-bold">{additionalInfo.text}</p>
+                        <ul className="list-disc pl-4">{additionalInfo.array.map(info => <li className="text-gray" key={info.id}>{info.text}</li>)}</ul>
+                    </div>}
+                {organizer &&
+                    <div className="space-y-5">
+                        <h1 className="font-bold">Event Organizer</h1>
+                        <div className="text-gray" dangerouslySetInnerHTML={{__html: organizer}}></div>
                     </div>}
                 {participants && <div className="space-y-5">
                     <h1 className="font-bold">Participants ({participants})</h1>
