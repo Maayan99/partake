@@ -82,6 +82,7 @@ const cardOnlyTemplate = {
     id: '',
     title: '',
     author: '',
+    shortDescription: '',
     coverImage: '.png',
     subject: '',
     category: '',
@@ -261,12 +262,6 @@ const takeData = [
 
 
 
-
-
-
-
-
-
     //Second featured take
     {
         id: "a6289983652a8ef8",
@@ -275,7 +270,7 @@ const takeData = [
         author: 'Anonymous Bee',
         impactType: 'Wellness',
         subject: "Wellness",
-        shortDescription: 'Regular meditation in a workplace can help to reduce stress and promote relaxation.',
+        shortDescription: 'Regular meditation in the workplace can help to reduce stress and promote relaxation.',
         description: 'Taking a few minutes to meditate can help you calm your mind and refocus your energy. In this challenge, we encourage you to take a mindful moment every day for the next week.',
         coins: 300,
         progress: 20,
