@@ -108,7 +108,7 @@ const takeData = [
         author: 'Anonymous Bee',
         impactType: 'environmental',
         subject: "Wellness",
-        shortDescription: 'Reduce unnecessary energy usage in seconds',
+        shortDescription: 'Reduce unnecessary energy usage in seconds and refresh your inbox',
         description: "Have you ever thought about the impact that deleting old emails can have on the environment? Every time you delete an email, you're reducing the amount of storage space needed on the server, which ultimately leads to lower energy consumption and carbon emissions. In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
         coins: 100,
         progress: 20,
@@ -397,6 +397,7 @@ const takeData = [
         title: 'Equality, Diversity, Inclusion',
         author: 'Anonymous Bee',
         subject: 'Diversity and Inclusion',
+        shortDescription: 'Equality and diversity in the workplace are essential for creating a positive work environment.',
         coins: 1000,
         progress: 0,
         category: 'Learning and Surveys',
@@ -702,6 +703,7 @@ const takeData = [
         coverImage: 'take_card_recycling_marathon.png',
         title: "Recycling Marathon",
         author: 'Anonymous Bee',
+        shortDescription: 'In this challenge you will compete with other employees and try to recycle as much as possible!',
         impact: {
             type: 'environmental'
         },
@@ -717,6 +719,7 @@ const takeData = [
         coverImage: 'take_card_fun_facts.png',
         title: 'Fun Facts',
         author: 'Anonymous Bee',
+        shortDescription: 'Tell us some fun facts about the office space and find out about new ones!',
         impact: {
             type: 'wellness'
         },
@@ -732,6 +735,7 @@ const takeData = [
         coverImage: 'take_card_pub_quiz.png',
         title: 'Pub Quiz',
         author: 'Anonymous Bee',
+        shortDescription: 'Where do you go after work? Share with otherss and find new places!',
         impact: {
             type: 'wellness',
         },
@@ -746,6 +750,7 @@ const takeData = [
         coverImage: 'take_card_cyber_security.png',
         title: 'Cyber Security',
         author: 'Anonymous Bee',
+        shortDescription: 'Cyber security can be critical. In this e-course you will learn all about it',
         subject: 'Training and Development',
         coins: 500,
         progress: 0,
@@ -758,6 +763,7 @@ const takeData = [
         coverImage: 'take_card_office_flex.png',
         title: 'Office Flex',
         author: 'Anonymous Bee',
+        shortDescription: '',
         impact: {
             type: 'wellness',
         },
@@ -772,6 +778,7 @@ const takeData = [
         coverImage: 'take_card_crave_for_health.png',
         title: 'Crave for Health',
         author: 'Anonymous Bee',
+        shortDescription: 'Start craving healthy food by eating a more balanced diet and eliminate the urge for sweets!',
         impact: {
             type: 'wellness',
         },
