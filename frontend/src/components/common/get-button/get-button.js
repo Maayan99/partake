@@ -5,7 +5,7 @@ const GetButton = (props) => {
 
     return (
         <button className={`${className} ${selected ? 'bg-black text-white' : 'bg-white text-black'} py-2 px-6 
-        border-black border-2 rounded-2xl cursor-pointer text-xl mx-2 
+        border-black border-2 rounded-full cursor-pointer text-xl 
         `} {...otherProps}>
             {children}
         </button>
