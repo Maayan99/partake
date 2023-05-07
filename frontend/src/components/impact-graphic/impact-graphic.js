@@ -1,7 +1,6 @@
 import InfoIcon from "@mui/icons-material/Info";
 import Icon from "@components/components/common/icon/icon";
 import LearnMoreTooltip from "@components/components/pop-ups/learn-more-tooltip/learn-more-tooltip";
-import {useState} from 'react';
 
 const ImpactCause = ({impactCause}) => {
 
@@ -11,12 +10,10 @@ const ImpactCause = ({impactCause}) => {
             {impactCause.boldText && <span className="font-bold text-xl">{impactCause.boldText}</span>}
             <p className='mb-5'>{impactCause.text}</p>
 
-            <div className="group">
+            <div className="relative group">
                 <span
-                className="cursor-pointer">{impactCause.infoText}</span>
-                <div className="relative">
-                    <LearnMoreTooltip text={impactCause.largeText}/>
-                </div>
+                    className="cursor-pointer">{impactCause.infoText}</span>
+                <LearnMoreTooltip text={impactCause.largeText}/>
             </div>
         </div>
     )

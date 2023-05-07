@@ -4,72 +4,15 @@ import giveData from "../../../public/give-data.js"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import AddIcon from '@mui/icons-material/Add';
 import {useState} from "react";
+import FilterBar from "@components/components/filter-bar/filter-bar";
 
-const FilterBar = ({search, setSearch, type, setType, cause, setCause, duration, setDuration}) => {
-    const handleSearchChange = (event) => {
-        setSearch(event.target.value);
-    };
 
-    const handleTypeChange = (event) => {
-        setType(event.target.value);
-    };
-
-    const handleCauseChange = (event) => {
-        setCause(event.target.value);
-    };
-
-    const handleDurationChange = (event) => {
-        setDuration(event.target.value);
-    };
-
-    return (
-        <div className="flex ml-36 h-24 items-center space-x-8 mb-10 ">
-            <div className="flex h-10 focus-within:shadow ">
-                <input placeholder="Search" className="w-72 pl-1 border border-1 border-gray-500 bg-light-gray
-                rounded-none border-r-0 focus:outline-none" onChange={handleSearchChange} value={search}/>
-                <select onChange={handleTypeChange} placeholder="Type" value={type}
-                        className="w-52 border border-1 border-gray-500 bg-light-gray
-                rounded-none border-r-0 focus:outline-none">
-                    <option value="">Type</option>
-                    <option value="Environment">Environment</option>
-                    <option value="Social">Social</option>
-                    <option value="Wellness">Well-Being</option>
-                </select>
-                <select onChange={handleCauseChange} value={cause}
-                        className="w-52 border border-1 border-gray-500 bg-light-gray
-                rounded-none border-r-0 focus:outline-none">
-                    <option value="">Cause</option>
-                    <option value="Sustainability">Sustainability</option>
-                    <option value="Wellness">Wellness</option>
-                    <option value="Social Connection">Social Connection</option>
-                    <option value="Training and Development">Training and Development</option>
-                    <option value="Diversity and Inclusion">Diversity and Inclusion</option>
-                </select>
-                <select onChange={handleDurationChange} value={duration}
-                        className="w-52 border border-1 border-gray-500 bg-light-gray
-                rounded-none focus:outline-none">
-                    <option value="">Duration</option>
-                    <option value="15">Longer than 15 Minutes</option>
-                    <option value="60">Longer than 1 Hour</option>
-                    <option value="1440">Longer than a Day</option>
-                </select>
-            </div>
-            <a href="/make">
-                <div className="w-24 h-24 border border-4 border-black rounded-full
-                transform-all duration-150 hover:scale-110 flex justify-center items-center">
-                    <AddIcon/>
-                </div>
-            </a>
-        </div>
-    );
-}
 
 const BeforeSearch = () => {
     const forYou = giveData.filter(give => give.category === 'For you');
     const inYourArea = giveData.filter(give => give.category === 'In your area');
     const events = giveData.filter(give => give.category === 'Events');
     const fundraising = giveData.filter(give => give.category === 'Fundraising');
-
 
     const categories = ['forYou', 'inYourArea', 'events', 'fundraising'];
     const categoriesTitleDictionary = {
@@ -151,6 +94,103 @@ export default function Give() {
     const [cause, setCause] = useState("");
     const [duration, setDuration] = useState("");
 
+    const handleTypeChange = (event) => {
+        setType(event.target.value);
+    };
+
+    const handleCauseChange = (event) => {
+        setCause(event.target.value);
+    };
+
+    const handleDurationChange = (event) => {
+        setDuration(event.target.value);
+    };
+
+
+
+    const filterers = [
+        {
+            id: '1',
+            handleFunction: handleTypeChange,
+            placeholder: 'Type',
+            value: type,
+            options: [
+                {
+                    id: '1',
+                    value: 'environmental',
+                    name: 'Environmental',
+                },
+                {
+                    id: '2',
+                    value: 'social',
+                    name: 'Social',
+                },
+                {
+                    id: '3',
+                    value: 'wellness',
+                    name: 'Well-Being',
+                },
+            ],
+        },
+        {
+            id: '2',
+            handleFunction: handleCauseChange,
+            placeholder: 'Cause',
+            value: cause,
+            options: [
+                {
+                    id: '1',
+                    value: 'Sustainability',
+                    name: 'Sustainability',
+                },
+                {
+                    id: '2',
+                    value: 'Wellness',
+                    name: 'Wellness',
+                },
+                {
+                    id: '3',
+                    value: 'Social Connection',
+                    name: 'Social Connection',
+                },
+                {
+                    id: '4',
+                    value: 'Training and Development',
+                    name: 'Training and Development',
+                },
+                {
+                    id: '5',
+                    value: 'Diversity and Inclusion',
+                    name: 'Diversity and Inclusion',
+                },
+            ],
+        },
+        {
+            id: '3',
+            handleFunction: handleDurationChange,
+            placeholder: 'Duration',
+            value: duration,
+            options: [
+                {
+                    id: '1',
+                    value: '15',
+                    name: 'Longer than 15 Minutes',
+                },
+                {
+                    id: '2',
+                    value: '60',
+                    name: 'Longer than 1 Hour',
+                },
+                {
+                    id: '3',
+                    value: '1440',
+                    name: 'Longer than a Day',
+                },
+            ],
+        },
+
+    ];
+
     return (
         <>
             <Head>
@@ -159,10 +199,7 @@ export default function Give() {
             <>
                 <FilterBar
                     search={search} setSearch={setSearch}
-                    type={type} setType={setType}
-                    cause={cause} setCause={setCause}
-                    duration={duration} setDuration={setDuration}
-                />
+                    filterersArray={filterers}/>
                 {(search !== "" || type !== "" || cause !== "" || duration !== "") ?
                     <AfterSearch search={search} type={type} cause={cause} duration={duration}/> :
                     <BeforeSearch/>}

@@ -112,7 +112,7 @@ const TopAfterStarted = ({
 };
 
 
-export default function TakePage({user}) {
+export default function TakePage() {
     const [started, setStarted] = useState(false);
     const [displayValidationPopUp, setDisplayValidationPopUp] = useState(false);
     const [currentTask, setCurrentTask] = useState(0);
