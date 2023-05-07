@@ -89,14 +89,16 @@ const TopAfterStarted = ({
             <div className="w-1/2 min-w-[370px]">
                 <TakeCoverCard take={take}/>
             </div>
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col justify-between space-y-3">
                 <div className="flex space-x-1">
                     <PrimaryButton onClick={handleLeaveChallenge}>Challenge Taken</PrimaryButton>
                     <TransparentButton className="px-2" onClick={handleInviteFriends}>Invite Friends</TransparentButton>
                 </div>
 
-                <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
-                <div dangerouslySetInnerHTML={{__html: tasks[currentTask]?.longText}}></div>
+                <div className="space-y-5">
+                    <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
+                    <div dangerouslySetInnerHTML={{__html: tasks[currentTask]?.longText}}></div>
+                </div>
                 <ExpandedProgressBar numberOfTasks={numberOfTasks} numberOfFulfilledTasks={currentTask + 1}
                                      viewedTask={currentTask}/>
             </div>
@@ -212,7 +214,8 @@ export default function TakePage({user}) {
                     <div className="space-y-5">
                         <h1 className="font-bold">Tips</h1>
                         {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
-                        <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}  className="text-gray">{tip.text}</li>)}</ul>
+                        <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}
+                                                                            className="text-gray">{tip.text}</li>)}</ul>
                     </div>}
                 {reward &&
                     <div className="space-y-5">

@@ -4,21 +4,19 @@ import LearnMoreTooltip from "@components/components/pop-ups/learn-more-tooltip/
 import {useState} from 'react';
 
 const ImpactCause = ({impactCause}) => {
-    const [displayTooltip, setDisplayTooltip] = useState(false);
-    const [keepDisplayingTooltip, setKeepDisplayingTooltip] = useState(false);
 
     return (
         <div className="flex flex-col items-center justify-between">
             <Icon name={impactCause.icon} className="w-12 h-12"/>
             {impactCause.boldText && <span className="font-bold text-xl">{impactCause.boldText}</span>}
             <p className='mb-5'>{impactCause.text}</p>
-            <span
-                onClick={() => setKeepDisplayingTooltip(true)}
-                onMouseEnter={() => setDisplayTooltip(true)}
-                onMouseLeave={() => setDisplayTooltip(false)}
+
+            <div className="group">
+                <span
                 className="cursor-pointer">{impactCause.infoText}</span>
-            <div className="relative">
-                <LearnMoreTooltip display={displayTooltip} setDisplay={setDisplayTooltip} text={impactCause.largeText}/>
+                <div className="relative">
+                    <LearnMoreTooltip text={impactCause.largeText}/>
+                </div>
             </div>
         </div>
     )

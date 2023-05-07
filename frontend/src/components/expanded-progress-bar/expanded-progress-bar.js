@@ -12,12 +12,12 @@ export default function ExpandedProgressBar({numberOfTasks, numberOfFulfilledTas
     }
 
     return (
-        <>
+        <div className="space-y-4">
             <h1 className="text-lg font-bold">Progress</h1>
             <div className="h-2 w-full flex space-x-2">
                 {blockArray}
             </div>
             <p className="text-xs">{numberOfFulfilled}/{numberOfTasks} tasks</p>
-        </>
+        </div>
     )
 }

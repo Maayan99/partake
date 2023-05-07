@@ -61,16 +61,26 @@ export default function InvitePopUp({display, setDisplay}) {
                 </IconButton>
                 <h1 className="absolute left-1/2 -translate-x-1/2">Invite Friends</h1>
             </div>
-            <div className="p-10 space-y-6 flex flex-col items-center">
-                <input placeholder="Search" className="pl-3 shadow bg-slate-300 w-full h-10 focus:outline-none placeholder:italic"
+            <div className="p-10 flex flex-col">
+                <input placeholder="Search"
+                       className="pl-3 shadow bg-light-gray w-full h-10 focus:outline-none placeholder:italic"
                        onChange={handleSearchChange} value={search}/>
 
-                <div className="overflow-auto h-80 w-full shadow bg-slate-300 p-4 space-y-2">
+                <p className="font-bold mt-3">Recommended:</p>
+
+                <div className="overflow-auto h-36 w-full shadow bg-light-gray p-4 space-y-2 my-2">
+                    {users.slice(3, 6).map(user =>
+                        <UserRow user={user} key={user.id} selected={selected} setSelected={setSelected}/>)}
+                </div>
+
+                <div className="overflow-auto h-48 w-full shadow bg-light-gray p-4 space-y-2 my-4">
                     {filtered.map(user =>
                         <UserRow user={user} key={user.id} selected={selected} setSelected={setSelected}/>)}
                 </div>
 
-                <BlueButton onClick={handleSubmit} className="w-2/3">Send Invitations</BlueButton>
+                <div className="flex justify-center">
+                    <BlueButton onClick={handleSubmit} className="w-2/3">Send Invitations</BlueButton>
+                </div>
             </div>
 
         </PopUp>
