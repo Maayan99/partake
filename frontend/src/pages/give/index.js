@@ -56,7 +56,7 @@ const FilterBar = ({search, setSearch, type, setType, cause, setCause, duration,
             </div>
             <a href="/make">
                 <div className="w-24 h-24 border border-4 border-black rounded-full
-                transform-all duration-150 hover:w-full hover:h-full flex justify-center items-center">
+                transform-all duration-150 hover:scale-110 flex justify-center items-center">
                     <AddIcon/>
                 </div>
             </a>

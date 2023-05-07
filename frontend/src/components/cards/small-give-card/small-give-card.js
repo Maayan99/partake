@@ -49,9 +49,9 @@ const SmallGiveCard = ({give}) => {
                     </div>
                 </div>
 
-                <div>
-                    <div className="flex justify-around p-2.5 space-x-2">
-                        <div className="flex gap-2 items-center">
+                <div className="px-4">
+                    <div className="flex justify-between my-2 space-x-2">
+                        {(donations || duration) && <div className="flex gap-2 items-center">
                             {duration && <div className="flex flex-col justify-center items-center border-solid border-2
                             border-blue rounded-full p-1.5 w-9 h-9 text-blue">
                                 <AccessTimeIcon fontSize="8pt"/>
@@ -62,7 +62,7 @@ const SmallGiveCard = ({give}) => {
                             border-blue rounded-full p-1.5 w-9 h-9 text-blue">
                                     <ShoppingBasketIcon/>
                                 </div>}
-                        </div>
+                        </div>}
                         {location && <div className="flex items-center text-gray space-x-2">
                             <Icon name="location"/>
                             <p className="text-xs">{location}</p>
@@ -72,7 +72,7 @@ const SmallGiveCard = ({give}) => {
                             <p className="text-xs">{endDate}</p>
                         </div>}
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between items-center">
                         {participants ? <ParticipantsRow/> : <div></div>}
                         <PrimaryButton className="m-2.5">Give help</PrimaryButton>
                     </div>
