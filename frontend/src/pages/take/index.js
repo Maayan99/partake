@@ -31,12 +31,12 @@ const FilterBar = ({search, setSearch, type, setType, subject, setSubject, durat
                 <input placeholder="Search" className="w-72 pl-1 border border-1 border-gray-500 bg-light-gray
                 rounded-none border-r-0 focus:outline-none" onChange={handleSearchChange} value={search}/>
                 <select onChange={handleTypeChange} placeholder="Type" value={type}
-                        className="w-52 border border-1 border-gray-500 bg-slate-200
+                        className="w-52 border border-1 border-gray-500 bg-light-gray
                 rounded-none border-r-0 focus:outline-none after:pr-2">
                     <option value="">Type</option>
-                    <option value="Environment">Environment</option>
-                    <option value="Social">Social</option>
-                    <option value="Wellness">Well-Being</option>
+                    <option value="environmental">Environment</option>
+                    <option value="social">Social</option>
+                    <option value="wellness">Well-Being</option>
                 </select>
                 <select onChange={handleSubjectChange} value={subject}
                         className="w-52 border border-1 border-gray-500 bg-light-gray
@@ -105,7 +105,8 @@ const BeforeSearch = () => {
                     <div className="flex flex-col justify-evenly py-10 w-80 text-2xl">
                         <h1>Try the {featuredChallenge.title} challenge</h1>
                         <h1>{featuredChallenge.shortDescription}</h1>
-                        <a href={`/take/${featuredChallenge.id}`}><PrimaryButton className='py-4 px-8'>Take Challenge</PrimaryButton>
+                        <a href={`/take/${featuredChallenge.id}`}><PrimaryButton className='py-4 px-8'>Take
+                            Challenge</PrimaryButton>
                         </a>
                     </div>
                 </div>
@@ -137,7 +138,7 @@ const AfterSearch = ({search, type, subject, duration}) => {
 
     if (type !== "") {
         filtered = filtered.filter(challenge => {
-            return challenge.impactType === type;
+            return challenge.impact?.type === type;
         })
     }
 
@@ -157,12 +158,10 @@ const AfterSearch = ({search, type, subject, duration}) => {
     }
 
     return (
-        <div className="grid lg:grid-cols-4 sm:grid-cols-1 px-4">
+        <div className="grid lg:grid-cols-4 sm:grid-cols-1 px-10 gap-8 items-center">
             {/*TODO: Make grid responsive*/}
             {filtered.map(take =>
-                <div className="m-3">
-                    <SmallTakeCard key={take.id} take={take}/>
-                </div>)}
+                <SmallTakeCard key={take.id} take={take}/>)}
         </div>
     )
 };

@@ -346,7 +346,7 @@ const takeData = [
                 },
             ],
             text: 'Emotional Well-Being',
-            type: 'Social'
+            type: 'social'
         },
 
         tips: [
@@ -461,7 +461,7 @@ const takeData = [
                 },
             ],
             text: 'Emotional Well-Being',
-            type: 'Social'
+            type: 'social'
         },
 
         tips: [
@@ -565,7 +565,7 @@ const takeData = [
                 },
             ],
             text: 'Emotional Well-Being',
-            type: 'Social'
+            type: 'social'
         },
 
         tips: [
@@ -667,7 +667,7 @@ const takeData = [
                 },
             ],
             text: 'Emotional Well-Being',
-            type: 'Social'
+            type: 'social'
         },
 
         tips: [

@@ -1,6 +1,3 @@
-import BlueButton from "@components/components/common/blue-button";
-import {useEffect, useRef} from "react";
-import LSystem from 'lindenmayer';
 import DashboardCard from "@components/components/cards/dashboard-card/dashboard-card";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import Tree from "@components/components/tree/tree";
@@ -89,7 +86,7 @@ export default function Dashboard() {
                 </DashboardCard>
             </div>
             <div className="grid grid-cols-3 place-items-center gap-10">
-                <DashboardCard>
+                <DashboardCard className="min-w-[321px]">
                     <h1 className="font-bold">Coins</h1>
                 </DashboardCard>
                 <DashboardCard>
