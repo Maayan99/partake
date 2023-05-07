@@ -2,7 +2,7 @@ const getData = [
     {
         id: '1',
         name: 'Cork',
-        logoImage: '',
+        logoImage: 'yoga-store-logo.webp',
         descriptionBold: 'Our products are made from natural cork, which is a sustainable and renewable resource',
         description: 'When you choose our cork yoga mat, you are helping to support a sustainable industry and reduce your impact on the planet.',
         category: 'Sustainability',

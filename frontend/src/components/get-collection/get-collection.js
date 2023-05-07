@@ -1,5 +1,4 @@
 import SmallGetCard from "@components/components/cards/small-get-card/small-get-card";
-import getData from "../../../public/get-data";
 
 export default function GetCollection({collection}) {
     const {items, logoImage, description, descriptionBold, id} = collection;
@@ -8,7 +7,7 @@ export default function GetCollection({collection}) {
         <div className="grid grid-cols-10 grid-rows-5 gap-4">
             <SmallGetCard get={items[0]} className="col-span-3 row-span-3"/>
             <SmallGetCard get={items[1]} className="col-span-3 row-span-3"/>
-            <div className="col-span-4 row-span-5 bg-light-gray p-20 space-y-4">
+            <div className="col-span-4 row-span-5 bg-slate-50 px-16 py-8 space-y-4">
                 <img src={`/assets/PNG/${logoImage}`}/>
                 <h1 className="font-bold text-xl">{descriptionBold}</h1>
                 <h1 className="text-lg">{description}</h1>
