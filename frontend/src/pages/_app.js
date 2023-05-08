@@ -3,48 +3,42 @@ import Header from "@components/layout/header/header";
 import Footer from "@components/layout/footer/footer";
 import Nav from "@components/layout/nav/nav";
 import UnloggedHeader from "@components/layout/unlogged-header/unlogged-header";
-import React, {useEffect, useState} from "react";
-import AdminHeader from "@components/layout/admin-header/admin-header";
-import EmployeeHeader from "@components/layout/employee-header/employee-header";
+import React, {useCallback, useEffect, useMemo, useState} from "react";
 import ModeTooltip from "@components/layout/mode-header/mode-tooltip";
+import LoadingSpinner from "@components/components/loading-spinner/loading-spinner";
 
 
 export default function App({Component, pageProps}) {
+    const [loadedAdmin, setLoadedAdmin] = useState(false);
+    const [loadedLoggedIn, setLoadedLoggedIn] = useState(false);
+
     const [loggedIn, setLoggedIn] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
-    const [loaded, setLoaded] = useState(false);
 
-    useEffect(() => {
-        const load = async () => {
-            if (sessionStorage.getItem("loggedIn") === "true") {
-                setLoggedIn(true);
-            } else {
-                setLoggedIn(false);
-            }
-
-            if (sessionStorage.getItem("isAdmin") === "true") {
-                setIsAdmin(true);
-            } else {
-                setIsAdmin(false);
-            }
-        }
-
-        load();
-        setLoaded(true);
-
+    const updateLoggedIn = useCallback(() => {
+        setLoadedLoggedIn(true);
+        setLoggedIn(sessionStorage.getItem("loggedIn") === "true");
+    }, []);
+    const updateIsAdmin = useCallback(() => {
+        setLoadedAdmin(true);
+        setIsAdmin(sessionStorage.getItem("isAdmin") === "true");
     }, []);
 
+    useEffect(() => {
+        updateIsAdmin();
+        updateLoggedIn();
+    }, [])
 
-    if (!loaded) {
-        return <></>
+    if (!loadedLoggedIn || !loadedAdmin) {
+        return <LoadingSpinner/>;
     }
 
     return (
         <>
-            <ModeTooltip setIsAdmin={setIsAdmin} isAdmin={isAdmin}/>
+            <ModeTooltip isAdmin={isAdmin} updateIsAdmin={updateIsAdmin}/>
             {loggedIn ? <Header/> : <UnloggedHeader/>}
             {loggedIn && <Nav isAdmin={isAdmin}/>}
-            <Component loggedIn={loggedIn} setLoggedIn={setLoggedIn} {...pageProps} />
+            <Component loggedIn={loggedIn} {...pageProps} />
             <Footer/>
         </>
     )

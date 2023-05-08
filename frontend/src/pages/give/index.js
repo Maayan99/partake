@@ -194,7 +194,7 @@ export default function Give() {
     return (
         <>
             <Head>
-                <title>Give - Partake</title>
+                <title>Give Activities</title>
             </Head>
             <>
                 <FilterBar

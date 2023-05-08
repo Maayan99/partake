@@ -1,7 +1,7 @@
 import DashboardCard from "@components/components/cards/dashboard-card/dashboard-card";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import Tree from "@components/components/tree/tree";
-
+import Head from "next/head";
 
 
 export default function Dashboard() {
@@ -95,49 +95,56 @@ export default function Dashboard() {
     };
 
     return (
-        <div className="bg-light-gray flex flex-col items-center space-y-10 px-32 py-10">
-            <img src={profileImage} alt="Profile image" className="rounded-full
+        <>
+            <Head>
+                <title>Dashboard</title>
+            </Head>
+            <div className="bg-light-gray flex flex-col items-center space-y-10 px-32 py-10">
+                <img src={profileImage} alt="Profile image" className="rounded-full
             w-52 h-52 outline outline-offset-8 outline-blue outline-2 object-cover"/>
-            <div className="flex space-x-10 items-center justify-between">
-                <Tree/>
-                <DashboardCard className="space-y-10">
-                    <h1 className="text-2xl font-bold">Impact</h1>
-                    <h1 className="text-lg font-bold">Environmental total points: <span className="text-blue">450</span></h1>
-                    <ImpactGraphic impact={environmentalImpact}/>
-                    <h1 className="text-lg font-bold">Social total points: <span className="text-blue">2040</span></h1>
-                    <ImpactGraphic impact={socialImpact}/>
-                </DashboardCard>
+                <div className="flex space-x-10 items-center justify-between">
+                    <Tree/>
+                    <DashboardCard className="space-y-10">
+                        <h1 className="text-2xl font-bold">Impact</h1>
+                        <h1 className="text-lg font-bold">Environmental total points: <span
+                            className="text-blue">450</span></h1>
+                        <ImpactGraphic impact={environmentalImpact}/>
+                        <h1 className="text-lg font-bold">Social total points: <span className="text-blue">2040</span>
+                        </h1>
+                        <ImpactGraphic impact={socialImpact}/>
+                    </DashboardCard>
+                </div>
+                <div className="grid grid-cols-3 place-items-center gap-10">
+                    <DashboardCard className="min-w-[321px]">
+                        <h1 className="font-bold">Coins</h1>
+                    </DashboardCard>
+                    <DashboardCard>
+                        <h1 className="font-bold">Badges</h1>
+                    </DashboardCard>
+                    <DashboardCard>
+                        <h1 className="font-bold">Certifications</h1>
+                    </DashboardCard>
+                    <DashboardCard>
+                        <h1 className="font-bold">Activities</h1>
+                    </DashboardCard>
+                    <DashboardCard className="col-span-2 w-full">
+                        <h1 className="font-bold">Analytics</h1>
+                    </DashboardCard>
+                    <DashboardCard>
+                        <h1 className="font-bold">Gave</h1>
+                    </DashboardCard>
+                    <DashboardCard>
+                        <h1 className="font-bold">Took</h1>
+                    </DashboardCard>
+                    <DashboardCard>
+                        <h1 className="font-bold">Made</h1>
+                    </DashboardCard>
+
+
+                    {/*<BlueButton onClick={handleLogout} className="h-max">Logout</BlueButton>*/}
+
+                </div>
             </div>
-            <div className="grid grid-cols-3 place-items-center gap-10">
-                <DashboardCard className="min-w-[321px]">
-                    <h1 className="font-bold">Coins</h1>
-                </DashboardCard>
-                <DashboardCard>
-                    <h1 className="font-bold">Badges</h1>
-                </DashboardCard>
-                <DashboardCard>
-                    <h1 className="font-bold">Certifications</h1>
-                </DashboardCard>
-                <DashboardCard>
-                    <h1 className="font-bold">Activities</h1>
-                </DashboardCard>
-                <DashboardCard className="col-span-2 w-full">
-                    <h1 className="font-bold">Analytics</h1>
-                </DashboardCard>
-                <DashboardCard>
-                    <h1 className="font-bold">Gave</h1>
-                </DashboardCard>
-                <DashboardCard>
-                    <h1 className="font-bold">Took</h1>
-                </DashboardCard>
-                <DashboardCard>
-                    <h1 className="font-bold">Made</h1>
-                </DashboardCard>
-
-
-                {/*<BlueButton onClick={handleLogout} className="h-max">Logout</BlueButton>*/}
-
-            </div>
-        </div>
+        </>
     );
 };

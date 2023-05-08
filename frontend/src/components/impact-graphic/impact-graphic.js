@@ -5,11 +5,13 @@ import LearnMoreTooltip from "@components/components/pop-ups/learn-more-tooltip/
 const ImpactCause = ({impactCategory}) => {
 
     return (
-        <div className="flex flex-col items-center justify-between">
+        <div className="flex flex-col items-center justify-between min-h-[150px]">
             <Icon name={impactCategory.icon} className="w-12 h-12"/>
-            {impactCategory.boldText && <span className="font-bold text-xl">{impactCategory.boldText}</span>}
-            <p className='mb-5'>{impactCategory.text}</p>
-
+            <div>
+                {impactCategory.boldText && <h1 className="font-bold text-xl">{impactCategory.boldText}</h1>}
+                {impactCategory.text && <span className="">{impactCategory.text}</span>}
+            </div>
+            <div className="flex grow"/>
             <div className="relative group">
                 <span
                     className="cursor-pointer">{impactCategory.tooltipText}</span>
@@ -20,22 +22,19 @@ const ImpactCause = ({impactCategory}) => {
 }
 
 export default function ImpactGraphic({impact}) {
-    const impactCategories = impact.categories;
-    const impactText = impact.text;
-    const impactType = impact.type;
+    const {categories, type} = impact;
 
 
     return (
         <div className="flex flex-col justify-between text-sm">
             <div className="flex text-blue space-x-10 my-5">
                 <div className="flex flex-col justify-between">
-                    <Icon name={impactType}/>
+                    <Icon name={type}/>
                     <InfoIcon className="text-black"/>
                 </div>
                 <div className="flex space-x-5 text-center">
-                    {impactCategories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
+                    {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
                 </div>
-                <p>{impactText}</p>
             </div>
         </div>
     );

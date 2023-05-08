@@ -1,15 +1,15 @@
 import {useState} from "react";
 
-export default function ModeTooltip({isAdmin, setIsAdmin}) {
+export default function ModeTooltip({isAdmin, updateIsAdmin}) {
     const [display, setDisplay] = useState(false);
 
     const handleToggle = () => {
         if (!isAdmin) {
-            setIsAdmin(true);
             sessionStorage.setItem('isAdmin', "true");
+            updateIsAdmin();
         } else {
-            setIsAdmin(false);
             sessionStorage.setItem('isAdmin', "false");
+            updateIsAdmin();
         }
     }
 

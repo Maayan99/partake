@@ -213,7 +213,7 @@ export default function Take() {
     return (
         <>
             <Head>
-                <title>Take - Partake</title>
+                <title>Take Activities</title>
             </Head>
             <>
                 <FilterBar

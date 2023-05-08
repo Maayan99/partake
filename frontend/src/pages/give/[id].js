@@ -9,6 +9,7 @@ import ImpactGraphic from "@components/components/impact-graphic/impact-graphic"
 import StarIcon from "@mui/icons-material/Star";
 import GiveCoverCard from "@components/components/cards/give-cover-card/give-cover-card";
 import React, {useState} from "react";
+import Head from "next/head";
 
 const ImportantDetails = ({give}) => {
     const {
@@ -106,6 +107,9 @@ export default function GivePage() {
 
     return (
         <>
+            <Head>
+                <title>Give</title>
+            </Head>
             <div className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20`}>
                 <GiveCoverCard className="md:col-span-2 lg:col-span-1" give={give}/>
 
