@@ -12,15 +12,15 @@ const ImpactCause = ({impactCause}) => {
 
             <div className="relative group">
                 <span
-                    className="cursor-pointer">{impactCause.infoText}</span>
-                <LearnMoreTooltip text={impactCause.largeText}/>
+                    className="cursor-pointer">{impactCause.tooltipText}</span>
+                <LearnMoreTooltip tooltips={impactCause.tooltips}/>
             </div>
         </div>
     )
 }
 
 export default function ImpactGraphic({impact}) {
-    const impactCauses = impact.causes;
+    const impactCauses = impact.categories;
     const impactText = impact.text;
     const impactType = impact.type;
 

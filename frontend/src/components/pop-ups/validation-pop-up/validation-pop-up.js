@@ -5,39 +5,74 @@ import BlueButton from "@components/components/common/blue-button";
 import Icon from "@components/components/common/icon/icon";
 import {useEffect, useState} from "react";
 
-export default function ValidationPopUp({setCurrentTask, display, setDisplay, question}) {
-    const [input, setInput] = useState('');
-    const [previousInput, setPreviousInput] = useState('0');
-    const [displayedValue, setDisplayedValue] = useState(0);
+export default function ValidationPopUp({
+                                            currentTask, setCurrentTask, display, setDisplay, validationData,
+                                            setDisplayCongratsPopUp, numberOfTasks
+                                        }) {
+    const {text, type, icon, photoValidationData, numberValidationData} = validationData;
+
+
+    const typeIsNumber = type === "number";
+
+    const [number, setNumber] = useState(0);
+    const [displayedNumber, setDisplayedNumber] = useState(1);
+
 
     useEffect(() => {
         const updateInput = () => {
-            let parsedCurrentInput = parseInt(input) || 0;
-            let parsedPreviousInput = parseInt(previousInput);
+            const numberMultiplied = number * numberValidationData?.multiplier;
 
-            if (parsedPreviousInput !== parsedCurrentInput) {
-                setPreviousInput(prev => {
-                    let parsedInt = parseInt(prev);
+            if (displayedNumber !== numberMultiplied) {
+                setDisplayedNumber(prev => {
+                    const difference = numberMultiplied - prev;
 
-                    if (parsedCurrentInput > parsedInt) {
-                        parsedInt++;
-                    } else {
-                        parsedInt--;
-                    }
-                    return (parsedInt.toString());
+                    const changeBy = difference > 0 ?
+                        Math.ceil(difference / 10) :
+                        Math.floor(difference / 10);
+
+                    return prev + changeBy;
                 });
+            } else {
+                clearInterval(interval);
             }
         }
 
-        const interval = setInterval(updateInput, 10);
+        const interval = setInterval(updateInput, 15);
 
         return (() => clearInterval(interval));
-    }, [input, previousInput])
+    }, [number, displayedNumber])
 
-    const handleValidate =() => {
+    const handleValidate = (e) => {
+        e.preventDefault()
+
         setDisplay(false);
-        setCurrentTask(prev => prev + 1);
-    }
+
+        if (currentTask + 1 === numberOfTasks) {
+            setCurrentTask(0);
+            setDisplayCongratsPopUp(true);
+        } else {
+            setCurrentTask(prev => prev + 1);
+        }
+    };
+
+    const handleNumberChange = (e) => {
+        const value = e.target.value;
+        const min = numberValidationData?.min;
+        const max = numberValidationData?.max;
+
+        if (!min === undefined || !max === undefined) {
+            setNumber(0);
+            return;
+        }
+        if (value < min) {
+            return;
+        }
+        if (value > max) {
+            return;
+        }
+
+        setNumber(e.target.value);
+    };
 
     return (
         <PopUp display={display}>
@@ -45,19 +80,39 @@ export default function ValidationPopUp({setCurrentTask, display, setDisplay, qu
                 <IconButton onClick={() => setDisplay(false)}>
                     <CloseIcon/>
                 </IconButton>
-                <h1 className="absolute left-1/2 -translate-x-1/2">Validate Challenge</h1>
+                <h1 className="absolute left-1/2 -translate-x-1/2">Validate Task</h1>
             </div>
-            <div className="flex flex-col items-center pt-10 text-blue">
-                <Icon name="carbon" className="h-12 w-12"/>
-                <h1 className="text-lg font-bold">You saved:</h1>
-                <p>{parseInt(previousInput)*4} grams</p>
+            <div className="flex flex-col items-center pt-10 space-y-2 text-blue">
+                <Icon name={icon} className="h-12 w-12"/>
+                {typeIsNumber && <h1 className="text-lg font-bold">You saved:</h1>}
+                {typeIsNumber ?
+                    <span>{displayedNumber} {numberValidationData?.units}</span>
+                    : <span>{photoValidationData?.text}</span>}
             </div>
-            <div className="p-8 flex flex-col items-center space-y-4">
-                <h1 className="text-xl">{question}</h1>
-                <input className="w-full placeholder:italic bg-slate-200 rounded-lg p-2"
-                       placeholder="Enter text" value={input} onChange={(e) => setInput(e.target.value)}/>
-                <BlueButton onClick={handleValidate}>Validate</BlueButton>
-            </div>
+            <form className="p-8 flex flex-col items-center space-y-4" onSubmit={handleValidate}>
+                <h1 className="text-xl">{text}</h1>
+
+                {typeIsNumber ?
+                    <div className="flex space-x-2 w-full">
+                        <input type="number" className="w-8 text-center h-full border border-blue
+                         appearance-none" value={number} onChange={handleNumberChange}/>
+                        <input className="w-full bg-light-gray focus:outline-none" type="range"
+                               min={numberValidationData?.min} max={numberValidationData?.max}
+                               placeholder="Enter number" value={number || 0}
+                               onChange={handleNumberChange}/>
+                    </div>
+                    :
+                    <label className="flex justify-center items-center w-full h-32 px-4 transition bg-white
+                    border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer
+                    hover:border-gray-400 focus:outline-none">
+                        <span className="font-medium text-gray">
+                            Drop files to Attach, or <span className="text-blue underline">browse</span>
+                        </span>
+                        <input type="file" className="hidden"/>
+                    </label>}
+
+                <BlueButton type="submit">Submit{!typeIsNumber && ' Image'}</BlueButton>
+            </form>
 
         </PopUp>
     )

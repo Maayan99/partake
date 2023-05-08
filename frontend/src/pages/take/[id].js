@@ -5,7 +5,7 @@ import Leaderboard from "@components/components/leaderboard/leaderboard";
 import PrimaryButton from "@components/components/common/primary-button";
 import TransparentButton from "@components/components/common/transparent-button"
 import BlueButton from "@components/components/common/blue-button"
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import StarIcon from "@mui/icons-material/Star";
 import ValidationPopUp from "@components/components/pop-ups/validation-pop-up/validation-pop-up";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
@@ -17,12 +17,14 @@ import ExpandedProgressBar from "@components/components/expanded-progress-bar/ex
 const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) => {
     const {
         type,
-        numberOfTasks,
         location,
+        tasks,
         difficultyLevel,
         durationText,
         participants,
     } = take;
+
+    const numberOfTasks = tasks.length;
 
     const handleStartChallenge = () => {
         setStarted(true);
@@ -50,7 +52,7 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
                     </div>
                     <div className="ml-10 space-y-2">
                         <h1 className="font-bold">Number of Tasks</h1>
-                        <p>{numberOfTasks}</p>
+                        <p>{take.tasks.length}</p>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-2">
                         <h1 className="font-bold">Location</h1>
@@ -77,7 +79,7 @@ const TopAfterStarted = ({
                              handleLeaveChallenge,
                              handleInviteFriends
                          }) => {
-    const {tasks, numberOfTasks} = take;
+    const {tasks} = take;
 
 
     const handleShowValidation = () => {
@@ -99,7 +101,7 @@ const TopAfterStarted = ({
                     <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
                     <div dangerouslySetInnerHTML={{__html: tasks[currentTask]?.longText}}></div>
                 </div>
-                <ExpandedProgressBar numberOfTasks={numberOfTasks} numberOfFulfilledTasks={currentTask + 1}
+                <ExpandedProgressBar numberOfTasks={tasks.length} numberOfFulfilledTasks={currentTask + 1}
                                      viewedTask={currentTask}/>
             </div>
             <div className="min-w-[370px] flex flex-col items-center">
@@ -111,7 +113,6 @@ const TopAfterStarted = ({
     )
 };
 
-
 export default function TakePage() {
     const [started, setStarted] = useState(false);
     const [displayValidationPopUp, setDisplayValidationPopUp] = useState(false);
@@ -120,20 +121,27 @@ export default function TakePage() {
     const [displayCongratsPopUp, setDisplayCongratsPopUp] = useState(false);
 
     const router = useRouter();
-    const {id} = router.query;
 
-    useEffect(() => {
-        if (id) {
-            if (currentTask === numberOfTasks) {
-                setDisplayCongratsPopUp(true);
-                setCurrentTask(0);
-            }
+    const id = useMemo(() => {
+        const query = router.query;
+
+        if (query.id) {
+            return query.id;
         }
-    }, [currentTask])
+    }, [router.query]);
 
 
-    // Check if the router has the required data
-    if (!id) {
+    const take = useMemo(() => {
+        if (id !== '') {
+            return takeData.find(take => {
+                return take.id === id;
+            });
+        }
+    }, [id]);
+
+
+    // Check if we fetched the required data
+    if (!id || !take) {
         return (
             <div
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
@@ -142,13 +150,6 @@ export default function TakePage() {
         );
     }
 
-    const take = takeData.find(take => {
-        return take.id === id;
-    });
-
-    if (!take) {
-        return null;
-    }
 
     const handleLeaveChallenge = () => {
         setStarted(false);
@@ -158,130 +159,137 @@ export default function TakePage() {
         setDisplayInvitePopUp(true);
     }
 
-
-    const {
-        galleryItems,
-        placeholderText,
-        info,
-        reward,
-        tips,
-        whatToDo,
-        impact,
-        tasks,
-        description,
-        participants,
-        numberOfTasks,
-        moreInformation,
-    } = take;
-
-
-    return (
-        <>
-            <InvitePopUp display={displayInvitePopUp} setDisplay={setDisplayInvitePopUp}/>
-            <ValidationPopUp setCurrentTask={setCurrentTask} display={displayValidationPopUp}
-                             setDisplay={setDisplayValidationPopUp} question={tasks[currentTask]?.validateText}/>
-            <CongratsPopUp display={displayCongratsPopUp} setDisplay={setDisplayCongratsPopUp}/>
-            <div
-                className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
-                {started ?
-                    <TopAfterStarted take={take} setStarted={setStarted} handleLeaveChallenge={handleLeaveChallenge}
-                                     handleInviteFriends={handleInviteFriends}
-                                     setDisplayValidationPopUp={setDisplayValidationPopUp} currentTask={currentTask}/> :
-                    <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
+    if (id && id !== '') {
+        return (
+            <>
+                <InvitePopUp display={displayInvitePopUp} setDisplay={setDisplayInvitePopUp}/>
+                <ValidationPopUp currentTask={currentTask} setCurrentTask={setCurrentTask}
+                                 display={displayValidationPopUp} setDisplayCongratsPopUp={setDisplayCongratsPopUp}
+                                 numberOfTasks={take.tasks.length}
+                                 setDisplay={setDisplayValidationPopUp} validationData={take.tasks[currentTask].validation}/>
+                <CongratsPopUp display={displayCongratsPopUp} setDisplay={setDisplayCongratsPopUp}/>
+                <div
+                    className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
+                    {started ?
+                        <TopAfterStarted take={take} setStarted={setStarted} handleLeaveChallenge={handleLeaveChallenge}
+                                         handleInviteFriends={handleInviteFriends}
+                                         setDisplayValidationPopUp={setDisplayValidationPopUp}
+                                         currentTask={currentTask}/> :
+                        <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
 
 
-                {started && <Gallery placeholderText={placeholderText} items={galleryItems} taskNum={currentTask + 1}
-                                     task={tasks[currentTask]?.shortText}/>}
+                    {started &&
+                        <Gallery items={take.galleryItems} taskNum={currentTask + 1}
+                                 task={take.tasks[currentTask]?.shortText}/>}
 
-                <ImportantDetails take={take} setStarted={setStarted} started={started}
-                                  setDisplayInvitePopUp={setDisplayInvitePopUp}/>
+                    <ImportantDetails take={take} setStarted={setStarted} started={started}
+                                      setDisplayInvitePopUp={setDisplayInvitePopUp}/>
 
 
-                {/*Detailed details*/}
-                <div className="space-y-5">
-                    <h1 className="font-bold">Description</h1>
-                    <p className="text-gray">{description}</p>
-                </div>
-                {whatToDo && <div className="space-y-5">
-                    <h1 className="font-bold">What to do?</h1>
-                    <p className="text-gray">{whatToDo}</p>
-                </div>}
-                {impact && <div className="space-y-5">
-                    <h1 className="font-bold">Impact</h1>
-                    <ImpactGraphic impact={impact} info={info}/>
-                </div>}
-                {tips &&
+                    {/*Detailed details*/}
                     <div className="space-y-5">
-                        <h1 className="font-bold">Tips</h1>
-                        {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
-                        <ul className="list-disc pl-4">{tips.map(tip => <li key={tip.id}
-                                                                            className="text-gray">{tip.text}</li>)}</ul>
+                        <h1 className="font-bold">Description</h1>
+                        <p className="text-gray">{take.description}</p>
+                    </div>
+                    {take.whatToDo && <div className="space-y-5">
+                        <h1 className="font-bold">What to do?</h1>
+                        <p className="text-gray">{take.whatToDo}</p>
                     </div>}
-                {reward &&
-                    <div className="space-y-5">
-                        <h1 className="font-bold">Reward</h1>
-                        <ul className="space-y-2">{reward.map(reward =>
-                            <div className="flex space-x-4">
-                                <div className="flex flex-col justify-center items-center bg-white
+                    {take.impact && <div className="space-y-5">
+                        <h1 className="font-bold">Impact</h1>
+                        <ImpactGraphic impact={take.impact}/>
+                    </div>}
+                    {take.tips &&
+                        <div className="space-y-5">
+                            <h1 className="font-bold">Tips</h1>
+                            {/*TODO: currently bullet list has to use pl-4 in order not to have the bullets out of the grid area. Find a cleaner fix*/}
+                            <ul className="list-disc pl-4">{take.tips.map(tip => <li key={tip.id}
+                                                                                className="text-gray">{tip.text}</li>)}</ul>
+                        </div>}
+                    {take.reward &&
+                        <div className="space-y-5">
+                            <h1 className="font-bold">Reward</h1>
+                            <ul className="space-y-2">{take.reward.map(reward =>
+                                <div className="flex space-x-4">
+                                    <div className="flex flex-col justify-center items-center bg-white
             border-solid border-2 border-blue rounded-full p-1 min-w-[80px] h-20 text-blue">
-                                    <StarIcon/>
-                                    <p className="text-xs">{reward.amount}</p>
+                                        <StarIcon/>
+                                        <p className="text-xs">{reward.amount}</p>
+                                    </div>
+                                    <p className="text-sm text-gray">{reward.text}</p>
                                 </div>
-                                <p className="text-sm text-gray">{reward.text}</p>
+                            )
+                            }</ul>
+                        </div>}
+                    {take.participants &&
+                        <div>
+                            <h1 className="font-bold">Participants ({take.participants})</h1>
+                            <TransparentButton className="text-sm mb-6 font-semibold" onClick={handleInviteFriends}>Invite
+                                Friends</TransparentButton>
+                            <div className="grid grid-cols-6 gap-2 w-max">
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_6.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_2.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_3.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_4.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_5.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_6.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_2.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_3.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_4.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_5.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_6.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_2.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_3.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_4.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_5.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_6.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_2.jpeg"
+                                     alt="Profile"/>
+                                <img className="rounded-full h-10 w-10 object-cover"
+                                     src="/assets/PNG/profile-images/profile_image_3.jpeg"
+                                     alt="Profile"/>
                             </div>
-                        )
-                        }</ul>
+                            <TransparentButton className="text-sm mt-2">See more</TransparentButton>
+                        </div>}
+                    {take.moreInformation && <div className="space-y-5">
+                        <h1 className="font-bold">More Information</h1>
+                        <p className="text-gray">{take.moreInformation}</p>
                     </div>}
-                {participants &&
-                    <div>
-                        <h1 className="font-bold">Participants ({participants})</h1>
-                        <TransparentButton className="text-sm mb-6 font-semibold" onClick={handleInviteFriends}>Invite
-                            Friends</TransparentButton>
-                        <div className="grid grid-cols-6 gap-2 w-max">
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_6.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_2.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_3.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_4.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_5.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_6.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_2.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_3.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_4.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_5.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_6.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_2.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_3.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_4.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_5.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_6.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_2.jpeg"
-                                 alt="Profile"/>
-                            <img className="rounded-full h-10 w-10 object-cover" src="/assets/PNG/profile-images/profile_image_3.jpeg"
-                                 alt="Profile"/>
-                        </div>
-                        <TransparentButton className="text-sm mt-2">See more</TransparentButton>
-                    </div>}
-                {moreInformation && <div className="space-y-5">
-                    <h1 className="font-bold">More Information</h1>
-                    <p className="text-gray">{moreInformation}</p>
-                </div>}
-            </div>
-        </>
-    )
+                </div>
+            </>
+        )
+    }
 }

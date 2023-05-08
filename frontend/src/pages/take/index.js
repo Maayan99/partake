@@ -78,14 +78,20 @@ const AfterSearch = ({search, type, subject, duration}) => {
     }
 
     if (type !== "") {
-        filtered = filtered.filter(challenge => {
-            return challenge.impact?.type === type;
+        filtered = filtered.filter(take => {
+            return take.type === type;
         })
     }
 
     if (subject !== "") {
-        filtered = filtered.filter(challenge => {
-            return challenge.subject === subject;
+        filtered = filtered.filter(take => {
+            return take.impact?.type === subject;
+        })
+    }
+
+    if (duration !== "") {
+        filtered = filtered.filter(take => {
+            return take.duration <= duration;
         })
     }
 
@@ -135,51 +141,46 @@ export default function Take() {
             options: [
                 {
                     id: '1',
-                    value: 'environmental',
-                    name: 'Environmental',
+                    value: 'challenge',
+                    name: 'Challenge',
                 },
                 {
                     id: '2',
-                    value: 'social',
-                    name: 'Social',
+                    value: 'survey',
+                    name: 'Survey',
                 },
                 {
                     id: '3',
-                    value: 'wellness',
-                    name: 'Well-Being',
+                    value: 'quiz',
+                    name: 'Quiz',
+                },
+                {
+                    id: '4',
+                    value: 'learning',
+                    name: 'E-Learning',
                 },
             ],
         },
         {
             id: '2',
             handleFunction: handleSubjectChange,
-            placeholder: 'Cause',
+            placeholder: 'Subject',
             value: subject,
             options: [
                 {
                     id: '1',
-                    value: 'Sustainability',
-                    name: 'Sustainability',
+                    value: 'environmental',
+                    name: 'Environmental',
                 },
                 {
                     id: '2',
-                    value: 'Wellness',
+                    value: 'wellness',
                     name: 'Wellness',
                 },
                 {
                     id: '3',
-                    value: 'Social Connection',
-                    name: 'Social Connection',
-                },
-                {
-                    id: '4',
-                    value: 'Training and Development',
-                    name: 'Training and Development',
-                },
-                {
-                    id: '5',
-                    value: 'Diversity and Inclusion',
-                    name: 'Diversity and Inclusion',
+                    value: 'social',
+                    name: 'Social',
                 },
             ],
         },
@@ -192,21 +193,20 @@ export default function Take() {
                 {
                     id: '1',
                     value: '15',
-                    name: 'Longer than 15 Minutes',
+                    name: 'Shorter than 15 Minutes',
                 },
                 {
                     id: '2',
                     value: '60',
-                    name: 'Longer than 1 Hour',
+                    name: 'Shorter than 1 Hour',
                 },
                 {
                     id: '3',
                     value: '1440',
-                    name: 'Longer than a Day',
+                    name: 'Shorter than a Day',
                 },
             ],
         },
-
     ];
 
 

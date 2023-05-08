@@ -7,7 +7,6 @@ const GalleryItem = ({item}) => {
     if (user) {
         const id= user.id;
         user = users.filter(user => user.id === id)[0];
-        console.log(user);
     }
 
     return (
