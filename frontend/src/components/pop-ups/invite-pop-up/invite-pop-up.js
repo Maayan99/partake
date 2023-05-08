@@ -50,6 +50,7 @@ export default function InvitePopUp({display, setDisplay}) {
 
 
     const handleSubmit = () => {
+        setSelected([]);
         setDisplay(false);
     }
 
@@ -61,19 +62,21 @@ export default function InvitePopUp({display, setDisplay}) {
                 </IconButton>
                 <h1 className="absolute left-1/2 -translate-x-1/2">Invite Friends</h1>
             </div>
-            <div className="p-10 flex flex-col">
+            <div className="p-10 flex flex-col space-y-3">
                 <input placeholder="Search"
                        className="pl-3 shadow bg-light-gray w-full h-10 focus:outline-none placeholder:italic"
                        onChange={handleSearchChange} value={search}/>
 
-                <p className="font-bold mt-3">Recommended:</p>
+                <p className="font-bold">Recommended:</p>
 
-                <div className="overflow-auto h-36 w-full shadow bg-light-gray p-4 space-y-2 my-2">
+                <div className="overflow-auto h-36 w-full shadow bg-light-gray p-4 space-y-2">
                     {users.slice(3, 6).map(user =>
                         <UserRow user={user} key={user.id} selected={selected} setSelected={setSelected}/>)}
                 </div>
 
-                <div className="overflow-auto h-48 w-full shadow bg-light-gray p-4 space-y-2 my-4">
+                <p className="font-bold">Recents:</p>
+
+                <div className="overflow-auto h-48 w-full shadow bg-light-gray p-4 space-y-2">
                     {filtered.map(user =>
                         <UserRow user={user} key={user.id} selected={selected} setSelected={setSelected}/>)}
                 </div>
