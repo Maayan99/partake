@@ -4,7 +4,7 @@ export default function GetCollection({collection}) {
     const {items, logoImage, description, descriptionBold, id} = collection;
 
     return (
-        <div className="grid grid-cols-10 grid-rows-5 gap-4">
+        <div className="grid grid-cols-10 grid-rows-5 gap-x-6 gap-y-4 ">
             <SmallGetCard get={items[0]} className="col-span-3 row-span-3"/>
             <SmallGetCard get={items[1]} className="col-span-3 row-span-3"/>
             <div className="col-span-4 row-span-5 bg-slate-50 px-16 py-8 space-y-4">

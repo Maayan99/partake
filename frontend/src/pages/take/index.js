@@ -59,7 +59,7 @@ const BeforeSearch = () => {
                         <ArrowForwardIosIcon/>
                     </div>
                     {/*pb-24 -mb-24 for overflow reasons*/}
-                    <div className="flex pl-36 pt-5 pb-24 pt-14 -mb-24 space-x-5 overflow-x-auto">
+                    <div className="flex pl-36 pt-20 -mt-16 pb-24 -mb-24 space-x-5 overflow-x-auto">
                         {categoriesDictionary[category].map(take => <SmallTakeCard key={take.id} take={take}/>)}
                     </div>
                 </div>)}

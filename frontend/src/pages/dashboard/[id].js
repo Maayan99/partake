@@ -15,45 +15,68 @@ export default function Dashboard() {
     }
 
     const environmentalImpact = {
-        causes: [
+        categories: [
             {
-                id: 1,
+                id: '1',
                 boldText: '44 KG',
                 text: 'Of CO2 Reduction',
                 icon: 'carbon',
-                infoText: 'Carbon emissions info',
-                largeText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at aliquet nisi, sed aliquet ipsum. Sed at aliquet nisi, sed aliquet ipsum. Sed at aliquet nisi, sed aliquet ipsum',
-                link: 'uhisdkd',
+                tooltipText: 'Carbon emissions info',
+                tooltips:
+                    [
+                        {
+                            text: 'Each meal donated helps another child smile more',
+                            icon: 'community',
+                        },
+                    ],
             },
             {
-                id: 2,
+                id: '2',
                 boldText: '20 Liters',
                 text: 'Of water saved',
                 icon: 'water',
-                infoText: 'Water savings info',
-                link: 'uhisdkd',
+                tooltipText: 'Carbon emissions info',
+                tooltips:
+                    [
+                        {
+                            text: 'Each meal donated helps another child smile more',
+                            icon: 'community',
+                        },
+                    ],
             },
             {
-                id: 3,
+                id: '3',
                 boldText: '200 M2',
                 text: 'Of land use saved',
                 icon: 'landfill',
-                infoText: 'Land use info',
-                link: 'uhisdkd',
+                tooltipText: 'Carbon emissions info',
+                tooltips:
+                    [
+                        {
+                            text: 'Each meal donated helps another child smile more',
+                            icon: 'community',
+                        },
+                    ],
             },
         ],
         type: 'environmental',
     };
 
     const socialImpact = {
-        causes: [
+        categories: [
             {
                 id: 1,
                 boldText: '20',
                 text: 'Hours volunteered',
                 icon: 'clock',
-                infoText: 'Social impact info',
-                link: 'uhisdkd',
+                tooltipText: 'Carbon emissions info',
+                tooltips:
+                    [
+                        {
+                            text: 'Each meal donated helps another child smile more',
+                            icon: 'community',
+                        },
+                    ],
             },
             {
                 id: 2,

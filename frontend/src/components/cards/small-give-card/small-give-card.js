@@ -1,12 +1,7 @@
 import React from 'react';
-import {Card, CardContent, Typography} from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import PetsIcon from '@mui/icons-material/Pets';
-import SignalWifiStatusbar4BarIcon from '@mui/icons-material/SignalWifiStatusbar4Bar';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 
 import PrimaryButton from "@components/components/common/primary-button";
 import ParticipantsRow from "@components/components/participants-row/participants-row";

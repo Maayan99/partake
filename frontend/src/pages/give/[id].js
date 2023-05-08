@@ -8,7 +8,7 @@ import TakeCoverCard from "@components/components/cards/take-cover-card/take-cov
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import StarIcon from "@mui/icons-material/Star";
 import GiveCoverCard from "@components/components/cards/give-cover-card/give-cover-card";
-import {useState} from "react";
+import React, {useState} from "react";
 
 const ImportantDetails = ({give}) => {
     const {
@@ -130,7 +130,7 @@ export default function GivePage() {
                     <div className="space-y-5">
                         <h1 className="font-bold">Sponsors</h1>
                         <div className="flex">{sponsors.array.map(sponsor =>
-                            <img key={sponsor.id} src={`/assets/PNG/logos/${sponsor.image}`}
+                            <img key={sponsor.id} src={`/assets/PNG/logos/rectangle/logo-${sponsor.image}.png`}
                                  className="h-16 w-16 rounded-full object-cover"/>)}</div>
                         <p className="text-gray">{sponsors.text}</p>
                     </div>}
@@ -149,24 +149,60 @@ export default function GivePage() {
                 {participants && <div className="space-y-5">
                     <h1 className="font-bold">Participants ({participants})</h1>
                     <div className="grid grid-cols-6 gap-2 w-max">
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/200" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/201" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/202" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/203" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/204" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/205" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/206" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/207" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/208" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/209" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/210" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/211" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/212" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/213" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/214" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/215" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/216" alt="Profile"/>
-                        <img className="rounded-full h-10 w-10" src="https://unsplash.it/217" alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_6.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_2.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_3.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_4.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_5.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_6.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_2.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_3.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_4.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_5.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_6.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_2.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_3.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_4.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_5.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_6.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_2.jpeg"
+                             alt="Profile"/>
+                        <img className="rounded-full h-10 w-10 object-cover"
+                             src="/assets/PNG/profile-images/profile_image_3.jpeg"
+                             alt="Profile"/>
                     </div>
                 </div>}
             </div>

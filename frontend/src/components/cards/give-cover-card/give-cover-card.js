@@ -23,7 +23,7 @@ const GiveCoverCard = ({give}) => {
                 </p>
                 {sponsors && <div className='flex space-x-2'>
                     {sponsors.array.map(sponsor => <img key={sponsor.id}
-                                                  src={`/assets/PNG/logos/${sponsor.image}`} alt={sponsor.name}
+                                                  src={`/assets/PNG/logos/square/logo-s-${sponsor.image}.png`} alt={sponsor.name}
                     className="rounded-full object-cover h-10 w-10 bg-white"/>)}
                 </div>}
             </div>
