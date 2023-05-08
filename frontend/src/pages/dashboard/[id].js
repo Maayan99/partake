@@ -6,7 +6,7 @@ import Tree from "@components/components/tree/tree";
 
 export default function Dashboard() {
 
-    const profileImage = `/assets/PNG/profile_image_1.jpeg`
+    const profileImage = `/assets/PNG/profile-images/profile_image_1.jpeg`
 
     const handleLogout = () => {
         sessionStorage.setItem('loggedIn', 'false');

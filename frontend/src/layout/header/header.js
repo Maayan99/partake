@@ -4,7 +4,7 @@ import Icon from "@components/components/common/icon/icon";
 
 const Header = () => {
 
-    const profilePhotoURL = `/assets/PNG/profile_image_1.jpeg`;
+    const profilePhotoURL = `/assets/PNG/profile-images/profile_image_1.jpeg`;
 
 
     const handleProfileClick = () => {

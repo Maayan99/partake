@@ -2,7 +2,7 @@ const getData = [
     {
         id: '1',
         name: 'Cork',
-        logoImage: 'yoga-store-logo.webp',
+        logoImage: 'yoga-store-logo.png',
         descriptionBold: 'Our products are made from natural cork, which is a sustainable and renewable resource',
         description: 'When you choose our cork yoga mat, you are helping to support a sustainable industry and reduce your impact on the planet.',
         category: 'Sustainability',
@@ -14,7 +14,8 @@ const getData = [
                     coins: 1750,
                     shortDescription: 'Yoga mats are nice bla bla bla bla bla bla',
                     title: 'Yoga Mat',
-                    category: 'Sustainability',
+                    left: 4,
+                    category: 'Sustainabi   lity',
                     collection: '1',
                 },
                 {
@@ -23,6 +24,7 @@ const getData = [
                     coins: 2500,
                     shortDescription: 'Bags are really nice bla bla bla bla bla bla',
                     title: 'Cork Bag',
+                    left: 32,
                     category: 'Sustainability',
                     collection: '1',
                 },
@@ -32,6 +34,7 @@ const getData = [
                     coins: 3000,
                     shortDescription: 'Hats are really nice bla bla bla bla bla bla',
                     title: 'Cork Hat',
+                    left: 20,
                     category: 'Sustainability',
                     collection: '1',
                 },
@@ -41,6 +44,7 @@ const getData = [
                     coins: 1200,
                     shortDescription: 'Bricks are really nice bla bla bla bla bla bla',
                     title: 'Cork Brick',
+                    left: 10,
                     category: 'Sustainability',
                     collection: '1',
                 }

@@ -19,7 +19,7 @@ const LargeTakeCard = ({take}) => {
         <div className="bg-white group w-72 h-[420px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
          hover:h-[500px] hover:-mb-20 hover:scale-110 hover:-translate-y-3 hover:rounded-lg hover:shadow-md hover:z-10 text-xs" onClick={handleClick}>
             <div className="w-full h-[410px] rounded-t-lg flex flex-col justify-between"
-                 style={{backgroundImage: `linear-gradient(to bottom, transparent 40%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
+                 style={{backgroundImage: `linear-gradient(to bottom, transparent 40%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/take/${coverImage}")`}}>
                 <TakeIcons duration={duration} impactType={impactType} coins={coins}/>
                 <div className="text-white ml-2.5 mb-2.5">
                     <h2 className="font-bold text-2xl leading-snug drop-shadow-md">

@@ -20,7 +20,7 @@ const SmallTakeCard = ({take}) => {
                 <div className="w-full h-[190px] rounded-t-lg flex flex-col justify-between"
                      style={{backgroundImage: `
                      linear-gradient(to bottom, rgba(2,0,36,0.4) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.65) 100%),
-                      url("/assets/PNG/${coverImage}")`}}>
+                      url("/assets/PNG/take/${coverImage}")`}}>
                     <TakeIcons impactType={impactType} coins={coins} duration={duration}/>
 
                     <div className="text-white ml-2.5 mb-2.5">

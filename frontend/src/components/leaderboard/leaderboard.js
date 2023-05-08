@@ -2,7 +2,7 @@ const LeaderboardRow = ({profileImage, name, score}) => {
     return (
         <div className="p-4">
             <div className="flex space-x-3">
-                <img src={`/assets/PNG/${profileImage}.jpeg`} className="w-8 h-8 rounded-full object-cover border border-white"
+                <img src={`/assets/PNG/profile-images/${profileImage}.jpeg`} className="w-8 h-8 rounded-full object-cover border border-white"
                      alt="Leaderboard Profile Image"/>
                 <p className="text-gray-500">{name}</p>
             </div>

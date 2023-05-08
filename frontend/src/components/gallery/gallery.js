@@ -13,12 +13,12 @@ const GalleryItem = ({item}) => {
     return (
         <div className="p-4 flex flex-col min-h-62 space-y-2 h-min">
             {user && <div className="flex items-center space-x-3">
-                <img src={`/assets/PNG/${user.profileImage}`} className="w-12 h-12 rounded-full object-cover"/>
+                <img src={`/assets/PNG/profile-images/${user.profileImage}`} className="w-12 h-12 rounded-full object-cover"/>
                 <span>{user.username}</span>
             </div>}
             <div className="w-full h-full bg-slate-200 mt-3">
                 {image &&
-                    <img src={`/assets/PNG/${image}`} className="w-full"/>}
+                    <img src={`/assets/PNG/gallery/${image}`} className="w-full"/>}
             </div>
             {text}
 

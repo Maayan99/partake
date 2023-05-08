@@ -12,7 +12,7 @@ const GiveCoverCard = ({give}) => {
             flex flex-col justify-between bg-cover bg-center"
             style={{backgroundImage: `
             linear-gradient(to bottom, rgba(2,0,36,0.4) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.65) 100%),
-            url("/assets/PNG/${coverImage}")`}}>
+            url("/assets/PNG/give/${coverImage}")`}}>
             <TakeIcons duration={duration} impactType={impactType} coins={coins}/>
             <div className="text-white ml-2.5 mb-2.5">
                 <h2 className="font-bold text-2xl leading-snug drop-shadow-md">
@@ -23,7 +23,7 @@ const GiveCoverCard = ({give}) => {
                 </p>
                 {sponsors && <div className='flex space-x-2'>
                     {sponsors.array.map(sponsor => <img key={sponsor.id}
-                                                  src={`/assets/PNG/${sponsor.image}`} alt={sponsor.name}
+                                                  src={`/assets/PNG/logos/${sponsor.image}`} alt={sponsor.name}
                     className="rounded-full object-cover h-10 w-10 bg-white"/>)}
                 </div>}
             </div>

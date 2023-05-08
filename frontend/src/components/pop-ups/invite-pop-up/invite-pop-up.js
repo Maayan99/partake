@@ -22,7 +22,7 @@ const UserRow = ({user, selected, setSelected}) => {
             <input type="checkbox" checked={selected.includes(id)}/>
             <div className="flex items-center">
                 <img
-                    src={`/assets/PNG/${profileImage}`}
+                    src={`/assets/PNG/profile-images/${profileImage}`}
                     alt="profile"
                     className="h-8 w-8 border border-1 border-white object-cover rounded-full mr-2"
                 />

@@ -29,9 +29,9 @@ const SmallGiveCard = ({give}) => {
 
     return (
         <div className="bg-white  w-80 h-80 min-w-[320px] rounded-lg shadow-md transition-all duration-150
-         hover:scale-110 hover:z-10" onClick={handleClick}>
+         hover:scale-110 hover:z-10 hover:shadow-lg hover:-translate-y-3" onClick={handleClick}>
                 <div className="w-full h-52 rounded-t-lg flex flex-col justify-between"
-                     style={{backgroundImage: `linear-gradient(to bottom, transparent 10%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/${coverImage}")`}}>
+                     style={{backgroundImage: `linear-gradient(to bottom, transparent 10%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/give/${coverImage}")`}}>
                     <div className="mt-2.5 ml-2.5">
                         <div className="flex bg-white rounded-full w-fit py-1 px-3 items-center">
                             <Icon name={activityType} className="h-5"/>

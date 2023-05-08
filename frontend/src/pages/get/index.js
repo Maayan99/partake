@@ -38,7 +38,7 @@ export default function Get() {
     return (
         <div className="px-20 space-y-10">
             <div className="grid grid-cols-4 grid-rows-3 gap-4 w-full aspect-[2.8]">
-                <img src={`/assets/PNG/donate-mock-image.webp`} className="col-span-2 row-span-3
+                <img src={`/assets/PNG/get/donate-mock-image.webp`} className="col-span-2 row-span-3
                  object-cover w-full h-full"/>
                 <div className="col-span-2 row-span-2 h-full w-full bg-important-blue flex flex-col
                  items-center justify-center p-10 text-center">
@@ -46,8 +46,8 @@ export default function Get() {
                         the environment and society</h1>
                     <p>Take a part and reduce your impact on the plant</p>
                 </div>
-                <img src={`/assets/PNG/blue-monday-mock.jpeg`} className="object-cover w-full h-full"/>
-                <img src={`/assets/PNG/gift-card-mock.jpeg`} className="object-cover w-full h-full"/>
+                <img src={`/assets/PNG/get/blue-monday-mock.jpeg`} className="object-cover w-full h-full"/>
+                <img src={`/assets/PNG/get/gift-card-mock.jpeg`} className="object-cover w-full h-full"/>
             </div>
 
             <div className="space-y-7">

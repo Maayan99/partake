@@ -130,7 +130,7 @@ export default function GivePage() {
                     <div className="space-y-5">
                         <h1 className="font-bold">Sponsors</h1>
                         <div className="flex">{sponsors.array.map(sponsor =>
-                            <img key={sponsor.id} src={`/assets/PNG/${sponsor.image}`}
+                            <img key={sponsor.id} src={`/assets/PNG/logos/${sponsor.image}`}
                                  className="h-16 w-16 rounded-full object-cover"/>)}</div>
                         <p className="text-gray">{sponsors.text}</p>
                     </div>}
