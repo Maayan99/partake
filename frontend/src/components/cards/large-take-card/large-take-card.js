@@ -30,7 +30,7 @@ const LargeTakeCard = ({take}) => {
                 </div>
             </div>
             <ProgressBar percentage={progress}/>
-            <div className="opacity-0 flex flex-col content-center transition-all duration-100 group-hover:opacity-100">
+            <div className="hidden opacity-0 group-hover:flex flex-col content-center transition-all duration-100 group-hover:opacity-100">
                 <p className="text-center m-1.5">{shortDescription}</p>
                 <div className="flex justify-between px-2.5">
                     <ParticipantsRow participants={participants}/>
