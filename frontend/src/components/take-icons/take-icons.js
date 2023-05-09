@@ -5,22 +5,22 @@ import Icon from "@components/components/common/icon/icon";
 export default function TakeIcons({impactType, coins, duration}) {
     const getDurationText = () => {
         if (duration < 60) {
-            return <p className="text-[7pt] -translate-y-[132%] leading-3 text-center">{duration}<br/>Min</p>;
+            return <p className="text-[7pt] -translate-y-[153%] leading-3 text-center">{duration}<br/>Min</p>;
         } else if (duration < 1440) {
             if (duration === 60) {
-                return <p className="text-[7pt] -translate-y-[132%]  leading-3 text-center">1<br/>Hour</p>
+                return <p className="text-[7pt] -translate-y-[153%]  leading-3 text-center">1<br/>Hour</p>
             }
-            return <p className="text-[7pt] -translate-y-[132%] leading-3 text-center">{duration / 60}<br/>Hours</p>;
+            return <p className="text-[7pt] -translate-y-[153%] leading-3 text-center">{duration / 60}<br/>Hours</p>;
         } else if (duration < 10080) {
             if (duration === 1440) {
-                return <p className="text-[7pt] -translate-y-[132%] leading-3 text-center">1<br/>Days</p>;
+                return <p className="text-[7pt] -translate-y-[153%] leading-3 text-center">1<br/>Days</p>;
             }
-            return <p className="text-[7pt] -translate-y-[132%] leading-3 text-center">{duration / 1440}<br/>Days</p>;
+            return <p className="text-[7pt] -translate-y-[153%] leading-3 text-center">{duration / 1440}<br/>Days</p>;
         } else {
             if (duration === 10080) {
-                return <p className="text-[7pt] -translate-y-[132%] leading-3 text-center">1<br/>Week</p>;
+                return <p className="text-[7pt] -translate-y-[153%] leading-3 text-center">1<br/>Week</p>;
             }
-            return <p className="text-[7pt] -translate-y-[132%] leading-3 text-center">{duration / 10080}<br/>Weeks</p>;
+            return <p className="text-[7pt] -translate-y-[153%] leading-3 text-center">{duration / 10080}<br/>Weeks</p>;
         }
     }
 
