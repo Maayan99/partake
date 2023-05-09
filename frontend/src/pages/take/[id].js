@@ -1,7 +1,6 @@
 import takeData from "../../../public/take-data.js"
 import {useRouter} from "next/router";
 import TakeCoverCard from "@components/components/cards/take-cover-card/take-cover-card";
-import Leaderboard from "@components/components/leaderboard/leaderboard";
 import PrimaryButton from "@components/components/common/primary-button";
 import TransparentButton from "@components/components/common/transparent-button"
 import BlueButton from "@components/components/common/blue-button"
@@ -76,6 +75,7 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
     );
 };
 const TopAfterStarted = ({
+                             setPingCategory,
                              take,
                              currentTask,
                              setDisplayValidationPopUp,
@@ -110,8 +110,11 @@ const TopAfterStarted = ({
                 <BlueButton className="mt-4 text-2xl w-2/3" onClick={handleShowValidation}>Validate
                     Task {currentTask + 1}</BlueButton>
             </div>
-            <div className="min-w-[370px] flex flex-col items-center justify-between">
-                <ImpactGraphic impact={impact}/>
+            <div className="flex flex-col items-center justify-between">
+                <div className="w-full">
+                    <h1 className="font-bold">Your Impact</h1>
+                    <ImpactGraphic impact={impact} setPingCategory={setPingCategory}/>
+                </div>
                 <ParticipantsGrid participants={take.participants} handleInviteFriends={handleInviteFriends}/>
 
             </div>
@@ -125,6 +128,62 @@ export default function TakePage() {
     const [currentTask, setCurrentTask] = useState(0);
     const [displayInvitePopUp, setDisplayInvitePopUp] = useState(false);
     const [displayCongratsPopUp, setDisplayCongratsPopUp] = useState(false);
+
+    const [pingCategory, setPingCategory] = useState(0);
+
+    const [totalImpactScore, setTotalImpactScore] = useState(0);
+    const [impactMade, setImpactMade] = useState(
+        [
+            {
+                id: '1',
+                boldText: '0 KG',
+                icon: 'carbon',
+                tooltipText: 'Carbon emissions info',
+                tooltips:
+                    [
+                        {
+                            text: '',
+                            icon: 'community',
+                        },
+                    ],
+            },
+            {
+                id: '2',
+                boldText: '20 Liters',
+                icon: 'water',
+                tooltipText: 'Carbon emissions info',
+                tooltips:
+                    [
+                        {
+                            text: 'Each meal donated helps another child smile more',
+                            icon: 'community',
+                        },
+                    ],
+            },
+            {
+                id: '3',
+                boldText: '200 M2',
+                icon: 'landfill',
+                tooltipText: 'Carbon emissions info',
+                tooltips:
+                    [
+                        {
+                            text: 'Each meal donated helps another child smile more',
+                            icon: 'community',
+                        },
+                    ],
+            },
+        ]
+    );
+
+    useEffect(() => {
+        setImpactMade(prev => {
+            return prev.map((category, index) => (index === pingCategory ? {
+                ...category,
+                ping: true
+            } : {...category, ping: false}))
+        });
+    }, [pingCategory])
 
     const router = useRouter();
 
@@ -154,11 +213,11 @@ export default function TakePage() {
 
     const handleLeaveChallenge = () => {
         setStarted(false);
-    }
+    };
 
     const handleInviteFriends = () => {
         setDisplayInvitePopUp(true);
-    }
+    };
 
     if (id && id !== '') {
         return (
@@ -176,8 +235,9 @@ export default function TakePage() {
                 <div
                     className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
                     {started ?
-                        <TopAfterStarted take={take} setStarted={setStarted} handleLeaveChallenge={handleLeaveChallenge}
-                                         handleInviteFriends={handleInviteFriends} impact={take.impact}
+                        <TopAfterStarted setPingCategory={setPingCategory} take={take} setStarted={setStarted}
+                                         handleLeaveChallenge={handleLeaveChallenge}
+                                         handleInviteFriends={handleInviteFriends} impact={{categories: impactMade, total: totalImpactScore}}
                                          setDisplayValidationPopUp={setDisplayValidationPopUp}
                                          currentTask={currentTask}/> :
                         <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}

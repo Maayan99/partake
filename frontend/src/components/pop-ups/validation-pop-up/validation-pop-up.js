@@ -1,26 +1,15 @@
-import CloseIcon from '@mui/icons-material/Close';
 import PopUp from "@components/components/pop-ups/basic-pop-up/pop-up";
-import IconButton from "@components/components/common/icon-button";
-import BlueButton from "@components/components/common/blue-button";
-import Icon from "@components/components/common/icon/icon";
 import {useEffect, useState} from "react";
-
-export default function ValidationPopUp({
-                                            currentTask, setCurrentTask, display, setDisplay, validationData,
-                                            setDisplayCongratsPopUp, numberOfTasks
-                                        }) {
-    const {text, type, icon, photoValidationData, numberValidationData} = validationData;
+import Icon from "@components/components/common/icon/icon";
+import BlueButton from "@components/components/common/blue-button";
 
 
-    const typeIsNumber = type === "number";
-
-    const [number, setNumber] = useState(0);
+const CongratsGraphic = ({icon, destinationNumber, multiplier, setDisplay}) => {
     const [displayedNumber, setDisplayedNumber] = useState(1);
-
 
     useEffect(() => {
         const updateInput = () => {
-            const numberMultiplied = number * numberValidationData?.multiplier;
+            const numberMultiplied = destinationNumber * multiplier;
 
             if (displayedNumber !== numberMultiplied) {
                 setDisplayedNumber(prev => {
@@ -40,20 +29,34 @@ export default function ValidationPopUp({
         const interval = setInterval(updateInput, 15);
 
         return (() => clearInterval(interval));
-    }, [number, displayedNumber])
+    }, [destinationNumber, displayedNumber])
 
-    const handleValidate = (e) => {
-        e.preventDefault()
+    return (
+        <div className="flex flex-col items-center p-6">
+            <Icon name={icon} className="h-12 w-12"/>
+            <h1 className="font-bold">You saved:</h1>
+            <span className="text-center mb-10">{displayedNumber}</span>
+            <BlueButton onClick={() => setDisplay(false)}>Close</BlueButton>
+        </div>
+    )
+}
 
-        setDisplay(false);
+const Validation = ({
+                        validationData,
+                        setDestinationNumber,
+                        setShowCongratsGraphic,
+                        currentTask,
+                        setCurrentTask,
+                        numberOfTasks,
+                        setDisplayCongratsPopUp,
+                        setDisplay,
+                    }) => {
 
-        if (currentTask + 1 === numberOfTasks) {
-            setCurrentTask(0);
-            setDisplayCongratsPopUp(true);
-        } else {
-            setCurrentTask(prev => prev + 1);
-        }
-    };
+    const {text, type, icon, photoValidationData, infoText, numberValidationData} = validationData;
+
+    const typeIsNumber = type === "number";
+
+    const [number, setNumber] = useState(0);
 
     const handleNumberChange = (e) => {
         const value = e.target.value;
@@ -74,20 +77,29 @@ export default function ValidationPopUp({
         setNumber(e.target.value);
     };
 
+    const handleValidate = (e) => {
+        e.preventDefault()
+
+
+        if (typeIsNumber) {
+            setDestinationNumber(number);
+            setShowCongratsGraphic(true);
+        } else {
+            setDisplay(false);
+
+            if (currentTask + 1 === numberOfTasks) {
+                setDisplayCongratsPopUp(true);
+            } else {
+                setCurrentTask(prev => prev + 1);
+            }
+        }
+    };
+
     return (
-        <PopUp display={display}>
-            <div className="bg-blue p-4 flex text-white">
-                <IconButton onClick={() => setDisplay(false)}>
-                    <CloseIcon/>
-                </IconButton>
-                <h1 className="absolute left-1/2 -translate-x-1/2">Validate Task</h1>
-            </div>
-            <div className="flex flex-col items-center pt-10 space-y-2 text-blue">
+        <div className={`flex flex-col`}>
+            <div className="flex flex-col items-center p-8 space-y-2 text-blue">
                 <Icon name={icon} className="h-12 w-12"/>
-                {typeIsNumber && <h1 className="text-lg font-bold">You saved:</h1>}
-                {typeIsNumber ?
-                    <span>{displayedNumber} {numberValidationData?.units}</span>
-                    : <span>{photoValidationData?.text}</span>}
+                <span className="text-center">{infoText}</span>
             </div>
             <form className="p-8 flex flex-col items-center space-y-4" onSubmit={handleValidate}>
                 <h1 className="text-xl">{text}</h1>
@@ -113,7 +125,35 @@ export default function ValidationPopUp({
 
                 <BlueButton type="submit">Submit{!typeIsNumber && ' Image'}</BlueButton>
             </form>
+        </div>
+    )
+}
 
+export default function ValidationPopUp({
+                                            currentTask, setCurrentTask, display, setDisplay, validationData,
+                                            setDisplayCongratsPopUp, numberOfTasks
+                                        }) {
+    const {icon, numberValidationData} = validationData;
+
+
+    const [destinationNumber, setDestinationNumber] = useState(0);
+    const [showCongratsGraphic, setShowCongratsGraphic] = useState(false);
+
+
+    return (
+        <PopUp display={display} setDisplay={setDisplay} title={showCongratsGraphic ? 'Congratulations!' : 'Validation'}>
+            {!showCongratsGraphic && <Validation validationData={validationData}
+                                                 setDestinationNumber={setDestinationNumber}
+                                                 setShowCongratsGraphic={setShowCongratsGraphic}
+                                                 currentTask={currentTask}
+                                                 setCurrentTask={setCurrentTask}
+                                                 numberOfTasks={numberOfTasks}
+                                                 setDisplayCongratsPopUp={setDisplayCongratsPopUp}
+                                                 setDisplay={setDisplay}/>}
+            {showCongratsGraphic && <CongratsGraphic multiplier={numberValidationData?.multiplier}
+                                                     destinationNumber={destinationNumber}
+                                                     icon={icon}
+                                                     setDisplay={setDisplay}/>}
         </PopUp>
     )
 }

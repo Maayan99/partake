@@ -143,11 +143,9 @@ const takeData = [
                         text: 'Take a screenshot of the emails ',
                         type: 'image',
                         icon: 'carbon',
-
+                        infoText: 'Deleting emails can also be refreshing',
                         photoValidationData:
-                            {
-                                text: 'Deleting emails can also be refreshing',
-                            },
+                            {},
                     },
                     shortText: 'Delete as many emails as possible',
                     longText: "Take a few minutes to go through your inbox and delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before and after. Don't forget to encourage your coworkers to participate as well!",
@@ -159,7 +157,7 @@ const takeData = [
                         text: 'How many emails have you deleted?',
                         type: 'number',
                         icon: 'carbon',
-
+                        infoText: 'Deleting emails can help the environment by as much as 4 grams per email',
                         numberValidationData:
                             {
                                 max: 200,

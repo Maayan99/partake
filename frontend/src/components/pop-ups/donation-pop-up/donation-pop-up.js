@@ -3,13 +3,12 @@ import IconButton from "@components/components/common/icon-button";
 import CloseIcon from "@mui/icons-material/Close";
 import BlueButton from "@components/components/common/blue-button";
 
-export default function CongratsPopUp({display, setDisplay}) {
+export default function DonationPopUp({display, setDisplay}) {
     return (
-        <PopUp display={display} setDisplay={setDisplay} title='Congratulations!'>
+        <PopUp display={display} setDisplay={setDisplay} title="Donation">
             <div className="p-8 flex flex-col items-center space-y-4">
                 <BlueButton onClick={() => {window.location.href = '/take'}}>Take me to more challenges!</BlueButton>
             </div>
-
         </PopUp>
     )
 }

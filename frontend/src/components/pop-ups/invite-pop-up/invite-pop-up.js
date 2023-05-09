@@ -55,13 +55,7 @@ export default function InvitePopUp({display, setDisplay}) {
     }
 
     return (
-        <PopUp display={display}>
-            <div className="bg-blue p-4 flex text-white">
-                <IconButton onClick={() => setDisplay(false)}>
-                    <CloseIcon/>
-                </IconButton>
-                <h1 className="absolute left-1/2 -translate-x-1/2">Invite Friends</h1>
-            </div>
+        <PopUp display={display} setDisplay={setDisplay} title="Invite Friends">
             <div className="p-10 flex flex-col space-y-3">
                 <input placeholder="Search"
                        className="pl-3 shadow bg-light-gray w-full h-10 focus:outline-none placeholder:italic"
