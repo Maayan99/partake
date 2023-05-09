@@ -38,9 +38,11 @@ export default function TakeIcons({impactType, coins, duration}) {
             </div>
             {duration ?
                 <div className="text-white w-12 h-12">
-                    <svg className="w-12 h-12 fill-white" viewBox="0 0 155 163">
-                        <path
-                            d="M133.68,37.545c-0.925-0.925-2.429-0.925-3.353,0c-0.931,0.931-0.931,2.434,0,3.359 C143.334,53.918,150.5,71.216,150.5,89.618c0,37.985-30.902,68.882-68.888,68.882c-37.979,0-68.882-30.902-68.882-68.882 c0-37.788,30.592-68.541,68.303-68.858L67.209,34.58c-0.931,0.925-0.931,2.429,0,3.359c0.459,0.465,1.074,0.698,1.677,0.698 s1.211-0.233,1.677-0.698l18.623-18.623L70.562,0.694c-0.931-0.925-2.429-0.925-3.353,0c-0.931,0.931-0.931,2.434,0,3.359 L79.25,16.088C39.743,17.359,7.987,49.801,7.987,89.606c0,40.605,33.027,73.637,73.631,73.637 c40.611,0,73.637-33.033,73.637-73.631C155.256,69.939,147.588,51.454,133.68,37.545z"/>
+                    <svg className="w-12 h-12 fill-white"  viewBox="0 0 64.57 65.694">
+                        <g id="Group_186" data-name="Group 186" transform="translate(2.087 2.087)">
+                            <path id="Path_420" data-name="Path 420" d="M58.82,16.76a30.751,30.751,0,1,0,2.636,25.154" transform="translate(-1.5 -1.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                            <path id="Path_421" data-name="Path 421" d="M35.766,5.21l.054,13.076L24.468,11.8Z" transform="translate(25.725 5.975)" fill="#fff" stroke="#fff" stroke-width="1"/>
+                        </g>
                     </svg>
                     {getDurationText()}
                 </div>
