@@ -54,7 +54,7 @@ const Nav = ({isAdmin}) => {
     };
 
     return (
-        <div className={`sticky top-0 bg-white w-full flex justify-center space-2.5 py-4 z-20 mb-20
+        <div className={`sticky top-0 bg-white w-full flex justify-center space-x-14 py-4 z-20 mb-20
         transition ease-in-out duration-500 ${animateNav && 'shadow-xl backdrop-blur-md bg-opacity-50'}`}>
             {options.map((option) => (
                 <div key={option}>

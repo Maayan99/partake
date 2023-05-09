@@ -25,7 +25,7 @@ export default function FilterBar({search, setSearch, filterersArray}) {
             <a href="/make">
                 <div className="w-24 h-24 border border-4 border-black rounded-full
                 transform-all duration-150 hover:scale-110 flex justify-center items-center">
-                    <Icon name="plus"/>
+                    <Icon name="plus" className="h-8 w-8"/>
                 </div>
             </a>
         </div>

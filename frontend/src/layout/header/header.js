@@ -12,11 +12,11 @@ const Header = () => {
     }
 
     return (
-        <div className="flex items-center justify-between p-4">
+        <div className="flex items-center justify-between py-4 px-16">
             <p>partake</p>
 
-            <div className='flex items-center space-x-7'>
-                <div className="flex items-center space-x-7">
+            <div className='flex items-center'>
+                <div className="flex items-center space-x-7 mr-10">
                     <p>My impact</p>
                     <div className="flex items-center space-x-3">
                         <Icon name="environmental" className="h-5"/>
@@ -32,13 +32,13 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className="flex mr-10">
+                <div className="flex space-x-3 mr-14">
                     <p>Partake Coins</p>
                     <StarIcon className="text-blue"/>
                     <p>100</p>
                 </div>
                 <img  onClick={handleProfileClick}
-                    src={profilePhotoURL} alt="Profile" className="w-14 h-14 rounded-full
+                    src={profilePhotoURL} alt="Profile" className="w-12 h-12 rounded-full
                 outline outline-2 outline-offset-1 outline-blue object-cover transition-all duration-150
                 hover:scale-110"
                 />
