@@ -1,5 +1,4 @@
 import React from 'react';
-import {Card, CardContent, Typography} from '@mui/material';
 
 import TakeIcons from "@components/components/take-icons/take-icons";
 

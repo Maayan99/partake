@@ -1,5 +1,4 @@
 import React from 'react';
-import {Card, CardContent, LinearProgress} from '@mui/material';
 
 import TakeIcons from "@components/components/take-icons/take-icons";
 import ParticipantsRow from "@components/components/participants-row/participants-row";

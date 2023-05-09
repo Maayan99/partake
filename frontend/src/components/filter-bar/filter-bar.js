@@ -1,9 +1,6 @@
-import AddIcon from "@mui/icons-material/Add";
+import Icon from "@components/components/common/icon/icon";
 
 export default function FilterBar({search, setSearch, filterersArray}) {
-    const filteringValues = filterersArray.map(filterer => filterer.name);
-
-
     const handleSearchChange = (event) => {
         setSearch(event.target.value);
     };
@@ -28,7 +25,7 @@ export default function FilterBar({search, setSearch, filterersArray}) {
             <a href="/make">
                 <div className="w-24 h-24 border border-4 border-black rounded-full
                 transform-all duration-150 hover:scale-110 flex justify-center items-center">
-                    <AddIcon/>
+                    <Icon name="plus"/>
                 </div>
             </a>
         </div>

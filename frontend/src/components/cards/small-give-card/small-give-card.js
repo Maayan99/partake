@@ -1,6 +1,5 @@
 import React from 'react';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import PrimaryButton from "@components/components/common/primary-button";
@@ -55,7 +54,7 @@ const SmallGiveCard = ({give}) => {
                             {donations &&
                                 <div className="flex flex-col justify-center items-center border-solid border-2
                             border-blue rounded-full p-1.5 w-9 h-9 text-blue">
-                                    <ShoppingBasketIcon/>
+                                    <Icon name="reward"/>
                                 </div>}
                         </div>}
                         {location && <div className="flex items-center text-gray space-x-2">

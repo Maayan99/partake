@@ -30,7 +30,7 @@ export default function ImpactGraphic({impact}) {
             <div className="flex text-blue space-x-10 my-5">
                 <div className="flex flex-col justify-between">
                     <Icon name={type}/>
-                    <InfoIcon className="text-black"/>
+                    <Icon name="info-circle" className="h-7 w-7"/>
                 </div>
                 <div className="flex space-x-5 text-center">
                     {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
