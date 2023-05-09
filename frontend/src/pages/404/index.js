@@ -6,7 +6,7 @@ export default function FourOFour() {
             <Head>
                 <title>404</title>
             </Head>
-            <div className="flex justify-center">
+            <div className="flex items-center justify-center">
                 <h1>404 - Page not found</h1>
             </div>
         </>

@@ -38,7 +38,7 @@ export default function Get() {
     return (
         <>
             <Head>
-                <title>Get Marketplace</title>
+                <title></title>
             </Head>
             <div className="px-20 space-y-10">
                 <div className="grid grid-cols-4 grid-rows-3 gap-4 w-full aspect-[2.8]">

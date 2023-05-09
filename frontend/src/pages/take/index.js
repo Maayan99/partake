@@ -213,17 +213,15 @@ export default function Take() {
     return (
         <>
             <Head>
-                <title>Take Activities</title>
+                <title>Take - Partake</title>
             </Head>
-            <>
-                <FilterBar
-                    search={search} setSearch={setSearch}
-                    filterersArray={filterers}
-                />
-                {(search !== "" || type !== "" || subject !== "" || duration !== "") ?
-                    <AfterSearch search={search} type={type} subject={subject} duration={duration}/> :
-                    <BeforeSearch/>}
-            </>
+            <FilterBar
+                search={search} setSearch={setSearch}
+                filterersArray={filterers}
+            />
+            {(search !== "" || type !== "" || subject !== "" || duration !== "") ?
+                <AfterSearch search={search} type={type} subject={subject} duration={duration}/> :
+                <BeforeSearch/>}
         </>
     );
 }

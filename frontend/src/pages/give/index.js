@@ -7,7 +7,6 @@ import {useState} from "react";
 import FilterBar from "@components/components/filter-bar/filter-bar";
 
 
-
 const BeforeSearch = () => {
     const forYou = giveData.filter(give => give.category === 'For you');
     const inYourArea = giveData.filter(give => give.category === 'In your area');
@@ -107,7 +106,6 @@ export default function Give() {
     };
 
 
-
     const filterers = [
         {
             id: '1',
@@ -196,14 +194,12 @@ export default function Give() {
             <Head>
                 <title>Give Activities</title>
             </Head>
-            <>
-                <FilterBar
-                    search={search} setSearch={setSearch}
-                    filterersArray={filterers}/>
-                {(search !== "" || type !== "" || cause !== "" || duration !== "") ?
-                    <AfterSearch search={search} type={type} cause={cause} duration={duration}/> :
-                    <BeforeSearch/>}
-            </>
+            <FilterBar
+                search={search} setSearch={setSearch}
+                filterersArray={filterers}/>
+            {(search !== "" || type !== "" || cause !== "" || duration !== "") ?
+                <AfterSearch search={search} type={type} cause={cause} duration={duration}/> :
+                <BeforeSearch/>}
         </>
     );
 }
