@@ -184,7 +184,7 @@ const giveData = [
         impact: {
             type: 'Social',
             reward: 'clock-  10-20  hours of volunteering',
-            causes: ['Education', 'Children and Youth', 'Strengthen Local community', 'Mentoring'],
+            categories: ['Education', 'Children and Youth', 'Strengthen Local community', 'Mentoring'],
         },
 
         timeDetails:

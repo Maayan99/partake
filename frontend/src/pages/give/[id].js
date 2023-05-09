@@ -8,8 +8,10 @@ import TakeCoverCard from "@components/components/cards/take-cover-card/take-cov
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import StarIcon from "@mui/icons-material/Star";
 import GiveCoverCard from "@components/components/cards/give-cover-card/give-cover-card";
-import React, {useState} from "react";
+import React, {useMemo, useState} from "react";
 import Head from "next/head";
+import takeData from "../../../public/take-data";
+import LoadingSpinner from "@components/components/loading-spinner/loading-spinner";
 
 const ImportantDetails = ({give}) => {
     const {
@@ -71,44 +73,36 @@ const ImportantDetails = ({give}) => {
 
 
 export default function GivePage() {
-
     const router = useRouter();
-    const {id} = router.query;
+
+    const id = useMemo(() => {
+        const query = router.query;
+
+        if (query.id) {
+            return query.id;
+        }
+    }, [router.query]);
+
+
+    const give = useMemo(() => {
+        if (id !== '') {
+            return giveData.find(give => {
+                return give.id === id;
+            });
+        }
+    }, [id]);
 
     // Check if the router has the required data
-    if (!id) {
+    if (!id || !give) {
         return (
-            <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
-                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue"/>
-            </div>
+            <LoadingSpinner/>
         );
     }
-
-    const give = giveData.find(give => {
-        return give.id === id;
-    });
-
-    if (!give) {
-        return null;
-    }
-
-
-    const {
-        impact,
-        tasks,
-        description,
-        participants,
-        aboutTheCause,
-        additionalInfo,
-        organizer,
-        sponsors,
-    } = give;
 
     return (
         <>
             <Head>
-                <title>Give</title>
+                <title>{give.title}</title>
             </Head>
             <div className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20`}>
                 <GiveCoverCard className="md:col-span-2 lg:col-span-1" give={give}/>
@@ -120,38 +114,40 @@ export default function GivePage() {
                 {/*Detailed details*/}
                 <div className="space-y-5">
                     <h1 className="font-bold">Description</h1>
-                    <p className="text-gray">{description}</p>
+                    <p className="text-gray">{give.description}</p>
                 </div>
-                {tasks && <div className="space-y-5">
+                {give.tasks && <div className="space-y-5">
                     <h1 className="font-bold">Task</h1>
-                    <ul className="list-disc pl-4">{tasks.map(task => <li key={task.id} className="text-gray">{task.shortText}</li>)}</ul>
+                    <ul className="list-disc pl-4">{give.tasks.map(task => <li key={task.id} className="text-gray">{task.shortText}</li>)}</ul>
                 </div>}
-                {aboutTheCause && <div className="space-y-5">
+                {give.aboutTheCause && <div className="space-y-5">
                     <h1 className="font-bold">About the Cause</h1>
-                    <p className="text-gray">{aboutTheCause}</p>
+                    <p className="text-gray">{give.aboutTheCause}</p>
                 </div>}
-                {sponsors &&
+                {give.sponsors &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Sponsors</h1>
-                        <div className="flex">{sponsors.array.map(sponsor =>
+                        <div className="flex">
+                            {give.sponsors.array.map(sponsor =>
                             <img key={sponsor.id} src={`/assets/PNG/logos/rectangle/logo-${sponsor.image}.png`}
-                                 className="h-16 w-16 rounded-full object-cover"/>)}</div>
-                        <p className="text-gray">{sponsors.text}</p>
+                                 className="h-16" alt={sponsor.name}/>)}
+                        </div>
+                        <p className="text-gray">{give.sponsors.text}</p>
                     </div>}
-                {impact && <ImpactGraphic impact={impact}/>}
-                {additionalInfo &&
+                {give.impact && <ImpactGraphic impact={give.impact}/>}
+                {give.additionalInfo &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Additional Information</h1>
-                        <p className="font-bold">{additionalInfo.text}</p>
-                        <ul className="list-disc pl-4">{additionalInfo.array.map(info => <li className="text-gray" key={info.id}>{info.text}</li>)}</ul>
+                        <p className="font-bold">{give.additionalInfo.text}</p>
+                        <ul className="list-disc pl-4">{give.additionalInfo.array.map(info => <li className="text-gray" key={info.id}>{info.text}</li>)}</ul>
                     </div>}
-                {organizer &&
+                {give.organizer &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Event Organizer</h1>
-                        <div className="text-gray" dangerouslySetInnerHTML={{__html: organizer}}></div>
+                        <div className="text-gray" dangerouslySetInnerHTML={{__html: give.organizer}}></div>
                     </div>}
-                {participants && <div className="space-y-5">
-                    <h1 className="font-bold">Participants ({participants})</h1>
+                {give.participants && <div className="space-y-5">
+                    <h1 className="font-bold">Participants ({give.participants})</h1>
                     <div className="grid grid-cols-6 gap-2 w-max">
                         <img className="rounded-full h-10 w-10 object-cover"
                              src="/assets/PNG/profile-images/profile_image_6.jpeg"
@@ -213,3 +209,4 @@ export default function GivePage() {
         </>
     )
 }
+
