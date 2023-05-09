@@ -10,8 +10,8 @@ import EmailIcon from '@mui/icons-material/Email';
 const Footer = () => {
     return (
         <div className="flex flex-col bg-footer-gray px-10 pt-10 pb-3 h-80 mt-32 justify-between text-white">
-            <div className="flex space-x-32">
-                <div className="flex flex-col justify-around">
+            <div className="flex space-x-32 h-full">
+                <div className="flex flex-col space-y-10">
                     <h2 className="text-lg font-semibold">Contact Us</h2>
                     <div className="flex">
                         <EmailIcon/>
@@ -21,9 +21,9 @@ const Footer = () => {
                     </div>
                     <h2 className="text-lg font-semibold">Partake</h2>
                 </div>
-                <div  className="flex flex-col justify-around">
+                <div  className="space-y-4">
                     <h2 className="text-lg font-semibold">Resources</h2>
-                    <ul className="list-none p-0">
+                    <ul className="list-none p-0 space-y-3">
                         <li>
                             <a href="#">World calculator</a>
                         </li>
@@ -35,9 +35,9 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div className="space-y-4">
                     <h2 className="text-lg font-semibold">Partners</h2>
-                    <ul className="list-none p-0">
+                    <ul className="list-none p-0 space-y-3">
                         <li>
                             <a href="#">Our partners</a>
                         </li>
