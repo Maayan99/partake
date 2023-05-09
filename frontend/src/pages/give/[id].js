@@ -12,6 +12,7 @@ import React, {useMemo, useState} from "react";
 import Head from "next/head";
 import takeData from "../../../public/take-data";
 import LoadingSpinner from "@components/components/loading-spinner/loading-spinner";
+import ParticipantsGrid from "@components/components/participants-grid/participants-grid";
 
 const ImportantDetails = ({give}) => {
     const {
@@ -73,6 +74,13 @@ const ImportantDetails = ({give}) => {
 
 
 export default function GivePage() {
+    const [started, setStarted] = useState(false);
+    const [displayValidationPopUp, setDisplayValidationPopUp] = useState(false);
+    const [currentTask, setCurrentTask] = useState(0);
+    const [displayInvitePopUp, setDisplayInvitePopUp] = useState(false);
+    const [displayCongratsPopUp, setDisplayCongratsPopUp] = useState(false);
+
+
     const router = useRouter();
 
     const id = useMemo(() => {
@@ -98,6 +106,15 @@ export default function GivePage() {
             <LoadingSpinner/>
         );
     }
+
+    const handleLeaveGive = () => {
+        setStarted(false);
+    }
+
+    const handleInviteFriends = () => {
+        setDisplayInvitePopUp(true);
+    }
+
 
     return (
         <>
@@ -146,65 +163,7 @@ export default function GivePage() {
                         <h1 className="font-bold">Event Organizer</h1>
                         <div className="text-gray" dangerouslySetInnerHTML={{__html: give.organizer}}></div>
                     </div>}
-                {give.participants && <div className="space-y-5">
-                    <h1 className="font-bold">Participants ({give.participants})</h1>
-                    <div className="grid grid-cols-6 gap-2 w-max">
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_6.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_2.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_3.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_4.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_5.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_6.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_2.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_3.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_4.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_5.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_6.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_2.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_3.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_4.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_5.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_6.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_2.jpeg"
-                             alt="Profile"/>
-                        <img className="rounded-full h-10 w-10 object-cover"
-                             src="/assets/PNG/profile-images/profile_image_3.jpeg"
-                             alt="Profile"/>
-                    </div>
-                </div>}
+                {give.participants && <ParticipantsGrid participants={give.participants} handleInviteFriends={handleInviteFriends}/>}
             </div>
         </>
     )
