@@ -41,7 +41,7 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
             <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
                 {!started && <div className="flex space-x-1 text-2xl">
                     <PrimaryButton onClick={handleStartChallenge}>Take Challenge</PrimaryButton>
-                    <TransparentButton className="px-2" onClick={handleInviteFriends}>Invite Friends</TransparentButton>
+                    <TransparentButton className="px-2 text-xl" onClick={handleInviteFriends}>Invite Friends</TransparentButton>
                 </div>}
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
                     <div className="ml-10 space-y-2">

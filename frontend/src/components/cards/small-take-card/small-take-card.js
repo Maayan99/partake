@@ -15,9 +15,9 @@ const SmallTakeCard = ({take}) => {
     }
 
     return (
-        <div className="bg-white group w-72 h-[200px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
-         hover:h-[280px] hover:-mb-20 hover:scale-110 hover:-translate-y-4 hover:rounded-lg hover:shadow-md hover:z-10 text-xs" onClick={handleClick}>
-                <div className="w-full h-[190px] rounded-t-lg flex flex-col justify-between"
+        <div className={`bg-white group w-72 h-[200px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
+         hover:h-[296px] hover:-mb-24 hover:scale-110 hover:-translate-y-4 hover:rounded-lg hover:shadow-md hover:z-10 text-xs`} onClick={handleClick}>
+                <div className="w-full h-[190px] rounded-t-lg flex flex-col justify-between p-2"
                      style={{backgroundImage: `
                      linear-gradient(to bottom, rgba(2,0,36,0.4) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.65) 100%),
                       url("/assets/PNG/take/${coverImage}")`}}>
@@ -34,9 +34,9 @@ const SmallTakeCard = ({take}) => {
                 </div>
                 <ProgressBar percentage={progress}/>
                 <div className="hidden opacity-0 group-hover:flex flex-col content-center transition-all
-                 duration-100 group-hover:opacity-100">
-                    <p className="text-center  m-1.5">{shortDescription}</p>
-                    <div className="flex justify-between px-2.5">
+                 duration-100 group-hover:opacity-100 ">
+                    <p className="text-center m-2.5">{shortDescription}</p>
+                    <div className="flex justify-between mx-2.5">
                         <ParticipantsRow participants={participants}/>
                         <BlueButton className='small-button'>Take Challenge</BlueButton>
                     </div>

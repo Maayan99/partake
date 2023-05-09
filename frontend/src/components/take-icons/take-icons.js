@@ -34,7 +34,7 @@ export default function TakeIcons({impactType, coins, duration}) {
             <div className="flex flex-col justify-center items-center bg-white
             border-solid border-2 border-blue rounded-full p-1 w-12 h-12 text-blue">
                 <StarIcon/>
-                <span className="text-xs">{coins}</span>
+                <span className="text-xs -mt-1">{coins}</span>
             </div>
             {duration ?
                 <div className="text-white w-12 h-12">

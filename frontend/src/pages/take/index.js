@@ -34,16 +34,16 @@ const BeforeSearch = () => {
     return (
         <>
             <div className="overflow-visible">
-                <div className="ml-36 mr-14 mt-10 mb-5">
-                    <h1 className="text-3xl font-bold">Featured</h1>
+                <div className="ml-36 mr-14 mt-10 mb-10">
+                    <h1 className="text-3xl">Featured</h1>
                 </div>
-                <div className="ml-36 flex space-x-6">
+                <div className="ml-36 flex">
                     <LargeTakeCard take={featuredChallenge}/>
-                    <div className="flex flex-col gap-y-5">
+                    <div className="flex flex-col gap-y-5 ml-6">
                         <SmallTakeCard take={takeData[1]}/>
                         <SmallTakeCard take={takeData[2]}/>
                     </div>
-                    <div className="flex flex-col justify-evenly py-10 w-80 text-2xl">
+                    <div className="flex flex-col justify-evenly py-10 w-1/3 text-2xl ml-12">
                         <h1>Try the {featuredChallenge.title} challenge</h1>
                         <h1>{featuredChallenge.shortDescription}</h1>
                         <a href={`/take/${featuredChallenge.id}`}><PrimaryButton className='py-4 px-8'>Take
@@ -54,12 +54,12 @@ const BeforeSearch = () => {
             </div>
             {categories.map(category =>
                 <div key={category}>
-                    <div className="ml-36 mr-14 mt-10 flex justify-between">
-                        <h1 className="text-3xl font-bold">{categoriesTitleDictionary[category]}</h1>
+                    <div className="ml-36 mr-14 mt-10 mb-10 flex justify-between">
+                        <h1 className="text-3xl">{categoriesTitleDictionary[category]}</h1>
                         <ArrowForwardIosIcon/>
                     </div>
                     {/*pb-24 -mb-24 for overflow reasons*/}
-                    <div className="flex pl-36 pt-20 -mt-16 pb-24 -mb-24 space-x-5 overflow-x-auto">
+                    <div className="flex pl-36 pt-20 -mt-20 pb-24 -mb-20 space-x-5 overflow-x-auto">
                         {categoriesDictionary[category].map(take => <SmallTakeCard key={take.id} take={take}/>)}
                     </div>
                 </div>)}
@@ -105,10 +105,12 @@ const AfterSearch = ({search, type, subject, duration}) => {
     }
 
     return (
-        <div className="grid lg:grid-cols-4 sm:grid-cols-1 px-10 gap-8 items-center">
-            {/*TODO: Make grid responsive*/}
-            {filtered.map(take =>
-                <SmallTakeCard key={take.id} take={take}/>)}
+        <div className="flex justify-center">
+            <div
+                className="mt-20 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 px-10 gap-5 w-max justify-items-center">
+                {/*TODO: Make grid responsive*/}
+                {filtered.map(take => <SmallTakeCard key={take.id} take={take}/>)}
+            </div>
         </div>
     )
 };
