@@ -277,7 +277,7 @@ export default function TakePage() {
                             <ul className="space-y-2">{take.reward.map(reward =>
                                 <div className="flex space-x-4">
                                     <div className="flex flex-col justify-center items-center bg-white
-            border-solid border-2 border-blue rounded-full p-1 min-w-[80px] h-20 text-blue">
+            border-solid border-2 border-blue rounded-full p-1 min-w-[66px] h-16 text-blue">
                                         <StarIcon/>
                                         <p className="text-xs">{reward.amount}</p>
                                     </div>

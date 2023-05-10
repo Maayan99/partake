@@ -34,7 +34,7 @@ const BeforeSearch = () => {
     return (
         <>
             <div className="overflow-visible">
-                <div className="ml-36 mr-14 mt-10 mb-10">
+                <div className="ml-36 mr-14 mt-20 mb-10">
                     <h1 className="text-3xl">Featured</h1>
                 </div>
                 <div className="ml-36 flex">
