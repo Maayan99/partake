@@ -14,7 +14,7 @@ const GiveCoverCard = ({give}) => {
             url("/assets/PNG/give/${coverImage}")`}}>
             <TakeIcons duration={duration} impactType={impactType} coins={coins}/>
             <div className="text-white ml-2.5 mb-2.5">
-                <h2 className="font-bold text-2xl leading-snug drop-shadow-md">
+                <h2 className="font-bold text-2xl leading-7 drop-shadow-md">
                     {title}
                 </h2>
                 <p className="font-italics text-xl leading-snug drop-shadow-md">

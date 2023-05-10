@@ -20,8 +20,8 @@ const LargeTakeCard = ({take}) => {
             <div className="w-full h-[410px] rounded-t-lg flex flex-col justify-between"
                  style={{backgroundImage: `linear-gradient(to bottom, transparent 40%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/take/${coverImage}")`}}>
                 <TakeIcons duration={duration} impactType={impactType} coins={coins}/>
-                <div className="text-white ml-2.5 mb-2.5">
-                    <h2 className="font-bold text-2xl leading-snug drop-shadow-md">
+                <div className="text-white ml-3.5 mb-3.5">
+                    <h2 className="font-bold text-2xl leading-7 drop-shadow-md">
                         {title}
                     </h2>
                     <p className="font-italics text-xl leading-snug drop-shadow-md">
