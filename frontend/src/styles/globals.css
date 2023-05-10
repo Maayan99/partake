@@ -22,7 +22,7 @@
     }
 
     select {
-        background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b6/Eo_circle_blue_arrow-down.svg");
+        background-image: url("/assets/SVG/down-arrow.svg");
         background-repeat: no-repeat;
         background-size: 1.5EM 1EM;
         background-position: right center;
