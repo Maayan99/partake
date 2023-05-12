@@ -126,7 +126,7 @@ const TopAfterStarted = ({
                 </div>
                 <ExpandedProgressBar numberOfTasks={tasks.length} numberOfFulfilledTasks={currentTask + 1}
                                      viewedTask={currentTask}/>
-                <BlueButton className="mt-4 text-2xl w-2/3" onClick={handleShowValidation}>Validate
+                <BlueButton className="mt-4 text-2xl w-64" onClick={handleShowValidation}>Validate
                     Task {currentTask + 1}</BlueButton>
             </div>
             <div className="flex flex-col items-center justify-between">
