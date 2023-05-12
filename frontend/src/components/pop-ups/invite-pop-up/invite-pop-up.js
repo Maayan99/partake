@@ -76,7 +76,7 @@ export default function InvitePopUp({display, setDisplay}) {
                 </div>
 
                 <div className="flex justify-center">
-                    <BlueButton onClick={handleSubmit} className="w-2/3">Send Invitations</BlueButton>
+                    <BlueButton onClick={handleSubmit} className="w-2/3 mt-6">Send Invitations</BlueButton>
                 </div>
             </div>
 

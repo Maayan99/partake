@@ -34,7 +34,7 @@ const LargeTakeCard = ({take}) => {
                 <p className="text-center m-2.5">{shortDescription}</p>
                 <div className="flex justify-between mx-2.5">
                     <ParticipantsRow participants={participants}/>
-                    <BlueButton className='small-button'>Take Challenge</BlueButton>
+                    <BlueButton className="text-sm small-button">Take Challenge</BlueButton>
                 </div>
             </div>
         </div>
