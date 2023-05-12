@@ -28,13 +28,13 @@ export default function TakeIcons({impactType, coins, duration}) {
     return (
         <div className="mt-3.5 ml-2.5 flex gap-2">
             {impactType && <div className="flex flex-col justify-center items-center bg-white
-            border-solid border-2 border-blue rounded-full p-2 w-12 h-12 text-blue">
+            border-solid border-2 border-blue rounded-full p-2.5 w-12 h-12 text-blue">
                 <Icon name={impactType}/>
             </div>}
             <div className="flex flex-col justify-center items-center bg-white
             border-solid border-2 border-blue rounded-full p-1 w-12 h-12 text-blue">
                 <StarIcon/>
-                <span className="text-xs -mt-1">{coins}</span>
+                <span className="text-xs -mt-1 -p-1">{coins}</span>
             </div>
             {duration ?
                 <div className="text-white w-12 h-12">

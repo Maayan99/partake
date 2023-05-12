@@ -6,7 +6,7 @@ const ImpactCause = ({impactCategory, setPingCategory}) => {
     return (
         <div className="flex flex-col items-center justify-between w-full relative">
             <div className="relative group">
-                <Icon onMouseEnter={() => setPingCategory(null)} name={impactCategory.icon} className={`w-14 h-14 mb-2 ${impactCategory.ping && 'animate-pulse'}`}/>
+                <Icon onMouseEnter={() => setPingCategory(null)} name={impactCategory.icon} className={`w-10 h-10 mb-2 ${impactCategory.ping && 'animate-pulse'}`}/>
                 {impactCategory.tooltips && <LearnMoreTooltip tooltips={impactCategory.tooltips}/>}
             </div>
             <div>
@@ -24,7 +24,7 @@ export default function ImpactGraphic({impact, setPingCategory}) {
     return (
         <div className="flex flex-col justify-between text-sm w-full">
             <div className="flex text-blue space-x-10 my-5">
-                {type && <Icon name={type} className="w-12 h-12"/>}
+                {type && <Icon name={type} className="w-10 h-10"/>}
                 <div className="flex space-x-5 w-full">
                     {categories.map(category => <ImpactCause key={category.id} impactCategory={category}
                                                              setPingCategory={setPingCategory}/>)}

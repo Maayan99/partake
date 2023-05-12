@@ -49,8 +49,8 @@ export default function Gallery({items, taskNum, task}) {
     return (
         <div className="bg-light-gray col-span-3 rounded-lg p-4 max-h-screen overflow-auto">
             <div className="flex flex-col items-center">
-                <h1 className="font-extrabold text-3xl">Gallery</h1>
-                <p className="font-bold">Task {taskNum}: {task}</p>
+                <h1 className="font-extrabold text-3xl mt-12 mb-2">Gallery</h1>
+                <h2 className="mb-12">Task {taskNum}: {task}</h2>
             </div>
             <section className="flex flex-col items-center col-span-3">
                 <div className="grid grid-cols-3 gap-6 mt-4 w-full">

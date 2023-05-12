@@ -5,6 +5,7 @@ import PrimaryButton from "@components/components/common/primary-button";
 import TransparentButton from "@components/components/common/transparent-button"
 import BlueButton from "@components/components/common/blue-button"
 import React, {useEffect, useMemo, useState} from "react";
+import Icon from "@components/components/common/icon/icon";
 import StarIcon from "@mui/icons-material/Star";
 import ValidationPopUp from "@components/components/pop-ups/validation-pop-up/validation-pop-up";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
@@ -45,27 +46,45 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
                 </div>}
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
                     <div className="ml-10 space-y-2">
-                        <h1 className="font-bold">Duration</h1>
+                        <div>
+                            <Icon name="duration-black" className="float-left w-5 mt-1.5 mr-2.5 -ml-1"/>
+                            <h1 className="font-bold">Duration</h1>
+                        </div>
                         <p>{durationText}</p>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-2">
-                        <h1 className="font-bold">Type</h1>
+                        <div>
+                            <Icon name="type-black" className="float-left w-5 mt-2 mr-2.5 -ml-1"/>
+                            <h1 className="font-bold">Type</h1>
+                        </div>
                         <p>{type}</p>
                     </div>
                     <div className="ml-10 space-y-2">
-                        <h1 className="font-bold">Number of Tasks</h1>
+                        <div>
+                            <Icon name="tasks-black" className="float-left w-4 mt-1 mr-3 -ml-0.5"/>
+                            <h1 className="font-bold">Number of Tasks</h1>
+                        </div>
                         <p>{take.tasks.length}</p>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-2">
-                        <h1 className="font-bold">Location</h1>
+                        <div>
+                            <Icon name="location-black" className="float-left w-4 mt-1 mr-2.5 -ml-0.5"/>
+                            <h1 className="font-bold">Location</h1>
+                        </div>
                         <p>{location}</p>
                     </div>
                     <div className="ml-10 space-y-2">
-                        <h1 className="font-bold">Difficulty Level</h1>
+                        <div>
+                            <Icon name="level-black" className="float-left w-5 mt-2 mr-2.5 -ml-0.5"/>
+                            <h1 className="font-bold">Difficulty Level</h1>
+                        </div>
                         <p>{difficultyLevel}</p>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-2">
-                        <h1 className="font-bold">Participants</h1>
+                        <div>
+                            <Icon name="participants-black" className="float-left w-5 mt-2 mr-2.5 -ml-0.5"/>
+                            <h1 className="font-bold">Participants</h1>
+                        </div>
                         <p>{participants}</p>
                     </div>
                 </div>
