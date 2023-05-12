@@ -92,8 +92,9 @@ export default function UsersGrid({numberOfRows, paginate}) {
                     <th/>
                     <th>Name</th>
                     <th>Department</th>
-                    <th>Impact</th>
-                    <th>Coins</th>
+                    <th>Impact Score</th>
+                    <th>Partake Coins</th>
+                    <th>Pending Activities</th>
                 </tr>
 
                 <tr className="bg-important-blue">
@@ -137,6 +138,15 @@ export default function UsersGrid({numberOfRows, paginate}) {
                             </IconButton>
                         </div>
                     </td>
+                    <td>
+                        <div className="flex">
+                            <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
+                                   type="text"/>
+                            <IconButton>
+                                <Icon name="donation"/>
+                            </IconButton>
+                        </div>
+                    </td>
                 </tr>
 
                 {filtered.map((user, index) =>
@@ -150,6 +160,7 @@ export default function UsersGrid({numberOfRows, paginate}) {
                         <td>{user.department}</td>
                         <td>{user.impact}</td>
                         <td>{user.coins}</td>
+                        <td>{user.pending}</td>
                     </tr>
                 )}
                 </tbody>
