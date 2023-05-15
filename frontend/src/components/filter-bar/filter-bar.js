@@ -1,4 +1,5 @@
 import Icon from "@components/components/common/icon/icon";
+import Dropdown from "@components/components/common/custom-dropdown/custom-dropdown";
 
 export default function FilterBar({search, setSearch, filterersArray}) {
     const handleSearchChange = (event) => {
@@ -11,17 +12,8 @@ export default function FilterBar({search, setSearch, filterersArray}) {
                 <input placeholder="Search" className="italic w-72 font-thin px-4 py-2 text-xl
                  border border-1 border-gray-500 bg-light-gray
                 rounded-none border-r-0 focus:outline-none" onChange={handleSearchChange} value={search}/>
-                {filterersArray.map(filterer =>
-                    <select key={filterer.id} onChange={filterer.handleFunction} value={filterer.value}
-                            className="w-52 px-4 py-2 border border-1 border-gray-500 bg-light-gray text-xl
-                rounded-none border-r-0 focus:outline-none">
-                        <option value="">{filterer.placeholder}</option>
-                        {filterer.options.map(option =>
-                        <option key={option.id} value={option.value}>
-                            {option.name}
-                        </option>)}
+                {filterersArray.map(filterer => <Dropdown className="min-w-[216px]" key={filterer.id} selectOptions={filterer}/>)}
 
-                    </select>)}
             </div>
             <a href="/make">
                 <div className="w-24 h-24 border border-2 border-black rounded-full
