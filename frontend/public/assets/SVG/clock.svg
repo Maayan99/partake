@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="33.858" height="33.858" viewBox="0 0 33.858 33.858">
-  <g id="Icon_feather-clock" data-name="Icon feather-clock" transform="translate(2 2)">
-    <path id="Path_361" data-name="Path 361" d="M32.858,17.929A14.929,14.929,0,1,1,17.929,3,14.929,14.929,0,0,1,32.858,17.929Z" transform="translate(-3 -3)" fill="none" stroke="#0082fe" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-    <path id="Path_362" data-name="Path 362" d="M18,9v8.957l5.972,2.986" transform="translate(-3.071 -3.028)" fill="none" stroke="#0082fe" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
-  </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 34.09 34.09"><defs><style>.cls-1{fill:url(#linear-gradient);}.cls-2{stroke-miterlimit:10;stroke-width:1.82px;}.cls-2,.cls-3{fill:none;stroke:#000;}.cls-3{stroke-linecap:round;stroke-linejoin:round;stroke-width:2.29px;}</style><linearGradient id="linear-gradient" x1="2.04" y1="39.56" x2="19.71" y2="13.04" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ad87ff"/><stop offset="1" stop-color="#00cfff"/></linearGradient></defs><g id="Layer_1-2"><circle class="cls-1" cx="17.05" cy="17.05" r="13.52"/><g id="Icon_feather-clock"><path id="Path_362" class="cls-3" d="m17.05,9.49v8.07l5.38,2.69"/></g><circle class="cls-2" cx="17.05" cy="17.05" r="16.14"/></g></svg>
