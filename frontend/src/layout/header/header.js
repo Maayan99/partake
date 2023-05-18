@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <div className="flex items-center justify-between py-4 px-16">
-            <p>partake</p>
+              <Icon name="logo" className="h-6 mb-2"/>
 
             <div className='flex items-center'>
                 <div className="flex items-center space-x-7 mr-10">
@@ -23,7 +23,7 @@ const Header = () => {
                         <p>1000</p>
                     </div>
                     <div className="flex items-center space-x-3">
-                        <Icon name="social-blue" className="h-5"/>
+                        <Icon name="social" className="h-5"/>
                         <p>2000</p>
                     </div>
                     <div className="flex items-center space-x-3">
@@ -34,7 +34,7 @@ const Header = () => {
 
                 <div className="flex space-x-3 mr-14">
                     <p>Partake Coins</p>
-                    <StarIcon className="text-blue"/>
+                    <Icon name="partake-coins-small" className="h-5 mt-0.5"/>
                     <p>100</p>
                 </div>
                 <img  onClick={handleProfileClick}
