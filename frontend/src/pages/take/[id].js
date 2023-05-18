@@ -276,7 +276,7 @@ export default function TakePage() {
                         <p className="text-gray">{take.description}</p>
                     </div>
                     {take.whatToDo && <div className="space-y-5">
-                        <h1 className="font-bold">What to do?</h1>
+                        <h1 className="font-bold">Tasks</h1>
                         <p className="text-gray">{take.whatToDo}</p>
                     </div>}
                     {take.impact && <div className="space-y-5">
