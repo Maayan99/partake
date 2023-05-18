@@ -46,14 +46,14 @@ const SmallGiveCard = ({give}) => {
                 <div className="px-4">
                     <div className="flex justify-between my-2 space-x-2">
                         {(donations || duration) && <div className="flex gap-2 items-center">
-                            {duration && <div className="flex flex-col justify-center items-center border-solid border-2
-                            border-blue rounded-full p-1.5 w-9 h-9 text-blue">
-                                <AccessTimeIcon fontSize="8pt"/>
+                            {duration && <div className="flex flex-col justify-center items-center 
+                             rounded-full p-1.5 w-9 h-9 text-blue">
+                                <Icon name="clock" className="mt-3"/>
                                 <p className="text-xs">{duration}</p>
                             </div>}
                             {donations &&
-                                <div className="flex flex-col justify-center items-center border-solid border-2
-                            border-blue rounded-full p-1.5 w-9 h-9 text-blue">
+                                <div className="flex flex-col justify-center items-center 
+                             p-1.5 w-9 h-9 text-blue">
                                     <Icon name="reward"/>
                                 </div>}
                         </div>}

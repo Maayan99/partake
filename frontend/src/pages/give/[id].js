@@ -33,7 +33,7 @@ const ImportantDetails = ({give}) => {
         <>
             <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
                 <div className="flex space-x-1 text-2xl">
-                    <PrimaryButton>Join</PrimaryButton>
+                    <PrimaryButton className="w-1/4 mr-4">Join</PrimaryButton>
                     <TransparentButton>Invite Friends</TransparentButton>
                 </div>
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
