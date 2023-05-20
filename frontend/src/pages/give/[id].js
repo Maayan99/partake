@@ -7,6 +7,7 @@ import ValidationPopUp from "@components/components/pop-ups/validation-pop-up/va
 import TakeCoverCard from "@components/components/cards/take-cover-card/take-cover-card";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import StarIcon from "@mui/icons-material/Star";
+import Icon from "@components/components/common/icon/icon";
 import GiveCoverCard from "@components/components/cards/give-cover-card/give-cover-card";
 import React, {useMemo, useState} from "react";
 import Head from "next/head";
@@ -38,29 +39,34 @@ const ImportantDetails = ({give}) => {
                 </div>
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
                     <div className="ml-10 space-y-2">
+                        <Icon name="location" className="float-left w-4 mt-4 mr-3 -ml-1 opacity-70"/>    
                         <h1 className="font-bold">Location</h1>
                         <div className="flex space-x-2 items-center rounded-full w-fit px-5 py-1 bg-blue">
                             <p className="text-white">{location}</p>
-                            <LocationOnIcon className="text-white"/>
                         </div>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-2">
+                        <Icon name="parking" className="float-left w-5 mt-4 mr-3 -ml-1 opacity-70"/>
                         <h1 className="font-bold">Parking</h1>
                         <p>{parking}</p>
                     </div>
                     <div className="ml-10 space-y-2">
+                        <Icon name="participants-black" className="float-left w-5 mt-5 mr-2.5 -ml-0.5 opacity-70"/>
                         <h1 className="font-bold">Participants</h1>
                         <p>{participants}</p>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-2">
+                        <Icon name="duration-black" className="float-left w-5 mt-4 mr-3 -ml-1 opacity-70"/>
                         <h1 className="font-bold">Frequency</h1>
                         <p>{frequency}</p>
                     </div>
                     <div className="ml-10 space-y-2">
+                        <Icon name="calendar" className="float-left w-5 mt-3.5 mr-3 -ml-1 opacity-70"/>
                         <h1 className="font-bold">Date & Time</h1>
                         <p>{dateTime}</p>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-2">
+                        <Icon name="person" className="float-left w-3 mt-4 mr-3 -ml-1 opacity-70"/>
                         <h1 className="font-bold">Contact Person</h1>
                         <p>{name}</p>
                         <p>{email}</p>
