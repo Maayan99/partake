@@ -176,50 +176,68 @@ const giveData = [
     },
     {
         id: '21',
-        title: 'Help us buy heating lamps for our animal shelter.',
+        title: 'Donate To Our Animal Shelter.',
         coverImage: '',
         type: 'Fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
-        author: 'צער בעלי חיים',
-        about: "The animals in our shelters need your help to get through the winter in peace and warmth. We are at the beginning of winter and in much need of your donations.", //About the NGO or the Give
-        description: "Come enlist and do good to all the animals in the shelter, helping fund heating lamps.A heating lamp can cost up to NIS 200 per unit, regardless of the high cost of electricity it consumes.Thanks to your donations, we are able to keep our heads above water and prevent the facility from closing down. Donations for animals also allow us to operate our clinic for longer hours, subsidize various surgeries and treatments, improve the conditions of the animals in our care, operate more rescue vehicles to assist animals in need, conduct educational activities for future generations, and more. Come and do good by donating from the bottom of your heart.",
-        skills: ['Coding', 'Teaching'],
-        location: '',
+        author: 'SPCA Isreal (צער בעלי חיים)',
+        about: "Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare", //About the NGO or the Give
+        description: "Donations for animals also allow us to operate our clinic for longer hours, subsidize various surgeries and treatments, improve the conditions of the animals in our care, operate more rescue vehicles to assist animals in need, conduct educational activities for future generations, and more. Come and do good by donating from the bottom of your heart.",
+        location: 'online',
         contactDetails:
             {
-                name: 'Chaya',
+                name: 'Chaya,head of SPCA Isreal jerusalem',
                 email: 'https://spca.co.il/',
                 phone: '053-1234567',
+                adress: '159  Hertsel st. Tel-Aviv.'
             },
         reward: '',
-        requirements: [''],
-        impactType: 'Socail',
-        impactReward: 'Money Bills- Money donated.',
-        impact: ['Animals welfare.'],
-        timeDetails:
+        donationTiers:[
             {
-                endDate: 'Ongoing',
-                frequency: '',
-                duration: '',
+                id: "dfguikmngfdt",
+                text: '50 NIS - can provide medical treatment and care of an injured animal.',
             },
+            {
+                id: "hgnuiolkhgfv",
+                text: '100 NIS - can provide vaccinations and spaying.',
+            },
+            {
+                id: "hgnyturgfhdbfr",
+                text: '200 NIS - can provide bags of food for 10 adult cats.',
+            },
+            {
+                id: "okjgdetfgdbs",
+                text: '500 NIS - you can sponsor therapy treatments for abused or traumatized animals, providing them an oppertunity to find a home.',
+            },
+        ],
+        requirements: [''],
+        impact: {
+            type: 'Social',
+            categories: ['Money'],
+            boldText: 'Donation',
+            text:'',
+            tooltip: [
+                {
+                   text:'Donating to an animal shelter helps them to find warm and loving homes.',
+                   icon:'animal-welfare',
+                },
+            ] 
+        },
+        timeDetails:
+        {
+            Date: 'n/a',
+            frequency: 'Ongoing',
+        },
         additionalInfo: {
             text: '',
             array: [
                 {
-                    id: "uhfgdtsbvutr",
-                    text: 'Please deliver the goods to out store',
-                },
-                {
-                    id: "gfbdteyhjiwf",
-                    text: 'Please store the items in bags or in boxes.',
-                },
-                {
-                    id: "lokgfbdtsvtw",
-                    text: 'Advantage for another language such as Russian, Arabic or Amharic.',
+                    id: "uhntgsvrtegf",
+                    text: 'If you’re interested in adopting a pet, feel free to contact us and visit  our animal shelter.',
                 },
             ]
             },
-        participants: 85,
-        aboutTheCause: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.',
+        participants: 105,
+        aboutTheCause: 'Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare.',
     },
     {
         id: '22',
