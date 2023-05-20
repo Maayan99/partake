@@ -115,18 +115,23 @@ export default function Give() {
             options: [
                 {
                     id: '1',
-                    value: 'environmental',
-                    name: 'Environmental',
+                    value: 'Field volunteering',
+                    name: 'Field volunteering',
                 },
                 {
                     id: '2',
-                    value: 'social',
+                    value: 'Online volunteering',
                     name: 'Social',
                 },
                 {
                     id: '3',
-                    value: 'wellness',
+                    value: 'Donation',
                     name: 'Well-Being',
+                },
+                {
+                    id: '4',
+                    value: 'Goods donation',
+                    name: 'Goods donation',
                 },
             ],
         },

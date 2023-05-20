@@ -27,7 +27,7 @@ module.exports = {
                 },
             },
             colors: {
-                'blue': '#0082FE',
+                'blue': '#226FFF',
                 'zebra-blue-off': '#78beff',
                 'zebra-blue-on': '#4f9ae0',
                 'white': '#FFFFFF',
