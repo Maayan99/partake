@@ -165,87 +165,85 @@ const giveData = [
     },
     {
         id: '22',
-        title: 'English Teacher for at-risk high school students.',
+        title: 'English teacher for children and Youth',
         coverImage: '',
-        type: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        type: 'Online Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'Kidum Noar- Kiryat Gat',
         about: '“Kidum-Noar" is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.', //About the NGO or the Give
-        description: 'We are seeking volunteers for personal and educational mentoring in English for these students. Upon arrival at the center, you will establish a personal relationship with the teenager. The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied. Volunteering takes place on Sundays through Thursdays  from 6:00 PM to 8:00 PM, for at least two hours per week. The commitment is until the end of the academic year.',
-        skills: ['English', 'Teaching', 'Mentoring', 'Coomunication'],
-        location: '1 Ha’yasmin st., Kiryat Gat',
+        description: 'We are seeking volunteers for personal and educational mentoring in English for these students.  The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied.  The commitment is until the end of the academic year.',
+        skills: ['English', 'Teaching',],
+        location: 'Online',
         contactDetails:
             {
                 name: 'Maya Cohen, Volunteer Coordinator',
                 email: 'maya.cohen@Kidum-Noar.org',
                 phone: '+972-123456789',
             },
-        reward: '',
-        requirements: ['Languges:', 'English', 'Hebrew', 'Russian', 'Arabic', 'Amharic'],
+        reward: 'Certificate of recognition.',
+        requirements: ['English-Reading and writing','Teaching'],
         impact: {
             type: 'Social',
-            reward: 'clock-  10-20  hours of volunteering',
-            categories: ['Education', 'Children and Youth', 'Strengthen Local community', 'Mentoring'],
+            categories: ['clock'],
+            boldText: '25 hours',
+            text:'',
+            tooltip:
+                {
+                text:'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
+                icon:'Book and pencil',
+            
+            
+                text:'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
+                icon:'child'
+                },  
         },
 
         timeDetails:
             {
-                endDate: 'Until the end of the academic year',
-                frequency: 'Once a week,',
-                duration: '10-20 hours',
+                time: 'October - June, Sundays.',
+                frequency: 'Weekly,',
+                duration: '25 hours',
             },
         sponsors:
             {
-                text: 'Let the Animals Live is a non-profit organization that relies on the support of donations to continue our work in rescuing and rehabilitating animals in need. We do not receive any government funding and rely solely on the generosity of individuals and businesses to support our mission. Thank you for your support!',
+                text: '',
                 array: [
                     {
-                        id: '1',
-                        name: 'כללית',
-                        image: 'clalit',
+                        id: '',
+                        name: '',
+                        image: '',
                     },
                     {
-                        id: '2',
-                        name: 'תנובה',
-                        image: 'tnuva',
+                        id: '',
+                        name: '',
+                        image: '',
                     },
                 ]
             },
 
         additionalInfo: {
-            text: 'Don’t forget to bring hiking essentials:',
+            text: '',
             array: [
                 {
                     id: "dasdsadsdaasd",
-                    text: '3 liters of water at least.',
+                    text: 'advantage for another language such as Russian, Arabic or Amharic.',
                 },
                 {
                     id: "fewhjlhjlfew",
-                    text: 'Sun Protection: Sunscreen, hat and sunglasses.',
+                    text: 'The Online teaching will take place in Zoom.',
                 },
                 {
                     id: "bjkdvsjefwln",
-                    text: 'First aid kit such as band-aids, antiseptic and pain relievers.',
-                },
-                {
-                    id: "njkefsnasnl",
-                    text: 'Water shoes or hiking sandals for hiking in water.',
-                },
-                {
-                    id: "23h9r8ou8osdul",
-                    text: 'Optional: bathing suit.',
-                },
-                {
-                    id: "h23ru0soajsal",
-                    text: 'Food and snacks will be provided by the sponsor “clean coin”.',
+                    text: 'We ask for a commitment for at least 4 months of volunteering.',
                 },
             ]
         },
 
-        aboutTheCause: 'Cleaning natural resort and national parks helps to reduce litter and waste, protect local wildlife, prevent pollution and enhance natural beauty of the park for visitors, Together, as volunteers we can make a positive impact, learn about the Ein-Gedi’s environment, wildlife and history. Ein-Gedi is a stunning natural reserve that can be enjoyed and preserved through volunteer efforts.',
+        aboutTheCause: '',
 
 
-        organizer: 'The event will be organized by “Israel Nature and Parks Authority“ ,(רשות הטבע והגנים) <br/> <a href="https://www.parks.org.il/"><span class="text-blue">https://www.parks.org.il/</span></a><br/> for any information please contact Shiri from the HR Department.',
+        organizer: '',
 
-        participants: 421,
+        participants: 23,
     },
     {
         id: '1',
