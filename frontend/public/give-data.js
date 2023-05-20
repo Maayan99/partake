@@ -27,6 +27,23 @@ const template = {
             duration: '',
         },
     dateTime: '',
+
+    sponsors:
+            {
+                text: '',
+                array: [
+                    {
+                        id: '',
+                        name: '',
+                        image: '',
+                    },
+                    {
+                        id: '',
+                        name: '',
+                        image: '',
+                    },
+                ]
+            },
 };
 
 const giveData = [
@@ -168,7 +185,7 @@ const giveData = [
         title: 'English teacher for children and Youth',
         coverImage: '',
         type: 'Online Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
-        author: 'Kidum Noar- Kiryat Gat',
+        author: "Kidum No'ar Kiryat Gat",
         about: '“Kidum-Noar" is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.', //About the NGO or the Give
         description: 'We are seeking volunteers for personal and educational mentoring in English for these students.  The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied.  The commitment is until the end of the academic year.',
         skills: ['English', 'Teaching',],
@@ -203,29 +220,13 @@ const giveData = [
                 frequency: 'Weekly,',
                 duration: '25 hours',
             },
-        sponsors:
-            {
-                text: '',
-                array: [
-                    {
-                        id: '',
-                        name: '',
-                        image: '',
-                    },
-                    {
-                        id: '',
-                        name: '',
-                        image: '',
-                    },
-                ]
-            },
 
         additionalInfo: {
             text: '',
             array: [
                 {
                     id: "dasdsadsdaasd",
-                    text: 'advantage for another language such as Russian, Arabic or Amharic.',
+                    text: 'Advantage for another language such as Russian, Arabic or Amharic.',
                 },
                 {
                     id: "fewhjlhjlfew",
@@ -233,7 +234,7 @@ const giveData = [
                 },
                 {
                     id: "bjkdvsjefwln",
-                    text: 'We ask for a commitment for at least 4 months of volunteering.',
+                    text: 'We ask a commitment for at least 4 months of volunteering.',
                 },
             ]
         },
