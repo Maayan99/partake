@@ -302,54 +302,72 @@ const takeData = [
     {
         id: "a6289983652a8ef8",
         coverImage: 'take_card_mindful_moment.png',
-        title: 'Mindful Moment',
-        author: 'Anonymous Bee',
+        title: '21 days of mindfulness.',
+        author: 'Partake',
         impactType: 'Wellness',
         subject: "Wellness",
-        shortDescription: 'Regular meditation in the workplace can help to reduce stress and promote relaxation.',
-        description: 'Taking a few minutes to meditate can help you calm your mind and refocus your energy. In this challenge, we encourage you to take a mindful moment every day for the next week.',
+        shortDescription: 'Meditation for 5 minutes  every day at your workplace can help reduce stress and enhance relaxation.',
+        description: 'Practicing meditation every day can calm your mind and refocus your energy. In this challenge, we encourage you to take a break for a few minutes at your workplace. By doing that, you can improve focus, reduce stress, and promote overall well-being for both yourself and your coworkers.',
         coins: 300,
         progress: 20,
         category: 'For you',
-        duration: 7200,
-        durationText: '5 days, starting Monday 15/4/2023',
-        numberOfTasks: 5,
+        duration: 30240,
+        durationText: '21 days',
+        numberOfTasks: 3,
         location: 'Online',
-        difficultyLevel: 'Hard',
-        participants: 243,
-
-
+        difficultyLevel: 'Easy',
+        participants: 47,
+        
+        whattodo:'The "21-Day Meditation  Challenge " is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
         tasks: [
             {
                 id: 1,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 1: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 1" and answer a short question.',
+                validation: {
+                    text: "Now, write it down and release it to the universe (aka the gallery..)",
+                    type: 'image',
+                    icon: 'Mindfulness',
+                    infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
+                    numberValidationData:
+                        {
+                
+                        },
+                },
+                shortText: "Meditation Goal Gallery",
+                longText: "Think of a goal that you would achieve before embarking on a 21-day meditation challenge.",
             },
             {
                 id: 2,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 2: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 2" and answer a short question.',
+                validation: {
+                    text: {
+                       // ["Which app did you choose?","Headspace","Ten Percent",'Spotify','Youtube',"other:"],
+                    },
+                    type: '',
+                    icon: 'Mindfulness',
+                    infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
+                    numberValidationData:
+                        {
+                
+                        },
+                },
+                shortText: "",
+                longText: "Open your favorite meditation app or track, and meditate every day for a minimum of  5 minutes."
             },
             {
-                id: 3,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 3: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 3" and answer a short question.',
+                id: 2,
+                validation: {
+                    text: "Draw the line to your satisfaction.",
+                    type: 'number',
+                    icon: 'Oak tree',
+                    infoText: 'Meditation empowers us to cultivate a resilient Just as a mountain stands tall.',
+                    numberValidationData:
+                        {
+                
+                        },
+                },
+                shortText: "",
+                longText: "Welcome back! Did you achieve your goal?",
             },
-            {
-                id: 4,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 4: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 4" and answer a short question.',
-            },
-            {
-                id: 5,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: 'Day 5: Have a 15-minute meditation. <br/> <br/> <span class="text-blue">How to meditate</span> <br/> <br/> <span class="text-blue">What is mindfullness</span> <br/>  <br/> You can use <span class="text-blue">Headspace</span> app, or any other meditation app you like. After your meditation session, click "Validate task 5" and answer a short question.',
-            },
+           
         ],
 
 
@@ -370,48 +388,59 @@ const takeData = [
             },
         ],
 
-        impact: {
-            causes: [
+        impact: [
+        {
+            type: 'Wellness',
+            categories: ['Psychological Well-being.'],
+            boldText: 'Well-being',
+            text:'',
+            
+           
+            tooltip:
                 {
-                    id: 1,
-                    text: 'Happy',
-                    icon: 'happy',
-                    infoText: 'Happy',
-                    boldText: '',
-                    largeText: '',
-                },
-            ],
-            text: 'Emotional Well-Being',
-            type: 'social'
+                text:'Research shows that participants who practiced mindfulness meditation on a daily basis  experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
+                icon:'Relaxation',
+                },  
         },
+        {
+            type: 'Wellness',
+            categories: ['Work-life balance'],
+            boldText: 'Work-life balance',
+            text:'',
+            
+           
+            tooltip:
+                {
+                text:'A study reported that individuals who engaged in regular mindfulness meditation experienced a 20% decrease in symptoms of anxiety and a 15% decrease in symptoms of depression (Hofmann et al., 2010).',
+                icon:'Mindfulness',
+                },  
+        },
+    ],
+        
 
         tips: [
             {
                 id: "3c7c28290fa0b40c",
-                text: "Choose a time of day when you can dedicate a few minutes to yourself without interruption.",
+                text: "If you're new to meditation, start with shorter sessions and gradually increase it.",
             },
             {
                 id: "44e3e1aadb502387",
-                text: "Find a quiet place where you can meditate comfortably.",
+                text: "Choose a time of day in a quiet place where you can dedicate a few minutes to yourself everyday.",
             },
             {
                 id: "842fe8e029d688b2",
-                text: "Don't worry if your mind wanders during meditation, it's normal. Simply acknowledge your thoughts and refocus your attention on your breath.",
+                text: "Experiment with different types of and  find what works best for you.",
             },
             {
                 id: "dc622a83dbabc447",
-                text: "Experiment with different types of meditations offered by the Headspace app to find what works best for you.",
-            },
-            {
-                id: "a6abbb6462008676",
-                text: "Encourage your colleagues to participate and share their experience. Together, we can create a more mindful workplace!",
+                text: "Meditation is a skill that takes time and practice to develop, so be patient with yourself.",
             },
         ],
 
         reward: [
             {
-                amount: 140,
-                text: 'You will receive 10 points for each day that you meditate using the Headspace app, for a total of 140 points.'
+                amount: 210,
+                text: 'You will receive 10 coins for each day that you meditate, for a total of 210 coins'
             }
         ],
     },
@@ -453,7 +482,7 @@ const takeData = [
         difficultyLevel: 'Hard',
         participants: 123,
 
-
+        
         tasks: [
             {
                 id: 1,
