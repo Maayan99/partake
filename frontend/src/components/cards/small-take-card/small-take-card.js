@@ -19,7 +19,7 @@ const SmallTakeCard = ({take}) => {
          hover:h-[296px] hover:-mb-24 hover:scale-110 hover:-translate-y-4 hover:rounded-lg hover:shadow-md hover:z-10 text-xs`} onClick={handleClick}>
                 <div className="w-full h-[190px] rounded-t-lg flex flex-col justify-between p-2"
                      style={{backgroundImage: `
-                     linear-gradient(to bottom, rgba(2,0,36,0.4) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.65) 100%),
+                     linear-gradient(to bottom, rgba(2,0,36,0) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.65) 100%),
                       url("/assets/PNG/take/${coverImage}")`}}>
                     <TakeIcons impactType={impactType} coins={coins} duration={duration}/>
 
