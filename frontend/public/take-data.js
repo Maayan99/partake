@@ -119,45 +119,57 @@ const takeData = [
         id: "b1c7051da1bc43ad",
         coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
         title: 'Clean Inbox, Clear Conscience',
-        author: 'Anonymous Bee',
-        subject: "wellness",
-        shortDescription: 'Reduce unnecessary energy usage in seconds and refresh your inbox',
-        description: "Have you ever thought about the impact that deleting old emails can have on the environment? Every time you delete an email, you're reducing the amount of storage space needed on the server, which ultimately leads to lower energy consumption and carbon emissions. In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
-        coins: 100,
-        progress: 20,
-        category: '',
-        durationText: 'Ongoing',
-        numberOfTasks: 1,
+        author: 'Partake',
+        subject: "Environmental",
+        shortDescription: 'Even a small action such as deleting emails  can reduce carbon emissions.',
+        description: "Have you ever thought about the impact that deleting old emails can have on the environment? In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
+        coins: 200,
+        progress: 33,
+        category: 'Environmental',
+        durationText: '10',
+        numberOfTasks: 3,
         location: 'Online',
         difficultyLevel: 'Easy',
-        participants: 568,
+        participants: 27,
         type: 'challenge',
 
-        whatToDo: "Take a few minutes to go through your inbox and delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before and after. Don't forget to encourage your coworkers to participate as well!",
-
+        whatToDo: "Take a screenshot of the number of emails you deleted before  and another one  after. Don't forget to encourage your coworkers to participate as well!",
         tasks:
             [
                 {
-                    id: "29f10a8ec96751ad",
+                    id: "19f10a8ec96751ad",
                     validation: {
-                        text: 'Take a screenshot of the emails ',
+                        text: "Upload the screenshot you've taken.",
                         type: 'image',
-                        icon: 'carbon',
-                        infoText: 'Deleting emails can also be refreshing',
+                        icon: 'Energy Consumption',
+                        infoText: 'Every email sent and stored requires energy to power the servers and data centers that store and transmit them.',
                         photoValidationData:
                             {},
                     },
-                    shortText: 'Delete as many emails as possible',
-                    longText: "Take a few minutes to go through your inbox and delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before and after. Don't forget to encourage your coworkers to participate as well!",
+                    shortText: "Check out your collegues' mailboxes",
+                    longText: "Take a screenshot of your mailbox showing the number of emails you currently have and upload it to the gallery.",
+                },
+                {
+                    id: "2g75y6htyr73regf",
+                    validation: {
+                        text: 'Draw the line to your current number.',
+                        type: 'number',
+                        icon: 'Data Center',
+                        infoText: 'Emails are stored in data centers that require extensive cooling systems that  consume significant amounts of energy.',
+                        photoValidationData:
+                            {},
+                    },
+                    shortText: "Check out your collegues' mailbox",
+                    longText: "Delete any old or unnecessary emails and insert the number of emails you have deleted.",
                 },
 
                 {
-                    id: "29f10a8ec96751af",
+                    id: "39f10a8ec96751af",
                     validation: {
-                        text: 'How many emails have you deleted?',
-                        type: 'number',
-                        icon: 'carbon',
-                        infoText: 'Deleting emails can help the environment by as much as 4 grams per email',
+                        text: "Upload the screenshot you've taken",
+                        type: 'image',
+                        icon: 'storage infrastructure',
+                        infoText: 'Storing emails requires servers and data storage devices that are associated with Co2 emissions, and electronic waste.',
                         numberValidationData:
                             {
                                 max: 200,
@@ -166,8 +178,8 @@ const takeData = [
                                 units: 'grams',
                             },
                     },
-                    shortText: 'Delete as many emails as possible',
-                    longText: "Take a few minutes to go through your inbox and delete any old or unnecessary emails. Take a screenshot of the number of emails you deleted before and after. Don't forget to encourage your coworkers to participate as well!",
+                    shortText: "Check out your collegues' mailbox",
+                    longText: "Take a screenshot of your mailbox showing the number of emails you currently have after deleting all unnecessary emails.",
                 },
             ],
 
@@ -244,67 +256,45 @@ const takeData = [
             },
 
         ],
-
         impact: {
-            type: 'environmental',
-            categories:
-                [
-                    {
-                        id: "8968f465b14a6b70",
-                        icon: 'carbon',
-                        tooltipText: 'Does this matter?',
-                        tooltips:
-                            [
-                                {
-                                    text: 'Each email deleted reduces co2 emissions by 4 grams',
-                                    icon: 'digital-footprint',
-                                },
-                            ],
-
-                    },
-                    {
-                        id: "8968f465b1426b70",
-                        icon: 'landfill',
-                        tooltipText: 'Save server space',
-                        tooltips:
-                            [
-                                {
-                                    text: 'Each email deleted saves 1 cm of server space',
-                                    icon: '',
-                                },
-                            ],
-
-                    },
-                ],
-        },
+            type: 'Environmental',
+            categories: ['carbon'],
+            boldText: 'Co2 emissions',
+            text:'',
+            tooltip:
+                {
+                text:'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
+                icon:'Digital Footprint',
+                },  
+        },    
 
         tips: [
             {
                 id: "ddc6ce14bd798f60",
-                text: "Make it a habit to delete old emails regularly to reduce your carbon footprint and contribute to a more sustainable future.",
+                text: "Don’t forget to delete spam or sale emails.",
             },
             {
                 id: "055060e5408fcf25",
-                text: "Remember, even small actions can make a big impact on the environment.",
+                text: "Unsubscribe from unnecessary emails you no longer need or want.",
             },
             {
                 id: "17b75b356a1e021b",
-                text: "Make it a habit to delete old emails regularly to reduce your carbon footprint and contribute to a more sustainable future.\n",
+                text: "Use labels to help you organize your email by category such as “work” or “personal”.\n",
             },
         ],
 
         reward: [
             {
                 amount: 100,
-                text: 'You will receive 1 point for each email you delete, for a maximum of 100 points.',
+                text: ' 1 coin for each 10  emails you delete, for a maximum of 100 coins.',
             },
             {
                 amount: 100,
-                text: 'Additionally, every 50 emails deleted will get you another 10 points, for a maximum of 100 points.',
+                text: 'Additionally, every 50 emails deleted will get you another 10 coins.',
             },
         ],
 
-        moreInformation: 'Did you know that every year, the world\'s data centers consume more energy than the entire United Kingdom? And did you know that a single email produces an average of 4 grams of CO2 emissions? It\'s time to take action and reduce our digital footprint.',
+        moreInformation: 'Did you know that every year, the world\'s data centers consume more energy than the entire United Kingdom? And did you know that a single email produces an average of 0.4 grams of CO2 emissions? It\'s time to take action and reduce our digital footprint.',
     },
 
 
