@@ -185,7 +185,7 @@ const giveData = [
         location: 'online',
         contactDetails:
             {
-                name: 'Chaya,head of SPCA Isreal jerusalem',
+                name: 'Chaya, head of SPCA Isreal jerusalem',
                 email: 'https://spca.co.il/',
                 phone: '053-1234567',
                 adress: '159  Hertsel st. Tel-Aviv.'
@@ -232,7 +232,7 @@ const giveData = [
             array: [
                 {
                     id: "uhntgsvrtegf",
-                    text: 'If you’re interested in adopting a pet, feel free to contact us and visit  our animal shelter.',
+                    text: "If you’re interested in adopting a pet, feel free to contact us and visit  our animal shelter.",
                 },
             ]
             },
