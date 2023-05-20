@@ -65,7 +65,7 @@ const ImportantDetails = ({give}) => {
                         <p>{dateTime}</p>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-1">
-                        <Icon name="person" className="float-left w-3 mt-4 mr-3 -ml-1 opacity-70"/>
+                        <Icon name="person" className="float-left w-3 mt-3 mr-3 -ml-1 opacity-70"/>
                         <h1 className="font-bold">Contact Person</h1>
                         <p>{name}</p>
                         <p className="text-blue">{email}</p>
