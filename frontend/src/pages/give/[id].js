@@ -6,7 +6,6 @@ import giveData from "../../../public/give-data";
 import ValidationPopUp from "@components/components/pop-ups/validation-pop-up/validation-pop-up";
 import TakeCoverCard from "@components/components/cards/take-cover-card/take-cover-card";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
-import StarIcon from "@mui/icons-material/Star";
 import Icon from "@components/components/common/icon/icon";
 import GiveCoverCard from "@components/components/cards/give-cover-card/give-cover-card";
 import React, {useMemo, useState} from "react";
@@ -65,11 +64,11 @@ const ImportantDetails = ({give}) => {
                         <h1 className="font-bold">Date & Time</h1>
                         <p>{dateTime}</p>
                     </div>
-                    <div className="ml-10 lg:ml-0 space-y-2">
+                    <div className="ml-10 lg:ml-0 space-y-1">
                         <Icon name="person" className="float-left w-3 mt-4 mr-3 -ml-1 opacity-70"/>
                         <h1 className="font-bold">Contact Person</h1>
                         <p>{name}</p>
-                        <p>{email}</p>
+                        <p className="text-blue">{email}</p>
                         <p>{phone}</p>
                     </div>
                 </div>
