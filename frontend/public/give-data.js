@@ -49,55 +49,77 @@ const template = {
 const giveData = [
     {
         id: "18",
-        title: 'Goods donation for families in need',
+        title: "Goods Donation For “Ha’Metsion”.",
         coverImage: 'give_card_food_basket_distribution.png',
-        activityType: 'goods_donation',
-        author: 'מיד ליעד',
-        about: 'Our charity collects donations of electricity products, furniture, and baby products to distribute to those who are struggling.', //About the NGO or the Give
-        description: "If you want to make a difference in someone's life, simply call us and arrange a date for us to pick up your donations. We will ensure that your items go to a family that truly needs them, providing them with essential household items that they might not otherwise be able to afford. By donating to our charity, you can make a meaningful impact on the lives of those who are less fortunate, while also promoting sustainability by reducing waste. Contact us today to schedule your donation and help us make a positive difference in the world.",
-        skills: ['', ''],
-        location: 'Gush-Dan area',
+        activityType: 'goods donation',
+        author: 'Shekel Association',
+        about: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.', //About the NGO or the Give
+        description: "You can bring the items directly to our Talpiot branch, located at 39 General Pierre Koenig Street in Jerusalem, or to our city centre branch, located at 5 Dorot Rishonim street, Center of town, Jerusalem Please contact us in case you do not find parking. We will send a team to receive the donation from the vehicle.",
+        location: 'General Pierre Koenig Street 39, Jerusalem.',
         contactDetails:
             {
-                name: '',
+                name: 'Ofra, Donation coordinator.',
                 phone: '+972-03-6198214',
-                email: 'meyad2@gmail.com',
-                website: 'layaad.org.il',
+                website: 'https://hamezion.co.il/',
             },
-        reward: '',
-        requirements: ['We deliver only furniture, electricity products and baby products', 'furniture and baby products must be in good condition', 'All electricity products must be working.'],
+        requirements: ['All clothes must be in good condition.','Furniture and baby products must be in good condition.','All electricity products must be working.'],
 
-        impact:
-            {
-                categories:
-                    [
-                        {
-                            id: "8968f465b14a6b70",
-                            icon: 'goods-donation',
-                            tooltipText: 'Help people in need',
-                            tooltips:
-                                [
-                                    {
-                                        text: 'Each meal donated helps another child smile more',
-                                        icon: 'community',
-                                    },
-                                ],
-
-                        },
-                    ],
-                type: 'social',
-            },
+        impact: {
+            type: 'Social',
+            categories: ['Bags'],
+            boldText: 'Good Donation',
+            text:'',
+            tooltip:
+                {
+                text:'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
+                icon:'Man with wheelchair',
+                },  
+            type: 'Environmenatal',
+            categories: ['Land'],
+            boldText: 'Landfill',
+            text:'',
+            tooltip:
+                {
+                text:'Donating second-hand products helps reduce waste, conserve natural resources, and minimize the carbon footprint associated with producing textile products.',
+                icon:'Reuse',
+                },  
+        },
         timeDetails:
             {
-                endDate: '',
-                frequency: '',
-                duration: '',
+                time: ['Sunday-Thursday','9am - 9pm'],
+                duration: 'ongoing',
             },
-        info:
+        sponsors:
             {
-                link: 'hello-world',
-                text: 'Hello World',
+            text: '',
+            array: [
+                {
+                    id: '1',
+                    name: 'Shekel Organization',
+                    text: 'An Israeli non-profit organization dedicated to promoting inclusion and improving the lives of people with disabilities. We collaborate with the social business "HaMzeyon" in Jerusalem, offering employment opportunities for individuals with disabilities.',
+                },
+                ]
             },
+        additionalInfo: {
+            text: '',
+            array: [
+                {
+                    id: "uhfgdtsbvutr",
+                    text: 'Please deliver the goods to our store.',
+                },
+                {
+                    id: "gfbdteyhjiwf",
+                    text: 'Please store the items in bags or in boxes.',
+                },
+                {
+                    id: "lokgfbdtsvtw",
+                    text: 'Advantage for another language such as Russian, Arabic or Amharic.',
+                },
+            ]
+                },
+            participants: 85,
+            aboutTheCause: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.',
+    
     },
 
     {
@@ -179,6 +201,25 @@ const giveData = [
                 frequency: '',
                 duration: '',
             },
+        additionalInfo: {
+            text: '',
+            array: [
+                {
+                    id: "uhfgdtsbvutr",
+                    text: 'Please deliver the goods to out store',
+                },
+                {
+                    id: "gfbdteyhjiwf",
+                    text: 'Please store the items in bags or in boxes.',
+                },
+                {
+                    id: "lokgfbdtsvtw",
+                    text: 'Advantage for another language such as Russian, Arabic or Amharic.',
+                },
+            ]
+            },
+        participants: 85,
+        aboutTheCause: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.',
     },
     {
         id: '22',
@@ -186,7 +227,7 @@ const giveData = [
         coverImage: '',
         type: 'Online Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: "Kidum No'ar Kiryat Gat",
-        about: '“Kidum-Noar" is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.', //About the NGO or the Give
+        about: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.", //About the NGO or the Give
         description: 'We are seeking volunteers for personal and educational mentoring in English for these students.  The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied.  The commitment is until the end of the academic year.',
         skills: ['English', 'Teaching',],
         location: 'Online',
@@ -203,15 +244,16 @@ const giveData = [
             categories: ['clock'],
             boldText: '25 hours',
             text:'',
-            tooltip:
+            tooltip: [
                 {
-                text:'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
-                icon:'Book and pencil',
-            
-            
-                text:'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
-                icon:'child'
-                },  
+                   text:'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
+                   icon:'Book and pencil',
+                },
+                {
+                    text:'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
+                    icon:'child',
+                }, 
+            ] 
         },
 
         timeDetails:
@@ -239,11 +281,7 @@ const giveData = [
             ]
         },
 
-        aboutTheCause: '',
-
-
-        organizer: '',
-
+        aboutTheCause: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.",
         participants: 23,
     },
     {
