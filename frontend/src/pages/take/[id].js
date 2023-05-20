@@ -41,8 +41,9 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
         <>
             <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
                 {!started && <div className="flex space-x-1 text-2xl">
-                    <PrimaryButton onClick={handleStartChallenge}>Take Challenge</PrimaryButton>
-                    <TransparentButton className="px-2 text-xl" onClick={handleInviteFriends}>Invite Friends</TransparentButton>
+                    <PrimaryButton onClick={handleStartChallenge} className="text-lg">Take Challenge</PrimaryButton>
+                    <TransparentButton className="px-2 text-lg" onClick={handleInviteFriends}>Invite
+                        Friends</TransparentButton>
                 </div>}
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
                     <div className="ml-10 space-y-2">
@@ -110,14 +111,13 @@ const TopAfterStarted = ({
     }
 
     return (
-        <div className="col-span-3 flex space-x-14 w-full lg:h-[500px]">
-            <div className="w-1/2 min-w-[370px]">
-                <TakeCoverCard take={take}/>
-            </div>
+        <>
+            <TakeCoverCard take={take}/>
             <div className="flex flex-col justify-between space-y-3">
-                <div className="flex space-x-1">
-                    <PrimaryButton onClick={handleLeaveChallenge}>Challenge Taken</PrimaryButton>
-                    <TransparentButton className="px-2" onClick={handleInviteFriends}>Invite Friends</TransparentButton>
+                <div className="flex space-x-1 w-full">
+                    <PrimaryButton onClick={handleLeaveChallenge} className="text-lg">Challenge Taken</PrimaryButton>
+                    <TransparentButton className="px-2 text-lg" onClick={handleInviteFriends}>Invite
+                        Friends</TransparentButton>
                 </div>
 
                 <div className="space-y-5">
@@ -129,15 +129,12 @@ const TopAfterStarted = ({
                 <BlueButton className="mt-4 text-2xl w-64" onClick={handleShowValidation}>Validate
                     Task {currentTask + 1}</BlueButton>
             </div>
-            <div className="flex flex-col items-center justify-between">
-                <div className="w-full">
-                    <h1 className="font-bold">Your Impact</h1>
-                    <ImpactGraphic impact={impact} setPingCategory={setPingCategory}/>
-                </div>
+            <div className="max-h-[420px] flex flex-col justify-between">
+                <ImpactGraphic impact={impact} setPingCategory={setPingCategory}/>
                 <ParticipantsGrid participants={take.participants} handleInviteFriends={handleInviteFriends}/>
 
             </div>
-        </div>
+        </>
     )
 };
 
@@ -256,7 +253,8 @@ export default function TakePage() {
                     {started ?
                         <TopAfterStarted setPingCategory={setPingCategory} take={take} setStarted={setStarted}
                                          handleLeaveChallenge={handleLeaveChallenge}
-                                         handleInviteFriends={handleInviteFriends} impact={{categories: impactMade, total: totalImpactScore}}
+                                         handleInviteFriends={handleInviteFriends}
+                                         impact={{categories: impactMade, total: totalImpactScore}}
                                          setDisplayValidationPopUp={setDisplayValidationPopUp}
                                          currentTask={currentTask}/> :
                         <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}

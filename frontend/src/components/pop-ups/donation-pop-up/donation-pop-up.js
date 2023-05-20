@@ -1,6 +1,4 @@
 import PopUp from "@components/components/pop-ups/basic-pop-up/pop-up";
-import IconButton from "@components/components/common/icon-button";
-import CloseIcon from "@mui/icons-material/Close";
 import BlueButton from "@components/components/common/blue-button";
 
 export default function DonationPopUp({display, setDisplay}) {
