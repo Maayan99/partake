@@ -12,8 +12,8 @@ const Footer = () => {
         <div className="flex flex-col bg-footer-gray px-10 pt-10 pb-3 h-80 mt-32 justify-between text-white">
             <div className="flex space-x-32 h-full">
                 <div className="flex flex-col space-y-10">
-                    <h2 className="text-lg font-semibold">Contact Us</h2>
-                    <div className="flex">
+                    <h2 className="text-xl font-semibold">Contact Us</h2>
+                    <div className="flex space-x-2">
                         <EmailIcon/>
                         <FacebookIcon/>
                         <TwitterIcon/>
@@ -22,7 +22,7 @@ const Footer = () => {
                     <h2 className="text-lg font-semibold">Partake</h2>
                 </div>
                 <div  className="space-y-4">
-                    <h2 className="text-lg font-semibold">Resources</h2>
+                    <h2 className="text-xl font-semibold">Resources</h2>
                     <ul className="list-none p-0 space-y-3">
                         <li>
                             <a href="#">World calculator</a>
@@ -36,7 +36,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="space-y-4">
-                    <h2 className="text-lg font-semibold">Partners</h2>
+                    <h2 className="text-xl font-semibold">Partners</h2>
                     <ul className="list-none p-0 space-y-3">
                         <li>
                             <a href="#">Our partners</a>

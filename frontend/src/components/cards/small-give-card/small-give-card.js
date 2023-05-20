@@ -27,9 +27,9 @@ const SmallGiveCard = ({give}) => {
                 <div className="w-full h-52 rounded-t-lg flex flex-col justify-between"
                      style={{backgroundImage: `linear-gradient(to bottom, transparent 10%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/give/${coverImage}")`}}>
                     <div className="mt-2.5 ml-2.5">
-                        <div className="flex bg-white rounded-full w-fit py-1 px-3 items-center">
+                        <div className="flex bg-white rounded-full w-fit py-1 px-2 items-center">
                             <Icon name={activityType} className="h-5"/>
-                            <p className="ml-2.5 text-xs">{activityTypeDictionary[activityType]}</p>
+                            <p className="ml-2.5 text-sm">{activityTypeDictionary[activityType]}</p>
                         </div>
                     </div>
 

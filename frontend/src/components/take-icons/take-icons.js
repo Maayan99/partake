@@ -1,4 +1,3 @@
-import StarIcon from "@mui/icons-material/Star";
 import Icon from "@components/components/common/icon/icon";
 
 
@@ -33,7 +32,7 @@ export default function TakeIcons({impactType, coins, duration}) {
             </div>}
             <div className="flex flex-col justify-center items-center bg-white
             border-solid border-2 border-blue rounded-full p-1 w-12 h-12 text-blue">
-                <StarIcon/>
+                <Icon name="partake-coins" className="w-2.5 mt-1 mb-1"/>
                 <span className="text-xs -mt-1 -p-1">{coins}</span>
             </div>
             {duration ?
