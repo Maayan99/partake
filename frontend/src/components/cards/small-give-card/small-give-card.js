@@ -34,7 +34,7 @@ const SmallGiveCard = ({give}) => {
                     </div>
 
                     <div className="text-white ml-2.5 mb-2.5">
-                        <h2 className="font-bold text-2xl leading-snug drop-shadow-md">
+                        <h2 className="font-bold text-2xl leading-tight drop-shadow-m mb-1">
                             {title}
                         </h2>
                         <p className="font-italics text-xl leading-snug drop-shadow-md">
@@ -57,12 +57,12 @@ const SmallGiveCard = ({give}) => {
                                     <Icon name="reward"/>
                                 </div>}
                         </div>}
-                        {location && <div className="flex items-center text-gray space-x-2">
-                            <Icon name="location"/>
-                            <p className="text-xs">{location}</p>
+                        {location && <div className="flex items-center text-gray space-x-2 max-w-[50%]">
+                            <Icon name="location" className="w-3.5 opacity-50"/>
+                            <p className="text-xs mt-1">{location}</p>
                         </div>}
                         {endDate && <div className="flex items-center text-gray">
-                            <CalendarMonthIcon/>
+                            <Icon name="calendar" className="w-3.5 mr-2 opacity-50"/>
                             <p className="text-xs">{endDate}</p>
                         </div>}
                     </div>
