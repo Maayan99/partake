@@ -502,7 +502,7 @@ const takeData = [
         durationText: '5 days, starting Monday 15/4/2023',
         numberOfTasks: 3,
         location: 'Home',
-        difficultyLevel: 'intermediate',
+        difficultyLevel: 'Intermediate',
         participants: 78,
 
         whatToDo:'Collect as many packages as possible. it can be  plastic packages, paper packaging, glass, and cans.Take a picture of each full trash bag. Share the picture on the challenge feed with the type of material collected.',
@@ -512,7 +512,7 @@ const takeData = [
                 validation: {
                     text: "What shouldn't you throw in the Tamir Orange Bag?",
                     type: 'multi',
-                    icon: 'Recycle bin',
+                    icon: 'recycle',
                     infoText: 'The average household waste in Israel is 50% organic waste, 20% paper and cardboard, 10% plastic, and 20% other materials such as glass, metal, and textiles.',
                     multiValidationData:
                         {
@@ -570,7 +570,7 @@ const takeData = [
             tooltip:
                 {
                 text:'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
-                icon:'Digital Footprint',
+                icon:'digital-footprint',
                 },  
         },    
 
