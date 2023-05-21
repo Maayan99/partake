@@ -2,16 +2,19 @@ import {useState} from "react";
 
 export default function Dropdown({selectOptions, className}) {
 
-    const options =
-        [
-            {
-                id: 'jaosiffasdkjljados',
-                value: '',
-                name: selectOptions.placeholder,
-            },
-            ...selectOptions.options,
-        ]
+    let options = selectOptions.options;
 
+    if (selectOptions.placeholder) {
+        options =
+            [
+                {
+                    id: 'jaosiffasdkjljados',
+                    value: '',
+                    name: selectOptions.placeholder,
+                },
+                ...selectOptions.options,
+            ]
+    }
     const handleOptionClick = (event) => {
         const value = event.target.getAttribute("value");
         selectOptions.handleFunction({target: {value}});

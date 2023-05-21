@@ -13,6 +13,7 @@ import Head from "next/head";
 import takeData from "../../../public/take-data";
 import LoadingSpinner from "@components/components/loading-spinner/loading-spinner";
 import ParticipantsGrid from "@components/components/participants-grid/participants-grid";
+import DonationPopUp from "@components/components/pop-ups/donation-pop-up/donation-pop-up";
 
 const ImportantDetails = ({give}) => {
     const {
@@ -80,7 +81,7 @@ const ImportantDetails = ({give}) => {
 
 export default function GivePage() {
     const [started, setStarted] = useState(false);
-    const [displayValidationPopUp, setDisplayValidationPopUp] = useState(false);
+    const [displayDonationPopUp, setDisplayDonationPopUp] = useState(false);
     const [currentTask, setCurrentTask] = useState(0);
     const [displayInvitePopUp, setDisplayInvitePopUp] = useState(false);
     const [displayCongratsPopUp, setDisplayCongratsPopUp] = useState(false);
@@ -126,6 +127,7 @@ export default function GivePage() {
             <Head>
                 <title>{give.title}</title>
             </Head>
+            <DonationPopUp display={displayDonationPopUp} setDisplay={setDisplayDonationPopUp}/>
             <div className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20`}>
                 <GiveCoverCard className="md:col-span-2 lg:col-span-1" give={give}/>
 
@@ -169,6 +171,10 @@ export default function GivePage() {
                         <div className="text-gray" dangerouslySetInnerHTML={{__html: give.organizer}}></div>
                     </div>}
                 {give.participants && <ParticipantsGrid participants={give.participants} handleInviteFriends={handleInviteFriends}/>}
+                <div className="space-y-5">
+                    <h1 className="font-bold">Want to help in other ways?</h1>
+                    <PrimaryButton onClick={() => setDisplayDonationPopUp(true)}>Click to Donate</PrimaryButton>
+                </div>
             </div>
         </>
     )

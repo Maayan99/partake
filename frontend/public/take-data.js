@@ -258,14 +258,21 @@ const takeData = [
         ],
         impact: {
             type: 'Environmental',
-            categories: ['carbon'],
-            boldText: 'Co2 emissions',
-            text:'',
-            tooltip:
+            categories: [
                 {
-                text:'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
-                icon:'Digital Footprint',
-                },  
+                    icon: 'carbon',
+                    boldText: 'Co2 emissions',
+                    text:'',
+                    tooltips:
+                        [
+                            {
+                                id: '1',
+                                text: 'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
+                                icon: 'Digital Footprint',
+                            }
+                        ],
+                }],
+
         },    
 
         tips: [
