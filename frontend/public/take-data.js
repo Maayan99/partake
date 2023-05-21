@@ -338,16 +338,32 @@ const takeData = [
             {
                 id: 2,
                 validation: {
-                    text: {
-                       // ["Which app did you choose?","Headspace","Ten Percent",'Spotify','Youtube',"other:"],
-                    },
-                    type: '',
+                    text: 'Which app did you choose?',
+                    type: 'multi',
                     icon: 'Mindfulness',
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
-                    numberValidationData:
-                        {
-                
-                        },
+                    multiValidationData:
+                    {
+                        options: 
+                         [
+                            {
+                                id: '1',
+                                text:'Headspace',
+                            },
+                            {
+                                id: '2',
+                                text:'Ten Percent',
+                            },
+                            {
+                                id: '3',
+                                text:'Youtube',
+                            },
+                            {
+                                id: '4',
+                                text:'Other',
+                            }
+                         ]
+                    },
                 },
                 shortText: "",
                 longText: "Open your favorite meditation app or track, and meditate every day for a minimum of  5 minutes."
@@ -465,30 +481,57 @@ const takeData = [
     // For you challenges
     {
         id: "3",
-        coverImage: 'take_card_mindful_moment.png',
-        title: 'Mindful Moment',
-        author: 'Anonymous Bee',
-        impactType: 'Wellness',
-        subject: "Wellness",
-        shortDescription: 'Reduce unnecessary energy usage in seconds',
-        description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
-        coins: 300,
+        coverImage: '',
+        title: 'Recycling Department War.',
+        author: 'HR, Abraham’s Hostel.',
+        impactType: 'Environmental',
+        subject: "Environmental",
+        shortDescription: 'Our exciting interdepartmental recycling competition! Who can make the biggest impact?',
+        description: 'Get ready for an exhilarating recycling challenge between departments! In this thrilling competition, teams will go head-to-head to determine who can make the most significant environmental impact. Watch our informative video, provided in collaboration with Tamir Corporation, to learn which materials should be recycled and join us in this exciting sustainability initiative. Click here to watch the video: [insert link to the video].',
+        coins: 50,
         progress: 20,
         category: 'For you',
-        duration: 7200,
+        duration: 20160,
         durationText: '5 days, starting Monday 15/4/2023',
-        numberOfTasks: 5,
-        location: 'Online',
-        difficultyLevel: 'Hard',
-        participants: 123,
+        numberOfTasks: 3,
+        location: 'Home',
+        difficultyLevel: 'intermediate',
+        participants: 78,
 
-        
+        whatToDo:'Collect as many packages as possible. it can be  plastic packages, paper packaging, glass, and cans.Take a picture of each full trash bag. Share the picture on the challenge feed with the type of material collected.',
         tasks: [
             {
                 id: 1,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: '',
+                validation: {
+                    text: "What shouldn't you throw in the Tamir Orange Bag?",
+                    type: 'multi',
+                    icon: 'Recycle bin',
+                    infoText: 'The average household waste in Israel is 50% organic waste, 20% paper and cardboard, 10% plastic, and 20% other materials such as glass, metal, and textiles.',
+                    multiValidationData:
+                        {
+                            options: 
+                             [
+                                {
+                                    id: '1',
+                                    text:'Glass bottles',
+                                },
+                                {
+                                    id: '2',
+                                    text:'Textile',
+                                },
+                                {
+                                    id: '3',
+                                    text:'Milk cartons',
+                                },
+                                {
+                                    id: '4',
+                                    text:'Stray Cats',
+                                }
+                             ]
+                        },
+                },
+                shortText: "",
+                longText: "Watch the video in the description.",
             },
         ],
 
@@ -509,21 +552,20 @@ const takeData = [
                 },
             },
         ],
+        
+        
 
         impact: {
-            causes: [
+            type: 'Environmental',
+            categories: ['carbon'],
+            boldText: 'Co2 emissions',
+            text:'',
+            tooltip:
                 {
-                    id: 1,
-                    text: 'Happy',
-                    icon: 'happy',
-                    infoText: 'Happy',
-                    boldText: '',
-                    largeText: '',
-                },
-            ],
-            text: 'Emotional Well-Being',
-            type: 'social'
-        },
+                text:'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
+                icon:'Digital Footprint',
+                },  
+        },    
 
         tips: [
             {
