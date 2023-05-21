@@ -17,7 +17,7 @@ const Header = () => {
 
             <div className='flex items-center'>
                 <div className="flex items-center space-x-7 mr-10">
-                    <p>My impact</p>
+                    <p className="font-medium">My impact</p>
                     <div className="flex items-center space-x-3">
                         <Icon name="environmental" className="h-5"/>
                         <p>1000</p>
@@ -25,15 +25,11 @@ const Header = () => {
                     <div className="flex items-center space-x-3">
                         <Icon name="social" className="h-5"/>
                         <p>2000</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                        <Icon name="wellness" className="h-5"/>
-                        <p>491</p>
-                    </div>
+                    </div> 
                 </div>
 
                 <div className="flex space-x-3 mr-14">
-                    <p>Partake Coins</p>
+                    <p className="font-medium">Partake Coins</p>
                     <Icon name="partake-coins-small" className="h-5 mt-0.5"/>
                     <p>100</p>
                 </div>

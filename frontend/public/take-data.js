@@ -313,7 +313,7 @@ const takeData = [
         author: 'Partake',
         impactType: 'Wellness',
         subject: "Wellness",
-        shortDescription: 'Meditation for 5 minutes  every day at your workplace can help reduce stress and enhance relaxation.',
+        shortDescription: 'Meditation for 5 minutes every day at your workplace can help reduce stress and enhance relaxation.',
         description: 'Practicing meditation every day can calm your mind and refocus your energy. In this challenge, we encourage you to take a break for a few minutes at your workplace. By doing that, you can improve focus, reduce stress, and promote overall well-being for both yourself and your coworkers.',
         coins: 300,
         progress: 20,
@@ -325,7 +325,7 @@ const takeData = [
         difficultyLevel: 'Easy',
         participants: 47,
         
-        whattodo:'The "21-Day Meditation  Challenge " is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
+        whattodo:'The "21-Day Meditation Challenge " is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
         tasks: [
             {
                 id: 1,

@@ -67,12 +67,12 @@ const giveData = [
         impact: {
             type: 'Social',
             categories: ['Bags'],
-            boldText: 'Good Donation',
+            boldText: 'Goods Donation',
             text:'',
             tooltip:
                 {
                 text:'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
-                icon:'Man with wheelchair',
+                icon:'wheelchair',
                 },  
             type: 'Environmenatal',
             categories: ['Land'],
@@ -81,7 +81,7 @@ const giveData = [
             tooltip:
                 {
                 text:'Donating second-hand products helps reduce waste, conserve natural resources, and minimize the carbon footprint associated with producing textile products.',
-                icon:'Reuse',
+                icon:'reuse',
                 },  
         },
         timeDetails:
