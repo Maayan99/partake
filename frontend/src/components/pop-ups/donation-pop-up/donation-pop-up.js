@@ -31,7 +31,7 @@ const currencyOptions =
 const presets = [10, 20, 50, 100];
 
 export default function DonationPopUp({display, setDisplay}) {
-    const [amountToDonate, setAmountToDonate] = useState();
+    const [amountToDonate, setAmountToDonate] = useState(0);
 
     const [anonOrPublic, setAnonOrPublic] = useState('');
 
@@ -40,29 +40,30 @@ export default function DonationPopUp({display, setDisplay}) {
     }
 
     const handleAnonOrPublicChoice = (e) => {
-        setAmountToDonate(e.target.value)
+        setAnonOrPublic(e.target.value)
     }
 
     const donationOptions =
         {
             value: anonOrPublic,
             handleFunction: handleAnonOrPublicChoice,
+            placeholder: 'Anonymous or Public?',
             options:
                 [
                     {
                         id: '0',
                         value: 'public',
-                        text: 'Public Donation',
+                        name: 'Public Donation',
                     },
                     {
                         id: '1',
                         value: 'name',
-                        text: 'Name Only',
+                        name: 'Name Only',
                     },
                     {
                         id: '2',
                         value: 'donation',
-                        text: 'Donation Only',
+                        name: 'Donation Only',
                     },
                 ],
         };

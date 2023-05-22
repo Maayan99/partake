@@ -1,6 +1,7 @@
 import {useState} from "react";
 
 export default function Dropdown({selectOptions, className}) {
+    const [selectedName, setSelectedName] = useState("");
 
     let options = selectOptions.options;
 
@@ -17,7 +18,11 @@ export default function Dropdown({selectOptions, className}) {
     }
     const handleOptionClick = (event) => {
         const value = event.target.getAttribute("value");
+        const name = event.target.getAttribute('id');
         selectOptions.handleFunction({target: {value}});
+
+        setSelectedName(name);
+        console.log(name);
     };
 
     return (
@@ -27,7 +32,7 @@ export default function Dropdown({selectOptions, className}) {
                 className="block h-full w-full px-4 py-2 border border-1 border-gray-500 bg-light-gray
                  text-xl rounded-none border-r-0 focus:outline-none text-start peer"
             >
-                {selectOptions.value || selectOptions.placeholder}
+                {selectedName || selectOptions.placeholder}
             </button>
 
             <ul className={`absolute top-14  left-0 w-full px-4 py-4 shadow-lg 
@@ -36,6 +41,7 @@ export default function Dropdown({selectOptions, className}) {
                 {options.filter((option) => option.value !== selectOptions.value).map((option) => (
                     <li
                         key={option.id}
+                        id={option.name}
                         value={option.value}
                         onClick={handleOptionClick}
                     >
