@@ -262,7 +262,7 @@ const takeData = [
                 {
                     icon: 'carbon',
                     boldText: 'Co2 emissions',
-                    text:'',
+                    text: '',
                     tooltips:
                         [
                             {
@@ -273,7 +273,7 @@ const takeData = [
                         ],
                 }],
 
-        },    
+        },
 
         tips: [
             {
@@ -324,8 +324,8 @@ const takeData = [
         location: 'Online',
         difficultyLevel: 'Easy',
         participants: 47,
-        
-        whattodo:'The "21-Day Meditation Challenge " is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
+
+        whatToDo: 'The "21-Day Meditation Challenge " is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
         tasks: [
             {
                 id: 1,
@@ -335,9 +335,7 @@ const takeData = [
                     icon: 'Mindfulness',
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
                     numberValidationData:
-                        {
-                
-                        },
+                        {},
                 },
                 shortText: "Meditation Goal Gallery",
                 longText: "Think of a goal that you would achieve before embarking on a 21-day meditation challenge.",
@@ -350,27 +348,27 @@ const takeData = [
                     icon: 'Mindfulness',
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
                     multiValidationData:
-                    {
-                        options: 
-                         [
-                            {
-                                id: '1',
-                                text:'Headspace',
-                            },
-                            {
-                                id: '2',
-                                text:'Ten Percent',
-                            },
-                            {
-                                id: '3',
-                                text:'Youtube',
-                            },
-                            {
-                                id: '4',
-                                text:'Other',
-                            }
-                         ]
-                    },
+                        {
+                            options:
+                                [
+                                    {
+                                        id: '1',
+                                        text: 'Headspace',
+                                    },
+                                    {
+                                        id: '2',
+                                        text: 'Ten Percent',
+                                    },
+                                    {
+                                        id: '3',
+                                        text: 'Youtube',
+                                    },
+                                    {
+                                        id: '4',
+                                        text: 'Other',
+                                    }
+                                ]
+                        },
                 },
                 shortText: "",
                 longText: "Open your favorite meditation app or track, and meditate every day for a minimum of  5 minutes."
@@ -383,14 +381,12 @@ const takeData = [
                     icon: 'Oak tree',
                     infoText: 'Meditation empowers us to cultivate a resilient Just as a mountain stands tall.',
                     numberValidationData:
-                        {
-                
-                        },
+                        {},
                 },
                 shortText: "",
                 longText: "Welcome back! Did you achieve your goal?",
             },
-           
+
         ],
 
 
@@ -411,35 +407,40 @@ const takeData = [
             },
         ],
 
-        impact: [
-        {
-            type: 'Wellness',
-            categories: ['Psychological Well-being.'],
-            boldText: 'Well-being',
-            text:'',
-            
-           
-            tooltip:
-                {
-                text:'Research shows that participants who practiced mindfulness meditation on a daily basis  experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
-                icon:'Relaxation',
-                },  
-        },
-        {
-            type: 'Wellness',
-            categories: ['Work-life balance'],
-            boldText: 'Work-life balance',
-            text:'',
-            
-           
-            tooltip:
-                {
-                text:'A study reported that individuals who engaged in regular mindfulness meditation experienced a 20% decrease in symptoms of anxiety and a 15% decrease in symptoms of depression (Hofmann et al., 2010).',
-                icon:'Mindfulness',
-                },  
-        },
-    ],
-        
+        impact:
+            {
+                type: 'Wellness',
+                categories: [
+                    {
+                        icon: 'Psychological Well-being.',
+                        boldText: 'Well-being',
+                        text: '',
+
+
+                        tooltip:
+                            {
+                                text: 'Research shows that participants who practiced mindfulness meditation on a daily basis  experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
+                                icon: 'Relaxation',
+                            },
+                    },
+                    {
+                        icon: 'Work-life balance',
+                        boldText: 'Work-life balance',
+                        text: '',
+
+
+                        tooltips:
+                            [
+                                {
+                                    text: 'A study reported that individuals who engaged in regular mindfulness meditation experienced a 20% decrease in symptoms of anxiety and a 15% decrease in symptoms of depression (Hofmann et al., 2010).',
+                                    icon: 'Mindfulness',
+                                },
+                            ]
+                    },
+                ],
+
+            },
+
 
         tips: [
             {
@@ -505,7 +506,7 @@ const takeData = [
         difficultyLevel: 'Intermediate',
         participants: 78,
 
-        whatToDo:'Collect as many packages as possible. it can be  plastic packages, paper packaging, glass, and cans.Take a picture of each full trash bag. Share the picture on the challenge feed with the type of material collected.',
+        whatToDo: 'Collect as many packages as possible. it can be  plastic packages, paper packaging, glass, and cans.Take a picture of each full trash bag. Share the picture on the challenge feed with the type of material collected.',
         tasks: [
             {
                 id: 1,
@@ -516,25 +517,25 @@ const takeData = [
                     infoText: 'The average household waste in Israel is 50% organic waste, 20% paper and cardboard, 10% plastic, and 20% other materials such as glass, metal, and textiles.',
                     multiValidationData:
                         {
-                            options: 
-                             [
-                                {
-                                    id: '1',
-                                    text:'Glass bottles',
-                                },
-                                {
-                                    id: '2',
-                                    text:'Textile',
-                                },
-                                {
-                                    id: '3',
-                                    text:'Milk cartons',
-                                },
-                                {
-                                    id: '4',
-                                    text:'Stray Cats',
-                                }
-                             ]
+                            options:
+                                [
+                                    {
+                                        id: '1',
+                                        text: 'Glass bottles',
+                                    },
+                                    {
+                                        id: '2',
+                                        text: 'Textile',
+                                    },
+                                    {
+                                        id: '3',
+                                        text: 'Milk cartons',
+                                    },
+                                    {
+                                        id: '4',
+                                        text: 'Stray Cats',
+                                    }
+                                ]
                         },
                 },
                 shortText: "",
@@ -559,20 +560,19 @@ const takeData = [
                 },
             },
         ],
-        
-        
+
 
         impact: {
             type: 'Environmental',
             categories: ['carbon'],
             boldText: 'Co2 emissions',
-            text:'',
+            text: '',
             tooltip:
                 {
-                text:'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
-                icon:'digital-footprint',
-                },  
-        },    
+                    text: 'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
+                    icon: 'digital-footprint',
+                },
+        },
 
         tips: [
             {

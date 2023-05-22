@@ -26,38 +26,46 @@ const currencyOptions =
             ]
     };
 
-const donationOptions =
-    {
-        options:
-            [
-                {
-                    id: '0',
-                    value: 'public',
-                    text: 'Public Donation',
-                },
-                {
-                    id: '1',
-                    value: 'name',
-                    text: 'Name Only',
-                },
-                {
-                    id: '2',
-                    value: 'donation',
-                    text: 'Donation Only',
-                },
-            ],
-    };
+
 
 const presets = [10, 20, 50, 100];
 
 export default function DonationPopUp({display, setDisplay}) {
     const [amountToDonate, setAmountToDonate] = useState();
 
-    const [anonOrPublic, setAnonOrPublic] = useState();
+    const [anonOrPublic, setAnonOrPublic] = useState('');
 
     const handlePresetClick = (e) => {
         setAmountToDonate(e.target.id)
     }
+
+    const handleAnonOrPublicChoice = (e) => {
+        setAmountToDonate(e.target.value)
+    }
+
+    const donationOptions =
+        {
+            value: anonOrPublic,
+            handleFunction: handleAnonOrPublicChoice,
+            options:
+                [
+                    {
+                        id: '0',
+                        value: 'public',
+                        text: 'Public Donation',
+                    },
+                    {
+                        id: '1',
+                        value: 'name',
+                        text: 'Name Only',
+                    },
+                    {
+                        id: '2',
+                        value: 'donation',
+                        text: 'Donation Only',
+                    },
+                ],
+        };
 
     return (
         <PopUp display={display} setDisplay={setDisplay} title="Donation">
