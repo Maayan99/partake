@@ -58,7 +58,7 @@ const giveData = [
         location: 'General Pierre Koenig Street 39, Jerusalem.',
         contactDetails:
             {
-                name: 'Ofra, Donation coordinator.',
+                name: 'Ofra, Donation coordinator',
                 phone: '+972-03-6198214',
                 website: 'https://hamezion.co.il/',
             },
@@ -265,7 +265,7 @@ const giveData = [
             tooltip: [
                 {
                    text:'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
-                   icon:'Book and pencil',
+                   icon:'education',
                 },
                 {
                     text:'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',

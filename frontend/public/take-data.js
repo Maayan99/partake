@@ -25,7 +25,7 @@ const template =
                 validation: {
                     text: 'How many emails have you deleted?',
                     type: 'number',
-                    icon: '',
+                    icon: 'email',
 
                     numberValidationData:
                         {
@@ -141,7 +141,7 @@ const takeData = [
                     validation: {
                         text: "Upload the screenshot you've taken.",
                         type: 'image',
-                        icon: 'Energy Consumption',
+                        icon: 'energy',
                         infoText: 'Every email sent and stored requires energy to power the servers and data centers that store and transmit them.',
                         photoValidationData:
                             {},
@@ -154,7 +154,7 @@ const takeData = [
                     validation: {
                         text: 'Draw the line to your current number.',
                         type: 'number',
-                        icon: 'Data Center',
+                        icon: 'db',
                         infoText: 'Emails are stored in data centers that require extensive cooling systems that  consume significant amounts of energy.',
                         photoValidationData:
                             {},
@@ -168,7 +168,7 @@ const takeData = [
                     validation: {
                         text: "Upload the screenshot you've taken",
                         type: 'image',
-                        icon: 'storage infrastructure',
+                        icon: 'server',
                         infoText: 'Storing emails requires servers and data storage devices that are associated with Co2 emissions, and electronic waste.',
                         numberValidationData:
                             {
@@ -268,7 +268,7 @@ const takeData = [
                             {
                                 id: '1',
                                 text: 'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
-                                icon: 'Digital Footprint',
+                                icon: 'digital-footprint',
                             }
                         ],
                 }],
@@ -332,7 +332,7 @@ const takeData = [
                 validation: {
                     text: "Now, write it down and release it to the universe (aka the gallery..)",
                     type: 'image',
-                    icon: 'Mindfulness',
+                    icon: 'mindfulness',
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
                     numberValidationData:
                         {},
@@ -345,7 +345,7 @@ const takeData = [
                 validation: {
                     text: 'Which app did you choose?',
                     type: 'multi',
-                    icon: 'Mindfulness',
+                    icon: 'mindfulness',
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
                     multiValidationData:
                         {
@@ -378,7 +378,7 @@ const takeData = [
                 validation: {
                     text: "Draw the line to your satisfaction.",
                     type: 'number',
-                    icon: 'Oak tree',
+                    icon: 'flower',
                     infoText: 'Meditation empowers us to cultivate a resilient Just as a mountain stands tall.',
                     numberValidationData:
                         {},
@@ -412,7 +412,7 @@ const takeData = [
                 type: 'Wellness',
                 categories: [
                     {
-                        icon: 'Psychological Well-being.',
+                        icon: 'happy',
                         boldText: 'Well-being',
                         text: '',
 
@@ -420,11 +420,11 @@ const takeData = [
                         tooltip:
                             {
                                 text: 'Research shows that participants who practiced mindfulness meditation on a daily basis  experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
-                                icon: 'Relaxation',
+                                icon: 'relaxation',
                             },
                     },
                     {
-                        icon: 'Work-life balance',
+                        icon: 'balance',
                         boldText: 'Work-life balance',
                         text: '',
 
@@ -433,7 +433,7 @@ const takeData = [
                             [
                                 {
                                     text: 'A study reported that individuals who engaged in regular mindfulness meditation experienced a 20% decrease in symptoms of anxiety and a 15% decrease in symptoms of depression (Hofmann et al., 2010).',
-                                    icon: 'Mindfulness',
+                                    icon: 'mindfulness',
                                 },
                             ]
                     },
