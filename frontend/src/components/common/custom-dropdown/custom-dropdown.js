@@ -1,4 +1,5 @@
 import {useState} from "react";
+import Icon from "@components/components/common/icon/icon";
 
 export default function Dropdown({selectOptions, className}) {
     const [selectedName, setSelectedName] = useState("");
@@ -36,10 +37,11 @@ export default function Dropdown({selectOptions, className}) {
             <button
                 onClick={() => setOpened(prev => !prev)}
                 type="button"
-                className="block h-full w-full px-4 py-2
+                className="flex items-center justify-between h-full w-full px-4 py-2
                  text-xl rounded-none focus:outline-none text-start peer"
             >
                 {selectedName || selectOptions.placeholder}
+                <Icon name="down-arrow" className="h-4"/>
             </button>
 
             <ul className={`absolute top-12 left-0 w-full px-4 py-4 shadow-lg 
