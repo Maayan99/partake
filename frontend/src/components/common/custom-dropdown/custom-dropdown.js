@@ -3,6 +3,8 @@ import {useState} from "react";
 export default function Dropdown({selectOptions, className}) {
     const [selectedName, setSelectedName] = useState("");
 
+    const [opened, setOpened] = useState(false);
+
     let options = selectOptions.options;
 
     if (selectOptions.placeholder) {
@@ -22,22 +24,28 @@ export default function Dropdown({selectOptions, className}) {
         selectOptions.handleFunction({target: {value}});
 
         setSelectedName(name);
-        console.log(name);
+
+        setOpened(false);
+
     };
 
+
+
     return (
-        <div className={`relative ${className}`}>
+        <div className={`relative ${className} border border-1 border-gray-500 bg-light-gray`}>
             <button
+                onClick={() => setOpened(prev => !prev)}
                 type="button"
-                className="block h-full w-full px-4 py-2 border border-1 border-gray-500 bg-light-gray
-                 text-xl rounded-none border-r-0 focus:outline-none text-start peer"
+                className="block h-full w-full px-4 py-2
+                 text-xl rounded-none focus:outline-none text-start peer"
             >
                 {selectedName || selectOptions.placeholder}
             </button>
 
-            <ul className={`absolute top-14  left-0 w-full px-4 py-4 shadow-lg 
+            <ul className={`absolute top-12 left-0 w-full px-4 py-4 shadow-lg 
                 peer-focus:opacity-100 opacity-0 transition-all duration-300
-                 border-gray-500 bg-light-gray text-xl rounded-none focus:outline-none z-10`}>
+                 border-gray-500 bg-light-gray text-xl rounded-none focus:outline-none z-10
+                 ${!opened && 'hidden'}`}>
                 {options.filter((option) => option.value !== selectOptions.value).map((option) => (
                     <li
                         key={option.id}

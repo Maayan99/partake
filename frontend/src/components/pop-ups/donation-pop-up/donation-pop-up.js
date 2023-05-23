@@ -88,6 +88,8 @@ export default function DonationPopUp({display, setDisplay}) {
                 </div>
 
                 <Dropdown selectOptions={donationOptions} className="w-full"/>
+
+                <BlueButton onClick={() => setDisplay(false)}>Continue to secure payment</BlueButton>
             </div>
         </PopUp>
     )

@@ -12,7 +12,7 @@ export default function FilterBar({search, setSearch, filterersArray}) {
                 <input placeholder="Search" className="italic w-72 font-thin px-4 py-2 text-xl
                  border border-1 border-gray-500 bg-light-gray
                 rounded-none border-r-0 focus:outline-none" onChange={handleSearchChange} value={search}/>
-                {filterersArray.map(filterer => <Dropdown className="min-w-[216px]" key={filterer.id} selectOptions={filterer}/>)}
+                {filterersArray.map(filterer => <Dropdown className="min-w-[216px] border-r-0 " key={filterer.id} selectOptions={filterer}/>)}
 
             </div>
             <a href="/make">
