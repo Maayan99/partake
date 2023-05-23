@@ -855,8 +855,25 @@ const takeData = [
         category: 'Popular',
         duration: 1440,
         participants: 31,
-    }
+    },
 
+    {
+        id: '',
+        title: '',
+        author: '',
+        shortDescription: '',
+        coverImage: '.png',
+        subject: '',
+        category: '15 Minutes or Less',
+        impact:
+            {
+                type: 'social'
+            },
+        coins: 100,
+        progress: 0,
+        duration: 60,
+        participants: 123,
+    }
 
 ];
 

@@ -29,21 +29,21 @@ const template = {
     dateTime: '',
 
     sponsors:
-            {
-                text: '',
-                array: [
-                    {
-                        id: '',
-                        name: '',
-                        image: '',
-                    },
-                    {
-                        id: '',
-                        name: '',
-                        image: '',
-                    },
-                ]
-            },
+        {
+            text: '',
+            array: [
+                {
+                    id: '',
+                    name: '',
+                    image: '',
+                },
+                {
+                    id: '',
+                    name: '',
+                    image: '',
+                },
+            ]
+        },
 };
 
 const giveData = [
@@ -51,7 +51,7 @@ const giveData = [
         id: "18",
         title: "Goods Donation For “Ha’Metsion”.",
         coverImage: 'give_card_food_basket_distribution.png',
-        activityType: 'goods donation',
+        activityType: 'goods-donation',
         author: 'Shekel Association',
         about: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.', //About the NGO or the Give
         description: "You can bring the items directly to our Talpiot branch, located at 39 General Pierre Koenig Street in Jerusalem, or to our city centre branch, located at 5 Dorot Rishonim street, Center of town, Jerusalem Please contact us in case you do not find parking. We will send a team to receive the donation from the vehicle.",
@@ -62,42 +62,56 @@ const giveData = [
                 phone: '+972-03-6198214',
                 website: 'https://hamezion.co.il/',
             },
-        requirements: ['All clothes must be in good condition.','Furniture and baby products must be in good condition.','All electricity products must be working.'],
+        requirements: ['All clothes must be in good condition.', 'Furniture and baby products must be in good condition.', 'All electricity products must be working.'],
 
         impact: {
             type: 'Social',
-            categories: ['Bags'],
-            boldText: 'Goods Donation',
-            text:'',
-            tooltip:
+            categories: [
                 {
-                text:'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
-                icon:'wheelchair',
-                },  
-            type: 'Environmenatal',
-            categories: ['Land'],
-            boldText: 'Landfill',
-            text:'',
-            tooltip:
+                    icon: 'goods-donation',
+                    boldText: 'Goods Donation',
+                    text: '',
+                    tooltips:
+                        [
+                            {
+                                text: 'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
+                                icon: 'wheelchair',
+                            },
+                        ],
+                },
                 {
-                text:'Donating second-hand products helps reduce waste, conserve natural resources, and minimize the carbon footprint associated with producing textile products.',
-                icon:'reuse',
-                },  
+                    icon: 'goods-donation',
+                    boldText: 'Goods Donation',
+                    text: '',
+                    tooltips:
+                        [
+                            {
+                                text: 'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
+                                icon: 'wheelchair',
+                            },
+                            {
+                                text: 'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
+                                icon: 'goods-donation',
+                            },
+                        ],
+                }
+            ],
         },
         timeDetails:
             {
-                time: ['Sunday-Thursday','9am - 9pm'],
+                time: ['Sunday-Thursday', '9am - 9pm'],
                 duration: 'ongoing',
             },
         sponsors:
             {
-            text: '',
-            array: [
-                {
-                    id: '1',
-                    name: 'Shekel Organization',
-                    text: 'An Israeli non-profit organization dedicated to promoting inclusion and improving the lives of people with disabilities. We collaborate with the social business "HaMzeyon" in Jerusalem, offering employment opportunities for individuals with disabilities.',
-                },
+                text: 'Haiush',
+                array: [
+                    {
+                        id: '1',
+                        image: 'adam',
+                        name: 'adam',
+                        text: 'An Israeli non-profit organization dedicated to promoting inclusion and improving the lives of people with disabilities. We collaborate with the social business "HaMzeyon" in Jerusalem, offering employment opportunities for individuals with disabilities.',
+                    },
                 ]
             },
         additionalInfo: {
@@ -116,10 +130,10 @@ const giveData = [
                     text: 'Advantage for another language such as Russian, Arabic or Amharic.',
                 },
             ]
-                },
-            participants: 85,
-            aboutTheCause: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.',
-    
+        },
+        participants: 85,
+        aboutTheCause: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.',
+        delivery: 'Self delivery',
     },
 
     {
@@ -191,7 +205,7 @@ const giveData = [
                 adress: '159  Hertsel st. Tel-Aviv.'
             },
         reward: '',
-        donationTiers:[
+        donationTiers: [
             {
                 id: "dfguikmngfdt",
                 text: '50 NIS - can provide medical treatment and care of an injured animal.',
@@ -214,19 +228,19 @@ const giveData = [
             type: 'Social',
             categories: ['Money'],
             boldText: 'Donation',
-            text:'',
+            text: '',
             tooltip: [
                 {
-                   text:'Donating to an animal shelter helps them to find warm and loving homes.',
-                   icon:'animal-welfare',
+                    text: 'Donating to an animal shelter helps them to find warm and loving homes.',
+                    icon: 'animal-welfare',
                 },
-            ] 
+            ]
         },
         timeDetails:
-        {
-            Date: 'n/a',
-            frequency: 'Ongoing',
-        },
+            {
+                Date: 'n/a',
+                frequency: 'Ongoing',
+            },
         additionalInfo: {
             text: '',
             array: [
@@ -235,7 +249,7 @@ const giveData = [
                     text: "If you’re interested in adopting a pet, feel free to contact us and visit  our animal shelter.",
                 },
             ]
-            },
+        },
         participants: 105,
         aboutTheCause: 'Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare.',
     },
@@ -256,22 +270,22 @@ const giveData = [
                 phone: '+972-123456789',
             },
         reward: 'Certificate of recognition.',
-        requirements: ['English-Reading and writing','Teaching'],
+        requirements: ['English-Reading and writing', 'Teaching'],
         impact: {
             type: 'Social',
             categories: ['clock'],
             boldText: '25 hours',
-            text:'',
+            text: '',
             tooltip: [
                 {
-                   text:'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
-                   icon:'education',
+                    text: 'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
+                    icon: 'education',
                 },
                 {
-                    text:'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
-                    icon:'child',
-                }, 
-            ] 
+                    text: 'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
+                    icon: 'child',
+                },
+            ]
         },
 
         timeDetails:

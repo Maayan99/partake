@@ -18,7 +18,7 @@ const SmallGiveCard = ({give}) => {
             online: 'Online Volunteering',
             field: 'Field Volunteering',
             donation: 'Donation',
-            goods_donation: 'Goods Donation'
+            'goods-donation': 'Goods Donation'
         };
 
     return (
