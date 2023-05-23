@@ -158,7 +158,7 @@ export default function GivePage() {
                         </div>
                         <p className="text-gray">{give.sponsors.text}</p>
                     </div>}
-                {give.impact && <ImpactGraphic impact={give.impact}/>}
+                {give.impact && <ImpactGraphic impact={give.impact}  showIconsBelow={true}/>}
                 {give.additionalInfo &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Additional Information</h1>

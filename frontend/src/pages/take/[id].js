@@ -281,7 +281,7 @@ export default function TakePage() {
                     </div>}
                     {take.impact && <div className="space-y-5">
                         <h1 className="font-bold">Impact</h1>
-                        <ImpactGraphic impact={take.impact}/>
+                        <ImpactGraphic impact={take.impact} showIconsBelow={true}/>
                     </div>}
                     {take.tips &&
                         <div className="space-y-5">
