@@ -2,8 +2,8 @@ const LeaderboardRow = ({profileImage, name, score}) => {
     return (
         <div className="p-4">
             <div className="flex space-x-3">
-                <img src={`/assets/PNG/profile-images/${profileImage}.jpeg`} className="w-8 h-8 rounded-full object-cover border border-white"
-                     alt="Leaderboard Profile Image"/>
+                {/*<img src={`/assets/PNG/profile-images/${profileImage}.jpeg`} className="w-8 h-8 rounded-full object-cover border border-white"*/}
+                {/*     alt="Leaderboard Profile Image"/>*/}
                 <p className="text-gray-500">{name}</p>
             </div>
             <div className="flex space-x-3 items-center">
@@ -18,33 +18,23 @@ export default function Leaderboard() {
     const employees = [
         {
             index: "2",
-            name: "Gili Jean",
+            name: "Management",
             score: 25,
         },
         {
             index: "3",
-            name: "Jela Tean",
+            name: "Development",
             score: 20,
         },
         {
             index: "4",
-            name: "Scatman Joe",
+            name: "HR",
             score: 20,
-        },
-        {
-            index: "5",
-            name: "Amir Rapopopoport",
-            score: 16,
-        },
-        {
-            index: "6",
-            name: "Jeremy Beth-Prath",
-            score: 6,
         },
     ];
 
     return (
-        <div className="bg-important-blue h-[450px] w-full">
+        <div className="bg-important-blue h-max w-full">
             {employees.map(employee => (<LeaderboardRow key={employee.index}
                                                        profileImage={`profile_image_${employee.index}`}
                                                            name={employee.name} score={employee.score}/>))}

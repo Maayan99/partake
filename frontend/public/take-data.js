@@ -506,6 +506,8 @@ const takeData = [
         difficultyLevel: 'Intermediate',
         participants: 78,
 
+        isCompetition: true,
+
         whatToDo: 'Collect as many packages as possible. it can be  plastic packages, paper packaging, glass, and cans.Take a picture of each full trash bag. Share the picture on the challenge feed with the type of material collected.',
         tasks: [
             {

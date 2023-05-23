@@ -16,6 +16,7 @@ import ExpandedProgressBar from "@components/components/expanded-progress-bar/ex
 import Head from "next/head";
 import LoadingSpinner from "@components/components/loading-spinner/loading-spinner";
 import ParticipantsGrid from "@components/components/participants-grid/participants-grid";
+import Leaderboard from "@components/components/leaderboard/leaderboard";
 
 const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) => {
     const {
@@ -131,7 +132,8 @@ const TopAfterStarted = ({
             </div>
             <div className="max-h-[420px] flex flex-col justify-between">
                 <ImpactGraphic impact={impact} setPingCategory={setPingCategory}/>
-                <ParticipantsGrid participants={take.participants} handleInviteFriends={handleInviteFriends}/>
+                {take.isCompetition ? <Leaderboard/>
+                    : <ParticipantsGrid participants={take.participants} handleInviteFriends={handleInviteFriends}/>}
 
             </div>
         </>
