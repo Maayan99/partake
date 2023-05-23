@@ -41,10 +41,10 @@ export default function Dropdown({selectOptions, className}) {
                  text-xl rounded-none focus:outline-none text-start peer"
             >
                 {selectedName || selectOptions.placeholder}
-                <Icon name="down-arrow" className="h-4"/>
+                <Icon name="down-arrow" className="h-6"/>
             </button>
 
-            <ul className={`absolute top-12 left-0 w-full px-4 py-4 shadow-lg 
+            <ul className={`absolute top-14 left-0 w-full px-4 py-4 shadow-lg 
                 peer-focus:opacity-100 opacity-0 transition-all duration-300
                  border-gray-500 bg-light-gray text-xl rounded-none focus:outline-none z-10
                  ${!opened && 'hidden'}`}>

@@ -87,7 +87,7 @@ export default function DonationPopUp({display, setDisplay}) {
                                                    className="bg-white border w-16 h-10 rounded-md text-blue">{preset} ₪</button>)}
                 </div>
 
-                <Dropdown selectOptions={donationOptions} className="w-full"/>
+                <Dropdown selectOptions={donationOptions} className="w-full h-24"/>
 
                 <BlueButton onClick={() => setDisplay(false)}>Continue to secure payment</BlueButton>
             </div>

@@ -156,8 +156,13 @@ const takeData = [
                         type: 'number',
                         icon: 'db',
                         infoText: 'Emails are stored in data centers that require extensive cooling systems that  consume significant amounts of energy.',
-                        photoValidationData:
-                            {},
+                        numberValidationData:
+                            {
+                                max: 200,
+                                min: 0,
+                                multiplier: 4,
+                                units: 'grams',
+                            },
                     },
                     shortText: "Check out your collegues' mailbox",
                     longText: "Delete any old or unnecessary emails and insert the number of emails you have deleted.",

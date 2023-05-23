@@ -4,7 +4,16 @@ import Icon from "@components/components/common/icon/icon";
 import BlueButton from "@components/components/common/blue-button";
 
 
-const CongratsGraphic = ({icon, destinationNumber, multiplier, setDisplay}) => {
+const CongratsGraphic = ({
+                             icon,
+                             destinationNumber,
+                             multiplier,
+                             setDisplay,
+                             setCurrentTask,
+                             currentTask,
+                             numberOfTasks,
+                             setDisplayCongratsPopUp
+                         }) => {
     const [displayedNumber, setDisplayedNumber] = useState(1);
 
     useEffect(() => {
@@ -31,12 +40,22 @@ const CongratsGraphic = ({icon, destinationNumber, multiplier, setDisplay}) => {
         return (() => clearInterval(interval));
     }, [destinationNumber, displayedNumber])
 
+
+    const handleClose = () => {
+        setDisplay(false);
+        if (currentTask + 1 === numberOfTasks) {
+            setDisplayCongratsPopUp(true);
+        } else {
+            setCurrentTask(prev => prev + 1);
+        }
+    }
+
     return (
         <div className="flex flex-col items-center p-6">
             <Icon name={icon} className="h-12 w-12"/>
             <h1 className="font-bold">You saved:</h1>
             <span className="text-center mb-10">{displayedNumber}</span>
-            <BlueButton onClick={() => setDisplay(false)}>Close</BlueButton>
+            <BlueButton onClick={handleClose}>Close</BlueButton>
         </div>
     )
 }
@@ -141,19 +160,24 @@ export default function ValidationPopUp({
 
 
     return (
-        <PopUp display={display} setDisplay={setDisplay} title={showCongratsGraphic ? 'Congratulations!' : 'Validation'}>
-            {!showCongratsGraphic && <Validation validationData={validationData}
-                                                 setDestinationNumber={setDestinationNumber}
-                                                 setShowCongratsGraphic={setShowCongratsGraphic}
-                                                 currentTask={currentTask}
-                                                 setCurrentTask={setCurrentTask}
-                                                 numberOfTasks={numberOfTasks}
-                                                 setDisplayCongratsPopUp={setDisplayCongratsPopUp}
-                                                 setDisplay={setDisplay}/>}
-            {showCongratsGraphic && <CongratsGraphic multiplier={numberValidationData?.multiplier}
-                                                     destinationNumber={destinationNumber}
-                                                     icon={icon}
-                                                     setDisplay={setDisplay}/>}
+        <PopUp display={display} setDisplay={setDisplay}
+               title={showCongratsGraphic ? 'Congratulations!' : 'Validation'}>
+            {!showCongratsGraphic ? <Validation validationData={validationData}
+                                                setDestinationNumber={setDestinationNumber}
+                                                setShowCongratsGraphic={setShowCongratsGraphic}
+                                                currentTask={currentTask}
+                                                setCurrentTask={setCurrentTask}
+                                                numberOfTasks={numberOfTasks}
+                                                setDisplayCongratsPopUp={setDisplayCongratsPopUp}
+                                                setDisplay={setDisplay}/>
+                : <CongratsGraphic multiplier={numberValidationData?.multiplier}
+                                   destinationNumber={destinationNumber}
+                                   icon={icon}
+                                   setDisplay={setDisplay}
+                                   setCurrentTask={setCurrentTask}
+                                   setDisplayCongratsPopUp={setDisplayCongratsPopUp}
+                                   numberOfTasks={numberOfTasks}
+                                   currentTask={currentTask}/>}
         </PopUp>
     )
 }
