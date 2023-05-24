@@ -49,7 +49,7 @@ const template = {
 const giveData = [
     {
         id: "18",
-        title: "Goods Donation For “Ha’Metsion”.",
+        title: "Goods Donation for “Ha’Metsion”.",
         coverImage: 'shekel_hamezion_donations.png',
         activityType: 'goods-donation',
         author: 'Shekel Association',
@@ -167,7 +167,7 @@ const giveData = [
     },
     {
         id: "20",
-        title: 'Ein-Gedi national Park cleaning day',
+        title: 'Ein-Gedi National Park Cleaning Day',
         coverImage: '',
         activityType: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'רשות הטבע והגנים & Clean Coin.',
@@ -192,7 +192,7 @@ const giveData = [
     },
     {
         id: '21',
-        title: 'Donate To Our Animal Shelter.',
+        title: 'Donate to Our Animal Shelter.',
         coverImage: '',
         activityType: 'fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'SPCA Israel (צער בעלי חיים)',
@@ -260,7 +260,7 @@ const giveData = [
     },
     {
         id: '22',
-        title: 'English teacher for children and youth',
+        title: 'English Teacher for Children and Youth',
         coverImage: '',
         activityType: 'online', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: "Kidum No'ar Kiryat Gat",
@@ -326,7 +326,7 @@ const giveData = [
 
     {
         id: '2',
-        title: 'Collect and sort surplus food for familiies in need',
+        title: 'Collect and Sort Surplus Food for Familiies in Need',
         author: 'Food Rescuers JLM (מצילות המזון בירושלים)',
         duration: 10,
         location: 'Ein Gedi Park',
@@ -373,7 +373,7 @@ const giveData = [
     },
     {
         id: '5',
-        title: "Planting trees in Ben Shemen Forest",
+        title: "Planting Trees in Ben Shemen Forest",
         author: 'Kakal',
         duration: 6,
         location: 'Ben Shemen Forest',
@@ -389,7 +389,7 @@ const giveData = [
     },
     {
         id: '6',
-        title: 'Adopt a donkey',
+        title: 'Adopt a Donkey',
         author: 'Safe haven for donkeys',
         duration: 10,
         location: "Online",
@@ -437,7 +437,7 @@ const giveData = [
     },
     {
         id: '9',
-        title: 'Collect and sort surplus food for familiies in need',
+        title: 'Collect and Sort Surplus Food for Familiies in Need',
         author: 'Food Rescuers JLM (מצילות המזון)',
         duration: 5,
         location: '',
@@ -515,7 +515,7 @@ const giveData = [
     },
     {
         id: '14',
-        title: 'Host a lone solider for the weekend',
+        title: 'Host a Lone Solider for the Weekend',
         author: 'Big Brother Oganization for Lone Soliders',
         donations: true,
         coverImage: 'give_card_help_PTSD.png',
