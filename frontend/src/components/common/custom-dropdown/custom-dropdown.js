@@ -33,7 +33,7 @@ export default function Dropdown({selectOptions, className}) {
 
 
     return (
-        <div className={`relative ${className} border border-1 border-gray-500 h-min bg-light-gray`}>
+        <div className={`relative ${className} border border-1 border-gray-500 max-h-[56px] bg-light-gray`}>
             <button
                 onClick={() => setOpened(prev => !prev)}
                 type="button"
