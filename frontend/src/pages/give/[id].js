@@ -144,10 +144,12 @@ export default function GivePage() {
                     <h1 className="font-bold">Task</h1>
                     <ul className="list-disc pl-4">{give.tasks.map(task => <li key={task.id} className="text-gray">{task.shortText}</li>)}</ul>
                 </div>}
+
                 {give.aboutTheCause && <div className="space-y-5">
                     <h1 className="font-bold">About the Cause</h1>
                     <p className="text-gray">{give.aboutTheCause}</p>
                 </div>}
+                {give.impact && <ImpactGraphic impact={give.impact}  showIconsBelow={true}/>}
                 {give.sponsors &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Partners</h1>
@@ -158,7 +160,6 @@ export default function GivePage() {
                         </div>
                         <p className="text-gray">{give.sponsors.text}</p>
                     </div>}
-                {give.impact && <ImpactGraphic impact={give.impact}  showIconsBelow={true}/>}
                 {give.additionalInfo &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Additional Information</h1>
