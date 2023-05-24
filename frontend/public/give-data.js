@@ -53,6 +53,7 @@ const giveData = [
         coverImage: 'give_card_food_basket_distribution.png',
         activityType: 'goods-donation',
         author: 'Shekel Association',
+        category: 'For you',
         about: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.', //About the NGO or the Give
         description: "You can bring the items directly to our Talpiot branch, located at 39 General Pierre Koenig Street in Jerusalem, or to our city centre branch, located at 5 Dorot Rishonim street, Center of town, Jerusalem Please contact us in case you do not find parking. We will send a team to receive the donation from the vehicle.",
         location: 'General Pierre Koenig Street 39, Jerusalem.',
@@ -104,7 +105,7 @@ const giveData = [
             },
         sponsors:
             {
-                text: 'Haiush',
+                text: 'Tamir',
                 array: [
                     {
                         id: '1',
@@ -195,6 +196,7 @@ const giveData = [
         type: 'Fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'SPCA Isreal (צער בעלי חיים)',
         about: "Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare", //About the NGO or the Give
+        category: 'For you',
         description: "Donations for animals also allow us to operate our clinic for longer hours, subsidize various surgeries and treatments, improve the conditions of the animals in our care, operate more rescue vehicles to assist animals in need, conduct educational activities for future generations, and more. Come and do good by donating from the bottom of your heart.",
         location: 'online',
         contactDetails:
@@ -255,12 +257,13 @@ const giveData = [
     },
     {
         id: '22',
-        title: 'English teacher for children and Youth',
+        title: 'English teacher for children and youth',
         coverImage: '',
         type: 'Online Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: "Kidum No'ar Kiryat Gat",
         about: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.", //About the NGO or the Give
-        description: 'We are seeking volunteers for personal and educational mentoring in English for these students.  The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied.  The commitment is until the end of the academic year.',
+        description: "We are seeking volunteers for personal and educational mentoring in English for these students.  The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied.  The commitment is until the end of the academic year.",
+        category:'For you',
         skills: ['English', 'Teaching',],
         location: 'Online',
         contactDetails:
@@ -290,8 +293,8 @@ const giveData = [
 
         timeDetails:
             {
-                time: 'October - June, Sundays.',
-                frequency: 'Weekly,',
+                endDate: 'October - June, Sundays.',
+                frequency: 'Weekly',
                 duration: '25 hours',
             },
 
@@ -382,15 +385,15 @@ const giveData = [
     },
     {
         id: '5',
-        title: 'Autistic Children Give',
-        author: 'ALUT',
-        duration: 3,
-        location: '123 Autism Street, Tel Aviv, Israel',
+        title: "Planting trees in Ben Shemen Forest",
+        author: 'Kakal',
+        duration: 1440,
+        location: 'Ben Shemen Forest',
         donations: false,
         coverImage: 'give_card_autistic_children.png',
         activityType: 'field',
         endDate: '14/5/2023',
-        participants: true,
+        participants: '8',
         category: 'In your area',
         cause: '',
         type: '',
@@ -398,14 +401,14 @@ const giveData = [
     },
     {
         id: '6',
-        title: 'At-Risk Youth Field Give',
-        author: 'Helping Hands Association',
+        title: 'Adopt a donkey',
+        author: 'Safe haven for donkeys',
         duration: 10,
-        location: '789 Hope Street, Jerusalem',
+        location: "Online",
         donations: true,
         coverImage: 'give_card_at-risk_youth_field.png',
-        activityType: 'field',
-        endDate: '3/6/2023',
+        activityType: 'funraising',
+        endDate: '',
         participants: true,
         category: 'In your area',
         cause: '',

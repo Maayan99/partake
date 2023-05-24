@@ -784,7 +784,7 @@ const takeData = [
     {
         id: "416171eef1bf987b",
         coverImage: 'take_card_fun_facts.png',
-        title: 'Fun Facts',
+        title: '',
         author: 'Anonymous Bee',
         shortDescription: 'Tell us some fun facts about the office space and find out about new ones!',
         impact: {
@@ -796,6 +796,22 @@ const takeData = [
         category: 'Popular',
         duration: 10,
         participants: 500,
+    },
+    {
+        id: "416171eef1bg987b",
+        coverImage: 'take_card_fun_facts.png',
+        title: 'Meatless Monday',
+        author: 'Ilanit from HR',
+        shortDescription: 'Tell us some fun facts about the office space and find out about new ones!',
+        impact: {
+            type: 'wellness'
+        },
+        subject: 'Wellness',
+        coins: 50,
+        progress: 0,
+        category: 'Popular',
+        duration: 10,
+        participants: 89,
     },
     {
         id: "8b5906d96ec1cbb7",
