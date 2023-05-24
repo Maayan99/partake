@@ -18,7 +18,8 @@ const SmallGiveCard = ({give}) => {
             online: 'Online Volunteering',
             field: 'Field Volunteering',
             donation: 'Donation',
-            'goods-donation': 'Goods Donation'
+            'goods-donation': 'Goods Donation',
+            fundraising: 'Fundraising',
         };
 
     return (
@@ -28,7 +29,7 @@ const SmallGiveCard = ({give}) => {
                      style={{backgroundImage: `linear-gradient(to bottom, transparent 10%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/give/${coverImage}")`}}>
                     <div className="mt-2.5 ml-2.5">
                         <div className="flex bg-white rounded-full w-fit py-1 px-2 items-center">
-                            <Icon name={activityType} className="h-5"/>
+                            <Icon name={activityType === 'fundraising' ? 'donation' : activityType} className="h-5"/>
                             <p className="ml-2.5 text-sm">{activityTypeDictionary[activityType]}</p>
                         </div>
                     </div>
