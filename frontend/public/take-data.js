@@ -314,7 +314,7 @@ const takeData = [
     {
         id: "a6289983652a8ef8",
         coverImage: 'take_card_mindful_moment.png',
-        title: '21 days of mindfulness.',
+        title: '21 Days of Mindfulness.',
         author: 'Partake',
         impactType: 'Wellness',
         subject: "Wellness",
@@ -844,7 +844,7 @@ const takeData = [
     {
         id: "948fe332bf68fb37",
         coverImage: 'take_card_office_flex.png',
-        title: 'Office Flex',
+        title: 'Strech Break',
         author: 'Anonymous Bee',
         shortDescription: '',
         impact: {
