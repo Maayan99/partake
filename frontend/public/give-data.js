@@ -53,6 +53,7 @@ const giveData = [
         coverImage: 'give_card_food_basket_distribution.png',
         activityType: 'goods-donation',
         author: 'Shekel Association',
+        DateTime:"",
         category: 'For you',
         about: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.', //About the NGO or the Give
         description: "You can bring the items directly to our Talpiot branch, located at 39 General Pierre Koenig Street in Jerusalem, or to our city centre branch, located at 5 Dorot Rishonim street, Center of town, Jerusalem Please contact us in case you do not find parking. We will send a team to receive the donation from the vehicle.",
@@ -266,6 +267,8 @@ const giveData = [
         category:'For you',
         skills: ['English', 'Teaching',],
         location: 'Online',
+        parking:"n/a",
+        dateTime:"October till June, Sundays.",
         contactDetails:
             {
                 name: 'Maya Cohen, Volunteer Coordinator',
@@ -293,7 +296,6 @@ const giveData = [
 
         timeDetails:
             {
-                endDate: 'October - June, Sundays.',
                 frequency: 'Weekly',
                 duration: '25 hours',
             },
@@ -407,7 +409,7 @@ const giveData = [
         location: "Online",
         donations: true,
         coverImage: 'give_card_at-risk_youth_field.png',
-        activityType: 'funraising',
+        activityType: 'fundraising',
         endDate: '',
         participants: true,
         category: 'In your area',
