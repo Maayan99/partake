@@ -494,7 +494,7 @@ const takeData = [
     // For you challenges
     {
         id: "3",
-        coverImage: '',
+        coverImage: 'take_card_recycle.png',
         title: 'Recycling Department War.',
         author: 'HR, Abraham’s Hostel.',
         impactType: 'Environmental',
