@@ -46,7 +46,7 @@ export default function Dropdown({selectOptions, className}) {
 
             <ul className={`absolute top-14 left-0 w-full px-4 py-4 shadow-lg 
                 peer-focus:opacity-100 opacity-0 transition-all duration-300
-                 border-gray-500 bg-light-gray text-xl rounded-none focus:outline-none z-10
+                border border-1 border-gray-500 border-t-0 bg-light-gray -mt-1 text-xl rounded-none focus:outline-none z-10
                  ${!opened && 'hidden'}`}>
                 {options.filter((option) => option.value !== selectOptions.value).map((option) => (
                     <li
