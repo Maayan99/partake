@@ -85,7 +85,6 @@ export default function UsersGrid({numberOfRows, paginate}) {
 
     return (
         <div className="px-16 space-y-10">
-            <h1 className="text-2xl font-bold">Users</h1>
             <table className="w-full border-collapse">
                 <tbody>
                 <tr className="p-2 bg-slate-50">

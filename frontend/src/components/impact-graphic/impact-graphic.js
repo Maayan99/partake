@@ -33,11 +33,12 @@ export default function ImpactGraphic({impact, showIconsBelow}) {
             {showIconsBelow &&
                 <div className="space-y-2">
                     <div className="flex space-x-4 items-center">
-                        <Icon name="donation" className="h-6 w-6"/>
+                        <Icon name="info-circle" className="h-6 w-6"/>
                         <h1>How does this help?</h1>
                     </div>
                     <div className="flex space-x-4">
-                        {categories.map(category => (category.tooltips.map(tooltip => <Icon name={tooltip.icon}
+                        {categories.map(category => (category.tooltips &&
+                            category.tooltips.map(tooltip => <Icon name={tooltip.icon}
                                                                                             className="h-14"/>)))}
                     </div>
                 </div>}
