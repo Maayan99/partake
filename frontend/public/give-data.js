@@ -405,10 +405,10 @@ const giveData = [
     },
     {
         id: '7',
-        title: 'Volunteering with Elderly People',
+        title: 'Volunteering at Yad Sarah',
         author: 'Yad Sarah',
         duration: 8,
-        location: '15 Herzl Street, Jerusalem',
+        location: '124 Herzl BLVD, Jerusalem',
         donations: false,
         coverImage: 'give_card_volunteering_elderly_people.png',
         activityType: 'field',
@@ -529,7 +529,7 @@ const giveData = [
     },
     {
         id: '15',
-        title: 'Helping Children with Cancer',
+        title: 'Hel',
         author: 'ICA',
         location: 'Online',
         donations: false,
