@@ -169,7 +169,7 @@ const giveData = [
         id: "20",
         title: 'Ein-Gedi national Park cleaning day',
         coverImage: '',
-        type: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        activityType: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'רשות הטבע והגנים & Clean Coin.',
         about: "Ein Gedi National Park is a nature reserve located in the Judean Desert of Israel, near the Dead Sea. The park features a lush oasis with waterfalls and streams, surrounded by dry desert mountains.The park is home to a variety of flora and fauna, including ibex, hyrax, and many species of birds. Ein Gedi is a popular destination for nature lovers, hikers, offering a unique and stunning contrast between the desert and oasis environments.Abraham Hostel's HR department is proud to partner with in and, “Israel Nature and Parks Authority” (רשות הטבע והגנים), to organize a day of hiking and cleaning one of Israel’s most unique places.", //About the NGO or the Givedescription: " Cleaning natural resort and national parks helps to reduce litter and waste, protect local wildlife, prevent pollution and enhance natural beauty of the park for visitors,Together, as volunteers we can make a positive impact, learn about the Ein-Gedi’s environment, wildlife and history. Ein-Gedi is a stunning natural reserve that can be enjoyed and preserved through volunteer efforts.",
         skills: ['Coding', 'Teaching'],
@@ -194,7 +194,7 @@ const giveData = [
         id: '21',
         title: 'Donate To Our Animal Shelter.',
         coverImage: '',
-        type: 'Fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        activityType: 'fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'SPCA Israel (צער בעלי חיים)',
         about: "Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare", //About the NGO or the Give
         category: 'For you',
@@ -262,7 +262,7 @@ const giveData = [
         id: '22',
         title: 'English teacher for children and youth',
         coverImage: '',
-        type: 'Online Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        activityType: 'online', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: "Kidum No'ar Kiryat Gat",
         about: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.", //About the NGO or the Give
         description: "We are seeking volunteers for personal and educational mentoring in English for these students.  The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied.  The commitment is until the end of the academic year.",
@@ -378,7 +378,7 @@ const giveData = [
         duration: 6,
         location: 'Ben Shemen Forest',
         donations: false,
-        coverImage: 'give_card_autistic_children.png',
+        coverImage: 'give_card_environmental _restoration_day.png',
         activityType: 'field',
         endDate: '14/5/2023',
         participants: '8',
