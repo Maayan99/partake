@@ -197,7 +197,7 @@ const takeData = [
             },
             {
                 id: "faa623ba3bff7565",
-                text: 'This felt so refreshing',
+                text: 'That was easy',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'owuadsfhli1u32e',
@@ -205,7 +205,7 @@ const takeData = [
             },
             {
                 id: "d0d057f3401ed49b",
-                text: 'This felt so refreshing',
+                text: 'Like cleaning my desk',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u31e',
@@ -213,7 +213,7 @@ const takeData = [
             },
             {
                 id: "db2fd9d5f571b962",
-                text: 'This felt so refreshing',
+                text: 'Nothing to add',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'aiua123hvefwli1u32e',
@@ -221,7 +221,7 @@ const takeData = [
             },
             {
                 id: "928966f939ccd19f",
-                text: 'This felt so refreshing',
+                text: '',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
@@ -229,7 +229,7 @@ const takeData = [
             },
             {
                 id: "d16b1f3f061a9e62",
-                text: 'This felt so refreshing',
+                text: 'I recommend emptying the bin as well',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
@@ -237,7 +237,7 @@ const takeData = [
             },
             {
                 id: "76ef74ccdbfdeaa1",
-                text: 'This felt so refreshing',
+                text: 'Wow',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
@@ -245,7 +245,7 @@ const takeData = [
             },
             {
                 id: "8234dabb7bfbc1ae",
-                text: 'This felt so refreshing',
+                text: '',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
@@ -253,7 +253,7 @@ const takeData = [
             },
             {
                 id: "9958b72228e7a462",
-                text: 'This felt so refreshing',
+                text: 'I usually delete a hundered emails per day. I think my account had been hacked',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
