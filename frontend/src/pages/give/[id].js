@@ -41,7 +41,7 @@ const ImportantDetails = ({give}) => {
                     <div className="ml-10 space-y-2">
                         <Icon name="location" className="float-left w-4 mt-4 mr-3 -ml-1 opacity-70"/>    
                         <h1 className="font-bold">Location</h1>
-                        <div className="flex space-x-2 items-center rounded-full w-fit px-5 py-1 bg-blue">
+                        <div className="flex space-x-2 items-center rounded-full w-max px-5 py-1 bg-blue">
                             <p className="text-white">{location}</p>
                         </div>
                     </div>

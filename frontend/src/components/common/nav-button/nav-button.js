@@ -4,7 +4,7 @@ export default function NavButton(props) {
     const { children, className, ...otherProps } = props;
 
     return (
-        <button className={`${className} text-black text-left py-2 px-6 
+        <button className={`${className} text-black text-left py-2 px-10 flex
         rounded-full cursor-pointer text-lg mx-2 `} {...otherProps}>
             {children}
         </button>
