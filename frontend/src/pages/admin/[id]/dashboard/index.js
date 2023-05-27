@@ -109,14 +109,15 @@ export default function AdminDashboard() {
                 <AdminNav baseUrl={baseUrl}/>
                 <div className="p-16 space-y-8">
                     <div className="grid grid-cols-6 gap-6">
-                        <h1 className="font-bold col-span-6 text-5xl">Welcome, Evyatar</h1>
-
+                        <h1 className="col-span-6 text-2xl font-style: italic">Welcome, Evyatar</h1>
                         <h1 className="font-bold col-span-6 mt-10">Analytics</h1>
                         <DashboardCard className="col-span-4">
                             <h1>Activity Log</h1>
+                            <Icon name="graph1" className="mt-16 mb-8"/>
                         </DashboardCard>
                         <DashboardCard className="col-span-2">
                             <h1>ESG Goals</h1>
+                            <Icon name="graph2" className="my-4 p-5 w-full"/>
                         </DashboardCard>
 
                         <DashboardCard className="relative col-span-2">
@@ -151,7 +152,7 @@ export default function AdminDashboard() {
                         <DashboardCard className="flex items-center justify-center border-blue col-span-6">
                             <UsersGrid numberOfRows={5} paginate={false}/>
                             <a href={`${baseUrl}/users`}>
-                                <p className="absolute bottom-10 right-8 font-bold text-blue">Go to users page</p>
+                                <p className="absolute bottom-5 right-8 font-bold text-blue">Go to users page</p>
                             </a>
                         </DashboardCard>
 
