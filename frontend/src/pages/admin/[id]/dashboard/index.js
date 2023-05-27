@@ -111,16 +111,16 @@ export default function AdminDashboard() {
                     <div className="grid grid-cols-6 gap-6">
                         <h1 className="col-span-6 text-2xl font-style: italic">Welcome, Evyatar</h1>
                         <h1 className="font-bold col-span-6 mt-10">Analytics</h1>
-                        <DashboardCard className="col-span-4">
+                        <DashboardCard className="col-span-4 border-[#00CFFF]">
                             <h1>Activity Log</h1>
                             <Icon name="graph1" className="mt-16 mb-8"/>
                         </DashboardCard>
-                        <DashboardCard className="col-span-2">
+                        <DashboardCard className="col-span-2 border-[#00CFFF]">
                             <h1>ESG Goals</h1>
                             <Icon name="graph2" className="my-4 p-5 w-full"/>
                         </DashboardCard>
 
-                        <DashboardCard className="relative col-span-2">
+                        <DashboardCard className="relative col-span-2 border-[#3BB6FF]">
                             <div className="flex items-center space-x-4">
                                 <Icon name="donation" className="h-6"/>
                                 <h1>Money Donated</h1>
@@ -128,7 +128,7 @@ export default function AdminDashboard() {
                             <h2>310,500$</h2>
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
-                        <DashboardCard className="col-span-2">
+                        <DashboardCard className="col-span-2 border-[#3BB6FF]">
                             <div className="flex items-center space-x-4">
                                 <Icon name="goods-donation" className="h-6"/>
                                 <h1>Goods Donated</h1>
@@ -136,7 +136,7 @@ export default function AdminDashboard() {
                             <h2>310,500$</h2>
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
-                        <DashboardCard className="col-span-2">
+                        <DashboardCard className="col-span-2 border-[#3BB6FF]">
                             <div className="flex items-center space-x-4">
                                 <Icon name="clock" className="h-6"/>
                                 <h1>Hours Volunteered</h1>
@@ -162,7 +162,7 @@ export default function AdminDashboard() {
 
                         <h1 className="font-bold col-span-3 mt-10">Give</h1>
                         <h1 className="font-bold col-span-3 mt-10">Take</h1>
-                        <DashboardCard className="col-span-3">
+                        <DashboardCard className="col-span-3 border-[#003ADD]">
                             <PrimaryButton className="flex gap-2 items-center">
                                 <Icon name="white-plus" className="h-8"/>
                                 Add a new give activity
@@ -172,14 +172,14 @@ export default function AdminDashboard() {
                                 <p className="absolute bottom-10 right-8 font-bold">Go to Give page</p>
                             </a>
                         </DashboardCard>
-                        <DashboardCard className="col-span-3">
+                        <DashboardCard className="col-span-3 border-[#003ADD]">
 
                         </DashboardCard>
 
 
 
                         <h1 className="font-bold col-span-6 mt-10">Partner Network</h1>
-                        <DashboardCard className="col-span-6">
+                        <DashboardCard className="col-span-6 border-[#001DAD]">
 
                         </DashboardCard>
 
@@ -189,8 +189,8 @@ export default function AdminDashboard() {
 
 
 
-                        <h1 className="font-bold col-span-3 mt-10">Impact Report</h1>
-                        <h1 className="font-bold col-span-3 mt-10">Wallet</h1>
+                        <h1 className="font-bold col-span-3 mt-10 border-[#001C77]">Impact Report</h1>
+                        <h1 className="font-bold col-span-3 mt-10 border-[#001C77]">Wallet</h1>
                         <DashboardCard className="col-span-3">
                             <h1 className="text-2xl font-bold">Impact</h1>
                             <h1 className="text-lg font-bold">Environmental total points: <span
@@ -207,13 +207,13 @@ export default function AdminDashboard() {
                         <h1 className="font-bold col-span-2 mt-10">Company's Programs</h1>
                         <h1 className="font-bold col-span-2 mt-10">Company's Programs</h1>
                         <h1 className="font-bold col-span-2 mt-10">Company's Programs</h1>
-                        <DashboardCard className="col-span-2">
+                        <DashboardCard className="col-span-2 border-[#010B2D]">
 
                         </DashboardCard>
-                        <DashboardCard className="col-span-2">
+                        <DashboardCard className="col-span-2 border-[#010B2D]">
 
                         </DashboardCard>
-                        <DashboardCard className="col-span-2">
+                        <DashboardCard className="col-span-2 border-[#010B2D]">
 
                         </DashboardCard>
                     </div>

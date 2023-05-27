@@ -28,8 +28,8 @@ module.exports = {
             },
             colors: {
                 'blue': '#226FFF',
-                'zebra-blue-off': '#78beff',
-                'zebra-blue-on': '#4f9ae0',
+                'zebra-blue-off': '#E6F7FF',
+                'zebra-blue-on': '#3A83F9',
                 'white': '#FFFFFF',
                 'black': '#000000',
                 'gray': '#808080',
