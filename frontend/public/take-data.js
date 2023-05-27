@@ -608,7 +608,7 @@ const takeData = [
                 text: 'Every participant will earn 50 points.'
             },
             {
-                icon: bottle,
+                icon: 50,
                 text: 'Every participant will earn 50 points.'
             }
         ],
