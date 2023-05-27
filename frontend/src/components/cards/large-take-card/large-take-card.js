@@ -21,10 +21,10 @@ const LargeTakeCard = ({take}) => {
                  style={{backgroundImage: `linear-gradient(to bottom, transparent 40%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/take/${coverImage}")`}}>
                 <TakeIcons duration={duration} impactType={impactType} coins={coins}/>
                 <div className="text-white ml-3.5 mb-3.5">
-                    <h2 className="font-bold text-2xl leading-7 drop-shadow-md">
+                    <h2 className="font-bold text-xl leading-6 drop-shadow-md pr-2">
                         {title}
                     </h2>
-                    <p className="font-italics text-xl leading-snug drop-shadow-md">
+                    <p className="font-italics text-lg leading-snug drop-shadow-md mt-1">
                         by <em>{author}</em>
                     </p>
                 </div>
