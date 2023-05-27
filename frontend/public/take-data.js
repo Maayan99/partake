@@ -121,19 +121,19 @@ const takeData = [
         title: 'Clean Inbox, Clear Conscience',
         author: 'Partake',
         subject: "Environmental",
-        shortDescription: 'Even a small action such as deleting emails  can reduce carbon emissions.',
+        shortDescription: 'Even a small action such as deleting emails can reduce carbon emissions.',
         description: "Have you ever thought about the impact that deleting old emails can have on the environment? In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
         coins: 200,
         progress: 33,
         category: 'Environmental',
-        durationText: '10',
+        durationText: '10 minutes',
         numberOfTasks: 3,
         location: 'Online',
         difficultyLevel: 'Easy',
         participants: 27,
         type: 'challenge',
 
-        whatToDo: "Take a screenshot of the number of emails you deleted before  and another one  after. Don't forget to encourage your coworkers to participate as well!",
+        whatToDo: "Take a screenshot of the number of emails you deleted before and another one  after. Don't forget to encourage your coworkers to participate as well!",
         tasks:
             [
                 {
@@ -375,7 +375,7 @@ const takeData = [
                                 ]
                         },
                 },
-                shortText: "",
+                shortText: "What apps did your collegues choose?",
                 longText: "Open your favorite meditation app or track, and meditate every day for a minimum of  5 minutes."
             },
             {
@@ -388,7 +388,7 @@ const takeData = [
                     numberValidationData:
                         {},
                 },
-                shortText: "",
+                shortText: "See how your collegues did",
                 longText: "Welcome back! Did you achieve your goal?",
             },
 
