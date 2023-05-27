@@ -548,6 +548,32 @@ const takeData = [
                 shortText: "",
                 longText: "Watch the video in the description.",
             },
+            {
+                id: 2,
+                validation: {
+                    text: "How many bags have you collected in the past 14 days?",
+                    type: 'free text',
+                    icon: 'plastic bottle',
+                    infoText: 'Recycling one ton of plastic saves around 5,774 kWh of energy.',
+                    multiValidationData:
+                        {},
+                },
+                shortText: "",
+                longText: "Take Tamir orange bags home, and collect packages that can be recycled.",
+            },
+            {
+                id: 3,
+                validation: {
+                    text: "Upload your photo",
+                    type: 'image',
+                    icon: 'Orange pastic bag.',
+                    infoText: 'It is estimated that plastic bags can not decompose for 100 to 500 years.',
+                    multiValidationData:
+                        {},
+                },
+                shortText: "",
+                longText: "Take a photo of the full Tamir Plastic bags next to the orange trash bin.",
+            },
         ],
 
 
