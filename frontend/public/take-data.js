@@ -583,8 +583,20 @@ const takeData = [
 
         tips: [
             {
-                text: "",
+                text: "Encourage your coworkers to participate and collect recyclable materials.",
                 id: 1,
+            },
+            {
+                text: "Make sure to properly sort and clean the recyclable materials before collecting them.",
+                id: 2,
+            },
+            {
+                text: "Consider setting up designated recycling bins in your workplace to make it easier for everyone to participate.",
+                id: 3,
+            },
+            {
+                text: "Remember, recycling is a simple but effective way to reduce waste and protect the environment!",
+                id: 4,
             },
         ],
 
@@ -593,7 +605,11 @@ const takeData = [
         reward: [
             {
                 amount: 50,
-                text: ''
+                text: 'Every participant will earn 50 points.'
+            },
+            {
+                icon: bottle,
+                text: 'Every participant will earn 50 points.'
             }
         ],
 
