@@ -7,13 +7,6 @@ import Head from "next/head";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 
 
-
-
-
-
-
-
-
 const environmentalImpact = {
     categories: [
         {
@@ -118,7 +111,7 @@ export default function AdminDashboard() {
                     <div className="grid grid-cols-6 gap-6">
                         <h1 className="font-bold col-span-6 text-5xl">Welcome, Evyatar</h1>
 
-                        <h1 className="font-bold col-span-6">Analytics</h1>
+                        <h1 className="font-bold col-span-6 mt-10">Analytics</h1>
                         <DashboardCard className="col-span-4">
                             <h1>Activity Log</h1>
                         </DashboardCard>
@@ -154,7 +147,7 @@ export default function AdminDashboard() {
 
 
 
-                        <h1 className="font-bold col-span-6">Users</h1>
+                        <h1 className="font-bold col-span-6 mt-10">Users</h1>
                         <DashboardCard className="flex items-center justify-center border-blue col-span-6">
                             <UsersGrid numberOfRows={5} paginate={false}/>
                             <a href={`${baseUrl}/users`}>
@@ -166,8 +159,8 @@ export default function AdminDashboard() {
 
 
 
-                        <h1 className="font-bold col-span-3">Give</h1>
-                        <h1 className="font-bold col-span-3">Take</h1>
+                        <h1 className="font-bold col-span-3 mt-10">Give</h1>
+                        <h1 className="font-bold col-span-3 mt-10">Take</h1>
                         <DashboardCard className="col-span-3">
                             <PrimaryButton className="flex gap-2 items-center">
                                 <Icon name="white-plus" className="h-8"/>
@@ -184,7 +177,7 @@ export default function AdminDashboard() {
 
 
 
-                        <h1 className="font-bold col-span-6">Partner Network</h1>
+                        <h1 className="font-bold col-span-6 mt-10">Partner Network</h1>
                         <DashboardCard className="col-span-6">
 
                         </DashboardCard>
@@ -195,8 +188,8 @@ export default function AdminDashboard() {
 
 
 
-                        <h1 className="font-bold col-span-3">Impact Report</h1>
-                        <h1 className="font-bold col-span-3">Wallet</h1>
+                        <h1 className="font-bold col-span-3 mt-10">Impact Report</h1>
+                        <h1 className="font-bold col-span-3 mt-10">Wallet</h1>
                         <DashboardCard className="col-span-3">
                             <h1 className="text-2xl font-bold">Impact</h1>
                             <h1 className="text-lg font-bold">Environmental total points: <span
@@ -210,9 +203,9 @@ export default function AdminDashboard() {
 
                         </DashboardCard>
 
-                        <h1 className="font-bold col-span-2">Company's Programs</h1>
-                        <h1 className="font-bold col-span-2">Company's Programs</h1>
-                        <h1 className="font-bold col-span-2">Company's Programs</h1>
+                        <h1 className="font-bold col-span-2 mt-10">Company's Programs</h1>
+                        <h1 className="font-bold col-span-2 mt-10">Company's Programs</h1>
+                        <h1 className="font-bold col-span-2 mt-10">Company's Programs</h1>
                         <DashboardCard className="col-span-2">
 
                         </DashboardCard>
