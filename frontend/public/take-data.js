@@ -608,8 +608,8 @@ const takeData = [
                 text: 'Every participant will earn 50 points.'
             },
             {
-                icon: 50,
-                text: 'Every participant will earn 50 points.'
+                amount: 50,
+                text: 'Every The participants from the winning department will receive a reusable bottle. will earn 50 points.'
             }
         ],
 
