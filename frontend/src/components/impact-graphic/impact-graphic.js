@@ -5,10 +5,7 @@ const ImpactCause = ({impactCategory}) => {
 
     return (
         <div className="flex flex-col items-center w-max relative">
-            <div className="relative group">
-                <Icon name={impactCategory.icon} className={`w-10 h-10 mb-2`}/>
-                {impactCategory.tooltips && <LearnMoreTooltip tooltips={impactCategory.tooltips}/>}
-            </div>
+            <Icon name={impactCategory.icon} className={`w-10 h-10 mb-2`}/>
             <div>
                 {impactCategory.boldText &&
                     <h1 className="font-bold text-lg text-center">{impactCategory.boldText}</h1>}
@@ -33,10 +30,13 @@ export default function ImpactGraphic({impact, showIconsBelow}) {
             {showIconsBelow &&
                 <div className="space-y-2">
                     <h1>How does this help?</h1>
-                    <div className="flex space-x-4">
+                    <div className="relative group flex space-x-4">
                         {categories.map(category => (category.tooltips &&
-                            category.tooltips.map(tooltip => <Icon name={tooltip.icon}
-                                                                   className="h-14"/>)))}
+                            category.tooltips.map(tooltip => <>
+                                <Icon name={tooltip.icon}
+                                      className="h-14"/>
+                                <LearnMoreTooltip tooltip={tooltip}/>
+                            </>)))}
                     </div>
                 </div>}
         </div>
