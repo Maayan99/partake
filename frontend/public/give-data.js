@@ -310,7 +310,7 @@ const giveData = [
 
     {
         id: '2',
-        title: 'Collect and Sort Surplus Food for Familiies in Need',
+        title: 'Collect and Sort Surplus Food for Families in Need',
         author: 'Food Rescuers JLM (מצילות המזון בירושלים)',
         duration: 10,
         location: 'Ein Gedi Park',
