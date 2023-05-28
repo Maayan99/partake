@@ -240,7 +240,7 @@ export default function AdminDashboard() {
                         <h1 className="font-bold col-span-6 mt-10">Partner Network</h1>
                         <DashboardCard
                             className="flex items-center justify-center border-blue col-span-6  border-[#001DAD]">
-                            <PartnerGrid numberOfRows={5} paginate={false}/>
+                            <PartnerGrid numberOfRows={6} paginate={false}/>
                             <a href={`${baseUrl}/partner-network`}>
                                 <p className="absolute bottom-5 right-8 font-bold text-blue">Go to partner network
                                     page</p>
