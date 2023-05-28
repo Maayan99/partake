@@ -104,56 +104,43 @@ export default function UsersGrid({numberOfRows, paginate}) {
                     <td>
                         <div className="flex">
                             <input className="rounded-none border border-light-gray w-32" onChange={handleNameSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                                type="text"/>    
                         </div>
                     </td>
                     <td>
                         <div className="flex">
                             <input className="rounded-none border border-light-gray w-32"
-                                   onChange={handleDepartmentSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                                onChange={handleDepartmentSearchChange}
+                                type="text"/>
+                                <Icon name="down-arrow" className="w-4 -ml-5"/>                    
                         </div>
                     </td>
                     <td>
                         <div className="flex">
                             <input className="rounded-none border border-light-gray w-28" onChange={handleImpactSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                                type="text"/>
+                                <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                     <td>
                         <div className="flex">
                             <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                                type="text"/>
+                                <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                     <td>
                         <div className="flex">
                             <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                            type="text"/>
+                            <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                     <td>
                         <div className="flex">
                             <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                                type="text"/>
+                                <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                 </tr>
