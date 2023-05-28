@@ -215,8 +215,8 @@ export default function AdminDashboard() {
 
                         <h1 className="font-bold col-span-3 mt-10">Give</h1>
                         <h1 className="font-bold col-span-3 mt-10">Take</h1>
-                        <DashboardCard className="col-span-3 border-[#003ADD] space-y-4 text-blue py-10">
-                            <PrimaryButton className="flex gap-2 items-center">
+                        <DashboardCard className="col-span-3 border-[#003ADD] space-y-4 text-blue py-8">
+                            <PrimaryButton className="flex gap-3 items-center py-4 w-64">
                                 <Icon name="white-plus" className="h-8"/>
                                 Add a new give activity
                             </PrimaryButton>
@@ -225,8 +225,8 @@ export default function AdminDashboard() {
                                 <p className="absolute bottom-4 right-4 font-bold">Go to Give page</p>
                             </a>
                         </DashboardCard>
-                        <DashboardCard className="col-span-3 border-[#003ADD] space-y-4 text-blue py-10">
-                            <PrimaryButton className="flex gap-2 items-center">
+                        <DashboardCard className="col-span-3 border-[#003ADD] space-y-4 text-blue py-8">
+                            <PrimaryButton className="flex gap-3 items-center py-4 w-64">
                                 <Icon name="white-plus" className="h-8"/>
                                 Add a new take activity
                             </PrimaryButton>
