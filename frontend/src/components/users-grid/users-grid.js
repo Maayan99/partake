@@ -88,7 +88,7 @@ export default function UsersGrid({numberOfRows, paginate}) {
             <table className="w-full border-collapse table-fixed">
                 <tbody>
                 <tr className="p-2 bg-slate-50">
-                    <th/>
+                    <th className="w-4"/>
                     <th>Name</th>
                     <th>Department</th>
                     <th>Impact Score</th>
@@ -98,7 +98,7 @@ export default function UsersGrid({numberOfRows, paginate}) {
                 </tr>
 
                 <tr className="bg-important-blue">
-                    <td>
+                    <td className="w-4 py-4">
                         <input type="checkbox" onChange={handleSelectAll} checked={filtered.every(user => selected.includes(user.id))}/>
                     </td>
                     <td>
@@ -112,7 +112,7 @@ export default function UsersGrid({numberOfRows, paginate}) {
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-28"
+                            <input className="rounded-none border border-light-gray w-32"
                                    onChange={handleDepartmentSearchChange}
                                    type="text"/>
                             <IconButton>
@@ -122,7 +122,7 @@ export default function UsersGrid({numberOfRows, paginate}) {
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24" onChange={handleImpactSearchChange}
+                            <input className="rounded-none border border-light-gray w-28" onChange={handleImpactSearchChange}
                                    type="text"/>
                             <IconButton>
                                 <Icon name="donation"/>
