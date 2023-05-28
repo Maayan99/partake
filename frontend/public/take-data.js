@@ -851,25 +851,25 @@ const takeData = [
     {
         id: "416171eef1bf987b",
         coverImage: 'take_card_fun_facts.png',
-        title: '',
-        author: 'Anonymous Bee',
-        shortDescription: 'Tell us some fun facts about the office space and find out about new ones!',
+        title: 'Go Zero-Waste for a Day',
+        author: 'Partake',
+        shortDescription: "Reducing waste can be difficult, so let's take it slowly, day by day.",
         impact: {
-            type: 'wellness'
+            type: 'environmental'
         },
-        subject: 'Wellness',
-        coins: 50,
+        subject: 'environmental',
+        coins: 100,
         progress: 0,
         category: 'Popular',
         duration: 10,
-        participants: 500,
+        participants: 38,
     },
     {
         id: "416171eef1bg987b",
         coverImage: 'take_card_fun_facts.png',
-        title: 'Meatless Monday',
-        author: 'Ilanit from HR',
-        shortDescription: 'Tell us some fun facts about the office space and find out about new ones!',
+        title: ' Morning Yoga with Ilanit',
+        author: 'Ilanit from marketing',
+        shortDescription: 'Join me for a 20 min yoga class at Monday, 8:15.',
         impact: {
             type: 'wellness'
         },
@@ -941,21 +941,38 @@ const takeData = [
     },
 
     {
-        id: '',
-        title: '',
-        author: '',
-        shortDescription: '',
+        id: 'hgutjnrbegrtfgdsb',
+        title: 'Flex & Stretch',
+        author: 'Partake',
+        shortDescription: 'A few minutes of targeted stretches will refresh your back and legs, boost circulation, and enhance your comfort at the desk!',
         coverImage: '.png',
         subject: '',
         category: '15 Minutes or Less',
         impact:
             {
-                type: 'social'
+                type: 'wellness'
             },
-        coins: 100,
+        coins: 50,
         progress: 0,
-        duration: 60,
-        participants: 123,
+        duration: 10,
+        participants: 86,
+    },
+    {
+        id: 'hgutjnrbegrtfgdsb',
+        title: '',
+        author: 'Partake',
+        shortDescription: 'A few minutes of targeted stretches will refresh your back and legs, boost circulation, and enhance your comfort at the desk!',
+        coverImage: '.png',
+        subject: '',
+        category: '15 Minutes or Less',
+        impact:
+            {
+                type: 'wellness'
+            },
+        coins: 50,
+        progress: 0,
+        duration: 10,
+        participants: 86,
     }
 
 ];
