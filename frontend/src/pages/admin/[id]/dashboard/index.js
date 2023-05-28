@@ -105,47 +105,47 @@ export default function AdminDashboard() {
                     <div className="grid grid-cols-6 gap-6">
                         <div className="col-span-6 flex items-center space-x-4">
                             <h1 className=" text-3xl italic">Welcome, Evyatar</h1>
-                            <Icon name="pending" className="h-8"/>
+                            <Icon name="pending" className="w-14 pl-4"/>
                         </div>
                         <h1 className="font-bold col-span-6 mt-10">Analytics</h1>
                         <DashboardCard className="col-span-4 border-[#00CFFF]">
-                            <h1>Activity Log</h1>
+                            <h1 className="font-medium">Activity Log</h1>
                             <Icon name="graph1" className="mt-16 mb-8"/>
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See more</p>
                         </DashboardCard>
                         <DashboardCard className="col-span-2 border-[#00CFFF]">
-                            <h1>ESG Goals</h1>
+                            <h1 className="font-medium mb-5">ESG Goals</h1>
                             <div className="flex items-center space-x-2">
-                                <Icon name="graph2" className="my-4 w-32"/>
+                                <Icon name="graph2" className="my-2 w-40"/>
 
-                                <div className="space-y-2">
+                                <div className="space-y-2 pl-4">
                                     <div className="flex items-center space-x-2">
-                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <div className="rounded-full h-2 w-2 bg-[#04cfff]"></div>
                                         <p className="text-sm">Sustainability</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
-                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <div className="rounded-full h-2 w-2 bg-black bg-[#3bb6ff]"></div>
                                         <p className="text-sm">Recycling</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
-                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <div className="rounded-full h-2 w-2 bg-[#3983f9]"></div>
                                         <p className="text-sm">Poverty</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
-                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <div className="rounded-full h-2 w-2  bg-[#1961ff]"></div>
                                         <p className="text-sm">Equality</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
-                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <div className="rounded-full h-2 w-2 bg-[#003add]"></div>
                                         <p className="text-sm">Youth at risk</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
-                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <div className="rounded-full h-2 w-2 bg-[#001dad]"></div>
                                         <p className="text-sm">Pollution</p>
                                     </div>
 
@@ -153,11 +153,11 @@ export default function AdminDashboard() {
                             </div>
 
                             <div>
-                                <div className="flex items-center space-x-2">
+                                <div className="flex items-center space-x-2 mt-4">
                                     <p className="text-sm w-32">Sustainability</p>
                                     <ProgressBar percentage={80} className="h-[4px]"/>
                                 </div>
-                                <div className="flex items-center space-x-2">
+                                <div className="flex items-center space-x-2 py-1">
                                     <p className="text-sm w-32">Inclusion</p>
                                     <ProgressBar percentage={70} className="h-[4px]"/>
                                 </div>
@@ -165,7 +165,7 @@ export default function AdminDashboard() {
                                     <p className="text-sm w-32">Poverty</p>
                                     <ProgressBar percentage={60} className="h-[4px]"/>
                                 </div>
-                                <div className="flex items-center space-x-2">
+                                <div className="flex items-center space-x-2 py-1">
                                     <p className="text-sm w-32">Equality</p>
                                     <ProgressBar percentage={50} className="h-[4px]"/>
                                 </div>
@@ -181,25 +181,25 @@ export default function AdminDashboard() {
                         <DashboardCard className="relative col-span-2 border-[#3BB6FF]">
                             <div className="flex items-center space-x-4">
                                 <Icon name="donation" className="h-6"/>
-                                <h1>Money Donated</h1>
+                                <h1 className="font-medium">Money Donated</h1>
                             </div>
-                            <h2>310,500$</h2>
+                            <h2 className="font-normal">310,500$</h2>
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
                         <DashboardCard className="col-span-2 border-[#3BB6FF]">
                             <div className="flex items-center space-x-4">
                                 <Icon name="goods-donation" className="h-6"/>
-                                <h1>Goods Donated</h1>
+                                <h1 className="font-medium">Goods Donated</h1>
                             </div>
-                            <h2>310,500$</h2>
+                            <h2 className="font-normal">20,000</h2>
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
                         <DashboardCard className="col-span-2 border-[#3BB6FF]">
                             <div className="flex items-center space-x-4">
                                 <Icon name="clock" className="h-6"/>
-                                <h1>Hours Volunteered</h1>
+                                <h1 className="font-medium">Hours Volunteered</h1>
                             </div>
-                            <h2>310,500$</h2>
+                            <h2 className="font-normal">2500</h2>
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
 
