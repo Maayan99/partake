@@ -81,22 +81,6 @@ const giveData = [
                             },
                         ],
                 },
-                {
-                    icon: 'goods-donation',
-                    boldText: 'Goods Donation',
-                    text: '',
-                    tooltips:
-                        [
-                            {
-                                text: 'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
-                                icon: 'wheelchair',
-                            },
-                            {
-                                text: 'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
-                                icon: 'goods-donation',
-                            },
-                        ],
-                }
             ],
         },
         timeDetails:
@@ -129,7 +113,7 @@ const giveData = [
                 },
                 {
                     id: "lokgfbdtsvtw",
-                    text: 'Advantage for another language such as Russian, Arabic or Amharic.',
+                    text: 'We also offer assistance in clearing out your apartment in case of moving apartments or clearing houses, stores or warehouses.',
                 },
             ]
         },
