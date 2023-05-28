@@ -19,7 +19,7 @@ const UserRow = ({user, selected, setSelected}) => {
 
     return (
         <div className="flex items-center cursor-pointer space-x-3" onClick={handleSelect}>
-            <input type="checkbox" checked={selected.includes(id)}/>
+            <input type="checkbox" checked={selected.includes(id)} onChange={handleSelect}/>
             <div className="flex items-center">
                 <img
                     src={`/assets/PNG/profile-images/${profileImage}`}

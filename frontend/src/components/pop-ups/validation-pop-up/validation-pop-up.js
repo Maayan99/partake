@@ -2,6 +2,7 @@ import PopUp from "@components/components/pop-ups/basic-pop-up/pop-up";
 import {useEffect, useState} from "react";
 import Icon from "@components/components/common/icon/icon";
 import BlueButton from "@components/components/common/blue-button";
+import Multichoice from "@components/components/common/multi-choice/multi-choice";
 
 
 const CongratsGraphic = ({
@@ -71,9 +72,12 @@ const Validation = ({
                         setDisplay,
                     }) => {
 
-    const {text, type, icon, photoValidationData, infoText, numberValidationData} = validationData;
+    const {text, type, icon, photoValidationData, infoText, numberValidationData, multiValidationData} = validationData;
 
     const typeIsNumber = type === "number";
+    const typeIsText = type === "text";
+    const typeIsMulti = type === "multi";
+    const typeIsImage= type === "image";
 
     const [number, setNumber] = useState(0);
 
@@ -114,6 +118,7 @@ const Validation = ({
         }
     };
 
+
     return (
         <div className={`flex flex-col`}>
             <div className="flex flex-col items-center p-8 space-y-2 text-black">
@@ -132,17 +137,25 @@ const Validation = ({
                                placeholder="Enter number" value={number || 0}
                                onChange={handleNumberChange}/>
                     </div>
-                    :
-                    <label className="flex justify-center items-center w-full h-32 px-4 transition bg-white
+                    : <>
+                        {typeIsText ? <input type="text" className="w-full h-8 bg-light-gray px-2"></input> :
+                            <>
+                                {typeIsMulti ?
+                                    <Multichoice options={multiValidationData.options}/> :
+                                    <label className="flex justify-center items-center w-full h-32 px-4 transition bg-white
                     border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer
                     hover:border-gray-400 focus:outline-none">
                         <span className="font-medium text-gray">
                             Drop files to Attach, or <span className="text-blue underline">browse</span>
                         </span>
-                        <input type="file" className="hidden"/>
-                    </label>}
+                                    <input type="file" className="hidden"/>
+                                </label>}
+                            </>
+                        }
+                    </>
+                }
 
-                <BlueButton type="submit">Submit{!typeIsNumber && ' Image'}</BlueButton>
+                <BlueButton type="submit">Submit{typeIsImage && ' Image'}</BlueButton>
             </form>
         </div>
     )
@@ -157,6 +170,12 @@ export default function ValidationPopUp({
 
     const [destinationNumber, setDestinationNumber] = useState(0);
     const [showCongratsGraphic, setShowCongratsGraphic] = useState(false);
+
+
+    useEffect(() => {
+        setShowCongratsGraphic(false);
+        setDestinationNumber(0);
+    }, [currentTask])
 
 
     return (
