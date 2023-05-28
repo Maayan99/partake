@@ -197,28 +197,28 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24"
+                            <input className="rounded-none border border-light-gray w-32"
                                    onChange={handleImpactSearchChange}
                                    type="text"/>
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24"
+                            <input className="rounded-none border border-light-gray w-32"
                                    onChange={handleCoinSearchChange}
                                    type="text"/>
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24"
+                            <input className="rounded-none border border-light-gray w-32"
                                    onChange={handleCoinSearchChange}
                                    type="text"/>
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24"
+                            <input className="rounded-none border border-light-gray w-32"
                                    onChange={handleCoinSearchChange}
                                    type="text"/>
                         </div>
@@ -233,15 +233,15 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                                    type="checkbox"/>
                         </td>
                         <td className="max-w-[40px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.initiatives}</p></td>
-                        <td className="flex items-center w-36 overflow-hidden border-r border-slate-300"><img
-                            src={`/assets/PNG/logos/square/logo-s-${initiative.leader.icon}.png`} className="h-10 rounded-full"/>
-                            <p className="whitespace-nowrap">{initiative.leader.name}</p></td>
-                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.partners}</p></td>
+                        <td className="flex items-center w-36 overflow-hidden border-r border-slate-300 px-2"><img
+                            src={`/assets/PNG/logos/square/logo-s-${initiative.leader.icon}.png`} className="h-8 rounded-full"/>
+                            <p className="whitespace-nowrap pl-2">{initiative.leader.name}</p></td>
+                        <td className="max-w-[96px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.partners}</p></td>
                         <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.demands}</p></td>
                         <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.timeFrame}</p></td>
                         <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><ColoredButton className={`${initiative.status === 'Joined' ? 
                         'bg-green-500' : initiative.status === 'Join' ?
-                        'bg-blue' : initiative.status === 'Pending' && 'bg-orange-400'} `}>{initiative.status}</ColoredButton></td>
+                        'bg-blue' : initiative.status === 'Pending' && 'bg-orange-400'} w-28 `}>{initiative.status}</ColoredButton></td>
                     </tr>
                 )}
                 </tbody>
