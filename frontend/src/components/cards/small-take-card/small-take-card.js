@@ -6,12 +6,12 @@ import ParticipantsRow from "@components/components/participants-row/participant
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 const SmallTakeCard = ({take}) => {
-    const {id, coverImage, title, author, impact, coins, progress, duration, shortDescription, participants, displayRewardIcon} = take;
+    const {id, type, coverImage, title, author, impact, coins, progress, duration, shortDescription, participants, displayRewardIcon} = take;
 
     const impactType = impact?.type;
 
     const handleClick = () => {
-        window.location.href = `take/${id}`
+        window.location.href = `take/${type}/${id}`
     }
 
     return (
