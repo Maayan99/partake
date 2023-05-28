@@ -85,7 +85,7 @@ export default function UsersGrid({numberOfRows, paginate}) {
 
     return (
         <div className="px-0 space-y-10">
-            <table className="w-full border-collapse table-fixed">
+            <table className="w-full border-collapse table-fixed border border-slate-300">
                 <tbody>
                 <tr className="p-2 bg-slate-50">
                     <th className="w-4"/>
@@ -165,12 +165,12 @@ export default function UsersGrid({numberOfRows, paginate}) {
                             <input id={user.id} checked={selected.includes(user.id)} onChange={handleSelect}
                                    type="checkbox"/>
                         </td>
-                        <td>{user.username}</td>
-                        <td>{user.department}</td>
-                        <td>{user.impact}</td>
-                        <td>{user.coins}</td>
-                        <td>{user.pending}</td>
-                        <td>{user.completed}</td>
+                        <td className="border-r border-slate-300">{user.username}</td>
+                        <td className="border-r border-slate-300">{user.department}</td>
+                        <td className="border-r border-slate-300">{user.impact}</td>
+                        <td className="border-r border-slate-300">{user.coins}</td>
+                        <td className="border-r border-slate-300">{user.pending}</td>
+                        <td className="border-r border-slate-300">{user.completed}</td>
                     </tr>
                 )}
                 </tbody>
