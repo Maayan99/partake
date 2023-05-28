@@ -516,6 +516,8 @@ const takeData = [
 
         isCompetition: true,
 
+        videoLink: 'https://www.youtube.com/watch?v=5TmjKUrYvvk',
+
         whatToDo: 'Collect as many packages as possible. it can be  plastic packages, paper packaging, glass, and cans.Take a picture of each full trash bag. Share the picture on the challenge feed with the type of material collected.',
         tasks: [
             {

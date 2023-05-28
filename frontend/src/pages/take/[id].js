@@ -274,6 +274,10 @@ export default function TakePage() {
                     <div className="space-y-5">
                         <h1 className="font-bold">Description</h1>
                         <p className="text-gray">{take.description}</p>
+                        {take.videoLink &&
+                        <iframe src={take.videoLink} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                        </iframe>
+                        }
                     </div>
                     {take.whatToDo && <div className="space-y-5">
                         <h1 className="font-bold">Tasks</h1>
