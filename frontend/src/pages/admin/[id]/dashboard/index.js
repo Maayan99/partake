@@ -153,23 +153,23 @@ export default function AdminDashboard() {
                             </div>
 
                             <div>
-                                <div className="flex items-center space-x-2 mt-4">
+                                <div className="flex items-center space-x-2 mt-5">
                                     <p className="text-sm w-32">Sustainability</p>
                                     <ProgressBar percentage={80} className="h-[4px]"/>
                                 </div>
-                                <div className="flex items-center space-x-2 py-1">
+                                <div className="flex items-center space-x-2 py-1 mt-2">
                                     <p className="text-sm w-32">Inclusion</p>
                                     <ProgressBar percentage={70} className="h-[4px]"/>
                                 </div>
-                                <div className="flex items-center space-x-2">
+                                <div className="flex items-center space-x-2 mt-2">
                                     <p className="text-sm w-32">Poverty</p>
                                     <ProgressBar percentage={60} className="h-[4px]"/>
                                 </div>
-                                <div className="flex items-center space-x-2 py-1">
+                                <div className="flex items-center space-x-2 py-1 mt-2">
                                     <p className="text-sm w-32">Equality</p>
                                     <ProgressBar percentage={50} className="h-[4px]"/>
                                 </div>
-                                <div className="flex items-center space-x-2">
+                                <div className="flex items-center space-x-2 mt-2">
                                     <p className="text-sm w-32">Youth at risk</p>
                                     <ProgressBar percentage={40} className="h-[4px]"/>
                                 </div>
