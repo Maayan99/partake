@@ -6,12 +6,12 @@ import BlueButton from "@components/components/common/blue-button";
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 const LargeTakeCard = ({take}) => {
-    const {id, coverImage, title, author, impact, coins, participants, progress, duration, shortDescription, displayRewardIcon} = take;
+    const {id, type, coverImage, title, author, impact, coins, participants, progress, duration, shortDescription, displayRewardIcon} = take;
 
     const impactType = impact.type;
 
     const handleClick = () => {
-        window.location.href = `take/${id}`
+        window.location.href = `take/${type}/${id}`
     }
 
     return (
