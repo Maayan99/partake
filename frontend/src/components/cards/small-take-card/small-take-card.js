@@ -6,7 +6,7 @@ import ParticipantsRow from "@components/components/participants-row/participant
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 const SmallTakeCard = ({take}) => {
-    const {id, coverImage, title, author, impact, coins, progress, duration, shortDescription, participants} = take;
+    const {id, coverImage, title, author, impact, coins, progress, duration, shortDescription, participants, displayRewardIcon} = take;
 
     const impactType = impact?.type;
 
@@ -21,7 +21,7 @@ const SmallTakeCard = ({take}) => {
                      style={{backgroundImage: `
                      linear-gradient(to bottom, rgba(2,0,36,0) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.65) 100%),
                       url("/assets/PNG/take/${coverImage}")`}}>
-                    <TakeIcons impactType={impactType} coins={coins} duration={duration}/>
+                    <TakeIcons impactType={impactType} coins={coins} duration={duration} displayRewardIcon={displayRewardIcon}/>
 
                     <div className="text-white ml-2.5 mb-2.5">
                         <h2 className="font-bold text-xl leading-none drop-shadow-md">

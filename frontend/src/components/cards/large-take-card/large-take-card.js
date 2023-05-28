@@ -6,7 +6,7 @@ import BlueButton from "@components/components/common/blue-button";
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 const LargeTakeCard = ({take}) => {
-    const {id, coverImage, title, author, impact, coins, participants, progress, duration, shortDescription} = take;
+    const {id, coverImage, title, author, impact, coins, participants, progress, duration, shortDescription, displayRewardIcon} = take;
 
     const impactType = impact.type;
 
@@ -19,7 +19,7 @@ const LargeTakeCard = ({take}) => {
          hover:h-[516px] hover:-mb-24 hover:scale-110 hover:-translate-y-6 hover:rounded-lg hover:shadow-md hover:z-10 text-xs" onClick={handleClick}>
             <div className="w-full h-[410px] rounded-t-lg flex flex-col justify-between bg-cover"
                  style={{backgroundImage: `linear-gradient(to bottom, transparent 40%, rgb(0,0,0,0.65) 100%), url("/assets/PNG/take/${coverImage}")`}}>
-                <TakeIcons duration={duration} impactType={impactType} coins={coins}/>
+                <TakeIcons duration={duration} impactType={impactType} coins={coins} displayRewardIcon={displayRewardIcon}/>
                 <div className="text-white ml-3.5 mb-3.5">
                     <h2 className="font-bold text-xl leading-6 drop-shadow-md pr-2">
                         {title}

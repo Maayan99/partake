@@ -514,6 +514,9 @@ const takeData = [
         difficultyLevel: 'Intermediate',
         participants: 78,
 
+
+        displayRewardIcon: true,
+
         isCompetition: true,
 
         videoLink: 'https://www.youtube.com/embed/5TmjKUrYvvk',
@@ -665,12 +668,25 @@ const takeData = [
                 text: 'Every participant will earn 50 points.'
             },
             {
-                amount: 50,
+                icon: 'reward',
                 text: 'Every The participants from the winning department will receive a reusable bottle. will earn 50 points.'
             }
         ],
 
         bonus: '',
+
+        partners:
+            {
+                text: 'Haiush ;)',
+                array: [
+                    {
+                        id: '1',
+                        image: 'adam',
+                        name: 'adam',
+                        text: 'An Israeli non-profit organization dedicated to promoting inclusion and improving the lives of people with disabilities. We collaborate with the social business "HaMzeyon" in Jerusalem, offering employment opportunities for individuals with disabilities.',
+                    },
+                ]
+            },
     },
 
 

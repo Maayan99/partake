@@ -312,8 +312,10 @@ export default function TakePage() {
                                 <div className="flex space-x-3">
                                     <div className="flex flex-col justify-center items-center bg-white
             border-solid border-2 border-blue rounded-full p-1 min-w-[66px] h-16 text-blue">
-                                        <Icon name="partake-coins" className="w-3 mt-1"/>
-                                        <p className="text-sm">{reward.amount}</p>
+                                        {reward.icon ?
+                                            <Icon name={reward.icon} className="w-8 mt-1"/> :
+                                            <Icon name="partake-coins" className="w-3 mt-1"/>}
+                                        {!reward.icon && <p className="text-sm">{reward.amount}</p>}
                                     </div>
                                     <p className="text-sm text-gray">{reward.text}</p>
                                 </div>
@@ -326,6 +328,16 @@ export default function TakePage() {
                         <h1 className="font-bold">More Information</h1>
                         <p className="text-gray">{take.moreInformation}</p>
                     </div>}
+                    {take.partners &&
+                        <div className="space-y-5">
+                            <h1 className="font-bold">Partners</h1>
+                            <div className="flex">
+                                {take.partners.array.map(sponsor =>
+                                    <img key={sponsor.id} src={`/assets/PNG/logos/rectangle/logo-${sponsor.image}.png`}
+                                         className="h-16" alt={sponsor.name}/>)}
+                            </div>
+                            <p className="text-gray">{take.partners.text}</p>
+                        </div>}
                 </div>
             </>
         )
