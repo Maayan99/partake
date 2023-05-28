@@ -163,11 +163,11 @@ export default function PartnerGrid({numberOfRows, paginate}) {
 
 
     return (
-        <div className="px-16 space-y-10">
-            <table className="w-full border-collapse">
+        <div className="px-0 space-y-10">
+            <table className="w-full border-collapse table-fixed border border-slate-300">
                 <tbody>
-                <tr className="bg-slate-50">
-                    <th/>
+                <tr className="p-2 bg-slate-50">
+                    <th className="w-4"/>
                     <th>Initiatives</th>
                     <th>Leader</th>
                     <th>Partners</th>
@@ -177,7 +177,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                 </tr>
 
                 <tr className="bg-important-blue">
-                    <td>
+                    <td className="w-4 py-4">
                         <input type="checkbox" onChange={handleSelectAll}
                                checked={filtered.every(initiative => selected.includes(initiative.id))}/>
                     </td>
@@ -232,14 +232,14 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                             <input id={initiative.id} checked={selected.includes(initiative.id)} onChange={handleSelect}
                                    type="checkbox"/>
                         </td>
-                        <td className="max-w-[40px] overflow-hidden"><p className="whitespace-nowrap">{initiative.initiatives}</p></td>
-                        <td className="flex items-center w-36 overflow-hidden"><img
+                        <td className="max-w-[40px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.initiatives}</p></td>
+                        <td className="flex items-center w-36 overflow-hidden border-r border-slate-300"><img
                             src={`/assets/PNG/logos/square/logo-s-${initiative.leader.icon}.png`} className="h-10 rounded-full"/>
                             <p className="whitespace-nowrap">{initiative.leader.name}</p></td>
-                        <td className="max-w-[36px] overflow-hidden"><p className="whitespace-nowrap">{initiative.partners}</p></td>
-                        <td className="max-w-[36px] overflow-hidden"><p className="whitespace-nowrap">{initiative.demands}</p></td>
-                        <td className="max-w-[36px] overflow-hidden"><p className="whitespace-nowrap">{initiative.timeFrame}</p></td>
-                        <td className="max-w-[36px] overflow-hidden"><ColoredButton className={`${initiative.status === 'Joined' ? 
+                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.partners}</p></td>
+                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.demands}</p></td>
+                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.timeFrame}</p></td>
+                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><ColoredButton className={`${initiative.status === 'Joined' ? 
                         'bg-green-500' : initiative.status === 'Join' ?
                         'bg-blue' : initiative.status === 'Pending' && 'bg-orange-400'} `}>{initiative.status}</ColoredButton></td>
                     </tr>
