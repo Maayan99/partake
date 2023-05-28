@@ -489,7 +489,7 @@ const takeData = [
         id: "sdgfhtyrujhfnmjf",
         type: 'challenge',
         coverImage: 'take_card_recycle.png',
-        title: 'Recycling Department War.',
+        title: 'Recycling Department War',
         author: 'HR, Abraham’s Hostel.',
         impactType: 'Environmental',
         subject: "Environmental",

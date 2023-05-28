@@ -9,19 +9,19 @@ export default function TakeSurveyPage() {
     const options = [
         {
             id: '1',
-            text: 'Shalom',
+            text: 'Children and youth',
         },
         {
             id: '2',
-            text: 'Boker',
+            text: 'Poverty',
         },
         {
             id: '3',
-            text: 'Tov',
+            text: 'Refugees',
         },
         {
             id: '4',
-            text: 'Lachem',
+            text: 'LGTBQIA+',
         },
     ];
 
@@ -35,12 +35,10 @@ export default function TakeSurveyPage() {
 
 
     return (
-        <div className="flex items-center justify-center w-full min-h-[720px] py-10 px-10 bg-blue">
-            {!submitted ? <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-10 space-y-10 w-2/3">
-                <h1 className="text-center">Which social cause do you want out company to highlight this year?</h1>
-                <p>Hi Evyatar, nininininninin</p>
-
-
+        <div className="flex items-center justify-center w-full min-h-[720px] py-10 px-10 bg-gradient-radial ellipse_at_bottom from-[#FFFCE6] to-[#05CDFF]">
+            {!submitted ? <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-10 space-y-10 w-2/3 max-w-[900px]">
+            <p className="text-lg">Hi Evyatar, please answer this short survey</p>
+                <h1 className="text-center font-bold text-2xl">Which social cause do you wish our company to focus on this year?</h1>
                 <div className="space-y-4 flex flex-col items-center">
                     {options.map(option =>
                         <div key={option.id}>
@@ -54,7 +52,7 @@ export default function TakeSurveyPage() {
 
                 <PrimaryButton onClick={handleSubmit}>Submit Choice</PrimaryButton>
             </div> :
-                <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-10  w-2/3">
+                <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-10 w-2/3 max-w-[900px]">
                     <h1 className="font-bold mb-10">Thanks!</h1>
                     <p>Your answer has been submitted</p>
                     <p>Have a great holiday season :)</p>
