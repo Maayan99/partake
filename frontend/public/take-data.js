@@ -644,9 +644,9 @@ const takeData = [
 
 
     {
-        id: "3",
+        id: "ghtuyjhnghfdklhrt",
         coverImage: 'take_card_mindful_moment.png',
-        title: 'Mindful Moment',
+        title: 'Mindful',
         author: 'Anonymous Bee',
         impactType: 'Wellness',
         subject: "Wellness",
