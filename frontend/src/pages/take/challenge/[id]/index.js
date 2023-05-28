@@ -1,4 +1,4 @@
-import takeData from "../../../public/take-data.js"
+import takeData from "../../../../../public/take-data.js"
 import {useRouter} from "next/router";
 import TakeCoverCard from "@components/components/cards/take-cover-card/take-cover-card";
 import PrimaryButton from "@components/components/common/primary-button";
@@ -6,7 +6,6 @@ import TransparentButton from "@components/components/common/transparent-button"
 import BlueButton from "@components/components/common/blue-button"
 import React, {useEffect, useMemo, useState} from "react";
 import Icon from "@components/components/common/icon/icon";
-import StarIcon from "@mui/icons-material/Star";
 import ValidationPopUp from "@components/components/pop-ups/validation-pop-up/validation-pop-up";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import Gallery from "@components/components/gallery/gallery";

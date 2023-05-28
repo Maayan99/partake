@@ -84,66 +84,63 @@ export default function UsersGrid({numberOfRows, paginate}) {
 
 
     return (
-        <div className="px-16 space-y-10">
-            <table className="w-full border-collapse">
+        <div className="px-0 space-y-10">
+            <table className="w-full border-collapse table-fixed border border-slate-300">
                 <tbody>
                 <tr className="p-2 bg-slate-50">
-                    <th/>
+                    <th className="w-4"/>
                     <th>Name</th>
                     <th>Department</th>
                     <th>Impact Score</th>
                     <th>Partake Coins</th>
                     <th>Pending Activities</th>
+                    <th>Completed Activities</th>
                 </tr>
 
                 <tr className="bg-important-blue">
-                    <td>
+                    <td className="w-4 py-4">
                         <input type="checkbox" onChange={handleSelectAll} checked={filtered.every(user => selected.includes(user.id))}/>
                     </td>
                     <td>
                         <div className="flex">
                             <input className="rounded-none border border-light-gray w-32" onChange={handleNameSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                                type="text"/>    
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-28"
-                                   onChange={handleDepartmentSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                            <input className="rounded-none border border-light-gray w-32"
+                                onChange={handleDepartmentSearchChange}
+                                type="text"/>
+                                <Icon name="down-arrow" className="w-4 -ml-5"/>                    
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24" onChange={handleImpactSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                            <input className="rounded-none border border-light-gray w-28" onChange={handleImpactSearchChange}
+                                type="text"/>
+                                <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                     <td>
                         <div className="flex">
                             <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                                type="text"/>
+                                <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                     <td>
                         <div className="flex">
                             <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
-                                   type="text"/>
-                            <IconButton>
-                                <Icon name="donation"/>
-                            </IconButton>
+                            type="text"/>
+                            <Icon name="down-arrow" className="w-4 -ml-5"/> 
+                        </div>
+                    </td>
+                    <td>
+                        <div className="flex">
+                            <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
+                                type="text"/>
+                                <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                 </tr>
@@ -155,11 +152,12 @@ export default function UsersGrid({numberOfRows, paginate}) {
                             <input id={user.id} checked={selected.includes(user.id)} onChange={handleSelect}
                                    type="checkbox"/>
                         </td>
-                        <td>{user.username}</td>
-                        <td>{user.department}</td>
-                        <td>{user.impact}</td>
-                        <td>{user.coins}</td>
-                        <td>{user.pending}</td>
+                        <td className="border-r border-slate-300">{user.username}</td>
+                        <td className="border-r border-slate-300">{user.department}</td>
+                        <td className="border-r border-slate-300">{user.impact}</td>
+                        <td className="border-r border-slate-300">{user.coins}</td>
+                        <td className="border-r border-slate-300">{user.pending}</td>
+                        <td className="border-r border-slate-300">{user.completed}</td>
                     </tr>
                 )}
                 </tbody>

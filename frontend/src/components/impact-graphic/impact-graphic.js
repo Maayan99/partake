@@ -4,44 +4,43 @@ import LearnMoreTooltip from "@components/components/pop-ups/learn-more-tooltip/
 const ImpactCause = ({impactCategory}) => {
 
     return (
-        <div className="flex flex-col items-center justify-between w-max relative">
-            <div className="relative group">
-                <Icon name={impactCategory.icon} className={`w-10 h-10 mb-2`}/>
-                {impactCategory.tooltips && <LearnMoreTooltip tooltips={impactCategory.tooltips}/>}
-            </div>
+        <div className="flex flex-col items-center w-min relative min-w-[50px]">
+            <Icon name={impactCategory.icon} className={`min-w-[40px] max-w-[40px] aspect-square mb-2`}/>
             <div>
                 {impactCategory.boldText &&
                     <h1 className="font-bold text-lg text-center">{impactCategory.boldText}</h1>}
-                {impactCategory.text && <span className="">{impactCategory.text}</span>}
+                {impactCategory.text && <p className="text-center">{impactCategory.text}</p>}
             </div>
         </div>
     )
 }
 
-export default function ImpactGraphic({impact, showIconsBelow}) {
+export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
     const {categories, type, total} = impact;
 
 
     return (
-        <div className="flex flex-col justify-between text-sm w-max space-y-4">
-            <div className="flex text-blue space-x-10 my-5">
-                {type && <Icon name={type} className="w-10 h-10"/>}
-                <div className="flex space-x-10 w-full">
-                    {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
-                </div>
+        <div className="grid grid-cols-[18%_80%] text-sm w-max gap-4">
+            {type && <Icon name={type} className="w-16 aspect-square border border-2 rounded-full p-2"/>}
+            <div className="flex space-x-16 w-full ml-10">
+                {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
             </div>
-            {showIconsBelow &&
+            {showIconsBelow && <div className="flex justify-center">
+                <Icon name="info-circle" className="h-6"/>
+            </div>}
+            {showIconsBelow ?
                 <div className="space-y-2">
-                    <div className="flex space-x-4 items-center">
-                        <Icon name="info-circle" className="h-6 w-6"/>
-                        <h1>How does this help?</h1>
-                    </div>
-                    <div className="flex space-x-4">
+                    <h1 className="text-lg">How does this help?</h1>
+                    <div className="flex space-x-12">
                         {categories.map(category => (category.tooltips &&
-                            category.tooltips.map(tooltip => <Icon name={tooltip.icon}
-                                                                                            className="h-14"/>)))}
+                            category.tooltips.map(tooltip => <div className="relative group">
+                                <Icon name={tooltip.icon}
+                                      className="h-6 mt-3"/>
+                                <LearnMoreTooltip tooltip={tooltip}/>
+                            </div>)))}
                     </div>
-                </div>}
+                </div> :
+                <>{!dontShowTotal && <h1 className="text-blue col-span-2">Your impact score: 7</h1>}</>}
         </div>
     );
 }

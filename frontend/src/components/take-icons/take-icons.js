@@ -1,7 +1,7 @@
 import Icon from "@components/components/common/icon/icon";
 
 
-export default function TakeIcons({impactType, coins, duration}) {
+export default function TakeIcons({impactType, coins, duration, displayRewardIcon}) {
     const getDurationText = () => {
         if (duration < 60) {
             return <p className="text-[7pt] -translate-y-[153%] leading-3 text-center">{duration}<br/>Min</p>;
@@ -35,7 +35,15 @@ export default function TakeIcons({impactType, coins, duration}) {
                 <Icon name="partake-coins" className="w-2.5 mt-1 mb-1"/>
                 <span className="text-xs -mt-1 -p-1">{coins}</span>
             </div>
-            {duration ?
+
+            {displayRewardIcon &&
+                <div className="flex flex-col justify-center items-center bg-white
+            border-solid border-2 border-blue rounded-full p-2.5 w-12 h-12 text-blue">
+                    <Icon name="reward"/>
+                </div>
+            }
+
+            {duration &&
                 <div className="text-white w-12 h-12">
                     <svg className="w-12 h-12 fill-white"  viewBox="0 0 64.57 65.694">
                         <g id="Group_186" data-name="Group 186" transform="translate(2.087 2.087)">
@@ -44,8 +52,8 @@ export default function TakeIcons({impactType, coins, duration}) {
                         </g>
                     </svg>
                     {getDurationText()}
-                </div>
-            : <></>}
+                </div>}
+
         </div>
     )
 }

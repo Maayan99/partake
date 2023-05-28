@@ -193,52 +193,55 @@ const takeData = [
             {
                 id: "12ffbbb28978fef6",
                 text: 'Look how many emails I deleted!',
-                image: 'give_card_renovation_day_home.png'
+                image: 'emails1.png',
+                user: {
+                    id: 'aiua123hvefwli1u32h',
+                },
             },
             {
                 id: "faa623ba3bff7565",
                 text: 'That was easy',
-                image: 'give_card_sustainable_farming_volunteer.png',
-                user: {
-                    id: 'owuadsfhli1u32e',
-                },
-            },
-            {
-                id: "d0d057f3401ed49b",
-                text: 'Like cleaning my desk',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                image: 'emails2.png',
                 user: {
                     id: 'oiuadsfhli1u31e',
                 },
             },
             {
-                id: "db2fd9d5f571b962",
-                text: 'Nothing to add',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                id: "d0d057f3401ed49b",
+                text: 'Like cleaning my desk',
+                image: 'emails3.png',
                 user: {
                     id: 'aiua123hvefwli1u32e',
                 },
             },
             {
+                id: "db2fd9d5f571b962",
+                text: 'Nothing to add',
+                image: 'emails4.png',
+                user: {
+                    id: 'aiua123hvefwli1u32g',
+                },
+            },
+            {
                 id: "928966f939ccd19f",
                 text: '',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                image: 'emails5.png',
                 user: {
-                    id: 'oiuadsfhli1u32d',
+                    id: 'aiuadsfhvefwli1u32c',
                 },
             },
             {
                 id: "d16b1f3f061a9e62",
                 text: 'I recommend emptying the bin as well',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                image: 'emails9.png',
                 user: {
-                    id: 'oiuadsfhli1u32d',
+                    id: 'aiuads1hvefwli1u32d',
                 },
             },
             {
                 id: "76ef74ccdbfdeaa1",
                 text: 'Wow',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                image: 'emails7.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
                 },
@@ -246,17 +249,17 @@ const takeData = [
             {
                 id: "8234dabb7bfbc1ae",
                 text: '',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                image: 'emails8.png',
                 user: {
-                    id: 'oiuadsfhli1u32d',
+                    id: 'aiua123hvefwli1u32j',
                 },
             },
             {
                 id: "9958b72228e7a462",
                 text: 'I usually delete a hundered emails per day. I think my account had been hacked',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                image: 'emails10.png',
                 user: {
-                    id: 'oiuadsfhli1u32d',
+                    id: 'aiua123hvefwli1u32f',
                 },
             },
 
@@ -329,6 +332,7 @@ const takeData = [
         location: 'Online',
         difficultyLevel: 'Easy',
         participants: 47,
+        type: 'challenge',
 
         whatToDo: 'The "21-Day Meditation Challenge " is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
         tasks: [
@@ -414,7 +418,7 @@ const takeData = [
 
         impact:
             {
-                type: 'Wellness',
+                type: 'wellness',
                 categories: [
                     {
                         icon: 'happy',
@@ -422,11 +426,11 @@ const takeData = [
                         text: '',
 
 
-                        tooltip:
+                        tooltips: [
                             {
                                 text: 'Research shows that participants who practiced mindfulness meditation on a daily basis  experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
                                 icon: 'relaxation',
-                            },
+                            }, ]
                     },
                     {
                         icon: 'balance',
@@ -434,7 +438,7 @@ const takeData = [
                         text: '',
 
 
-                        tooltips:
+                        tooltips: 
                             [
                                 {
                                     text: 'A study reported that individuals who engaged in regular mindfulness meditation experienced a 20% decrease in symptoms of anxiety and a 15% decrease in symptoms of depression (Hofmann et al., 2010).',
@@ -478,6 +482,8 @@ const takeData = [
     // Third featured take
     {
         id: "0b395cd505248fa2",
+        type: "survey",
+
         coverImage: 'take_card_equality_diversity_inclusion.png',
         title: 'Equality, Diversity, Inclusion',
         author: 'Anonymous Bee',
@@ -488,19 +494,21 @@ const takeData = [
         category: 'Learning and Surveys',
         duration: 60,
         participants: 31,
+
     },
 
 
     // For you challenges
     {
         id: "sdgfhtyrujhfnmjf",
+        type: 'challenge',
         coverImage: 'take_card_recycle.png',
         title: 'Recycling Department War.',
         author: 'HR, Abraham’s Hostel.',
         impactType: 'Environmental',
         subject: "Environmental",
         shortDescription: 'Our exciting interdepartmental recycling competition! Who can make the biggest impact?',
-        description: 'Get ready for an exhilarating recycling challenge between departments! In this thrilling competition, teams will go head-to-head to determine who can make the most significant environmental impact. Watch our informative video, provided in collaboration with Tamir Corporation, to learn which materials should be recycled and join us in this exciting sustainability initiative. Click here to watch the video: [insert link to the video].',
+        description: 'Get ready for an exhilarating recycling challenge between departments! In this thrilling competition, teams will go head-to-head to determine who can make the most significant environmental impact. Please watch this video by Tamir corporation:',
         coins: 50,
         progress: 20,
         category: 'For you',
@@ -511,7 +519,12 @@ const takeData = [
         difficultyLevel: 'Intermediate',
         participants: 78,
 
+
+        displayRewardIcon: true,
+
         isCompetition: true,
+
+        videoLink: 'https://www.youtube.com/embed/5TmjKUrYvvk',
 
         whatToDo: 'Collect as many packages as possible. it can be  plastic packages, paper packaging, glass, and cans.Take a picture of each full trash bag. Share the picture on the challenge feed with the type of material collected.',
         tasks: [
@@ -545,8 +558,9 @@ const takeData = [
                                 ]
                         },
                 },
+                videoLink: 'https://www.youtube.com/embed/5TmjKUrYvvk',
                 shortText: "",
-                longText: "Watch the video in the description.",
+                longText: 'Watch the video and answer a question about it by clicking "Validate Task 1".',
             },
             {
                 id: 2,
@@ -596,8 +610,33 @@ const takeData = [
 
 
         impact: {
-            type: 'Environmental',
-            categories: ['carbon'],
+            type: 'environmental',
+            categories:
+                [
+                    {
+                        icon: 'carbon',
+                        tooltips:
+                            [
+                                {
+                                    id: '1',
+                                    text: 'hi',
+                                    icon: 'waste'
+                                },
+
+                                {
+                                    id: '1',
+                                    text: 'hi',
+                                    icon: 'paper'
+                                },
+
+                                {
+                                    id: '1',
+                                    text: 'hi',
+                                    icon: 'recycle'
+                                }
+                            ],
+                    }
+                ],
             boldText: 'Co2 emissions',
             text: '',
             tooltip:
@@ -634,12 +673,25 @@ const takeData = [
                 text: 'Every participant will earn 50 points.'
             },
             {
-                amount: 50,
+                icon: 'reward',
                 text: 'Every The participants from the winning department will receive a reusable bottle. will earn 50 points.'
             }
         ],
 
         bonus: '',
+
+        partners:
+            {
+                text: 'Haiush ;)',
+                array: [
+                    {
+                        id: '1',
+                        image: 'adam',
+                        name: 'adam',
+                        text: 'An Israeli non-profit organization dedicated to promoting inclusion and improving the lives of people with disabilities. We collaborate with the social business "HaMzeyon" in Jerusalem, offering employment opportunities for individuals with disabilities.',
+                    },
+                ]
+            },
     },
 
 

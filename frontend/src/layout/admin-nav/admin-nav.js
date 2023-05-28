@@ -5,11 +5,6 @@ export default function AdminNav( {baseUrl} ) {
     const [selected, setSelected] = useState('1')
     const options = [
         {
-            url: 'pending-requests',
-            text: "Pending Requests",
-            id: '1'
-        },
-        {
             url: 'dashboard',
             text: "Dashboard",
             id: '2'
@@ -97,6 +92,10 @@ export default function AdminNav( {baseUrl} ) {
 
     return (
         <div className="bg-white shadow-inner w-80 border border-gray border-l-0 space-y-7 py-8">
+            <div className="flex items-center">
+            <NavButton onClick={handleClick} value='1'>Pending Requests</NavButton>
+                <div className="h-3.5 w-3.5 bg-orange-300 rounded-full"/>
+            </div>
             {options.map(option => (option.id !== selected) ?
                 <NavButton onClick={handleClick} value={option.id} key={option.id}>{option.text}</NavButton> :
                 <NavButton onClick={handleClick} value={option.id} key={option.id} className="font-bold">{option.text}</NavButton>)}

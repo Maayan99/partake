@@ -8,7 +8,8 @@ const users = [
         department: 'Marketing',
         impact: '1200',
         coins: '200',
-        pending: '3'
+        pending: '3',
+        completed: '20'
     },
     {
         id: 'oiuadsfhli1u31e',
@@ -19,7 +20,8 @@ const users = [
         department: 'Marketing',
         impact: '3000',
         coins: '200',
-        pending: '3'
+        pending: '3',
+        completed: '25'
     },
     {
         id: 'owuadsfhli1u32e',
@@ -30,7 +32,8 @@ const users = [
         department: 'Marketing',
         impact: '1100',
         coins: '2000',
-        pending: '0'
+        pending: '0',
+        completed: '40'
     },
     {
         id: 'oiuadsfhli1u32d',
@@ -42,6 +45,7 @@ const users = [
         impact: '5400',
         coins: '1000',
         pending: '0',
+        completed: '10'
     },
     {
         id: 'aiuadsfhvefwli1u32c',
@@ -52,7 +56,8 @@ const users = [
         department: 'Development',
         impact: '240',
         coins: '1050',
-        pending: '10'
+        pending: '10',
+        completed: '43'
     },
     {
         id: 'aiuads1hvefwli1u32d',
@@ -63,84 +68,91 @@ const users = [
         department: 'Development',
         impact: '2010',
         coins: '300',
-        pending: '2'
+        pending: '2',
+        completed: '12'
     },
     {
         id: 'aiua123hvefwli1u32e',
         username: 'Henry Moore',
         email: 'hmoore@gmail.com',
         password: 'helloworld',
-        profileImage: 'profile_image_6.jpeg',
+        profileImage: 'avatar-19.png',
         department: 'Development',
         impact: '3280',
         coins: '0',
-        pending: '0'
+        pending: '10'
     },
     {
         id: 'aiua123hvefwli1u32f',
         username: 'Isabella Ali',
         email: 'isabelali@gmail.com',
         password: 'helloworld',
-        profileImage: 'profile_image_6.jpeg',
+        profileImage: 'avatar-14.png',
         department: 'Design',
         impact: '4000',
         coins: '1000',
-        pending: '0'
+        pending: '0',
+        completed: '41'
     },
     {
         id: 'aiua123hvefwli1u32g',
         username: 'Jack Lemon',
         email: 'walterm@gmail.com',
         password: 'helloworld',
-        profileImage: 'profile_image_6.jpeg',
+        profileImage: 'avatar-10.png',
         department: 'Design',
         impact: '1400',
         coins: '340',
-        pending: '0'
+        pending: '0',
+        completed: '120'
     },
     {
         id: 'aiua123hvefwli1u32h',
         username: 'Katherine Limestone',
         email: 'kat99load@gmail.com',
         password: 'helloworld',
-        profileImage: 'profile_image_6.jpeg',
+        profileImage: 'avatar-16.png',
         department: 'Design',
         impact: '1330',
         coins: '545',
-        pending: '4'
+        pending: '4',
+        completed: '31'
     },
     {
         id: 'aiua123hvefwli1u32i',
         username: "Nasreen O'hara",
         email: 'jgarland@gmail.com',
         password: 'helloworld',
-        profileImage: 'profile_image_6.jpeg',
+        profileImage: 'avatar-17.png',
         department: 'Design',
         impact: '1330',
         coins: '545',
-        pending: '4'
+        pending: '4',
+        completed: '60'
     },
     {
         id: 'aiua123hvefwli1u32j',
         username: 'Geoff Beck',
         email: 'jbeckofficial@gmail.com',
         password: 'helloworld',
-        profileImage: 'profile_image_6.jpeg',
+        profileImage: 'avatar-18.png',
         department: 'Design',
         impact: '2050',
         coins: '760',
-        pending: '1'
+        pending: '1',
+        completed: '120'
     },
     {
         id: 'aiua123hvefwli1u32k',
         username: 'Michelle Stipe',
         email: 'rema@gmail.com',
         password: 'helloworld',
-        profileImage: 'profile_image_6.jpeg',
+        profileImage: 'avatar-6.png',
         department: 'Accounts',
         impact: '3020',
         coins: '1030',
-        pending: '1'
+        pending: '1',
+        completed: '21'
     },
     {
         id: 'aiua123hvefwli1u32m',
@@ -151,7 +163,8 @@ const users = [
         department: 'Accounts',
         impact: '3020',
         coins: '1030',
-        pending: '1'
+        pending: '1',
+        completed: '75'
     },
     {
         id: 'aiua123hvefwli1u32l',
@@ -162,7 +175,8 @@ const users = [
         department: 'Accounts',
         impact: '2800',
         coins: '156',
-        pending: '2'
+        pending: '2',
+        completed: '25'
     },
     {
         id: 'aiua123hvefwli1u32n',
@@ -173,7 +187,8 @@ const users = [
         department: 'Customer success',
         impact: '4450',
         coins: '2000',
-        pending: '1'
+        pending: '1',
+        completed: '20'
     },
     {
         id: 'aiua123hvefwli1u32o',
@@ -184,7 +199,8 @@ const users = [
         department: 'Customer success',
         impact: '5000',
         coins: '210',
-        pending: '1'
+        pending: '1',
+        completed: '10'
     },
     {
         id: 'aiua123hvefwli1u32p',
@@ -195,7 +211,8 @@ const users = [
         department: 'Customer success',
         impact: '1040',
         coins: '500',
-        pending: '4'
+        pending: '4',
+        completed: '23'
     },
     {
         id: 'aiua123hvefwli1u32q',
@@ -206,7 +223,8 @@ const users = [
         department: 'Sales',
         impact: '3000',
         coins: '500',
-        pending: '1'
+        pending: '1',
+        completed: '24'
     },
     {
         id: 'aiua123hvefwli1u32r',
@@ -217,7 +235,8 @@ const users = [
         department: 'Sales',
         impact: '1100',
         coins: '450',
-        pending: '1'
+        pending: '1',
+        completed: '40'
     },
     {
         id: 'aiua123hvefwli1u32s',
@@ -228,7 +247,8 @@ const users = [
         department: 'Sales',
         impact: '1200',
         coins: '980',
-        pending: '4'
+        pending: '4',
+        completed: '73'
     },
     {
         id: 'aiua123hvefwli1u32t',
@@ -239,7 +259,8 @@ const users = [
         department: 'Sales',
         impact: '1050',
         coins: '980',
-        pending: '4'
+        pending: '4',
+        completed: '22'
     },
     {
         id: 'aiua123hvefwli1u32u',
@@ -250,7 +271,8 @@ const users = [
         department: 'Management',
         impact: '3910',
         coins: '110',
-        pending: '0'
+        pending: '0',
+        completed: '10'
     },
     {
         id: 'aiua123hvefwli1u32v',
@@ -261,7 +283,8 @@ const users = [
         department: 'Management',
         impact: '2060',
         coins: '50',
-        pending: '0'
+        pending: '0',
+        completed: '20'
     },
     {
         id: 'aiua123hvefwli1u32w',
@@ -272,7 +295,8 @@ const users = [
         department: 'Management',
         impact: '1010',
         coins: '20',
-        pending: '0'
+        pending: '0',
+        completed: '63'
     },
     {
         id: 'aiua123hvefwli1u32x',
@@ -283,7 +307,8 @@ const users = [
         department: 'Management',
         impact: '3890',
         coins: '800',
-        pending: '0'
+        pending: '0',
+        completed: '28'
     },
 ]
 
