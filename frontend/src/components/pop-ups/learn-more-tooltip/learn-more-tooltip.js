@@ -3,7 +3,7 @@ import Icon from "@components/components/common/icon/icon";
 export default function LearnMoreTooltip({tooltip}) {
     return (
         <div
-            className={`hidden flex-col items-center absolute text-left bg-white w-72 shadow-lg
+            className={`hidden flex-col top-12 left-8 items-center absolute text-left bg-white w-72 shadow-lg
                 group-hover:flex p-4 border border-gray z-10`}>
             <p className="text-md font-bold">How does it help?</p>
                 <div>
