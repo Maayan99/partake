@@ -124,6 +124,13 @@ const TopAfterStarted = ({
                 <div className="space-y-5">
                     <h1 className="font-bold text-xl">Task {currentTask + 1}</h1>
                     <div dangerouslySetInnerHTML={{__html: tasks[currentTask]?.longText}}></div>
+                    {tasks[currentTask].videoLink &&
+                        <iframe className="aspect-video w-full" src={tasks[currentTask].videoLink}
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen></iframe>
+
+                    }
                 </div>
                 <ExpandedProgressBar numberOfTasks={tasks.length} numberOfFulfilledTasks={currentTask + 1}
                                      viewedTask={currentTask}/>
@@ -131,7 +138,9 @@ const TopAfterStarted = ({
                     Task {currentTask + 1}</BlueButton>
             </div>
             <div className="max-h-[420px] flex flex-col justify-between">
+                <h1 className="mb-2">Your impact</h1>
                 <ImpactGraphic impact={impact} setPingCategory={setPingCategory}/>
+                <h1 className="mt-7 mb-3">Leaderboard</h1>
                 {take.isCompetition ? <Leaderboard/>
                     : <ParticipantsGrid participants={take.participants} handleInviteFriends={handleInviteFriends}/>}
 
@@ -165,19 +174,19 @@ export default function TakePage() {
                         },
                     ],
             },
-            {
-                id: '2',
-                boldText: '20 Liters',
-                icon: 'water',
-                tooltipText: 'Carbon emissions info',
-                tooltips:
-                    [
-                        {
-                            text: 'Each meal donated helps another child smile more',
-                            icon: 'community',
-                        },
-                    ],
-            },
+            // {
+            //     id: '2',
+            //     boldText: '20 Liters',
+            //     icon: 'water',
+            //     tooltipText: 'Carbon emissions info',
+            //     tooltips:
+            //         [
+            //             {
+            //                 text: 'Each meal donated helps another child smile more',
+            //                 icon: 'community',
+            //             },
+            //         ],
+            // },
             {
                 id: '3',
                 boldText: '200 M2',
@@ -256,7 +265,7 @@ export default function TakePage() {
                         <TopAfterStarted setPingCategory={setPingCategory} take={take} setStarted={setStarted}
                                          handleLeaveChallenge={handleLeaveChallenge}
                                          handleInviteFriends={handleInviteFriends}
-                                         impact={{categories: impactMade, total: totalImpactScore}}
+                                         impact={{categories: impactMade, total: totalImpactScore, type: 'environmental'}}
                                          setDisplayValidationPopUp={setDisplayValidationPopUp}
                                          currentTask={currentTask}/> :
                         <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
@@ -275,8 +284,10 @@ export default function TakePage() {
                         <h1 className="font-bold">Description</h1>
                         <p className="text-gray">{take.description}</p>
                         {take.videoLink &&
-                        <iframe src={take.videoLink} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-                        </iframe>
+                            <iframe className="aspect-video w-full" src={take.videoLink}
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen></iframe>
                         }
                     </div>
                     {take.whatToDo && <div className="space-y-5">

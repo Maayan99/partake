@@ -425,7 +425,7 @@ const takeData = [
                         text: '',
 
 
-                        tooltip:
+                        tooltips:
                             {
                                 text: 'Research shows that participants who practiced mindfulness meditation on a daily basis  experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
                                 icon: 'relaxation',
@@ -503,7 +503,7 @@ const takeData = [
         impactType: 'Environmental',
         subject: "Environmental",
         shortDescription: 'Our exciting interdepartmental recycling competition! Who can make the biggest impact?',
-        description: 'Get ready for an exhilarating recycling challenge between departments! In this thrilling competition, teams will go head-to-head to determine who can make the most significant environmental impact. Watch our informative video, provided in collaboration with Tamir Corporation, to learn which materials should be recycled and join us in this exciting sustainability initiative. Click here to watch the video: [insert link to the video].',
+        description: 'Get ready for an exhilarating recycling challenge between departments! In this thrilling competition, teams will go head-to-head to determine who can make the most significant environmental impact. Please watch this video by Tamir corporation:',
         coins: 50,
         progress: 20,
         category: 'For you',
@@ -516,7 +516,7 @@ const takeData = [
 
         isCompetition: true,
 
-        videoLink: 'https://www.youtube.com/watch?v=5TmjKUrYvvk',
+        videoLink: 'https://www.youtube.com/embed/5TmjKUrYvvk',
 
         whatToDo: 'Collect as many packages as possible. it can be  plastic packages, paper packaging, glass, and cans.Take a picture of each full trash bag. Share the picture on the challenge feed with the type of material collected.',
         tasks: [
@@ -550,8 +550,9 @@ const takeData = [
                                 ]
                         },
                 },
+                videoLink: 'https://www.youtube.com/embed/5TmjKUrYvvk',
                 shortText: "",
-                longText: "Watch the video in the description.",
+                longText: 'Watch the video and answer a question about it by clicking "Validate Task 1".',
             },
             {
                 id: 2,
@@ -601,8 +602,33 @@ const takeData = [
 
 
         impact: {
-            type: 'Environmental',
-            categories: ['carbon'],
+            type: 'environmental',
+            categories:
+                [
+                    {
+                        icon: 'carbon',
+                        tooltips:
+                            [
+                                {
+                                    id: '1',
+                                    text: 'hi',
+                                    icon: 'waste'
+                                },
+
+                                {
+                                    id: '1',
+                                    text: 'hi',
+                                    icon: 'paper'
+                                },
+
+                                {
+                                    id: '1',
+                                    text: 'hi',
+                                    icon: 'recycle'
+                                }
+                            ],
+                    }
+                ],
             boldText: 'Co2 emissions',
             text: '',
             tooltip:
