@@ -702,7 +702,7 @@ const takeData = [
         author: 'Partake',
         impactType: 'environmental',
         subject: "environmental",
-        shortDescription: "sharing a ride together and reducing personal car usauge can have major impact on the environment.",
+        shortDescription: "Sharing a ride together and reducing personal car usauge can have major impact on the environment.",
         description: '',
         coins: 50,
         progress: 0,
