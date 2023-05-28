@@ -555,7 +555,7 @@ const takeData = [
                     type: 'image',
                     icon: 'Orange pastic bag.',
                     infoText: 'It is estimated that plastic bags can not decompose for 100 to 500 years.',
-                    multiValidationData:
+                    imageValidationData:
                         {},
                 },
                 shortText: "",
