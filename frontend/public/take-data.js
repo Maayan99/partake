@@ -121,19 +121,19 @@ const takeData = [
         title: 'Clean Inbox, Clear Conscience',
         author: 'Partake',
         subject: "Environmental",
-        shortDescription: 'Even a small action such as deleting emails  can reduce carbon emissions.',
+        shortDescription: 'Even a small action such as deleting emails can reduce carbon emissions.',
         description: "Have you ever thought about the impact that deleting old emails can have on the environment? In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
         coins: 200,
         progress: 33,
         category: 'Environmental',
-        durationText: '10',
+        durationText: '10 minutes',
         numberOfTasks: 3,
         location: 'Online',
         difficultyLevel: 'Easy',
         participants: 27,
         type: 'challenge',
 
-        whatToDo: "Take a screenshot of the number of emails you deleted before  and another one  after. Don't forget to encourage your coworkers to participate as well!",
+        whatToDo: "Take a screenshot of the number of emails you deleted before and another one  after. Don't forget to encourage your coworkers to participate as well!",
         tasks:
             [
                 {
@@ -197,7 +197,7 @@ const takeData = [
             },
             {
                 id: "faa623ba3bff7565",
-                text: 'This felt so refreshing',
+                text: 'That was easy',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'owuadsfhli1u32e',
@@ -205,7 +205,7 @@ const takeData = [
             },
             {
                 id: "d0d057f3401ed49b",
-                text: 'This felt so refreshing',
+                text: 'Like cleaning my desk',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u31e',
@@ -213,7 +213,7 @@ const takeData = [
             },
             {
                 id: "db2fd9d5f571b962",
-                text: 'This felt so refreshing',
+                text: 'Nothing to add',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'aiua123hvefwli1u32e',
@@ -221,7 +221,7 @@ const takeData = [
             },
             {
                 id: "928966f939ccd19f",
-                text: 'This felt so refreshing',
+                text: '',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
@@ -229,7 +229,7 @@ const takeData = [
             },
             {
                 id: "d16b1f3f061a9e62",
-                text: 'This felt so refreshing',
+                text: 'I recommend emptying the bin as well',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
@@ -237,7 +237,7 @@ const takeData = [
             },
             {
                 id: "76ef74ccdbfdeaa1",
-                text: 'This felt so refreshing',
+                text: 'Wow',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
@@ -245,7 +245,7 @@ const takeData = [
             },
             {
                 id: "8234dabb7bfbc1ae",
-                text: 'This felt so refreshing',
+                text: '',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
@@ -253,7 +253,7 @@ const takeData = [
             },
             {
                 id: "9958b72228e7a462",
-                text: 'This felt so refreshing',
+                text: 'I usually delete a hundered emails per day. I think my account had been hacked',
                 image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u32d',
@@ -314,7 +314,7 @@ const takeData = [
     {
         id: "a6289983652a8ef8",
         coverImage: 'take_card_mindful_moment.png',
-        title: '21 days of mindfulness.',
+        title: '21 Days of Mindfulness.',
         author: 'Partake',
         impactType: 'Wellness',
         subject: "Wellness",
@@ -375,7 +375,7 @@ const takeData = [
                                 ]
                         },
                 },
-                shortText: "",
+                shortText: "What apps did your collegues choose?",
                 longText: "Open your favorite meditation app or track, and meditate every day for a minimum of  5 minutes."
             },
             {
@@ -388,7 +388,7 @@ const takeData = [
                     numberValidationData:
                         {},
                 },
-                shortText: "",
+                shortText: "See how your collegues did",
                 longText: "Welcome back! Did you achieve your goal?",
             },
 
@@ -493,7 +493,7 @@ const takeData = [
 
     // For you challenges
     {
-        id: "3",
+        id: "sdgfhtyrujhfnmjf",
         coverImage: 'take_card_recycle.png',
         title: 'Recycling Department War.',
         author: 'HR, Abraham’s Hostel.',
@@ -548,6 +548,32 @@ const takeData = [
                 shortText: "",
                 longText: "Watch the video in the description.",
             },
+            {
+                id: 2,
+                validation: {
+                    text: "How many bags have you collected in the past 14 days?",
+                    type: 'free text',
+                    icon: 'plastic bottle',
+                    infoText: 'Recycling one ton of plastic saves around 5,774 kWh of energy.',
+                    multiValidationData:
+                        {},
+                },
+                shortText: "",
+                longText: "Take Tamir orange bags home, and collect packages that can be recycled.",
+            },
+            {
+                id: 3,
+                validation: {
+                    text: "Upload your photo",
+                    type: 'image',
+                    icon: 'Orange pastic bag.',
+                    infoText: 'It is estimated that plastic bags can not decompose for 100 to 500 years.',
+                    multiValidationData:
+                        {},
+                },
+                shortText: "",
+                longText: "Take a photo of the full Tamir Plastic bags next to the orange trash bin.",
+            },
         ],
 
 
@@ -583,8 +609,20 @@ const takeData = [
 
         tips: [
             {
-                text: "",
+                text: "Encourage your coworkers to participate and collect recyclable materials.",
                 id: 1,
+            },
+            {
+                text: "Make sure to properly sort and clean the recyclable materials before collecting them.",
+                id: 2,
+            },
+            {
+                text: "Consider setting up designated recycling bins in your workplace to make it easier for everyone to participate.",
+                id: 3,
+            },
+            {
+                text: "Remember, recycling is a simple but effective way to reduce waste and protect the environment!",
+                id: 4,
             },
         ],
 
@@ -593,7 +631,11 @@ const takeData = [
         reward: [
             {
                 amount: 50,
-                text: ''
+                text: 'Every participant will earn 50 points.'
+            },
+            {
+                amount: 50,
+                text: 'Every The participants from the winning department will receive a reusable bottle. will earn 50 points.'
             }
         ],
 
@@ -844,7 +886,7 @@ const takeData = [
     {
         id: "948fe332bf68fb37",
         coverImage: 'take_card_office_flex.png',
-        title: 'Office Flex',
+        title: 'Strech Break',
         author: 'Anonymous Bee',
         shortDescription: '',
         impact: {

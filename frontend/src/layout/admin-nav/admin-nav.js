@@ -96,7 +96,7 @@ export default function AdminNav( {baseUrl} ) {
     })
 
     return (
-        <div className="bg-white shadow-inner w-56 border border-gray border-l-0 space-y-7 py-4">
+        <div className="bg-white shadow-inner w-80 border border-gray border-l-0 space-y-7 py-8">
             {options.map(option => (option.id !== selected) ?
                 <NavButton onClick={handleClick} value={option.id} key={option.id}>{option.text}</NavButton> :
                 <NavButton onClick={handleClick} value={option.id} key={option.id} className="font-bold">{option.text}</NavButton>)}

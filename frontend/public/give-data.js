@@ -49,8 +49,8 @@ const template = {
 const giveData = [
     {
         id: "18",
-        title: "Goods Donation For “Ha’Metsion”.",
-        coverImage: 'give_card_food_basket_distribution.png',
+        title: "Goods Donation for “Ha’Metsion”.",
+        coverImage: 'shekel_hamezion_donations.png',
         activityType: 'goods-donation',
         author: 'Shekel Association',
         DateTime:"",
@@ -167,9 +167,9 @@ const giveData = [
     },
     {
         id: "20",
-        title: 'Ein-Gedi national Park cleaning day',
+        title: 'Ein-Gedi National Park Cleaning Day',
         coverImage: '',
-        type: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        activityType: 'Field Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'רשות הטבע והגנים & Clean Coin.',
         about: "Ein Gedi National Park is a nature reserve located in the Judean Desert of Israel, near the Dead Sea. The park features a lush oasis with waterfalls and streams, surrounded by dry desert mountains.The park is home to a variety of flora and fauna, including ibex, hyrax, and many species of birds. Ein Gedi is a popular destination for nature lovers, hikers, offering a unique and stunning contrast between the desert and oasis environments.Abraham Hostel's HR department is proud to partner with in and, “Israel Nature and Parks Authority” (רשות הטבע והגנים), to organize a day of hiking and cleaning one of Israel’s most unique places.", //About the NGO or the Givedescription: " Cleaning natural resort and national parks helps to reduce litter and waste, protect local wildlife, prevent pollution and enhance natural beauty of the park for visitors,Together, as volunteers we can make a positive impact, learn about the Ein-Gedi’s environment, wildlife and history. Ein-Gedi is a stunning natural reserve that can be enjoyed and preserved through volunteer efforts.",
         skills: ['Coding', 'Teaching'],
@@ -192,14 +192,16 @@ const giveData = [
     },
     {
         id: '21',
-        title: 'Donate To Our Animal Shelter.',
+        title: 'Donate to Our Animal Shelter.',
         coverImage: '',
-        type: 'Fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
-        author: 'SPCA Isreal (צער בעלי חיים)',
+        activityType: 'fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        author: 'SPCA Israel (צער בעלי חיים)',
         about: "Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare", //About the NGO or the Give
         category: 'For you',
         description: "Donations for animals also allow us to operate our clinic for longer hours, subsidize various surgeries and treatments, improve the conditions of the animals in our care, operate more rescue vehicles to assist animals in need, conduct educational activities for future generations, and more. Come and do good by donating from the bottom of your heart.",
         location: 'online',
+        parking: 'n/a',
+        dateTime:'n/a',
         contactDetails:
             {
                 name: 'Chaya, head of SPCA Isreal jerusalem',
@@ -258,9 +260,9 @@ const giveData = [
     },
     {
         id: '22',
-        title: 'English teacher for children and youth',
+        title: 'English Teacher for Children and Youth',
         coverImage: '',
-        type: 'Online Volunteering', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
+        activityType: 'online', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: "Kidum No'ar Kiryat Gat",
         about: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.", //About the NGO or the Give
         description: "We are seeking volunteers for personal and educational mentoring in English for these students.  The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied.  The commitment is until the end of the academic year.",
@@ -321,37 +323,21 @@ const giveData = [
         aboutTheCause: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.",
         participants: 23,
     },
-    {
-        id: '1',
-        title: 'Shekel Hamzion Donations',
-        author: 'Shekel',
-        duration: 3,
-        location: 'Jerusalem',
-        donations: true,
-        coverImage: 'shekel_hamezion_donations.png',
-        activityType: 'field',
-        endDate: '1/5/2023',
-        participants: true,
-        category: 'For you',
-        cause: '',
-        type: '',
-        sponsors: [],
-    },
+
     {
         id: '2',
-        title: 'Ein-Gedi national Park cleaning day',
-        author: 'Israel Nature and Parks Authority and Abraham Hostel',
+        title: 'Collect and Sort Surplus Food for Familiies in Need',
+        author: 'Food Rescuers JLM (מצילות המזון בירושלים)',
         duration: 10,
         location: 'Ein Gedi Park',
         donations: true,
-        coverImage: 'ein_gedi_national_park_cleaning_day.png',
+        coverImage: '',
         activityType: 'field',
         endDate: '21/5/2023',
         participants: false,
-        category: 'For you',
+        category: 'events',
         cause: '',
-        type: '',
-        sponsors: ['kkl.png', 'aroma.png'],
+        type: 'Social',
     },
     {
         id: '3',
@@ -387,12 +373,12 @@ const giveData = [
     },
     {
         id: '5',
-        title: "Planting trees in Ben Shemen Forest",
+        title: "Planting Trees in Ben Shemen Forest",
         author: 'Kakal',
-        duration: 1440,
+        duration: 6,
         location: 'Ben Shemen Forest',
         donations: false,
-        coverImage: 'give_card_autistic_children.png',
+        coverImage: 'give_card_environmental _restoration_day.png',
         activityType: 'field',
         endDate: '14/5/2023',
         participants: '8',
@@ -403,7 +389,7 @@ const giveData = [
     },
     {
         id: '6',
-        title: 'Adopt a donkey',
+        title: 'Adopt a Donkey',
         author: 'Safe haven for donkeys',
         duration: 10,
         location: "Online",
@@ -419,10 +405,10 @@ const giveData = [
     },
     {
         id: '7',
-        title: 'Volunteering with Elderly People',
+        title: 'Volunteering at Yad Sarah',
         author: 'Yad Sarah',
         duration: 8,
-        location: '15 Herzl Street, Jerusalem',
+        location: '124 Herzl BLVD, Jerusalem',
         donations: false,
         coverImage: 'give_card_volunteering_elderly_people.png',
         activityType: 'field',
@@ -451,10 +437,10 @@ const giveData = [
     },
     {
         id: '9',
-        title: 'Food Rescue Mission',
-        author: 'Food Savers',
-        duration: 3,
-        location: '123 Autism Street, Tel Aviv, Israel',
+        title: 'Collect and Sort Surplus Food for Familiies in Need',
+        author: 'Food Rescuers JLM (מצילות המזון)',
+        duration: 5,
+        location: '',
         donations: false,
         coverImage: 'give_card_food_rescue_mission.png',
         activityType: 'field',
@@ -529,8 +515,8 @@ const giveData = [
     },
     {
         id: '14',
-        title: 'Help PTSD Victims in Israel',
-        author: 'NATAL',
+        title: 'Host a Lone Solider for the Weekend',
+        author: 'Big Brother Oganization for Lone Soliders',
         donations: true,
         coverImage: 'give_card_help_PTSD.png',
         activityType: 'donation',
@@ -543,7 +529,7 @@ const giveData = [
     },
     {
         id: '15',
-        title: 'Helping Children with Cancer',
+        title: 'Hel',
         author: 'ICA',
         location: 'Online',
         donations: false,

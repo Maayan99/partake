@@ -17,17 +17,17 @@ const SmallTakeCard = ({take}) => {
     return (
         <div className={`bg-white group w-72 h-[200px] min-w-[288px] rounded-t-lg rounded-b-none transition-all duration-150
          hover:h-[296px] hover:-mb-24 hover:scale-110 hover:-translate-y-4 hover:rounded-lg hover:shadow-md hover:z-10 text-xs`} onClick={handleClick}>
-                <div className="w-full h-[190px] rounded-t-lg flex flex-col justify-between px-0.5 py-0"
+                <div className="w-full h-[190px] rounded-t-lg flex flex-col justify-between px-0.5 py-0 bg-cover"
                      style={{backgroundImage: `
-                     linear-gradient(to bottom, rgba(2,0,36,0) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 66%, rgba(0,0,0,0.65) 100%),
+                     linear-gradient(to bottom, rgba(2,0,36,0) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.65) 100%),
                       url("/assets/PNG/take/${coverImage}")`}}>
                     <TakeIcons impactType={impactType} coins={coins} duration={duration}/>
 
                     <div className="text-white ml-2.5 mb-2.5">
-                        <h2 className="font-bold text-2xl leading-snug drop-shadow-md">
+                        <h2 className="font-bold text-xl leading-none drop-shadow-md">
                             {title}
                         </h2>
-                        <p className="font-italics text-xl leading-snug drop-shadow-md">
+                        <p className="font-italics mt-1 text-lg leading-snug drop-shadow-md">
                             by <em>{author}</em>
                         </p>
                     </div>
