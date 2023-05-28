@@ -620,7 +620,7 @@ const takeData = [
                                 {
                                     id: '1',
                                     text: 'Instead of being buried in a landfill site, the packages you collect will be recycled into different products.',
-                                    icon: 'waste'
+                                    icon: 'waste',
                                 },
 
                                 {
