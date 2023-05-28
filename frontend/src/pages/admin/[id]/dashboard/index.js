@@ -216,7 +216,7 @@ export default function AdminDashboard() {
                         <h1 className="font-bold col-span-3 mt-10">Give</h1>
                         <h1 className="font-bold col-span-3 mt-10">Take</h1>
                         <DashboardCard className="col-span-3 border-[#003ADD] space-y-4 text-blue py-8">
-                            <PrimaryButton className="flex gap-3 items-center py-4 w-64">
+                            <PrimaryButton className="flex gap-3 items-center py-4 w-72 text-xl">
                                 <Icon name="white-plus" className="h-8"/>
                                 Add a new give activity
                             </PrimaryButton>
@@ -226,8 +226,8 @@ export default function AdminDashboard() {
                             </a>
                         </DashboardCard>
                         <DashboardCard className="col-span-3 border-[#003ADD] space-y-4 text-blue py-8">
-                            <PrimaryButton className="flex gap-3 items-center py-4 w-64">
-                                <Icon name="white-plus" className="h-8"/>
+                            <PrimaryButton className="flex gap-3 items-center py-4 w-72 text-xl">
+                                <Icon name="white-plus" className="h-8 text-xl"/>
                                 Add a new take activity
                             </PrimaryButton>
                             <p className="font-bold text-lg">See suggestions</p>
@@ -250,8 +250,7 @@ export default function AdminDashboard() {
 
                         <h1 className="font-bold col-span-3 mt-10 border-[#001C77]">Impact Report</h1>
                         <h1 className="font-bold col-span-3 mt-10 border-[#001C77]">Wallet</h1>
-                        <DashboardCard className="col-span-3 space-y-10">
-                            <h1 className="text-2xl font-bold">Impact</h1>
+                        <DashboardCard className="col-span-3 space-y-10 py-12">
                             <h1 className="text-lg font-bold">Environmental total points: <span
                                 className="text-blue">450</span></h1>
                             <ImpactGraphic impact={environmentalImpact} dontShowTotal={true}/>
@@ -261,44 +260,44 @@ export default function AdminDashboard() {
                             <ImpactGraphic impact={socialImpact} dontShowTotal={true}/>
                         </DashboardCard>
                         <DashboardCard className="col-span-3">
-                            <div className="flex items-center space-x-3">
-                                <h1 className="text-blue text-3xl">280,000</h1>
+                            <div className="flex items-center space-x-3 mt-6">
+                                <h1 className="text-blue font-bold text-3xl">280,000</h1>
                                 <Icon name="partake-coins-small" className="h-8"/>
                             </div>
                             <h3 className="font-bold mb-3">Partake coins in your wallet</h3>
-                            <PrimaryButton className="mb-10">Buy Partake Coins</PrimaryButton>
+                            <PrimaryButton className="mt-5 mb-8 w-56 h-16 px-10 text-xl">Buy Partake Coins</PrimaryButton>
 
                             <div className="flex items-center space-x-3">
-                                <h1 className="text-blue text-3xl">30,000</h1>
+                                <h1 className="text-blue font-bold text-3xl">30,000</h1>
                                 <Icon name="partake-coins-small" className="h-8"/>
                             </div>
-                            <h3 className="font-bold mb-3">Partake coins used this month</h3>
+                            <h3 className="font-bold mb-8">Partake coins used this month</h3>
 
                             <div className="flex items-center space-x-4">
                                 <Icon name="reward" className="h-8"/>
                                 <h1 className="font-bold text-3xl">Reward Program</h1>
 
                             </div>
-                            <h2 className="text-blue text-lg font-bold">Manage program</h2>
+                            <h2 className="text-blue text-lg font-bold mt-6">Manage program</h2>
                             <p className="absolute bottom-3 right-4 font-bold text-blue">Go to wallet</p>
                         </DashboardCard>
 
                         <h1 className="font-bold col-span-6 mt-10">Company's Programs</h1>
                         <DashboardCard className="col-span-2 border-[#010B2D]">
-                            <h1 className="text-xl font-bold">Matching donations</h1>
-                            <h2>310,500$</h2>
+                            <h1 className="text-2xl font-medium mb-2">Matching donations</h1>
+                            <h2 className="font-normal">310,500$</h2>
 
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
                         <DashboardCard className="col-span-2 border-[#010B2D]">
-                            <h1 className="text-xl font-bold">Volunteering grants</h1>
-                            <h2>550</h2>
+                            <h1 className="text-2xl font-medium mb-2">Volunteering grants</h1>
+                            <h2 className="font-normal">550</h2>
 
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
                         <DashboardCard className="col-span-2 border-[#010B2D]">
-                            <h1 className="text-xl font-bold">Company's initiatives</h1>
-                            <h2>1200</h2>
+                            <h1 className="text-2xl font-medium mb-2">Company's initiatives</h1>
+                            <h2 className="font-normal">1200</h2>
 
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
