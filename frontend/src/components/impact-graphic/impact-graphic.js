@@ -4,24 +4,24 @@ import LearnMoreTooltip from "@components/components/pop-ups/learn-more-tooltip/
 const ImpactCause = ({impactCategory}) => {
 
     return (
-        <div className="flex flex-col items-center w-min relative">
-            <Icon name={impactCategory.icon} className={`min-w-[40px] aspect-square mb-2`}/>
+        <div className="flex flex-col items-center w-min relative min-w-[50px]">
+            <Icon name={impactCategory.icon} className={`min-w-[40px] max-w-[40px] aspect-square mb-2`}/>
             <div>
                 {impactCategory.boldText &&
                     <h1 className="font-bold text-lg text-center">{impactCategory.boldText}</h1>}
-                {impactCategory.text && <span className="">{impactCategory.text}</span>}
+                {impactCategory.text && <p className="text-center">{impactCategory.text}</p>}
             </div>
         </div>
     )
 }
 
-export default function ImpactGraphic({impact, showIconsBelow}) {
+export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
     const {categories, type, total} = impact;
 
 
     return (
-        <div className="grid grid-cols-[30%_80%] text-sm w-max gap-4">
-            {type && <Icon name={type} className="aspect-square border border-2 rounded-full p-3"/>}
+        <div className="grid grid-cols-[18%_80%] text-sm w-max gap-4">
+            {type && <Icon name={type} className="w-16 aspect-square border border-2 rounded-full p-2"/>}
             <div className="flex space-x-16 w-full ml-10">
                 {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
             </div>
@@ -40,7 +40,7 @@ export default function ImpactGraphic({impact, showIconsBelow}) {
                             </div>)))}
                     </div>
                 </div> :
-                <h1 className="text-blue col-span-2">Your impact score: 7</h1>}
+                <>{!dontShowTotal && <h1 className="text-blue col-span-2">Your impact score: 7</h1>}</>}
         </div>
     );
 }
