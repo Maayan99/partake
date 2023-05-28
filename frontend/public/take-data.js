@@ -619,19 +619,19 @@ const takeData = [
                             [
                                 {
                                     id: '1',
-                                    text: 'hi',
+                                    text: 'Instead of being buried in a landfill site, the packages you collect will be recycled into different products.',
                                     icon: 'waste'
                                 },
 
                                 {
-                                    id: '1',
-                                    text: 'hi',
+                                    id: '2',
+                                    text: 'Recycling one ton of paper packaging can save around 26,500 to 75,700 liters of water.',
                                     icon: 'paper'
                                 },
 
                                 {
-                                    id: '1',
-                                    text: 'hi',
+                                    id: '3',
+                                    text: "A full  Tamir's Orange Bag that you recycle,  can  save around 1.6 kg to 2.4kg of Co2 emissions",
                                     icon: 'recycle'
                                 }
                             ],
