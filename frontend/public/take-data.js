@@ -669,7 +669,7 @@ const takeData = [
             },
             {
                 icon: 'reward',
-                text: 'Every The participants from the winning department will receive a reusable bottle. will earn 50 points.'
+                text: 'The participants from the winning department will receive a reusable bottle as their winning price!'
             }
         ],
 
@@ -677,13 +677,13 @@ const takeData = [
 
         partners:
             {
-                text: 'Haiush ;)',
+                text: 'Tamir Ltd',
                 array: [
                     {
                         id: '1',
                         image: 'adam',
                         name: 'adam',
-                        text: 'An Israeli non-profit organization dedicated to promoting inclusion and improving the lives of people with disabilities. We collaborate with the social business "HaMzeyon" in Jerusalem, offering employment opportunities for individuals with disabilities.',
+                        text: 'Tamir is a public-benefit company operating on a non-profit basis founded by the Israel Manufacturers Association, was established to ensure that manufacturers and importers of packaged goods and packaging materials fulfil all their obligations under the Regulation.',
                     },
                 ]
             },
@@ -693,21 +693,21 @@ const takeData = [
     {
         id: "ghtuyjhnghfdklhrt",
         coverImage: 'take_card_mindful_moment.png',
-        title: 'Mindful',
-        author: 'Anonymous Bee',
-        impactType: 'Wellness',
-        subject: "Wellness",
-        shortDescription: 'Reduce unnecessary energy usage in seconds',
-        description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
-        coins: 300,
-        progress: 20,
+        title: 'Transportation Team',
+        author: 'Partake',
+        impactType: 'environmental',
+        subject: "environmental",
+        shortDescription: "sharing a ride together and reducing personal car usauge can have major impact on the environment.",
+        description: '',
+        coins: 50,
+        progress: 0,
         category: 'For you',
-        duration: 7200,
+        duration: 30,
         durationText: '5 days, starting Monday 15/4/2023',
         numberOfTasks: 5,
-        location: 'Online',
-        difficultyLevel: 'Hard',
-        participants: 123,
+        location: 'Office',
+        difficultyLevel: 'Easy',
+        participants: 48,
 
 
         tasks: [
@@ -857,18 +857,18 @@ const takeData = [
     {
         id: "73018c53b97334d9",
         coverImage: 'take_card_recycling_marathon.png',
-        title: "Recycling Marathon",
-        author: 'Anonymous Bee',
-        shortDescription: 'In this challenge you will compete with other employees and try to recycle as much as possible!',
+        title: "Green Office",
+        author: 'Partake',
+        shortDescription: 'Growing a plant is easy and relaxing. It also improves air quality at the office!',
         impact: {
             type: 'environmental'
         },
         subject: 'Sustainability',
-        coins: 300,
+        coins: 50,
         progress: 0,
         category: 'For you',
-        duration: 20160,
-        participants: 100,
+        duration: 10,
+        participants: 47,
     },
     {
         id: "416171eef1bf987b",

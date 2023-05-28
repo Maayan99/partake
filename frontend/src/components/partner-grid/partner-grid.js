@@ -17,78 +17,84 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                 id: '1',
                 initiatives: 'Installing biogas service',
                 leader: {
-                    icon: 'adam',
+                    icon: 'igud',
                     name: 'Igud Arim Haifa',
                 },
                 partners: 'Electra, Home bi-',
                 demands: 'Money donation, biogas',
                 timeFrame: '3 years',
+                scope: '2',
                 status: 'Join',
             },
 
             {
                 id: '2',
-                initiatives: '',
+                initiatives: 'Cleaning in Ein-Gedi park',
                 leader: {
-                    icon: '',
-                    name: '',
+                    icon: 'elem',
+                    name: 'Elem',
                 },
-                partners: '',
-                demands: '',
-                timeFrame: '',
-                status: '',
+                partners: 'Mhaneyuda group',
+                demands: 'A bus from Tel Aviv to Ein-Gedi',
+                timeFrame: '1 day',
+                scope: '3',
+                status: 'Join',
             },
 
             {
                 id: '3',
-                initiatives: '',
+                initiatives: 'Terror victims fundraising',
                 leader: {
-                    icon: '',
-                    name: '',
+                    icon: 'lohamim',
+                    name: 'fighting for Life',
                 },
-                partners: '',
-                demands: '',
-                timeFrame: '',
-                status: '',
+                partners: 'Facebook Israel, Caspit',
+                demands: 'Hosting place in Ramle',
+                timeFrame: '1 day',
+                scope: '3',
+                status: 'Joined',
             },
 
             {
                 id: '4',
-                initiatives: '',
+                initiatives: 'Solar panels installment',
                 leader: {
-                    icon: '',
-                    name: '',
+                    icon: 'heshel',
+                    name: 'Heshel Center',
                 },
-                partners: '',
-                demands: '',
-                timeFrame: '',
-                status: '',
+                partners: 'Electra',
+                demands: 'Money donation, Food delivery',
+                timeFrame: '6 hours',
+                scope: '1',
+                status: 'Joined',
             },
 
             {
                 id: '5',
-                initiatives: '',
+                initiatives: 'awareness campaign',
                 leader: {
-                    icon: '',
-                    name: '',
+                    icon: 'matav',
+                    name: 'Matav',
                 },
-                partners: '',
-                demands: '',
-                timeFrame: '',
-                status: '',
+                partners: 'Bank HaPoalim',
+                demands: 'Ad campaign',
+                timeFrame: '3 days',
+                scope: '3',
+                status: 'Pending',
             },
 
             {
                 id: '6',
-                initiatives: '',
+                initiatives: 'Nonprofit advertising',
                 leader: {
-                    icon: '',
-                    name: '',
+                    icon: 'ilan',
+                    name: 'Ilan',
                 },
-                partners: '',
-                demands: '',
-                timeFrame: '',
-                status: '',
+                partners: 'McCann Tel Aviv, Cellcom',
+                demands: 'Online advertising, design',
+                timeFrame: '1 week',
+                scope: '2',
+                status: 'Pending',
             },
 
         ];
@@ -173,6 +179,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     <th>Partners</th>
                     <th>Demands</th>
                     <th>Time frame</th>
+                    <th>Scope</th>                  
                     <th>Status</th>
                 </tr>
 
@@ -197,28 +204,35 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24"
+                            <input className="rounded-none border border-light-gray w-32"
                                    onChange={handleImpactSearchChange}
                                    type="text"/>
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24"
+                            <input className="rounded-none border border-light-gray w-32"
                                    onChange={handleCoinSearchChange}
                                    type="text"/>
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24"
+                            <input className="rounded-none border border-light-gray w-32"
                                    onChange={handleCoinSearchChange}
                                    type="text"/>
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24"
+                            <input className="rounded-none border border-light-gray w-32"
+                                   onChange={handleCoinSearchChange}
+                                   type="text"/>
+                        </div>
+                    </td>
+                    <td>
+                        <div className="flex">
+                            <input className="rounded-none border border-light-gray w-32"
                                    onChange={handleCoinSearchChange}
                                    type="text"/>
                         </div>
@@ -233,15 +247,16 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                                    type="checkbox"/>
                         </td>
                         <td className="max-w-[40px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.initiatives}</p></td>
-                        <td className="flex items-center w-36 overflow-hidden border-r border-slate-300"><img
-                            src={`/assets/PNG/logos/square/logo-s-${initiative.leader.icon}.png`} className="h-10 rounded-full"/>
-                            <p className="whitespace-nowrap">{initiative.leader.name}</p></td>
-                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.partners}</p></td>
+                        <td className="flex items-center w-36 overflow-hidden border-r border-slate-300 px-2"><img
+                            src={`/assets/PNG/logos/square/logo-s-${initiative.leader.icon}.png`} className="h-10 p-1 rounded-full"/>
+                            <p className="whitespace-nowrap pl-2">{initiative.leader.name}</p></td>
+                        <td className="max-w-[96px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.partners}</p></td>
                         <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.demands}</p></td>
                         <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.timeFrame}</p></td>
+                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.scope}</p></td>                      
                         <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><ColoredButton className={`${initiative.status === 'Joined' ? 
                         'bg-green-500' : initiative.status === 'Join' ?
-                        'bg-blue' : initiative.status === 'Pending' && 'bg-orange-400'} `}>{initiative.status}</ColoredButton></td>
+                        'bg-blue' : initiative.status === 'Pending' && 'bg-orange-400'} w-28 `}>{initiative.status}</ColoredButton></td>
                     </tr>
                 )}
                 </tbody>
