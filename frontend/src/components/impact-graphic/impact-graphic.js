@@ -4,7 +4,7 @@ import LearnMoreTooltip from "@components/components/pop-ups/learn-more-tooltip/
 const ImpactCause = ({impactCategory}) => {
 
     return (
-        <div className="flex flex-col items-center justify-between w-max relative">
+        <div className="flex flex-col items-center w-max relative">
             <div className="relative group">
                 <Icon name={impactCategory.icon} className={`w-10 h-10 mb-2`}/>
                 {impactCategory.tooltips && <LearnMoreTooltip tooltips={impactCategory.tooltips}/>}
@@ -23,23 +23,20 @@ export default function ImpactGraphic({impact, showIconsBelow}) {
 
 
     return (
-        <div className="flex flex-col justify-between text-sm w-max space-y-4">
-            <div className="flex text-blue space-x-10 my-5">
-                {type && <Icon name={type} className="w-10 h-10"/>}
-                <div className="flex space-x-10 w-full">
-                    {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
-                </div>
+        <div className="grid grid-cols-[20%_auto] text-sm w-max space-y-4">
+            {type && <Icon name={type} className="w-10 h-10"/>}
+            <div className="flex space-x-4 w-full">
+                {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
             </div>
+            <Icon name="info-circle" className="h-6"/>
+
             {showIconsBelow &&
                 <div className="space-y-2">
-                    <div className="flex space-x-4 items-center">
-                        <Icon name="info-circle" className="h-6 w-6"/>
-                        <h1>How does this help?</h1>
-                    </div>
+                    <h1>How does this help?</h1>
                     <div className="flex space-x-4">
                         {categories.map(category => (category.tooltips &&
                             category.tooltips.map(tooltip => <Icon name={tooltip.icon}
-                                                                                            className="h-14"/>)))}
+                                                                   className="h-14"/>)))}
                     </div>
                 </div>}
         </div>

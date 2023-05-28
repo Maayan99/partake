@@ -119,11 +119,13 @@ export default function AdminDashboard() {
                         <h1 className="font-bold col-span-6 text-5xl">Welcome, Evyatar</h1>
 
                         <h1 className="font-bold col-span-6">Analytics</h1>
-                        <DashboardCard className="col-span-4">
+                        <DashboardCard className="col-span-4 space-y-2">
                             <h1>Activity Log</h1>
+                            <Icon name="big-graph"/>
                         </DashboardCard>
-                        <DashboardCard className="col-span-2">
+                        <DashboardCard className="col-span-2 space-y-2 flex flex-col justify-center">
                             <h1>ESG Goals</h1>
+                            <Icon name="small-graph"/>
                         </DashboardCard>
 
                         <DashboardCard className="relative col-span-2">
@@ -210,9 +212,7 @@ export default function AdminDashboard() {
 
                         </DashboardCard>
 
-                        <h1 className="font-bold col-span-2">Company's Programs</h1>
-                        <h1 className="font-bold col-span-2">Company's Programs</h1>
-                        <h1 className="font-bold col-span-2">Company's Programs</h1>
+                        <h1 className="font-bold col-span-6">Company's Programs</h1>
                         <DashboardCard className="col-span-2">
 
                         </DashboardCard>
