@@ -332,6 +332,7 @@ const takeData = [
         location: 'Online',
         difficultyLevel: 'Easy',
         participants: 47,
+        type: 'challenge',
 
         whatToDo: 'The "21-Day Meditation Challenge " is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
         tasks: [
@@ -417,7 +418,7 @@ const takeData = [
 
         impact:
             {
-                type: 'Wellness',
+                type: 'wellness',
                 categories: [
                     {
                         icon: 'happy',
@@ -425,11 +426,11 @@ const takeData = [
                         text: '',
 
 
-                        tooltips:
+                        tooltips: [
                             {
                                 text: 'Research shows that participants who practiced mindfulness meditation on a daily basis  experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
                                 icon: 'relaxation',
-                            },
+                            }, ]
                     },
                     {
                         icon: 'balance',
@@ -437,7 +438,7 @@ const takeData = [
                         text: '',
 
 
-                        tooltips:
+                        tooltips: 
                             [
                                 {
                                     text: 'A study reported that individuals who engaged in regular mindfulness meditation experienced a 20% decrease in symptoms of anxiety and a 15% decrease in symptoms of depression (Hofmann et al., 2010).',
