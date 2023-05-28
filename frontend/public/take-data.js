@@ -674,7 +674,7 @@ const takeData = [
             },
             {
                 icon: 'reward',
-                text: 'Every The participants from the winning department will receive a reusable bottle. will earn 50 points.'
+                text: 'The participants from the winning department will receive a reusable bottle as their winning price!'
             }
         ],
 
@@ -682,13 +682,13 @@ const takeData = [
 
         partners:
             {
-                text: 'Haiush ;)',
+                text: 'Tamir Ltd',
                 array: [
                     {
                         id: '1',
                         image: 'adam',
                         name: 'adam',
-                        text: 'An Israeli non-profit organization dedicated to promoting inclusion and improving the lives of people with disabilities. We collaborate with the social business "HaMzeyon" in Jerusalem, offering employment opportunities for individuals with disabilities.',
+                        text: 'Tamir is a public-benefit company operating on a non-profit basis founded by the Israel Manufacturers Association, was established to ensure that manufacturers and importers of packaged goods and packaging materials fulfil all their obligations under the Regulation.',
                     },
                 ]
             },
