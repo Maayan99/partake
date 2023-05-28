@@ -5,6 +5,7 @@ import PrimaryButton from "@components/components/common/primary-button";
 import Icon from "@components/components/common/icon/icon";
 import Head from "next/head";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
+import ProgressBar from "@components/components/progress-bar/progress-bar";
 
 
 const environmentalImpact = {
@@ -88,14 +89,6 @@ const socialImpact = {
 }
 
 
-
-
-
-
-
-
-
-
 export default function AdminDashboard() {
     const baseUrl = '/admin/oiuadsfhli1u32e';
 
@@ -114,10 +107,71 @@ export default function AdminDashboard() {
                         <DashboardCard className="col-span-4 border-[#00CFFF]">
                             <h1>Activity Log</h1>
                             <Icon name="graph1" className="mt-16 mb-8"/>
+                            <p className="absolute bottom-3 right-4 font-bold text-blue">See more</p>
                         </DashboardCard>
                         <DashboardCard className="col-span-2 border-[#00CFFF]">
                             <h1>ESG Goals</h1>
-                            <Icon name="graph2" className="my-4 p-5 w-full"/>
+                            <div className="flex items-center space-x-2">
+                                <Icon name="graph2" className="my-4 w-32"/>
+
+                                <div className="space-y-2">
+                                    <div className="flex items-center space-x-2">
+                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <p className="text-sm">Sustainability</p>
+                                    </div>
+
+                                    <div className="flex items-center space-x-2">
+                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <p className="text-sm">Recycling</p>
+                                    </div>
+
+                                    <div className="flex items-center space-x-2">
+                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <p className="text-sm">Poverty</p>
+                                    </div>
+
+                                    <div className="flex items-center space-x-2">
+                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <p className="text-sm">Equality</p>
+                                    </div>
+
+                                    <div className="flex items-center space-x-2">
+                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <p className="text-sm">Youth at risk</p>
+                                    </div>
+
+                                    <div className="flex items-center space-x-2">
+                                        <div className="rounded-full h-2 w-2 bg-black"></div>
+                                        <p className="text-sm">Pollution</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div>
+                                <div className="flex items-center space-x-2">
+                                    <p className="text-sm w-32">Sustainability</p>
+                                    <ProgressBar percentage={80} className="h-[4px]"/>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <p className="text-sm w-32">Inclusion</p>
+                                    <ProgressBar percentage={70} className="h-[4px]"/>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <p className="text-sm w-32">Poverty</p>
+                                    <ProgressBar percentage={60} className="h-[4px]"/>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <p className="text-sm w-32">Equality</p>
+                                    <ProgressBar percentage={50} className="h-[4px]"/>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <p className="text-sm w-32">Youth at risk</p>
+                                    <ProgressBar percentage={40} className="h-[4px]"/>
+                                </div>
+                            </div>
+
+                            <p className="absolute bottom-3 right-4 font-bold text-blue">See more</p>
                         </DashboardCard>
 
                         <DashboardCard className="relative col-span-2 border-[#3BB6FF]">
@@ -146,8 +200,6 @@ export default function AdminDashboard() {
                         </DashboardCard>
 
 
-
-
                         <h1 className="font-bold col-span-6 mt-10">Users</h1>
                         <DashboardCard className="flex items-center justify-center border-blue col-span-6">
                             <UsersGrid numberOfRows={5} paginate={false}/>
@@ -155,9 +207,6 @@ export default function AdminDashboard() {
                                 <p className="absolute bottom-5 right-8 font-bold text-blue">Go to users page</p>
                             </a>
                         </DashboardCard>
-
-
-
 
 
                         <h1 className="font-bold col-span-3 mt-10">Give</h1>
@@ -177,16 +226,10 @@ export default function AdminDashboard() {
                         </DashboardCard>
 
 
-
                         <h1 className="font-bold col-span-6 mt-10">Partner Network</h1>
                         <DashboardCard className="col-span-6 border-[#001DAD]">
 
                         </DashboardCard>
-
-
-
-
-
 
 
                         <h1 className="font-bold col-span-3 mt-10 border-[#001C77]">Impact Report</h1>
@@ -196,7 +239,8 @@ export default function AdminDashboard() {
                             <h1 className="text-lg font-bold">Environmental total points: <span
                                 className="text-blue">450</span></h1>
                             <ImpactGraphic impact={environmentalImpact} showIconsBelow={true}/>
-                            <h1 className="text-lg font-bold">Social total points: <span className="text-blue">2040</span>
+                            <h1 className="text-lg font-bold">Social total points: <span
+                                className="text-blue">2040</span>
                             </h1>
                             <ImpactGraphic impact={socialImpact} showIconsBelow={true}/>
                         </DashboardCard>
