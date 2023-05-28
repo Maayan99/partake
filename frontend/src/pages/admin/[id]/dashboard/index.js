@@ -103,7 +103,10 @@ export default function AdminDashboard() {
                 <AdminNav baseUrl={baseUrl}/>
                 <div className="p-16 space-y-8">
                     <div className="grid grid-cols-6 gap-6">
-                        <h1 className="col-span-6 text-2xl font-style: italic">Welcome, Evyatar</h1>
+                        <div className="col-span-6 flex items-center space-x-4">
+                            <h1 className=" text-3xl italic">Welcome, Evyatar</h1>
+                            <Icon name="pending" className="h-8"/>
+                        </div>
                         <h1 className="font-bold col-span-6 mt-10">Analytics</h1>
                         <DashboardCard className="col-span-4 border-[#00CFFF]">
                             <h1>Activity Log</h1>
@@ -237,7 +240,6 @@ export default function AdminDashboard() {
                         <h1 className="font-bold col-span-6 mt-10">Partner Network</h1>
                         <DashboardCard
                             className="flex items-center justify-center border-blue col-span-6  border-[#001DAD]">
-
                             <PartnerGrid numberOfRows={5} paginate={false}/>
                             <a href={`${baseUrl}/partner-network`}>
                                 <p className="absolute bottom-5 right-8 font-bold text-blue">Go to partner network
@@ -248,31 +250,57 @@ export default function AdminDashboard() {
 
                         <h1 className="font-bold col-span-3 mt-10 border-[#001C77]">Impact Report</h1>
                         <h1 className="font-bold col-span-3 mt-10 border-[#001C77]">Wallet</h1>
-                        <DashboardCard className="col-span-3">
+                        <DashboardCard className="col-span-3 space-y-10">
                             <h1 className="text-2xl font-bold">Impact</h1>
                             <h1 className="text-lg font-bold">Environmental total points: <span
                                 className="text-blue">450</span></h1>
-                            <ImpactGraphic impact={environmentalImpact} showIconsBelow={true}/>
+                            <ImpactGraphic impact={environmentalImpact} dontShowTotal={true}/>
                             <h1 className="text-lg font-bold">Social total points: <span
                                 className="text-blue">2040</span>
                             </h1>
-                            <ImpactGraphic impact={socialImpact} showIconsBelow={true}/>
+                            <ImpactGraphic impact={socialImpact} dontShowTotal={true}/>
                         </DashboardCard>
                         <DashboardCard className="col-span-3">
+                            <div className="flex items-center space-x-3">
+                                <h1 className="text-blue text-3xl">280,000</h1>
+                                <Icon name="partake-coins-small" className="h-8"/>
+                            </div>
+                            <h3 className="font-bold mb-3">Partake coins in your wallet</h3>
+                            <PrimaryButton className="mb-10">Buy Partake Coins</PrimaryButton>
 
+                            <div className="flex items-center space-x-3">
+                                <h1 className="text-blue text-3xl">30,000</h1>
+                                <Icon name="partake-coins-small" className="h-8"/>
+                            </div>
+                            <h3 className="font-bold mb-3">Partake coins used this month</h3>
+
+                            <div className="flex items-center space-x-4">
+                                <Icon name="reward" className="h-8"/>
+                                <h1 className="font-bold text-3xl">Reward Program</h1>
+
+                            </div>
+                            <h2 className="text-blue text-lg font-bold">Manage program</h2>
+                            <p className="absolute bottom-3 right-4 font-bold text-blue">Go to wallet</p>
                         </DashboardCard>
 
-                        <h1 className="font-bold col-span-2 mt-10">Company's Programs</h1>
-                        <h1 className="font-bold col-span-2 mt-10">Company's Programs</h1>
-                        <h1 className="font-bold col-span-2 mt-10">Company's Programs</h1>
+                        <h1 className="font-bold col-span-6 mt-10">Company's Programs</h1>
                         <DashboardCard className="col-span-2 border-[#010B2D]">
+                            <h1 className="text-xl font-bold">Matching donations</h1>
+                            <h2>310,500$</h2>
 
+                            <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
                         <DashboardCard className="col-span-2 border-[#010B2D]">
+                            <h1 className="text-xl font-bold">Volunteering grants</h1>
+                            <h2>550</h2>
 
+                            <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
                         <DashboardCard className="col-span-2 border-[#010B2D]">
+                            <h1 className="text-xl font-bold">Company's initiatives</h1>
+                            <h2>1200</h2>
 
+                            <p className="absolute bottom-3 right-4 font-bold text-blue">See details</p>
                         </DashboardCard>
                     </div>
                 </div>
