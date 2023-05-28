@@ -191,18 +191,14 @@ const takeData = [
 
         galleryItems: [
             {
-                id: "aiua123hvefwli1u32h",
-                text: 'Challenge taken!',
-                image: 'emails1.png',
-                user: {
-                    id: 'aiua123hvefwli1u32h',
-                },
-
+                id: "12ffbbb28978fef6",
+                text: 'Look how many emails I deleted!',
+                image: 'give_card_renovation_day_home.png'
             },
             {
-                id: "owuadsfhli1u32e",
+                id: "faa623ba3bff7565",
                 text: 'That was easy',
-                image: 'emails2.png',
+                image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'owuadsfhli1u32e',
                 },
@@ -210,7 +206,7 @@ const takeData = [
             {
                 id: "d0d057f3401ed49b",
                 text: 'Like cleaning my desk',
-                image: 'emails3.png',
+                image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'oiuadsfhli1u31e',
                 },
@@ -218,7 +214,7 @@ const takeData = [
             {
                 id: "db2fd9d5f571b962",
                 text: 'Nothing to add',
-                image: 'emails4.png',
+                image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
                     id: 'aiua123hvefwli1u32e',
                 },
@@ -226,41 +222,41 @@ const takeData = [
             {
                 id: "928966f939ccd19f",
                 text: '',
-                image: 'emails5.png',
+                image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
-                    id: 'aiua123hvefwli1u32g',
+                    id: 'oiuadsfhli1u32d',
                 },
             },
             {
                 id: "d16b1f3f061a9e62",
                 text: 'I recommend emptying the bin as well',
-                image: 'emails9.png',
+                image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
-                    id: 'aiuadsfhvefwli1u32c',
+                    id: 'oiuadsfhli1u32d',
                 },
             },
             {
-                id: "aiuads1hvefwli1u32d",
+                id: "76ef74ccdbfdeaa1",
                 text: 'Wow',
-                image: 'emails7.png',
+                image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
-                    id: 'aiuads1hvefwli1u32d',
+                    id: 'oiuadsfhli1u32d',
                 },
             },
             {
-                id: "aiua123hvefwli1u32e",
+                id: "8234dabb7bfbc1ae",
                 text: '',
-                image: 'emails8.png',
+                image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
-                    id: 'aiua123hvefwli1u32j',
+                    id: 'oiuadsfhli1u32d',
                 },
             },
             {
-                id: "aiua123hvefwli1u32f",
+                id: "9958b72228e7a462",
                 text: 'I usually delete a hundered emails per day. I think my account had been hacked',
-                image: 'emails10.png',
+                image: 'give_card_sustainable_farming_volunteer.png',
                 user: {
-                    id: 'aiua123hvefwli1u32f',
+                    id: 'oiuadsfhli1u32d',
                 },
             },
 
