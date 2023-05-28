@@ -344,7 +344,11 @@ const takeData = [
                     icon: 'mindfulness',
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
                     numberValidationData:
-                        {},
+                        {
+                            max: 100,
+                            min: 0,
+                            multiplier: 4,
+                        },
                 },
                 shortText: "Meditation Goal Gallery",
                 longText: "Think of a goal that you would achieve before embarking on a 21-day meditation challenge.",
@@ -390,7 +394,11 @@ const takeData = [
                     icon: 'flower',
                     infoText: 'Meditation empowers us to cultivate a resilient Just as a mountain stands tall.',
                     numberValidationData:
-                        {},
+                        {
+                            max: 100,
+                            min: 0,
+                            multiplier: 4,
+                        },
                 },
                 shortText: "See how your collegues did",
                 longText: "Welcome back! Did you achieve your goal?",
@@ -538,24 +546,7 @@ const takeData = [
                     multiValidationData:
                         {
                             options:
-                                [
-                                    {
-                                        id: '1',
-                                        text: 'Glass bottles',
-                                    },
-                                    {
-                                        id: '2',
-                                        text: 'Textile',
-                                    },
-                                    {
-                                        id: '3',
-                                        text: 'Milk cartons',
-                                    },
-                                    {
-                                        id: '4',
-                                        text: 'Stray Cats',
-                                    }
-                                ]
+                                ['Glass bottles', 'Textile',  'Milk cartons', 'Stray Cats'],
                         },
                 },
                 videoLink: 'https://www.youtube.com/embed/5TmjKUrYvvk',
@@ -566,11 +557,15 @@ const takeData = [
                 id: 2,
                 validation: {
                     text: "How many bags have you collected in the past 14 days?",
-                    type: 'free text',
+                    type: 'number',
                     icon: 'plastic bottle',
                     infoText: 'Recycling one ton of plastic saves around 5,774 kWh of energy.',
-                    multiValidationData:
-                        {},
+                    numberValidationData:
+                        {
+                            max: 10,
+                            min: 0,
+                            multiplier: 40,
+                        },
                 },
                 shortText: "",
                 longText: "Take Tamir orange bags home, and collect packages that can be recycled.",
