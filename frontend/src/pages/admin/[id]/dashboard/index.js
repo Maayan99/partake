@@ -6,6 +6,7 @@ import Icon from "@components/components/common/icon/icon";
 import Head from "next/head";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import ProgressBar from "@components/components/progress-bar/progress-bar";
+import PartnerGrid from "@components/components/partner-grid/partner-grid";
 
 
 const environmentalImpact = {
@@ -211,24 +212,37 @@ export default function AdminDashboard() {
 
                         <h1 className="font-bold col-span-3 mt-10">Give</h1>
                         <h1 className="font-bold col-span-3 mt-10">Take</h1>
-                        <DashboardCard className="col-span-3 border-[#003ADD]">
+                        <DashboardCard className="col-span-3 border-[#003ADD] space-y-4 text-blue py-10">
                             <PrimaryButton className="flex gap-2 items-center">
                                 <Icon name="white-plus" className="h-8"/>
                                 Add a new give activity
                             </PrimaryButton>
-                            <p className="font-bold">See suggestions</p>
+                            <p className="font-bold text-lg">See suggestions</p>
                             <a href={`${baseUrl}/activities`}>
-                                <p className="absolute bottom-10 right-8 font-bold">Go to Give page</p>
+                                <p className="absolute bottom-4 right-4 font-bold">Go to Give page</p>
                             </a>
                         </DashboardCard>
-                        <DashboardCard className="col-span-3 border-[#003ADD]">
-
+                        <DashboardCard className="col-span-3 border-[#003ADD] space-y-4 text-blue py-10">
+                            <PrimaryButton className="flex gap-2 items-center">
+                                <Icon name="white-plus" className="h-8"/>
+                                Add a new take activity
+                            </PrimaryButton>
+                            <p className="font-bold text-lg">See suggestions</p>
+                            <a href={`${baseUrl}/activities`}>
+                                <p className="absolute bottom-4 right-4 font-bold">Go to Take page</p>
+                            </a>
                         </DashboardCard>
 
 
                         <h1 className="font-bold col-span-6 mt-10">Partner Network</h1>
-                        <DashboardCard className="col-span-6 border-[#001DAD]">
+                        <DashboardCard
+                            className="flex items-center justify-center border-blue col-span-6  border-[#001DAD]">
 
+                            <PartnerGrid numberOfRows={5} paginate={false}/>
+                            <a href={`${baseUrl}/partner-network`}>
+                                <p className="absolute bottom-5 right-8 font-bold text-blue">Go to partner network
+                                    page</p>
+                            </a>
                         </DashboardCard>
 
 
