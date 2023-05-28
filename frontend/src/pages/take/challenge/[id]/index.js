@@ -148,6 +148,30 @@ const TopAfterStarted = ({
     )
 };
 
+
+
+
+
+
+
+
+
+const impactDictionary = {
+    carbon: '0.4KG',
+    water: '2L',
+    landfill: '100M2',
+    happy: 'Relaxation',
+    balance: 'Work-Life Balance',
+}
+
+
+
+
+
+
+
+
+
 export default function TakePage() {
     const [started, setStarted] = useState(false);
     const [displayValidationPopUp, setDisplayValidationPopUp] = useState(false);
@@ -155,61 +179,6 @@ export default function TakePage() {
     const [displayInvitePopUp, setDisplayInvitePopUp] = useState(false);
     const [displayCongratsPopUp, setDisplayCongratsPopUp] = useState(false);
 
-    const [pingCategory, setPingCategory] = useState(0);
-
-    const [totalImpactScore, setTotalImpactScore] = useState(0);
-    const [impactMade, setImpactMade] = useState(
-        [
-            {
-                id: '1',
-                boldText: '0 KG',
-                icon: 'carbon',
-                tooltipText: 'Carbon emissions info',
-                tooltips:
-                    [
-                        {
-                            text: '',
-                            icon: 'community',
-                        },
-                    ],
-            },
-            // {
-            //     id: '2',
-            //     boldText: '20 Liters',
-            //     icon: 'water',
-            //     tooltipText: 'Carbon emissions info',
-            //     tooltips:
-            //         [
-            //             {
-            //                 text: 'Each meal donated helps another child smile more',
-            //                 icon: 'community',
-            //             },
-            //         ],
-            // },
-            {
-                id: '3',
-                boldText: '200 M2',
-                icon: 'landfill',
-                tooltipText: 'Carbon emissions info',
-                tooltips:
-                    [
-                        {
-                            text: 'Each meal donated helps another child smile more',
-                            icon: 'community',
-                        },
-                    ],
-            },
-        ]
-    );
-
-    useEffect(() => {
-        setImpactMade(prev => {
-            return prev.map((category, index) => (index === pingCategory ? {
-                ...category,
-                ping: true
-            } : {...category, ping: false}))
-        });
-    }, [pingCategory])
 
     const router = useRouter();
 
@@ -261,10 +230,14 @@ export default function TakePage() {
                 <div
                     className={`grid lg:grid-cols-page-grid md:grid-cols-2 sm:grid-cols-1 gap-16 px-20 ${displayValidationPopUp && ''}`}>
                     {started ?
-                        <TopAfterStarted setPingCategory={setPingCategory} take={take} setStarted={setStarted}
+                        <TopAfterStarted take={take} setStarted={setStarted}
                                          handleLeaveChallenge={handleLeaveChallenge}
                                          handleInviteFriends={handleInviteFriends}
-                                         impact={{categories: impactMade, total: totalImpactScore, type: 'environmental'}}
+                                         impact={{categories: take.impact.categories.map(category => {return {
+                                             id: category.id,
+                                                 icon: category.icon,
+                                                 boldText: impactDictionary[category.icon],
+                                             }}), type: take.impact.type}}
                                          setDisplayValidationPopUp={setDisplayValidationPopUp}
                                          currentTask={currentTask}/> :
                         <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}

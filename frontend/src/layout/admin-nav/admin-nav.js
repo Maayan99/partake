@@ -91,7 +91,7 @@ export default function AdminNav( {baseUrl} ) {
     })
 
     return (
-        <div className="bg-white shadow-inner w-80 border border-gray border-l-0 space-y-7 py-8">
+        <div className="bg-white shadow-inner min-w-[240px] border border-gray border-l-0 space-y-7 py-8">
             <div className="flex items-center">
             <NavButton onClick={handleClick} value='1'>Pending Requests</NavButton>
                 <div className="h-3.5 w-3.5 bg-orange-300 rounded-full"/>

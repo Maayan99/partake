@@ -340,15 +340,11 @@ const takeData = [
                 id: 1,
                 validation: {
                     text: "Now, write it down and release it to the universe (aka the gallery..)",
-                    type: 'image',
+                    type: 'text',
                     icon: 'mindfulness',
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
-                    numberValidationData:
-                        {
-                            max: 100,
-                            min: 0,
-                            multiplier: 4,
-                        },
+                    textValidationData:
+                        {},
                 },
                 shortText: "Meditation Goal Gallery",
                 longText: "Think of a goal that you would achieve before embarking on a 21-day meditation challenge.",
@@ -362,25 +358,7 @@ const takeData = [
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
                     multiValidationData:
                         {
-                            options:
-                                [
-                                    {
-                                        id: '1',
-                                        text: 'Headspace',
-                                    },
-                                    {
-                                        id: '2',
-                                        text: 'Ten Percent',
-                                    },
-                                    {
-                                        id: '3',
-                                        text: 'Youtube',
-                                    },
-                                    {
-                                        id: '4',
-                                        text: 'Other',
-                                    }
-                                ]
+                            options: ['Headspace', 'Ten Percent', 'Youtube', 'Other'],
                         },
                 },
                 shortText: "What apps did your collegues choose?",
@@ -438,7 +416,7 @@ const takeData = [
                             {
                                 text: 'Research shows that participants who practiced mindfulness meditation on a daily basis  experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
                                 icon: 'relaxation',
-                            }, ]
+                            },]
                     },
                     {
                         icon: 'balance',
@@ -446,7 +424,7 @@ const takeData = [
                         text: '',
 
 
-                        tooltips: 
+                        tooltips:
                             [
                                 {
                                     text: 'A study reported that individuals who engaged in regular mindfulness meditation experienced a 20% decrease in symptoms of anxiety and a 15% decrease in symptoms of depression (Hofmann et al., 2010).',
@@ -546,7 +524,7 @@ const takeData = [
                     multiValidationData:
                         {
                             options:
-                                ['Glass bottles', 'Textile',  'Milk cartons', 'Stray Cats'],
+                                ['Glass bottles', 'Textile', 'Milk cartons', 'Stray Cats'],
                         },
                 },
                 videoLink: 'https://www.youtube.com/embed/5TmjKUrYvvk',
