@@ -481,6 +481,8 @@ const takeData = [
     // Third featured take
     {
         id: "0b395cd505248fa2",
+        type: "survey",
+
         coverImage: 'take_card_equality_diversity_inclusion.png',
         title: 'Equality, Diversity, Inclusion',
         author: 'Anonymous Bee',
@@ -491,6 +493,7 @@ const takeData = [
         category: 'Learning and Surveys',
         duration: 60,
         participants: 31,
+
     },
 
 
