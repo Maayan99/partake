@@ -336,7 +336,7 @@ const giveData = [
     },
     {
         id: '3',
-        title: 'Help us Purchase Computers for Youth at Risk ',
+        title: 'Help us Purchase Computers for our commuimity center ',
         author: 'Kidum Noar, Kiryat Gat',
         duration: 8,
         location: 'Online',
