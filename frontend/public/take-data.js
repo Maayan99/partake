@@ -1141,9 +1141,9 @@ const takeData = [
     },
     {
         id: 'hgutjnrbegrtfgdsbdd',
-        title: 'Clean the Kitchen',
+        title: 'Office Fitness Activity',
         author: 'HR',
-        shortDescription: "Clean the office's kitchen, wash the dishes and throw away the trash.",
+        shortDescription: "Fitness activity stimulates blood flow and oxygen circulation. It can also increase energy levels and improved productivity and focus.",
         coverImage: 'kitchen-clean.jpg',
         subject: '',
         category: '15 Minutes or Less',
