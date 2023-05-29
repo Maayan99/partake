@@ -30,7 +30,7 @@ export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
             </div>}
             {showIconsBelow ?
                 <div className="space-y-2">
-                    <h1 className="text-lg">How does this help?</h1>
+                    <h1 className="text-lg">How does it help?</h1>
                     <div className="flex space-x-12">
                         {categories.map(category => (category.tooltips &&
                             category.tooltips.map(tooltip => <div className="relative group">

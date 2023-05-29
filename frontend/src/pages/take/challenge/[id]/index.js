@@ -58,7 +58,7 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
                             <Icon name="type-black" className="float-left w-5 mt-2.5 mr-3 -ml-1 opacity-70"/>
                             <h1 className="font-bold">Type</h1>
                         </div>
-                        <p>{type}</p>
+                        <p>Challenge</p>
                     </div>
                     <div className="ml-10 space-y-2">
                         <div>
@@ -86,7 +86,7 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
                             <Icon name="participants-black" className="float-left w-5 mt-3 mr-2.5 -ml-0.5 opacity-70"/>
                             <h1 className="font-bold">Participants</h1>
                         </div>
-                        <p>{participants}</p>
+                        <p>{participants.number}</p>
                     </div>
                 </div>
             </div>

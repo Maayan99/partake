@@ -15,7 +15,7 @@ export default function ParticipantsRow({participants}) {
             min-w-[32px] h-8 object-cover hover:z-10"/>)}
             <div
                 className="cursor-default flex justify-center items-center bg-blue min-w-[32px] h-8 rounded-full border-white border">
-                <p className="text-white text-xs">{participants - 5}+</p>
+                <p className="text-white text-xs">{numberOfParticipants - 5}+</p>
             </div>
         </div>
     )
