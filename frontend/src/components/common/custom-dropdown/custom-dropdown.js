@@ -44,7 +44,7 @@ export default function Dropdown({selectOptions, className}) {
                 <Icon name="down-arrow" className="h-6"/>
             </button>
 
-            <ul className={`absolute top-14 -left-[1px] w-[calc(100%_+_2px)] px-4 py-4 shadow-lg 
+            <ul className={`absolute top-14 -left-[1px] w-[calc(100%_+_2px)] px-4 py-4 space-y-4 shadow-lg 
                 peer-focus:opacity-100 opacity-0 transition-all duration-300
                 border border-1 border-gray-500 border-t-0 bg-light-gray -mt-1 text-xl rounded-none focus:outline-none z-10
                  ${!opened && 'hidden'}`}>
@@ -54,6 +54,7 @@ export default function Dropdown({selectOptions, className}) {
                         id={option.name}
                         value={option.value}
                         onClick={handleOptionClick}
+                        className="-mb-1"
                     >
                         {option.name}
                     </li>

@@ -69,8 +69,11 @@ export default function DonationPopUp({display, setDisplay}) {
         };
 
     return (
-        <PopUp display={display} setDisplay={setDisplay} title="Donation" icon="donation">
+        <PopUp display={display} setDisplay={setDisplay} icon="donation">
             <div className="p-8 flex flex-col items-center space-y-4">
+                <h2 className="text-[1.26rem] font-bold text-center">How much would you like to donate?</h2>
+
+
                 <div className="relative w-full">
                     <input type="number" className="w-full h-10 bg-light-gray p-2"
                            value={amountToDonate} onChange={(e) => setAmountToDonate(e.target.value)}>
@@ -86,6 +89,8 @@ export default function DonationPopUp({display, setDisplay}) {
                     {presets.map(preset => <button id={preset.toString()} key={preset} onClick={handlePresetClick}
                                                    className="bg-white border w-16 h-10 rounded-md text-blue">{preset} ₪</button>)}
                 </div>
+
+                <p className="text-gray">What would you like to appear on your personal/company profile?</p>
 
                 <Dropdown selectOptions={donationOptions} className="w-full h-24"/>
 
