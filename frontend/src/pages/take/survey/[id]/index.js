@@ -43,7 +43,7 @@ export default function TakeSurveyPage() {
                 <div className="space-y-4 flex flex-col items-center">
                     {options.map(option =>
                             <ColoredButton onClick={handleClick} value={option.id} key={option.id}
-                                className={`w-80 hover:translate-x-1 ${option.id === selected ? 'bg-black' : 'bg-blue hover:bg-black'}`}>
+                                className={`w-80 hover:-translate-y-1 hover:scale-[1.02] ${option.id === selected ? 'bg-black' : 'bg-blue hover:bg-black'}`}>
                                 {option.text}
                             </ColoredButton>)}
                 </div>
