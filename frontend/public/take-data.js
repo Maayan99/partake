@@ -704,7 +704,7 @@ const takeData = [
 
     {
         id: "ghtuyjhnghfdklhrt",
-        coverImage: 'take_card_mindful_moment.png',
+        coverImage: 'transportation-team.jpg',
         title: 'Transportation Team',
         author: 'Partake',
         impactType: 'environmental',
@@ -786,7 +786,7 @@ const takeData = [
 
     {
         id: "3",
-        coverImage: 'take_card_mindful_moment.png',
+        coverImage: 'take_card_mindful_moment2.png',
         title: 'A Mindful Moment',
         author: 'Jerry Fendelbaum',
         impactType: 'wellness',
@@ -868,7 +868,7 @@ const takeData = [
 
     {
         id: "73018c53b97334d9",
-        coverImage: 'take_card_recycling_marathon.png',
+        coverImage: 'green-office.jpg',
         title: "Green Office",
         author: 'Partake',
         shortDescription: 'Growing a plant is easy and relaxing. It also improves air quality at the office!',
@@ -884,7 +884,7 @@ const takeData = [
     },
     {
         id: "416171eef1bf987b",
-        coverImage: 'take_card_fun_facts.png',
+        coverImage: 'zero-waste.jpg',
         title: 'Go Zero-Waste for a Day',
         author: 'Partake',
         shortDescription: "Reducing waste can be difficult, so let's take it slowly, day by day.",
@@ -900,7 +900,7 @@ const takeData = [
     },
     {
         id: "416171eef1bg987b",
-        coverImage: 'take_card_fun_facts.png',
+        coverImage: 'morning-yoga.jpg',
         title: ' Morning Yoga with Ilanit',
         author: 'Ilanit from marketing',
         shortDescription: 'Join me for a 20 min yoga class at Monday, 8:15.',
@@ -931,7 +931,7 @@ const takeData = [
     },
     {
         id: "8b5906d96ec1cbb7c",
-        coverImage: 'take_card_pub_quiz.png',
+        coverImage: 'home-energy-audit.jpg',
         title: 'Home energy audit',
         author: 'HR',
         shortDescription: "Manage your home's energy usage with this challenge",
@@ -959,7 +959,7 @@ const takeData = [
     },
     {
         id: "460bd61f793c16bdf",
-        coverImage: 'take_card_cyber_security.png',
+        coverImage: 'diversity.jpg',
         title: 'Inclusion, Diversity and Equality',
         author: 'HR',
         shortDescription: 'In this course you will learn the principals of IDE',
@@ -972,7 +972,7 @@ const takeData = [
     },
     {
         id: "460bd61f793c16bdf",
-        coverImage: 'take_card_cyber_security.png',
+        coverImage: 'take_card_clean_inbox_clear_conscience_big-old.png',
         title: 'Safe Emails',
         author: 'HR',
         shortDescription: "We are all potential victims for cyber crime, let's learn how to work safely",
@@ -985,7 +985,7 @@ const takeData = [
     },
     {
         id: "460bd61f793c16bdf",
-        coverImage: 'take_card_cyber_security.png',
+        coverImage: 'gift-card.jpg',
         title: 'Gift card survey',
         author: 'HR',
         shortDescription: "Choose your gift card",
@@ -1000,7 +1000,7 @@ const takeData = [
         id: "948fe332bf68fb37",
         coverImage: 'take_card_office_flex.png',
         title: 'Strech Break',
-        author: 'Anonymous Bee',
+        author: 'Avi Ram',
         shortDescription: '',
         impact: {
             type: 'wellness',
@@ -1032,7 +1032,7 @@ const takeData = [
         title: 'Flex & Stretch',
         author: 'Partake',
         shortDescription: 'A few minutes of targeted stretches will refresh your back and legs, boost circulation, and enhance your comfort at the desk!',
-        coverImage: '.png',
+        coverImage: 'flex.jpg',
         subject: '',
         category: '15 Minutes or Less',
         impact:
@@ -1049,7 +1049,7 @@ const takeData = [
         title: 'Water a plant',
         author: 'Partake',
         shortDescription: 'Just water a plant. any plant. Not too much though.',
-        coverImage: '.png',
+        coverImage: 'plant.jpg',
         subject: '',
         category: '15 Minutes or Less',
         impact:
@@ -1066,7 +1066,7 @@ const takeData = [
         title: 'Turn off your computer screen for 10 minutes',
         author: 'Partake',
         shortDescription: 'A few minutes without looking at a screen will improve your mental and physical health',
-        coverImage: '.png',
+        coverImage: 'turn-off.jpg',
         subject: '',
         category: '15 Minutes or Less',
         impact:
@@ -1083,7 +1083,7 @@ const takeData = [
         title: 'Clean the kitchen',
         author: 'HR',
         shortDescription: "Clean the office's kitchen, wash the dishes and throw away the trash.",
-        coverImage: '.png',
+        coverImage: 'kitchen-clean.jpg',
         subject: '',
         category: '15 Minutes or Less',
         impact:
@@ -1100,7 +1100,7 @@ const takeData = [
         title: 'Check for malware',
         author: 'HR',
         shortDescription: "In this challenge we will make sure your working computer is protected",
-        coverImage: '.png',
+        coverImage: 'malware.jpg',
         subject: '',
         category: '15 Minutes or Less',
         impact:
