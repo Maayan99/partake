@@ -68,7 +68,7 @@ const SmallGiveCard = ({give}) => {
                         </div>}
                     </div>
                     <div className="flex justify-between items-center mt-4">
-                        {participants && <ParticipantsRow participants={participants}/>}
+                        {participants ? <ParticipantsRow participants={participants}/> : <div></div>}
                         <PrimaryButton className="mx-2.5 -mr-1.5">Give help</PrimaryButton>
                     </div>
                 </div>

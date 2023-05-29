@@ -53,7 +53,7 @@ const giveData = [
         coverImage: 'shekel_hamezion_donations.png',
         activityType: 'goods-donation',
         author: 'Shekel Association',
-        DateTime:"",
+        DateTime: "",
         category: 'For you',
         about: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.', //About the NGO or the Give
         description: "You can bring the items directly to our Talpiot branch, located at 39 General Pierre Koenig Street in Jerusalem, or to our city centre branch, located at 5 Dorot Rishonim street, Center of town, Jerusalem Please contact us in case you do not find parking. We will send a team to receive the donation from the vehicle.",
@@ -117,7 +117,10 @@ const giveData = [
                 },
             ]
         },
-        participants: 85,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
         aboutTheCause: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.',
         delivery: 'Self delivery',
     },
@@ -186,7 +189,7 @@ const giveData = [
         description: "Donations for animals also allow us to operate our clinic for longer hours, subsidize various surgeries and treatments, improve the conditions of the animals in our care, operate more rescue vehicles to assist animals in need, conduct educational activities for future generations, and more. Come and do good by donating from the bottom of your heart.",
         location: 'online',
         parking: 'n/a',
-        dateTime:'n/a',
+        dateTime: 'n/a',
         contactDetails:
             {
                 name: 'Chaya, head of SPCA Isreal jerusalem',
@@ -240,7 +243,10 @@ const giveData = [
                 },
             ]
         },
-        participants: 105,
+        participants: {
+            number: 105,
+            array: [11, 7, 2, 20, 13],
+        },
         aboutTheCause: 'Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare.',
     },
     {
@@ -251,11 +257,11 @@ const giveData = [
         author: "Kidum No'ar Kiryat Gat",
         about: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.", //About the NGO or the Give
         description: "We are seeking volunteers for personal and educational mentoring in English for these students.  The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied.  The commitment is until the end of the academic year.",
-        category:'For you',
+        category: 'For you',
         skills: ['English', 'Teaching',],
         location: 'Online',
-        parking:"n/a",
-        dateTime:"October till June, Sundays.",
+        parking: "n/a",
+        dateTime: "October till June, Sundays.",
         contactDetails:
             {
                 name: 'Maya Cohen, Volunteer Coordinator',
@@ -306,7 +312,10 @@ const giveData = [
         },
 
         aboutTheCause: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.",
-        participants: 23,
+        participants: {
+            number: 32,
+            array: [1, 23, 24, 10, 16],
+        },
     },
 
     {
@@ -350,7 +359,10 @@ const giveData = [
         coverImage: 'give_card_food_collection_distribution.png',
         activityType: 'goods-donation',
         endDate: '3/5/2023',
-        participants: true,
+        participants: {
+            number: 81,
+            array: [11, 22, 18, 12, 14],
+        },
         category: 'For you',
         cause: '',
         type: '',
@@ -366,7 +378,10 @@ const giveData = [
         coverImage: 'give_card_environmental _restoration_day.png',
         activityType: 'field',
         endDate: '14/5/2023',
-        participants: '8',
+        participants: {
+            number: 8,
+            array: [8, 9, 12, 17, 18],
+        },
         category: 'In your area',
         cause: '',
         type: '',
@@ -382,7 +397,10 @@ const giveData = [
         coverImage: 'give_card_at-risk_youth_field.png',
         activityType: 'fundraising',
         endDate: '',
-        participants: true,
+        participants: {
+            number: 103,
+            array: [11, 12, 21, 13, 14],
+        },
         category: 'Fundraising',
         cause: '',
         type: '',
@@ -414,7 +432,10 @@ const giveData = [
         coverImage: 'give_card_sustainable_farming_volunteer.png',
         activityType: 'field',
         endDate: '3/5/2023',
-        participants: true,
+        participants: {
+            number: 111,
+            array: [0, 10, 20, 5, 4],
+        },
         category: '',
         cause: '',
         type: '',
@@ -430,7 +451,10 @@ const giveData = [
         coverImage: 'give_card_food_rescue_mission.png',
         activityType: 'field',
         endDate: '14/5/2023',
-        participants: true,
+        participants: {
+            number: 93,
+            array: [17, 18, 19, 8, 9],
+        },
         category: 'Events',
         cause: '',
         type: '',
@@ -446,7 +470,10 @@ const giveData = [
         coverImage: '',
         activityType: 'field',
         endDate: '3/6/2023',
-        participants: true,
+        participants: {
+            number: 105,
+            array: [16, 17, 0, 1, 10],
+        },
         category: 'Events',
         cause: '',
         type: '',
@@ -478,7 +505,10 @@ const giveData = [
         coverImage: 'give_card_environmental _restoration_day.png',
         activityType: 'field',
         endDate: '3/5/2023',
-        participants: true,
+        participants: {
+            number: 23,
+            array: [13, 14, 15, 3, 4],
+        },
         category: 'Events',
         cause: '',
         type: '',
@@ -492,7 +522,10 @@ const giveData = [
         coverImage: 'give_card_Empowering give_card_women_children.png',
         activityType: 'donation',
         endDate: '14/5/2023',
-        participants: true,
+        participants: {
+            number: 12,
+            array: [10, 2, 3, 11, 12],
+        },
         category: 'Fundraising',
         cause: '',
         type: '',
@@ -506,7 +539,10 @@ const giveData = [
         coverImage: 'give_card_help_PTSD.png',
         activityType: 'field',
         endDate: '3/6/2023',
-        participants: true,
+        participants: {
+            number: 320,
+            array: [6, 7, 1, 8, 9],
+        },
         category: 'In your area',
         cause: '',
         type: '',
@@ -535,7 +571,10 @@ const giveData = [
         coverImage: 'give_card_environmental _restoration_day.png',
         activityType: 'goods-donation',
         endDate: '3/5/2023',
-        participants: true,
+        participants: {
+            number: 67,
+            array: [1, 2, 3, 4, 5],
+        },
         category: '',
         cause: '',
         type: '',
