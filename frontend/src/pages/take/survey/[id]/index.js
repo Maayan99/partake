@@ -1,6 +1,7 @@
 import {useState} from "react";
 import BlueButton from "@components/components/common/blue-button";
 import PrimaryButton from "@components/components/common/primary-button";
+import ColoredButton from "@components/components/common/colored-button/colored-button";
 
 export default function TakeSurveyPage() {
     const [selected, setSelected] = useState();
@@ -41,13 +42,10 @@ export default function TakeSurveyPage() {
                 <h1 className="text-center font-bold text-2xl">Which social cause do you wish our company to focus on this year?</h1>
                 <div className="space-y-4 flex flex-col items-center">
                     {options.map(option =>
-                        <div key={option.id}>
-                            {
-                                option.id !== selected ?
-                                    <BlueButton onClick={handleClick} value={option.id} className="w-80">{option.text}</BlueButton> :
-                                    <PrimaryButton onClick={handleClick} value={option.id} className="w-80">{option.text}</PrimaryButton>
-                            }
-                        </div>)}
+                            <ColoredButton onClick={handleClick} value={option.id} key={option.id}
+                                className={`w-80 hover:translate-x-1 ${option.id === selected ? 'bg-black' : 'bg-blue hover:bg-black'}`}>
+                                {option.text}
+                            </ColoredButton>)}
                 </div>
 
                 <PrimaryButton onClick={handleSubmit}>Submit Choice</PrimaryButton>
