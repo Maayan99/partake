@@ -40,7 +40,7 @@ export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
                             </div>)))}
                     </div>
                 </div> :
-                <>{!dontShowTotal && <h1 className="text-blue col-span-2">Your impact score: 7</h1>}</>}
+                <>{!dontShowTotal && <h1 className="text-blue col-span-2 text-lg">Your impact score: 7</h1>}</>}
         </div>
     );
 }
