@@ -16,7 +16,10 @@ const template =
         numberOfTasks: 5,
         location: 'Online',
         difficultyLevel: 'Hard',
-        participants: 123,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
 
 
         tasks: [
@@ -130,7 +133,10 @@ const takeData = [
         numberOfTasks: 3,
         location: 'Online',
         difficultyLevel: 'Easy',
-        participants: 27,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
         type: 'challenge',
 
         whatToDo: "Take a screenshot of the number of emails you deleted before and another one  after. Don't forget to encourage your coworkers to participate as well!",
@@ -265,7 +271,7 @@ const takeData = [
 
         ],
         impact: {
-            type: 'Environmental',
+            type: 'environmental',
             categories: [
                 {
                     icon: 'carbon',
@@ -275,6 +281,7 @@ const takeData = [
                         [
                             {
                                 id: '1',
+                                title: 'Carbon Savings',
                                 text: 'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
                                 icon: 'digital-footprint',
                             }
@@ -330,7 +337,10 @@ const takeData = [
         numberOfTasks: 3,
         location: 'Online',
         difficultyLevel: 'Easy',
-        participants: 47,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
         type: 'challenge',
 
         whatToDo: 'The "21-Day Meditation Challenge" is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
@@ -390,7 +400,7 @@ const takeData = [
                 text: 'Just to relax',
                 image: '',
                 user: {
-                    id: 'aiua123hvefwli1u32h',      
+                    id: 'aiua123hvefwli1u32h',
                 },
             },
             {
@@ -423,7 +433,7 @@ const takeData = [
                 image: '',
                 user: {
                     id: 'aiua123hvefwli1u32l',
-                },       
+                },
             },
             {
                 id: "6",
@@ -431,7 +441,7 @@ const takeData = [
                 image: '',
                 user: {
                     id: 'aiua123hvefwli1u32p',
-                },       
+                },
             },
         ],
 
@@ -511,8 +521,10 @@ const takeData = [
         progress: 0,
         category: 'Learning and Surveys',
         duration: 60,
-        participants: 31,
-
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
 
 
@@ -535,8 +547,10 @@ const takeData = [
         numberOfTasks: 3,
         location: 'Home',
         difficultyLevel: 'Intermediate',
-        participants: 78,
-
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
 
         displayRewardIcon: true,
 
@@ -719,8 +733,10 @@ const takeData = [
         numberOfTasks: 5,
         location: 'Office',
         difficultyLevel: 'Easy',
-        participants: 48,
-
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
 
         tasks: [
             {
@@ -801,8 +817,10 @@ const takeData = [
         numberOfTasks: 5,
         location: 'Online',
         difficultyLevel: 'Hard',
-        participants: 123,
-
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
 
         tasks: [
             {
@@ -880,7 +898,10 @@ const takeData = [
         progress: 0,
         category: 'For you',
         duration: 10,
-        participants: 47,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "416171eef1bf987b",
@@ -896,7 +917,10 @@ const takeData = [
         progress: 0,
         category: 'Popular',
         duration: 10,
-        participants: 38,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "416171eef1bg987b",
@@ -912,7 +936,10 @@ const takeData = [
         progress: 0,
         category: 'Popular',
         duration: 10,
-        participants: 89,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "8b5906d96ec1cbb7",
@@ -927,7 +954,10 @@ const takeData = [
         coins: 300,
         progress: 0,
         category: 'Popular',
-        participants: 20,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "8b5906d96ec1cbb7c",
@@ -942,7 +972,10 @@ const takeData = [
         coins: 300,
         progress: 0,
         category: 'Popular',
-        participants: 20,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "460bd61f793c16bde",
@@ -955,7 +988,10 @@ const takeData = [
         progress: 0,
         category: 'Learning and Surveys',
         duration: 30,
-        participants: 164,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "460bd61f793c16bdf",
@@ -968,7 +1004,10 @@ const takeData = [
         progress: 0,
         category: 'Learning and Surveys',
         duration: 60,
-        participants: 164,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "460bd61f793c16bdf",
@@ -981,7 +1020,10 @@ const takeData = [
         progress: 0,
         category: 'Learning and Surveys',
         duration: 60,
-        participants: 164,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "460bd61f793c16bdf",
@@ -994,7 +1036,10 @@ const takeData = [
         progress: 0,
         category: 'Learning and Surveys',
         duration: 60,
-        participants: 164,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "948fe332bf68fb37",
@@ -1010,7 +1055,10 @@ const takeData = [
         duration: 1440,
         progress: 0,
         category: 'For you',
-        participants: 31,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: "8ef17a519c62a6b5",
@@ -1026,7 +1074,10 @@ const takeData = [
         progress: 0,
         category: 'Popular',
         duration: 1440,
-        participants: 31,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: 'hgutjnrbegrtfgdsb',
@@ -1043,7 +1094,10 @@ const takeData = [
         coins: 50,
         progress: 0,
         duration: 10,
-        participants: 86,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: 'hgutjnrbegrtfgdsb',
@@ -1060,7 +1114,10 @@ const takeData = [
         coins: 10,
         progress: 0,
         duration: 10,
-        participants: 86,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: 'hgutjnrbegrtfgdsb',
@@ -1077,7 +1134,10 @@ const takeData = [
         coins: 20,
         progress: 0,
         duration: 10,
-        participants: 16,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: 'hgutjnrbegrtfgdsbdd',
@@ -1094,7 +1154,10 @@ const takeData = [
         coins: 20,
         progress: 0,
         duration: 15,
-        participants: 16,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     },
     {
         id: 'hgutjnrbegrtfgdsbdde',
@@ -1111,7 +1174,10 @@ const takeData = [
         coins: 80,
         progress: 0,
         duration: 15,
-        participants: 56,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
     }
 
 ];

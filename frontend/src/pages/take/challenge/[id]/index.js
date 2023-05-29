@@ -58,7 +58,7 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
                             <Icon name="type-black" className="float-left w-5 mt-2.5 mr-3 -ml-1 opacity-70"/>
                             <h1 className="font-bold">Type</h1>
                         </div>
-                        <p>{type}</p>
+                        <p>Challenge</p>
                     </div>
                     <div className="ml-10 space-y-2">
                         <div>
@@ -86,7 +86,7 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
                             <Icon name="participants-black" className="float-left w-5 mt-3 mr-2.5 -ml-0.5 opacity-70"/>
                             <h1 className="font-bold">Participants</h1>
                         </div>
-                        <p>{participants}</p>
+                        <p>{participants.number}</p>
                     </div>
                 </div>
             </div>
@@ -139,21 +139,17 @@ const TopAfterStarted = ({
             <div className="max-h-[420px] flex flex-col justify-between">
                 <h1 className="mb-2">Your impact</h1>
                 <ImpactGraphic impact={impact} setPingCategory={setPingCategory}/>
-                <h1 className="mt-7 mb-3">Leaderboard</h1>
-                {take.isCompetition ? <Leaderboard/>
+                {take.isCompetition ?
+                    <>
+                        <h1 className="mt-7 mb-3">Leaderboard</h1>
+                        <Leaderboard/>
+                    </>
                     : <ParticipantsGrid participants={take.participants} handleInviteFriends={handleInviteFriends}/>}
 
             </div>
         </>
     )
 };
-
-
-
-
-
-
-
 
 
 const impactDictionary = {
@@ -163,13 +159,6 @@ const impactDictionary = {
     happy: 'Relaxation',
     balance: 'Work-Life Balance',
 }
-
-
-
-
-
-
-
 
 
 export default function TakePage() {
@@ -233,11 +222,15 @@ export default function TakePage() {
                         <TopAfterStarted take={take} setStarted={setStarted}
                                          handleLeaveChallenge={handleLeaveChallenge}
                                          handleInviteFriends={handleInviteFriends}
-                                         impact={{categories: take.impact.categories.map(category => {return {
-                                             id: category.id,
-                                                 icon: category.icon,
-                                                 boldText: impactDictionary[category.icon],
-                                             }}), type: take.impact.type}}
+                                         impact={{
+                                             categories: take.impact.categories.map(category => {
+                                                 return {
+                                                     id: category.id,
+                                                     icon: category.icon,
+                                                     boldText: impactDictionary[category.icon],
+                                                 }
+                                             }), type: take.impact.type
+                                         }}
                                          setDisplayValidationPopUp={setDisplayValidationPopUp}
                                          currentTask={currentTask}/> :
                         <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}

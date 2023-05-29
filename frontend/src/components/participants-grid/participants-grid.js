@@ -4,7 +4,7 @@ import React from "react";
 export default function ParticipantsGrid ( {handleInviteFriends, participants}) {
     return (
         <div>
-            <h1 className="font-bold">Participants ({participants})</h1>
+            <h1 className="font-bold">Participants ({participants.number})</h1>
             <TransparentButton className="text-sm mb-6 font-semibold" onClick={handleInviteFriends}>Invite
                 Friends</TransparentButton>
             <div className="grid grid-cols-6 gap-2 w-max">
