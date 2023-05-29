@@ -319,7 +319,7 @@ const takeData = [
         coverImage: 'take_card_mindful_moment.png',
         title: '21 Days of Mindfulness.',
         author: 'Partake',
-        impactType: 'Wellness',
+        impactType: 'wellness',
         subject: "Wellness",
         shortDescription: 'Meditation for 5 minutes every day at your workplace can help reduce stress and enhance relaxation.',
         description: 'Practicing meditation every day can calm your mind and refocus your energy. In this challenge, we encourage you to take a break for a few minutes at your workplace. By doing that, you can improve focus, reduce stress, and promote overall well-being for both yourself and your coworkers.',
@@ -428,7 +428,7 @@ const takeData = [
                             [
                                 {
                                     text: 'A study reported that individuals who engaged in regular mindfulness meditation experienced a 20% decrease in symptoms of anxiety and a 15% decrease in symptoms of depression (Hofmann et al., 2010).',
-                                    icon: 'mindfulness',
+                                    icon: 'lotus',
                                 },
                             ]
                     },
@@ -491,7 +491,7 @@ const takeData = [
         coverImage: 'take_card_recycle.png',
         title: 'Recycling Department War',
         author: 'HR, Abraham’s Hostel.',
-        impactType: 'Environmental',
+        impactType: 'environmental',
         subject: "Environmental",
         shortDescription: 'Our exciting interdepartmental recycling competition! Who can make the biggest impact?',
         description: 'Get ready for an exhilarating recycling challenge between departments! In this thrilling competition, teams will go head-to-head to determine who can make the most significant environmental impact. Please watch this video by Tamir corporation:',
@@ -757,7 +757,7 @@ const takeData = [
         coverImage: 'take_card_mindful_moment.png',
         title: 'Mindful Moment',
         author: 'Anonymous Bee',
-        impactType: 'Wellness',
+        impactType: 'wellness',
         subject: "Wellness",
         shortDescription: 'Reduce unnecessary energy usage in seconds',
         description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
@@ -785,13 +785,13 @@ const takeData = [
         galleryItems: [
             {
                 id: "1",
-                text: 'Link to the podcast!',
-                image: 'give_card_renovation_day_home.png'
+                text: 'I feel tired',
+                image: ''
             },
             {
                 id: "2",
-                text: 'Link to the podcast?',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                text: 'A nice way to start the way',
+                image: '',
                 user: {
                     name: 'Someone',
                     profileImage: 'profile_image_3.jpeg'
