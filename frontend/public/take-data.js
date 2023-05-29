@@ -388,17 +388,51 @@ const takeData = [
         galleryItems: [
             {
                 id: "1",
-                text: 'Link to the podcast!',
-                image: 'give_card_renovation_day_home.png'
+                text: 'Just to relax',
+                image: '',
+                user: {
+                    id: 'aiua123hvefwli1u32h',      
+                },
             },
             {
                 id: "2",
-                text: 'Link to the podcast?',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                text: 'I wish to become more optimistic',
+                image: '',
                 user: {
-                    name: 'Someone',
-                    profileImage: 'profile_image_3.jpeg'
+                    id: 'aiua123hvefwli1u32i',
                 },
+            },
+            {
+                id: "3",
+                text: 'My goal is to not break and stop after one week',
+                image: '',
+                user: {
+                    id: 'aiua123hvefwli1u32j',
+                },
+            },
+            {
+                id: "4",
+                text: 'I wish to become less hedonistic',
+                image: '',
+                user: {
+                    id: 'aiua123hvefwli1u32k',
+                },
+            },
+            {
+                id: "5",
+                text: 'I am doing this meditation every morning anyways. for like years and years already.',
+                image: '',
+                user: {
+                    id: 'aiua123hvefwli1u32l',
+                },       
+            },
+            {
+                id: "6",
+                text: 'To think more about myself',
+                image: '',
+                user: {
+                    id: 'aiua123hvefwli1u32p',
+                },       
             },
         ],
 
@@ -535,7 +569,7 @@ const takeData = [
                 validation: {
                     text: "How many bags have you collected in the past 14 days?",
                     type: 'number',
-                    icon: 'plastic bottle',
+                    icon: 'plastic',
                     infoText: 'Recycling one ton of plastic saves around 5,774 kWh of energy.',
                     numberValidationData:
                         {
@@ -552,7 +586,7 @@ const takeData = [
                 validation: {
                     text: "Upload your photo",
                     type: 'image',
-                    icon: 'Orange pastic bag.',
+                    icon: 'waste',
                     infoText: 'It is estimated that plastic bags can not decompose for 100 to 500 years.',
                     imageValidationData:
                         {},
@@ -566,7 +600,7 @@ const takeData = [
         galleryItems: [
             {
                 id: "1",
-                text: 'Link to the podcast!',
+                text: 'This our hunt',
                 image: 'give_card_renovation_day_home.png'
             },
             {
