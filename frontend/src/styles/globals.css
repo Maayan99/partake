@@ -47,3 +47,9 @@
         -moz-appearance:textfield;
     }
 }
+
+@layer utilities {
+    .hide-scrollbar::-webkit-scrollbar {
+        height: 0;
+    }
+}
