@@ -26,7 +26,7 @@ export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
                 {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
             </div>
             {showIconsBelow && <div className="flex justify-center">
-                <Icon name="info-circle" className="h-6"/>
+                <Icon name="info" className="h-6"/>
             </div>}
             {showIconsBelow ?
                 <div className="space-y-2">
@@ -35,7 +35,7 @@ export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
                         {categories.map(category => (category.tooltips &&
                             category.tooltips.map(tooltip => <div className="relative group">
                                 <Icon name={tooltip.icon}
-                                      className="h-6 mt-3"/>
+                                      className="h-9 mt-3"/>
                                 <LearnMoreTooltip tooltip={tooltip}/>
                             </div>)))}
                     </div>

@@ -4,10 +4,10 @@ export default function LearnMoreTooltip({tooltip}) {
     return (
         <div
             className={`hidden flex-col top-full left-1/2 -translate-x-1/2 items-center
-             absolute text-left bg-white w-72 shadow-lg
-                group-hover:flex p-4 border border-gray z-10`}>
-                    <Icon name={tooltip.icon} className="w-5 h-5 mt-4 float-left"/>
-                    <p className="mt-4 text-gray">{tooltip.text}</p>
+             absolute text-center bg-white w-80 shadow-lg
+                group-hover:flex px-6 mt-2 pt-2 pb-6 border border-gray z-10`}>
+                    <div className="w-5 h-5 m-0 float-left"/>
+                    <p className="mb-2 text-gray text-base">{tooltip.text}</p>
         </div>
     )
 }
