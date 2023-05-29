@@ -53,7 +53,7 @@ const BeforeSearch = () => {
                 </div>
             </div>
             {categories.map(category =>
-                <div key={category}>
+                <div key={category} className="hide-scrollbar">
                     <div className="ml-36 mr-14 mt-10 mb-10 flex justify-between">
                         <h1 className="text-3xl">{categoriesTitleDictionary[category]}</h1>
                         <ArrowForwardIosIcon/>
