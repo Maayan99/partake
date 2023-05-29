@@ -377,7 +377,7 @@ const takeData = [
                 id: 2,
                 validation: {
                     text: "Draw the line to your satisfaction.",
-                    type: 'number',
+                    type: 'feedback',
                     icon: 'flower',
                     infoText: 'Meditation empowers us to cultivate a resilient Just as a mountain stands tall.',
                     numberValidationData:
