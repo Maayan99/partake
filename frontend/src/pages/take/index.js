@@ -53,13 +53,13 @@ const BeforeSearch = () => {
                 </div>
             </div>
             {categories.map(category =>
-                <div key={category} className="hide-scrollbar">
+                <div key={category}>
                     <div className="ml-36 mr-14 mt-10 mb-10 flex justify-between">
                         <h1 className="text-3xl">{categoriesTitleDictionary[category]}</h1>
                         <ArrowForwardIosIcon/>
                     </div>
                     {/*pb-24 -mb-24 for overflow reasons*/}
-                    <div className="flex pl-36 pt-20 -mt-20 pb-24 -mb-20 space-x-5 overflow-x-auto">
+                    <div className="flex pl-36 pt-20 -mt-20 pb-24 -mb-20 space-x-5 overflow-x-auto scrollbar-none">
                         {categoriesDictionary[category].map(take => <SmallTakeCard key={take.id} take={take}/>)}
                     </div>
                 </div>)}

@@ -47,9 +47,3 @@
         -moz-appearance:textfield;
     }
 }
-
-@layer utilities {
-    ::-webkit-scrollbar {
-        height: 0;
-    }
-}
