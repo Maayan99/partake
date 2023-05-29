@@ -8,7 +8,7 @@ const ImpactCause = ({impactCategory}) => {
             <Icon name={impactCategory.icon} className={`min-w-[40px] max-w-[40px] aspect-square mb-2`}/>
             <div>
                 {impactCategory.boldText &&
-                    <h1 className="font-bold text-lg text-center">{impactCategory.boldText}</h1>}
+                    <h1 className="font-bold text-lg text-center leading-tight">{impactCategory.boldText}</h1>}
                 {impactCategory.text && <p className="text-center">{impactCategory.text}</p>}
             </div>
         </div>
