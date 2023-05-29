@@ -49,7 +49,7 @@ const template = {
 const giveData = [
     {
         id: "18",
-        title: "Goods Donation for “Ha’Metsion”.",
+        title: "Goods Donation for “Ha’Metsion”",
         coverImage: 'shekel_hamezion_donations.png',
         activityType: 'goods-donation',
         author: 'Shekel Association',
@@ -180,7 +180,7 @@ const giveData = [
     },
     {
         id: '21',
-        title: 'Donate to Our Animal Shelter.',
+        title: 'Donate to Our Animal Shelter',
         coverImage: '',
         activityType: 'fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'SPCA Israel (צער בעלי חיים)',
@@ -374,6 +374,25 @@ const giveData = [
         author: 'Kakal',
         duration: 6,
         location: 'Ben Shemen Forest',
+        donations: false,
+        coverImage: 'give_card_environmental _restoration_day.png',
+        activityType: 'field',
+        endDate: '14/5/2023',
+        participants: {
+            number: 8,
+            array: [8, 9, 12, 17, 18],
+        },
+        category: 'In your area',
+        cause: '',
+        type: '',
+        sponsors: [],
+    },
+    {
+        id: '2yrhfyrujfndgsyegf',
+        title: "Guiding a Group of LGBTQ+ Teenagers",
+        author: 'IGY Organization',
+        duration: '',
+        location: 'Tel-Aviv',
         donations: false,
         coverImage: 'give_card_environmental _restoration_day.png',
         activityType: 'field',
