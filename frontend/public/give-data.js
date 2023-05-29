@@ -370,13 +370,13 @@ const giveData = [
     },
     {
         id: '5',
-        title: "Planting Trees in Ben Shemen Forest",
-        author: 'Kakal',
+        title: "Legal Guidance for Women in Shleters",
+        author: 'נשים למען נשים',
         duration: 6,
         location: 'Ben Shemen Forest',
         donations: false,
         coverImage: 'give_card_environmental _restoration_day.png',
-        activityType: 'field',
+        activityType: 'Online',
         endDate: '14/5/2023',
         participants: {
             number: 8,
