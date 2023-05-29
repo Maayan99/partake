@@ -341,7 +341,7 @@ const giveData = [
         location: 'Online',
         donations: false,
         coverImage: 'give_card_online_volunteer_digital_marketing_tutors_needed.png',
-        activityType: 'online',
+        activityType: 'fundraising',
         endDate: '21/5/2023',
         participants: false,
         category: 'Fundraising',
@@ -376,7 +376,7 @@ const giveData = [
         location: 'Online',
         donations: false,
         coverImage: 'give_card_environmental _restoration_day.png',
-        activityType: 'Online',
+        activityType: 'field',
         endDate: '14/7/2023',
         participants: {
             number: 8,
@@ -539,7 +539,7 @@ const giveData = [
         author: 'Rakefet Group',
         donations: false,
         coverImage: 'give_card_Empowering give_card_women_children.png',
-        activityType: 'donation',
+        activityType: 'fundraising',
         endDate: '14/5/2023',
         participants: {
             number: 12,
