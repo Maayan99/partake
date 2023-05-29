@@ -69,7 +69,7 @@ export default function DonationPopUp({display, setDisplay}) {
         };
 
     return (
-        <PopUp display={display} setDisplay={setDisplay} title="Donation">
+        <PopUp display={display} setDisplay={setDisplay} title="Donation" icon="donation">
             <div className="p-8 flex flex-col items-center space-y-4">
                 <div className="relative w-full">
                     <input type="number" className="w-full h-10 bg-light-gray p-2"
