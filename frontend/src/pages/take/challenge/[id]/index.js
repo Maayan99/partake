@@ -308,7 +308,7 @@ export default function TakePage() {
                                     <img key={sponsor.id} src={`/assets/PNG/logos/rectangle/logo-${sponsor.image}.png`}
                                          className="h-16" alt={sponsor.name}/>)}
                             </div>
-                            <p className="text-gray">{take.partners.text}</p>
+                            <p className="text-gray pt-2">{take.partners.text}</p>
                         </div>}
                 </div>
             </>

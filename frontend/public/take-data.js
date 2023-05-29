@@ -317,7 +317,7 @@ const takeData = [
     {
         id: "a6289983652a8ef8",
         coverImage: 'take_card_mindful_moment.png',
-        title: '21 Days of Mindfulness.',
+        title: '21 Days of Mindfulness',
         author: 'Partake',
         impactType: 'wellness',
         subject: "Wellness",
@@ -334,7 +334,7 @@ const takeData = [
         participants: 47,
         type: 'challenge',
 
-        whatToDo: 'The "21-Day Meditation Challenge " is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
+        whatToDo: 'The "21-Day Meditation Challenge" is a challenge that helps you determine a realistic and achievable meditation goal based on your desired outcome, practice meditation in an app of your choosing, and finally realizing the impact on your life.',
         tasks: [
             {
                 id: 1,
@@ -414,7 +414,7 @@ const takeData = [
 
                         tooltips: [
                             {
-                                text: 'Research shows that participants who practiced mindfulness meditation on a daily basis  experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
+                                text: 'Research shows that participants who practiced mindfulness meditation on a daily basis experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
                                 icon: 'relaxation',
                             },]
                     },
@@ -422,7 +422,6 @@ const takeData = [
                         icon: 'balance',
                         boldText: 'Work-life balance',
                         text: '',
-
 
                         tooltips:
                             [
@@ -489,8 +488,8 @@ const takeData = [
         id: "sdgfhtyrujhfnmjf",
         type: 'challenge',
         coverImage: 'take_card_recycle.png',
-        title: 'Recycling Department War',
-        author: 'HR, Abraham’s Hostel.',
+        title: 'Departments Recycling War',
+        author: 'HR, Abraham’s Hostel',
         impactType: 'environmental',
         subject: "Environmental",
         shortDescription: 'Our exciting interdepartmental recycling competition! Who can make the biggest impact?',
@@ -657,13 +656,13 @@ const takeData = [
 
         partners:
             {
-                text: 'Tamir Ltd',
+                text: 'Tamir is a public-benefit company operating on a non-profit basis founded by the Israel Manufacturers Association, was established to ensure that manufacturers and importers of packaged goods and packaging materials fulfil all their obligations under the Regulation.',
                 array: [
                     {
                         id: '1',
-                        image: 'adam',
-                        name: 'adam',
-                        text: 'Tamir is a public-benefit company operating on a non-profit basis founded by the Israel Manufacturers Association, was established to ensure that manufacturers and importers of packaged goods and packaging materials fulfil all their obligations under the Regulation.',
+                        image: 'tamir',
+                        name: 'tamir',
+                        text: '',
                     },
                 ]
             },
@@ -756,7 +755,7 @@ const takeData = [
         id: "3",
         coverImage: 'take_card_mindful_moment.png',
         title: 'Mindful Moment',
-        author: 'Anonymous Bee',
+        author: 'Jerry Fendelbaum',
         impactType: 'wellness',
         subject: "Wellness",
         shortDescription: 'Reduce unnecessary energy usage in seconds',
