@@ -174,7 +174,7 @@ const takeData = [
                         text: "Upload the screenshot you've taken",
                         type: 'image',
                         icon: 'server',
-                        infoText: 'Storing emails requires servers and data storage devices that are associated with Co2 emissions, and electronic waste.',
+                        infoText: 'Storing emails requires servers and data storage devices that are associated with CO2 emissions, and electronic waste.',
                         numberValidationData:
                             {
                                 max: 200,
@@ -269,7 +269,7 @@ const takeData = [
             categories: [
                 {
                     icon: 'carbon',
-                    boldText: 'Co2 emissions',
+                    boldText: 'CO2 emissions',
                     text: '',
                     tooltips:
                         [
@@ -588,6 +588,8 @@ const takeData = [
                 [
                     {
                         icon: 'carbon',
+                        boldText: 'CO2 emissions',
+                        text: '',
                         tooltips:
                             [
                                 {
@@ -604,13 +606,13 @@ const takeData = [
 
                                 {
                                     id: '3',
-                                    text: "A full  Tamir's Orange Bag that you recycle,  can  save around 1.6 kg to 2.4kg of Co2 emissions",
+                                    text: "A full  Tamir's Orange Bag that you recycle,  can  save around 1.6 kg to 2.4kg of CO2 emissions",
                                     icon: 'recycle'
                                 }
                             ],
                     }
                 ],
-            boldText: 'Co2 emissions',
+            boldText: 'CO2 emissions',
             text: '',
             tooltip:
                 {
