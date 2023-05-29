@@ -70,7 +70,7 @@ export default function DonationPopUp({display, setDisplay}) {
 
     return (
         <PopUp display={display} setDisplay={setDisplay} icon="donation">
-            <div className="p-8 flex flex-col items-center space-y-4">
+            <div className="px-8 py-4 flex flex-col items-center space-y-4">
                 <h2 className="text-[1.26rem] font-bold text-center">How much would you like to donate?</h2>
 
 
