@@ -931,7 +931,7 @@ const takeData = [
     },
     {
         id: "8b5906d96ec1cbb7c",
-        coverImage: 'ome-energy-audit.jpg',
+        coverImage: 'home-energy-audit.jpg',
         title: 'Home Energy Audit',
         author: 'HR',
         shortDescription: "Manage your home's energy usage with this challenge",
