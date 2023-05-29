@@ -78,6 +78,7 @@ const Validation = ({
     const typeIsText = type === "text";
     const typeIsMulti = type === "multi";
     const typeIsImage= type === "image";
+    const typeIsFeedback = type === "feedback";
 
     const [number, setNumber] = useState(0);
 
@@ -142,14 +143,20 @@ const Validation = ({
                             <>
                                 {typeIsMulti ?
                                     <Multichoice options={multiValidationData.options}/> :
-                                    <label className="flex justify-center items-center w-full h-32 px-4 transition bg-white
+                                    <>
+                                        {typeIsFeedback ?
+                                            <input className="w-full bg-light-gray focus:outline-none" type="range"
+                                                   min={0} max={100}/> :
+                                            <label className="flex justify-center items-center w-full h-32 px-4 transition bg-white
                     border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer
                     hover:border-gray-400 focus:outline-none">
                         <span className="font-medium text-gray">
                             Drop files to Attach, or <span className="text-blue underline">browse</span>
                         </span>
-                                    <input type="file" className="hidden"/>
-                                </label>}
+                                            <input type="file" className="hidden"/>
+                                        </label>}
+                                    </>
+                                    }
                             </>
                         }
                     </>

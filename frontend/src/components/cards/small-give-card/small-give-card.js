@@ -67,7 +67,7 @@ const SmallGiveCard = ({give}) => {
                             <p className="text-xs">{endDate}</p>
                         </div>}
                     </div>
-                    <div className="flex justify-between items-center mt-4">
+                    <div className="flex justify-between items-center mb-1">
                         {participants ? <ParticipantsRow participants={participants}/> : <div></div>}
                         <PrimaryButton className="mx-2.5 -mr-1.5">Give help</PrimaryButton>
                     </div>

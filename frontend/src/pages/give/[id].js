@@ -53,7 +53,7 @@ const ImportantDetails = ({give}) => {
                     <div className="ml-10 space-y-2">
                         <Icon name="participants-black" className="float-left w-5 mt-5 mr-2.5 -ml-0.5 opacity-70"/>
                         <h1 className="font-bold">Participants</h1>
-                        <p>{participants}</p>
+                        <p>{participants.number}</p>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-2">
                         <Icon name="duration-black" className="float-left w-5 mt-4 mr-3 -ml-1 opacity-70"/>
