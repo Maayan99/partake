@@ -503,7 +503,7 @@ const takeData = [
         type: "survey",
 
         coverImage: 'take_card_survey_esg.png',
-        title: 'ESG goals survey',
+        title: 'ESG Goals Survey',
         author: 'HR',
         subject: 'ESG',
         shortDescription: 'Please take a few seconds in answering this survey.',
@@ -932,7 +932,7 @@ const takeData = [
     {
         id: "8b5906d96ec1cbb7c",
         coverImage: 'home-energy-audit.jpg',
-        title: 'Home energy audit',
+        title: 'Home Energy Audit',
         author: 'HR',
         shortDescription: "Manage your home's energy usage with this challenge",
         impact: {
@@ -986,7 +986,7 @@ const takeData = [
     {
         id: "460bd61f793c16bdf",
         coverImage: 'gift-card.jpg',
-        title: 'Gift card survey',
+        title: 'Gift Card Survey',
         author: 'HR',
         shortDescription: "Choose your gift card",
         subject: 'survey',
@@ -1046,7 +1046,7 @@ const takeData = [
     },
     {
         id: 'hgutjnrbegrtfgdsb',
-        title: 'Water a plant',
+        title: 'Water a Plant',
         author: 'Partake',
         shortDescription: 'Just water a plant. any plant. Not too much though.',
         coverImage: 'plant.jpg',
@@ -1063,7 +1063,7 @@ const takeData = [
     },
     {
         id: 'hgutjnrbegrtfgdsb',
-        title: 'Turn off your computer screen for 10 minutes',
+        title: 'Turn Off Your Computer Screen for 10 Minutes',
         author: 'Partake',
         shortDescription: 'A few minutes without looking at a screen will improve your mental and physical health',
         coverImage: 'turn-off.jpg',
@@ -1080,7 +1080,7 @@ const takeData = [
     },
     {
         id: 'hgutjnrbegrtfgdsbdd',
-        title: 'Clean the kitchen',
+        title: 'Clean the Kitchen',
         author: 'HR',
         shortDescription: "Clean the office's kitchen, wash the dishes and throw away the trash.",
         coverImage: 'kitchen-clean.jpg',
@@ -1097,7 +1097,7 @@ const takeData = [
     },
     {
         id: 'hgutjnrbegrtfgdsbdde',
-        title: 'Check for malware',
+        title: 'Check for Malware',
         author: 'HR',
         shortDescription: "In this challenge we will make sure your working computer is protected",
         coverImage: 'malware.jpg',
