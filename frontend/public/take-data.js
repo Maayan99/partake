@@ -918,8 +918,8 @@ const takeData = [
         id: "8b5906d96ec1cbb7",
         coverImage: 'take_card_pub_quiz.png',
         title: 'Pub Quiz',
-        author: 'Anonymous Bee',
-        shortDescription: 'Where do you go after work? Share with otherss and find new places!',
+        author: 'Amnon',
+        shortDescription: 'The weekly pub quiz with many annoying questions',
         impact: {
             type: 'wellness',
         },
@@ -930,7 +930,22 @@ const takeData = [
         participants: 20,
     },
     {
-        id: "460bd61f793c16bd",
+        id: "8b5906d96ec1cbb7c",
+        coverImage: 'take_card_pub_quiz.png',
+        title: 'Home energy audit',
+        author: 'HR',
+        shortDescription: "Manage your home's energy usage with this challenge",
+        impact: {
+            type: 'wellness',
+        },
+        subject: 'Susatainability',
+        coins: 300,
+        progress: 0,
+        category: 'Popular',
+        participants: 20,
+    },
+    {
+        id: "460bd61f793c16bde",
         coverImage: 'take_card_cyber_security.png',
         title: 'Cyber Security',
         author: 'Aubery Beardsley',
@@ -940,6 +955,45 @@ const takeData = [
         progress: 0,
         category: 'Learning and Surveys',
         duration: 30,
+        participants: 164,
+    },
+    {
+        id: "460bd61f793c16bdf",
+        coverImage: 'take_card_cyber_security.png',
+        title: 'Inclusion, Diversity and Equality',
+        author: 'HR',
+        shortDescription: 'In this course you will learn the principals of IDE',
+        subject: 'Training and Development',
+        coins: 1000,
+        progress: 0,
+        category: 'Learning and Surveys',
+        duration: 60,
+        participants: 164,
+    },
+    {
+        id: "460bd61f793c16bdf",
+        coverImage: 'take_card_cyber_security.png',
+        title: 'Safe Emails',
+        author: 'HR',
+        shortDescription: "We are all potential victims for cyber crime, let's learn how to work safely",
+        subject: 'Training and Development',
+        coins: 1000,
+        progress: 0,
+        category: 'Learning and Surveys',
+        duration: 60,
+        participants: 164,
+    },
+    {
+        id: "460bd61f793c16bdf",
+        coverImage: 'take_card_cyber_security.png',
+        title: 'Gift card survey',
+        author: 'HR',
+        shortDescription: "Choose your gift card",
+        subject: 'survey',
+        coins: 1000,
+        progress: 0,
+        category: 'Learning and Surveys',
+        duration: 60,
         participants: 164,
     },
     {
@@ -973,7 +1027,6 @@ const takeData = [
         duration: 1440,
         participants: 31,
     },
-
     {
         id: 'hgutjnrbegrtfgdsb',
         title: 'Flex & Stretch',
@@ -993,7 +1046,24 @@ const takeData = [
     },
     {
         id: 'hgutjnrbegrtfgdsb',
-        title: '',
+        title: 'Water a plant',
+        author: 'Partake',
+        shortDescription: 'Just water a plant. any plant. Not too much though.',
+        coverImage: '.png',
+        subject: '',
+        category: '15 Minutes or Less',
+        impact:
+            {
+                type: 'wellness'
+            },
+        coins: 10,
+        progress: 0,
+        duration: 10,
+        participants: 86,
+    },
+    {
+        id: 'hgutjnrbegrtfgdsb',
+        title: 'Close your computer screen for 10 minutes',
         author: 'Partake',
         shortDescription: 'A few minutes of targeted stretches will refresh your back and legs, boost circulation, and enhance your comfort at the desk!',
         coverImage: '.png',
@@ -1003,10 +1073,44 @@ const takeData = [
             {
                 type: 'wellness'
             },
-        coins: 50,
+        coins: 20,
         progress: 0,
         duration: 10,
-        participants: 86,
+        participants: 16,
+    },
+    {
+        id: 'hgutjnrbegrtfgdsbdd',
+        title: 'Clean the kitchen',
+        author: 'HR',
+        shortDescription: "Clean the office's kitchen, wash the dishes and throw away the trash.",
+        coverImage: '.png',
+        subject: '',
+        category: '15 Minutes or Less',
+        impact:
+            {
+                type: 'wellness'
+            },
+        coins: 20,
+        progress: 0,
+        duration: 15,
+        participants: 16,
+    },
+    {
+        id: 'hgutjnrbegrtfgdsbdde',
+        title: 'Check for malware',
+        author: 'HR',
+        shortDescription: "In this challenge we will make sure your working computer is protected",
+        coverImage: '.png',
+        subject: '',
+        category: '15 Minutes or Less',
+        impact:
+            {
+                type: 'wellness'
+            },
+        coins: 80,
+        progress: 0,
+        duration: 15,
+        participants: 56,
     }
 
 ];
