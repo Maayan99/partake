@@ -126,7 +126,7 @@ const Validation = ({
                 <Icon name={icon} className="h-12 w-12 mb-4"/>
                 <span className="text-center">{infoText}</span>
             </div>
-            <form className="p-8 flex flex-col items-center space-y-4" onSubmit={handleValidate}>
+            <form className="px-8 py-4 flex flex-col items-center space-y-4" onSubmit={handleValidate}>
                 <h1 className="text-xl">{text}</h1>
 
                 {typeIsNumber ?
