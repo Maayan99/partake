@@ -805,7 +805,7 @@ const takeData = [
         description: 'Podcasts are a great way to learn new things and gain knowledge on a variety of subjects. In this challenge, we want you to listen to at least one episode of a podcast related to your professional or personal interests and share your key takeaways with the team. Not only will this challenge encourage you to learn new things, but it will also inspire your colleagues to discover new podcasts and expand their own knowledge.',
         coins: 50,
         progress: 20,
-        category: 'For you',
+        category: '15 Minutes or Less',
         duration: 10,
         durationText: '5 days, starting Monday 15/4/2023',
         numberOfTasks: 5,
@@ -881,9 +881,9 @@ const takeData = [
     {
         id: "73018c53b97334d9",
         coverImage: 'green-office.jpg',
-        title: "Green Office",
+        title: "Green Office Makeover",
         author: 'Partake',
-        shortDescription: 'Growing a plant is easy and relaxing. It also improves air quality at the office!',
+        shortDescription: 'Growing plants is easy and relaxing. It also improves air quality at the office!',
         impact: {
             type: 'environmental'
         },
@@ -1080,7 +1080,7 @@ const takeData = [
         shortDescription: 'A few minutes of targeted stretches will refresh your back and legs, boost circulation, and enhance your comfort at the desk!',
         coverImage: 'flex.jpg',
         subject: '',
-        category: '15 Minutes or Less',
+        category: 'For you',
         impact:
             {
                 type: 'wellness'
@@ -1095,9 +1095,9 @@ const takeData = [
     },
     {
         id: 'hgutjnrbegrtfgdsb',
-        title: 'Water a Plant',
+        title: 'Water Wellness Challenge',
         author: 'Partake',
-        shortDescription: 'Just water a plant. any plant. Not too much though.',
+        shortDescription: 'Drinking enough water helps combat fatigue, increase energy levels and improve focus.',
         coverImage: 'plant.jpg',
         subject: '',
         category: '15 Minutes or Less',
