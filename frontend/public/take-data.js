@@ -281,7 +281,7 @@ const takeData = [
                         [
                             {
                                 id: '1',
-                                title: 'Carbon Savings',
+                                title: 'Digital Footprint',
                                 text: 'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
                                 icon: 'digital-footprint',
                             }
@@ -451,6 +451,7 @@ const takeData = [
 
                         tooltips: [
                             {
+                                title: 'Relaxation',
                                 text: 'Research shows that participants who practiced mindfulness meditation on a daily basis experienced a decrease in stress by 31%. (Chiesa & Serretti, 2009).',
                                 icon: 'relaxation',
                             },]
@@ -463,6 +464,7 @@ const takeData = [
                         tooltips:
                             [
                                 {
+                                    title:'Mindfulness',
                                     text: 'A study reported that individuals who engaged in regular mindfulness meditation experienced a 20% decrease in symptoms of anxiety and a 15% decrease in symptoms of depression (Hofmann et al., 2010).',
                                     icon: 'lotus',
                                 },
@@ -634,18 +636,21 @@ const takeData = [
                             [
                                 {
                                     id: '1',
+                                    title:'Waste Reduction',
                                     text: 'Instead of being buried in a landfill site, the packages you collect will be recycled into different products.',
                                     icon: 'waste',
                                 },
 
                                 {
                                     id: '2',
+                                    title:'Paper',
                                     text: 'Recycling one ton of paper packaging can save around 26,500 to 75,700 liters of water.',
                                     icon: 'paper'
                                 },
 
                                 {
                                     id: '3',
+                                    title:'Recycle',
                                     text: "A full  Tamir's Orange Bag that you recycle,  can  save around 1.6 kg to 2.4kg of CO2 emissions",
                                     icon: 'recycle'
                                 }
