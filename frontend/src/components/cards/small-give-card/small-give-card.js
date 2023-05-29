@@ -44,7 +44,7 @@ const SmallGiveCard = ({give}) => {
                     </div>
                 </div>
 
-                <div className="px-4">
+                <div className="px-4 pb-1 flex flex-col justify-between h-[112px]">
                     <div className="flex justify-between my-2 space-x-2">
                         {(donations || duration) && <div className="flex gap-2 items-center">
                             {duration && <div className="flex flex-col justify-center items-center 
