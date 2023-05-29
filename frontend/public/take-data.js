@@ -380,12 +380,6 @@ const takeData = [
                     type: 'feedback',
                     icon: 'flower',
                     infoText: 'Meditation empowers us to cultivate a resilient Just as a mountain stands tall.',
-                    numberValidationData:
-                        {
-                            max: 100,
-                            min: 0,
-                            multiplier: 4,
-                        },
                 },
                 shortText: "See how your collegues did",
                 longText: "Welcome back! Did you achieve your goal?",
