@@ -216,7 +216,7 @@ const giveData = [
             type: 'Social',
             categories: [
                 {
-                    icon: 'goods-donation',
+                    icon: 'donation',
                     boldText: 'Fundraising',
                     text:'',
 
