@@ -7,6 +7,7 @@ import Head from "next/head";
 import ImpactGraphic from "@components/components/impact-graphic/impact-graphic";
 import ProgressBar from "@components/components/progress-bar/progress-bar";
 import PartnerGrid from "@components/components/partner-grid/partner-grid";
+import PartnersMap from "@components/components/partners-map/partners-map";
 
 
 const environmentalImpact = {
@@ -240,7 +241,8 @@ export default function AdminDashboard() {
                         <h1 className="font-bold col-span-6 mt-10">Partner Network</h1>
                         <DashboardCard
                             className="flex items-center justify-center border-blue col-span-6  border-[#001DAD]">
-                            <PartnerGrid numberOfRows={6} paginate={false}/>
+                            {/*<PartnerGrid numberOfRows={6} paginate={false}/>*/}
+                            <PartnersMap/>
                             <a href={`${baseUrl}/partner-network`}>
                                 <p className="absolute bottom-5 right-8 font-bold text-blue">Go to partner network
                                     page</p>
