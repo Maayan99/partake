@@ -53,11 +53,12 @@ const giveData = [
         coverImage: 'shekel_hamezion_donations.png',
         activityType: 'goods-donation',
         author: 'Shekel Association',
-        DateTime: "",
+        DateTime: "n/a",
+        parking: 'Nearby',
         category: 'For you',
         about: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.', //About the NGO or the Give
         description: "You can bring the items directly to our Talpiot branch, located at 39 General Pierre Koenig Street in Jerusalem, or to our city centre branch, located at 5 Dorot Rishonim street, Center of town, Jerusalem Please contact us in case you do not find parking. We will send a team to receive the donation from the vehicle.",
-        location: 'General Pierre Koenig Street 39, Jerusalem.',
+        location: 'General Pierre Koenig Street 39, Jerusalem',
         contactDetails:
             {
                 name: 'Ofra, Donation coordinator',
@@ -88,18 +89,7 @@ const giveData = [
                 time: ['Sunday-Thursday', '9am - 9pm'],
                 duration: 'ongoing',
             },
-        sponsors:
-            {
-                text: 'Tamir',
-                array: [
-                    {
-                        id: '1',
-                        image: 'adam',
-                        name: 'adam',
-                        text: 'An Israeli non-profit organization dedicated to promoting inclusion and improving the lives of people with disabilities. We collaborate with the social business "HaMzeyon" in Jerusalem, offering employment opportunities for individuals with disabilities.',
-                    },
-                ]
-            },
+
         additionalInfo: {
             text: '',
             array: [
@@ -216,19 +206,30 @@ const giveData = [
                 text: '500 NIS - you can sponsor therapy treatments for abused or traumatized animals, providing them an oppertunity to find a home.',
             },
         ],
+
+
+
+
         requirements: [''],
         impact: {
             type: 'Social',
-            categories: ['Money'],
-            boldText: 'Donation',
-            text: '',
-            tooltip: [
+            categories: [
                 {
-                    text: 'Donating to an animal shelter helps them to find warm and loving homes.',
-                    icon: 'animal-welfare',
-                },
-            ]
-        },
+                    icon: 'goods-donation',
+                    boldText: 'Fundraising',
+                    text:'',
+
+                tooltips: [
+                    {
+                        text: 'Donating to an animal shelter helps them to find warm and loving homes.',
+                        icon: 'animal-welfare',
+                    },
+                ],
+            },
+        ],
+    },
+                
+               
         timeDetails:
             {
                 Date: 'n/a',
