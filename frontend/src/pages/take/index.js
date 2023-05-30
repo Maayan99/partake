@@ -217,7 +217,6 @@ export default function Take() {
             <Head>
                 <title>Take - Partake</title>
             </Head>
-            <div className="pl-10 scale-[1.2] py-32 translate-y-10">
             <FilterBar
                 search={search} setSearch={setSearch}
                 filterersArray={filterers}
@@ -225,7 +224,6 @@ export default function Take() {
             {(search !== "" || type !== "" || subject !== "" || duration !== "") ?
                 <AfterSearch search={search} type={type} subject={subject} duration={duration}/> :
                 <BeforeSearch/>}
-            </div>
         </>
     );
 }
