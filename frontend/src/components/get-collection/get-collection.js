@@ -7,8 +7,8 @@ export default function GetCollection({collection}) {
         <div className="grid grid-cols-10 grid-rows-5 gap-x-6 gap-y-4 ">
             <SmallGetCard get={items[0]} className="col-span-3 row-span-3"/>
             <SmallGetCard get={items[1]} className="col-span-3 row-span-3"/>
-            <div className="col-span-4 row-span-5 bg-slate-50 px-16 py-8 space-y-4">
-                <img src={`/assets/PNG/logos/${logoImage}`}/>
+            <div className="col-span-4 row-span-5 bg-slate-50 px-16 py-8 space-y-4 items-center flex flex-col">
+                <img src={`/assets/PNG/logos/${logoImage}`} className="h-32"/>
                 <h1 className="font-bold text-xl">{descriptionBold}</h1>
                 <h1 className="text-lg">{description}</h1>
                 <a href={`get/collections/${id}`}>
