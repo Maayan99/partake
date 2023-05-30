@@ -61,7 +61,7 @@ export default function Get() {
                 <GetCollection collection={getData[0]}/>
 
 
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 w-full justify-between">
                 <LargeGetCard get={getData[1]}/>
                 <LargeGetCard get={getData[2]}/>
                 <LargeGetCard get={getData[3]}/>
