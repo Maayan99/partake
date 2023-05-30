@@ -121,32 +121,32 @@ export default function AdminDashboard() {
                                 <div className="space-y-2 pl-4">
                                     <div className="flex items-center space-x-2">
                                         <div className="rounded-full h-2 w-2 bg-[#04cfff]"></div>
-                                        <p className="text-sm">Sustainability</p>
+                                        <p className="text-sm">End poverty</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
                                         <div className="rounded-full h-2 w-2 bg-black bg-[#3bb6ff]"></div>
-                                        <p className="text-sm">Recycling</p>
+                                        <p className="text-sm">Zero hunger</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
                                         <div className="rounded-full h-2 w-2 bg-[#3983f9]"></div>
-                                        <p className="text-sm">Poverty</p>
+                                        <p className="text-sm">Health</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
                                         <div className="rounded-full h-2 w-2  bg-[#1961ff]"></div>
-                                        <p className="text-sm">Equality</p>
+                                        <p className="text-sm">Education</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
                                         <div className="rounded-full h-2 w-2 bg-[#003add]"></div>
-                                        <p className="text-sm">Youth at risk</p>
+                                        <p className="text-sm">Gender equality</p>
                                     </div>
 
                                     <div className="flex items-center space-x-2">
                                         <div className="rounded-full h-2 w-2 bg-[#001dad]"></div>
-                                        <p className="text-sm">Pollution</p>
+                                        <p className="text-sm">Water and Sanitation</p>
                                     </div>
 
                                 </div>
@@ -154,23 +154,23 @@ export default function AdminDashboard() {
 
                             <div>
                                 <div className="flex items-center space-x-2 mt-5">
-                                    <p className="text-sm w-32">Sustainability</p>
+                                    <p className="text-sm w-32">End poverty</p>
                                     <ProgressBar percentage={80} className="h-[4px]"/>
                                 </div>
                                 <div className="flex items-center space-x-2 py-1 mt-2">
-                                    <p className="text-sm w-32">Inclusion</p>
+                                    <p className="text-sm w-32">Zero hunger</p>
                                     <ProgressBar percentage={70} className="h-[4px]"/>
                                 </div>
                                 <div className="flex items-center space-x-2 mt-2">
-                                    <p className="text-sm w-32">Poverty</p>
+                                    <p className="text-sm w-32">Health</p>
                                     <ProgressBar percentage={60} className="h-[4px]"/>
                                 </div>
                                 <div className="flex items-center space-x-2 py-1 mt-2">
-                                    <p className="text-sm w-32">Equality</p>
+                                    <p className="text-sm w-32">Education</p>
                                     <ProgressBar percentage={50} className="h-[4px]"/>
                                 </div>
                                 <div className="flex items-center space-x-2 mt-2">
-                                    <p className="text-sm w-32">Youth at risk</p>
+                                    <p className="text-sm w-32">Gender equality</p>
                                     <ProgressBar percentage={40} className="h-[4px]"/>
                                 </div>
                             </div>
