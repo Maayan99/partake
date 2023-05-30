@@ -241,7 +241,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
 
                 {filtered.map((initiative, index) =>
                     <tr key={initiative.id}
-                        className={selected.includes(initiative.id) ? `${index % 2 === 0 ? 'bg-zebra-blue-on' : 'bg-zebra-blue-off'}` : `${index % 2 === 0 ? 'bg-light-gray' : 'bg-white'}`}>
+                        className={selected.includes(initiative.id) ? `bg-gradient-to-r ${index % 2 === 0 ? 'from-[#a38bff] to-[#4eaeff]' : 'from-[#00cfff] to-[#4eaeff]'}` : `${index % 2 === 0 ? 'bg-light-gray' : 'bg-white'}`}>
                         <td>
                             <input id={initiative.id} checked={selected.includes(initiative.id)} onChange={handleSelect}
                                    type="checkbox"/>
