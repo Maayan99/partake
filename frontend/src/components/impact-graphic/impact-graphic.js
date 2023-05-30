@@ -21,7 +21,10 @@ export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
 
     return (
         <div className="grid grid-cols-[15%_75%] text-sm w-full gap-4 mt-4">
-            {type && <Icon name={type} className="w-16 aspect-square border border-2 rounded-full p-2"/>}
+            {type &&
+                <div className="w-12 aspect-square outline outline-2 outline-offset-2 rounded-full p-2">
+                    <Icon name={type} className="w-full aspect-square"/>
+                </div>}
             <div className="flex space-x-16 w-full ml-10">
                 {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
             </div>
