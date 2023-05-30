@@ -476,7 +476,7 @@ const giveData = [
         title: 'Collect and Sort Surplus Food',
         author: 'Food Rescuers JLM (מצילות המזון)',
         duration: 5,
-        location: '',
+        location: 'השוק הסיטונאי,ירושלים',
         donations: false,
         coverImage: 'give_card_food_rescue_mission.png',
         activityType: 'field',
