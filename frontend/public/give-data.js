@@ -437,7 +437,7 @@ const giveData = [
     },
     {
         id: '7',
-        title: 'Volunteering at Yad Sarah',
+        title: 'Companionship and Assistance to Seniors',
         author: 'Yad Sarah',
         duration: 8,
         location: '124 Herzl BLVD, Jerusalem',
@@ -445,7 +445,10 @@ const giveData = [
         coverImage: 'give_card_volunteering_elderly_people.png',
         activityType: 'field',
         endDate: '16/5/2023',
-        participants: false,
+        participants: {
+            number: 27,
+            array: [11, 12, 21, 13, 14],
+        },
         category: 'In your area',
         cause: '',
         type: '',
