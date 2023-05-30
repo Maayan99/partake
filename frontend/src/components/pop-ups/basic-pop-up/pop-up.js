@@ -16,7 +16,7 @@ export default function PopUp({children, display, title, setDisplay, icon}) {
                         {icon && <div className="-translate-y-6 shadow-xl
                         bg-white p-4 border-blue border
                          rounded-full">
-                            <Icon name={icon} className="h-12"/>
+                            <Icon name={icon} className="h-10 aspect-square"/>
                         </div>}
                         {title && <h1>{title}</h1>}
                         <div className="w-full">

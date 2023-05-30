@@ -190,7 +190,7 @@ export default function ValidationPopUp({
 
 
     return (
-        <PopUp display={display} setDisplay={setDisplay}
+        <PopUp display={display} setDisplay={setDisplay} icon={showCongratsGraphic ? 'congrats' : 'validation'}
                title={showCongratsGraphic ? 'Congratulations!' : 'Validation'}>
             {!showCongratsGraphic ? <Validation validationData={validationData}
                                                 setDestinationNumber={setDestinationNumber}
