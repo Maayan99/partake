@@ -181,7 +181,7 @@ const giveData = [
     {
         id: '21',
         title: 'Donate to Our Animal Shelter',
-        coverImage: '',
+        coverImage: 'give_card_animal.png',
         activityType: 'fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'SPCA Israel (צער בעלי חיים)',
         about: "Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare", //About the NGO or the Give
@@ -252,7 +252,7 @@ const giveData = [
     {
         id: '22',
         title: 'English Teacher for Children and Youth',
-        coverImage: '',
+        coverImage: 'english_teacher_high_school.png',
         activityType: 'online', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: "Kidum No'ar Kiryat Gat",
         about: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.", //About the NGO or the Give
@@ -341,7 +341,7 @@ const giveData = [
         duration: 8,
         location: 'Online',
         donations: false,
-        coverImage: 'give_card_online_volunteer_digital_marketing_tutors_needed.png',
+        coverImage: 'give_card_computers.png',
         activityType: 'fundraising',
         endDate: '21/5/2023',
         participants: false,
@@ -376,7 +376,7 @@ const giveData = [
         duration: 6,
         location: 'Online',
         donations: false,
-        coverImage: 'give_card_environmental _restoration_day.png',
+        coverImage: 'give_card_women.png',
         activityType: 'field',
         endDate: '14/7/2023',
         participants: {
@@ -395,7 +395,7 @@ const giveData = [
         duration: '',
         location: 'Givat Ram, Jerusalem',
         donations: false,
-        coverImage: 'give_card_environmental _restoration_day.png',
+        coverImage: 'give_card_pride.png',
         activityType: 'field',
         endDate: '14/5/2023',
         participants: {
@@ -414,7 +414,7 @@ const giveData = [
         duration: 10,
         location: "Online",
         donations: true,
-        coverImage: 'give_card_at-risk_youth_field.png',
+        coverImage: 'give_card_donkey.png',
         activityType: 'fundraising',
         endDate: '',
         participants: {
@@ -487,7 +487,7 @@ const giveData = [
         duration: 4,
         location: 'מושב עולש',
         donations: true,
-        coverImage: '',
+        coverImage: 'give_card_rescued_animals.png',
         activityType: 'field',
         endDate: '3/6/2023',
         participants: {
@@ -506,7 +506,7 @@ const giveData = [
         duration: 5,
         location: 'Hanisui School, Jerusalem',
         donations: false,
-        coverImage: 'give_card_food_basket_distribution.png',
+        coverImage: 'give_card_cooking.jpg',
         activityType: 'field',
         endDate: '16/5/2023',
         participants: {
@@ -525,7 +525,7 @@ const giveData = [
         duration: 6,
         location: 'Ein-Gedi National Park',
         donations: false,
-        coverImage: 'give_card_environmental _restoration_day.png',
+        coverImage: 'give_card_ein_gedi_national_park_cleaning_day.png',
         activityType: 'field',
         endDate: '3/5/2023',
         participants: {
@@ -543,7 +543,7 @@ const giveData = [
         author: 'Latet',
         donations: false,
         location: 'online',
-        coverImage: 'give_card_Empowering give_card_women_children.png',
+        coverImage: 'give_card_food_basket_distribution.png',
         activityType: 'fundraising',
         endDate: '14/5/2023',
         participants: {
@@ -574,15 +574,15 @@ const giveData = [
     },
     {
         id: '15',
-        title: 'Hel',
+        title: 'Help Us Treat and Prevent Addiction',
         author: 'ICA',
         location: 'Online',
         donations: false,
         coverImage: 'give_card_helping_children.png',
-        activityType: 'goods-donation',
+        activityType: 'fundraising',
         endDate: '16/5/2023',
         participants: false,
-        category: '',
+        category: 'Fundraising',
         cause: '',
         type: '',
         sponsors: [],
