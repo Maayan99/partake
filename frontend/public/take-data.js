@@ -613,15 +613,25 @@ const takeData = [
             {
                 id: "1",
                 text: 'This our hunt',
-                image: 'give_card_renovation_day_home.png'
+                image: 'recycle1.png',
+                user: {
+                    id: 'aiua123hvefwli1u32x',
+                },
             },
             {
                 id: "2",
-                text: 'Link to the podcast?',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                text: 'Not bad',
+                image: 'recycle2.png',
                 user: {
-                    name: 'Someone',
-                    profileImage: 'profile_image_3.jpeg'
+                    id: 'aiua123hvefwli1u32w',
+                },
+            },
+            {
+                id: "3",
+                text: 'Link to the podcast?',
+                image: 'recycle3.png',
+                user: {
+                    id: 'aiua123hvefwli1u32v',             
                 },
             },
         ],
