@@ -13,7 +13,7 @@ export default function PopUp({children, display, title, setDisplay, icon}) {
                         <IconButton className="absolute top-0 left-0" onClick={() => setDisplay(false)}>
                             <CloseIcon/>
                         </IconButton>
-                        {icon && <div className="-translate-y-6 shadow-xl
+                        {icon && <div className="-translate-y-6 drop-shadow-2xl
                         bg-white p-4 border-blue border
                          rounded-full">
                             <Icon name={icon} className="h-10 aspect-square"/>

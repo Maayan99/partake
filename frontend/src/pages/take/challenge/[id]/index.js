@@ -65,14 +65,16 @@ const ImportantDetails = ({started, take, setStarted, setDisplayInvitePopUp}) =>
                             <Icon name="tasks-black" className="float-left w-4 mt-1.5 mr-3.5 -ml-0.5 opacity-70"/>
                             <h1 className="font-bold">Number of Tasks</h1>
                         </div>
-                        <p>{take.tasks.length}</p>
+                        <p>{numberOfTasks}</p>
                     </div>
                     <div className="ml-10 lg:ml-0 space-y-2">
                         <div>
                             <Icon name="location-black" className="float-left w-4 mt-1.5 mr-3 -ml-0.5 opacity-70"/>
                             <h1 className="font-bold">Location</h1>
                         </div>
-                        <p>{location}</p>
+                        <div className="bg-blue rounded-full px-5 py-1 w-max">
+                            <p className="text-white">{location}</p>
+                        </div>
                     </div>
                     <div className="ml-10 space-y-2">
                         <div>
@@ -169,7 +171,6 @@ export default function TakePage() {
     const [displayInvitePopUp, setDisplayInvitePopUp] = useState(false);
     const [displayCongratsPopUp, setDisplayCongratsPopUp] = useState(false);
     const [completed, setCompleted] = useState(false);
-
 
 
     const router = useRouter();
