@@ -127,7 +127,7 @@ const Validation = ({
     return (
         <div className={`flex flex-col`}>
             <div className="flex flex-col items-center p-8 space-y-2 text-black">
-                <Icon name={icon} className="h-12 w-12 mb-4"/>
+                <Icon name={icon} className="h-12 w-12"/>
                 <span className="text-center">{infoText}</span>
             </div>
             <form className="px-8 pb-6 flex flex-col items-center space-y-4" onSubmit={handleValidate}>

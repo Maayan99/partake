@@ -159,15 +159,15 @@ const impactDictionary = {
     carbon: '0 Grams',
     water: '0L',
     landfill: '0M2',
-    happy: 'Relaxation',
+    happy: 'Well-being',
     balance: 'Work-Life Balance',
 }
 
 const impactDictionaryAfterCompletion = {
-    carbon: '40 Grams',
+    carbon: '80 Grams',
     water: '2L',
     landfill: '100M2',
-    happy: 'Relaxation',
+    happy: 'Well-being',
     balance: 'Work-Life Balance',
 }
 
