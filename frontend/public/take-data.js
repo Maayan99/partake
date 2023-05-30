@@ -569,7 +569,7 @@ const takeData = [
                     multiValidationData:
                         {
                             options:
-                                ['Glass bottles', 'Textile', 'Milk cartons', 'Stray Cats'],
+                                ['Glass bottles', 'Textile', 'Milk cartons', 'Electronics'],
                         },
                 },
                 videoLink: 'https://www.youtube.com/embed/5TmjKUrYvvk',
@@ -612,16 +612,26 @@ const takeData = [
         galleryItems: [
             {
                 id: "1",
-                text: 'This our hunt',
-                image: 'give_card_renovation_day_home.png'
+                text: '',
+                image: 'recycle1.png',
+                user: {
+                    id: 'aiua123hvefwli1u32x',
+                },
             },
             {
                 id: "2",
-                text: 'Link to the podcast?',
-                image: 'give_card_sustainable_farming_volunteer.png',
+                text: 'Not bad',
+                image: 'recycle2.png',
                 user: {
-                    name: 'Someone',
-                    profileImage: 'profile_image_3.jpeg'
+                    id: 'aiua123hvefwli1u32w',
+                },
+            },
+            {
+                id: "3",
+                text: '',
+                image: 'recycle3.png',
+                user: {
+                    id: 'aiua123hvefwli1u32v',             
                 },
             },
         ],
@@ -1106,7 +1116,7 @@ const takeData = [
         title: 'Water Wellness Challenge',
         author: 'Partake',
         shortDescription: 'Drinking enough water helps combat fatigue, increase energy levels and improve focus.',
-        coverImage: 'take_card_recycling_marathon.png',
+        coverImage: 'take_card_water.png',
         subject: '',
         category: '15 Minutes or Less',
         impact:

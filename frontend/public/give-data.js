@@ -367,7 +367,7 @@ const giveData = [
         duration: 4,
         location: "Rehavia neighberhod, Jerusalem",
         donations: false,
-        coverImage: 'give_card_food_collection_distribution.png',
+        coverImage: 'give_card_garden.png',
         activityType: 'field',
         endDate: '3/5/2023',
         participants: {

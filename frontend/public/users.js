@@ -275,8 +275,8 @@ const users = [
         completed: '10'
     },
     {
-        id: 'aiua123hvefwli1u32v',
-        username: 'William Coldbeer',
+        id: 'aiua123hvefwli1u32x',
+        username: 'Yvonne St. Francis',
         email: 'hotwine@gmail.com',
         password: 'helloworld',
         profileImage: 'avatar-29.png',
@@ -288,7 +288,7 @@ const users = [
     },
     {
         id: 'aiua123hvefwli1u32w',
-        username: 'Xander Maximus',
+        username: 'William Coldbeer',
         email: 'xandermax@gmail.com',
         password: 'helloworld',
         profileImage: 'avatar-30.png',
@@ -299,8 +299,8 @@ const users = [
         completed: '63'
     },
     {
-        id: 'aiua123hvefwli1u32x',
-        username: 'Yvonne St. Francis',
+        id: 'aiua123hvefwli1u32v',
+        username: 'Xander Maximus',
         email: 'stpaulstjohn@gmail.com',
         password: 'helloworld',
         profileImage: 'avatar-31.png',
