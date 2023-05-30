@@ -162,13 +162,14 @@ const takeData = [
                     validation: {
                         text: 'Draw the line to your current number.',
                         type: 'number',
-                        icon: 'carbon',
+                        icon: 'db',
                         infoText: 'Emails are stored in data centers that require extensive cooling systems that  consume significant amounts of energy.',
                         numberValidationData:
                             {
                                 max: 200,
                                 min: 0,
-                                multiplier: 4,
+                                multiplier: 0.4,
+                                icon: 'carbon',
                                 units: 'grams',
                             },
                     },

@@ -20,7 +20,7 @@ const CongratsGraphic = ({
 
     useEffect(() => {
         const updateInput = () => {
-            const numberMultiplied = destinationNumber * multiplier;
+            const numberMultiplied = Math.floor(destinationNumber * multiplier);
 
             if (displayedNumber !== numberMultiplied) {
                 setDisplayedNumber(prev => {
@@ -203,7 +203,7 @@ export default function ValidationPopUp({
                                                 setDisplay={setDisplay}/>
                 : <CongratsGraphic multiplier={numberValidationData?.multiplier}
                                    destinationNumber={destinationNumber}
-                                   icon={icon}
+                                   icon={numberValidationData?.icon}
                                    units={numberValidationData?.units}
                                    setDisplay={setDisplay}
                                    setCurrentTask={setCurrentTask}

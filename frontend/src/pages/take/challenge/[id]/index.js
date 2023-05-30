@@ -156,7 +156,15 @@ const TopAfterStarted = ({
 
 
 const impactDictionary = {
-    carbon: '0.4KG',
+    carbon: '0 Grams',
+    water: '0L',
+    landfill: '0M2',
+    happy: 'Relaxation',
+    balance: 'Work-Life Balance',
+}
+
+const impactDictionaryAfterCompletion = {
+    carbon: '40 Grams',
     water: '2L',
     landfill: '100M2',
     happy: 'Relaxation',
@@ -232,7 +240,7 @@ export default function TakePage() {
                                                  return {
                                                      id: category.id,
                                                      icon: category.icon,
-                                                     boldText: impactDictionary[category.icon],
+                                                     boldText: (completed ? impactDictionaryAfterCompletion[category.icon] : impactDictionary[category.icon]),
                                                  }
                                              }), type: take.impact.type
                                          }}
