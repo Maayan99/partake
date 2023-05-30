@@ -508,11 +508,11 @@ const takeData = [
         id: "0b395cd505248fa2",
         type: "survey",
 
-        coverImage: 'take_card_survey_esg.png',
-        title: 'ESG Goals Survey',
+        coverImage: 'take_card_social_survey.png',
+        title: 'Social Involvement Survey',
         author: 'HR',
         subject: 'ESG',
-        shortDescription: 'Please take a few seconds in answering this survey.',
+        shortDescription: 'Please take a few moments and answer this survey.',
         coins: 50,
         progress: 0,
         category: 'Learning and Surveys',
@@ -802,7 +802,7 @@ const takeData = [
     {
         id: "3",
         coverImage: 'take_card_mindful_moment2.png',
-        title: 'a Mindful Moment',
+        title: 'A Mindful Moment',
         author: 'Jerry Fendelbaum',
         impactType: 'wellness',
         subject: "Wellness",
@@ -1042,7 +1042,7 @@ const takeData = [
     },
     {
         id: "948fe332bf68fb37",
-        coverImage: 'take_card_office_flex.png',
+        coverImage: 'take_card_vegan_option.png',
         title: 'Meatless Monday',
         author: 'Partake',
         shortDescription: "Meat industy is the top industry in greenhouse emissions. Try to go veg for a day. It has a major impact on the environment ",
@@ -1103,7 +1103,7 @@ const takeData = [
         title: 'Water Wellness Challenge',
         author: 'Partake',
         shortDescription: 'Drinking enough water helps combat fatigue, increase energy levels and improve focus.',
-        coverImage: 'plant.jpg',
+        coverImage: 'take_card_recycling_marathon.png',
         subject: '',
         category: '15 Minutes or Less',
         impact:
@@ -1120,7 +1120,7 @@ const takeData = [
     },
     {
         id: 'hgutjnrbegrtfgdsb',
-        title: 'Turn Off Your Computer Screen for 10 Minutes',
+        title: 'Turn Off your Computer Screen for 10 Minutes',
         author: 'Partake',
         shortDescription: 'A few minutes without looking at a screen will improve your mental and physical health',
         coverImage: 'turn-off.jpg',
@@ -1143,7 +1143,7 @@ const takeData = [
         title: 'Office Fitness Activity',
         author: 'HR',
         shortDescription: "Fitness activity stimulates blood flow and oxygen circulation. It can also increase energy levels and improved productivity and focus.",
-        coverImage: 'kitchen-clean.jpg',
+        coverImage: 'take_card_fitness.png',
         subject: '',
         category: '15 Minutes or Less',
         impact:

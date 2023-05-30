@@ -10,19 +10,19 @@ export default function TakeSurveyPage() {
     const options = [
         {
             id: '1',
-            text: 'Children and youth',
+            text: 'No poverty',
         },
         {
             id: '2',
-            text: 'Poverty',
+            text: 'Zero hunger',
         },
         {
             id: '3',
-            text: 'Refugees',
+            text: 'Good health',
         },
         {
             id: '4',
-            text: 'LGTBQIA+',
+            text: 'Quality education',
         },
     ];
 
@@ -39,7 +39,7 @@ export default function TakeSurveyPage() {
         <div className="-mb-32 flex items-center justify-center w-full min-h-[720px] py-10 px-10 bg-gradient-radial ellipse_at_bottom from-[#FFFCE6] to-[#05CDFF]">
             {!submitted ? <div className="flex flex-col items-center bg-white shadow-lg rounded-lg p-10 space-y-10 w-2/3 max-w-[900px]">
             <p className="text-lg">Hi Evyatar, please answer this short survey</p>
-                <h1 className="text-center font-bold text-2xl">Which social cause do you wish our company to focus on this year?</h1>
+                <h1 className="text-center font-bold text-2xl">In your opinion, which of the following social goals should our comapny to promote this year?</h1>
                 <div className="space-y-4 flex flex-col items-center">
                     {options.map(option =>
                             <ColoredButton onClick={handleClick} value={option.id} key={option.id}

@@ -20,7 +20,7 @@ export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
 
 
     return (
-        <div className="grid grid-cols-[18%_80%] text-sm w-max gap-4">
+        <div className="grid grid-cols-[18%_80%] text-sm w-max gap-4 mt-4">
             {type && <Icon name={type} className="w-16 aspect-square border border-2 rounded-full p-2"/>}
             <div className="flex space-x-16 w-full ml-10">
                 {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
@@ -40,7 +40,7 @@ export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
                             </div>)))}
                     </div>
                 </div> :
-                <>{!dontShowTotal && <h1 className="text-blue col-span-2">Your impact score: 7</h1>}</>}
+                <>{!dontShowTotal && <h1 className="text-blue col-span-2 text-lg mb-4">Your impact score: 7</h1>}</>}
         </div>
     );
 }

@@ -49,15 +49,16 @@ const template = {
 const giveData = [
     {
         id: "18",
-        title: "Goods Donation for “Ha’Metsion”.",
+        title: "Goods Donation for “Ha’Metsion”",
         coverImage: 'shekel_hamezion_donations.png',
         activityType: 'goods-donation',
         author: 'Shekel Association',
-        DateTime: "",
+        DateTime: "n/a",
+        parking: 'Nearby',
         category: 'For you',
         about: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.', //About the NGO or the Give
         description: "You can bring the items directly to our Talpiot branch, located at 39 General Pierre Koenig Street in Jerusalem, or to our city centre branch, located at 5 Dorot Rishonim street, Center of town, Jerusalem Please contact us in case you do not find parking. We will send a team to receive the donation from the vehicle.",
-        location: 'General Pierre Koenig Street 39, Jerusalem.',
+        location: 'General Pierre Koenig Street 39, Jerusalem',
         contactDetails:
             {
                 name: 'Ofra, Donation coordinator',
@@ -76,7 +77,8 @@ const giveData = [
                     tooltips:
                         [
                             {
-                                text: 'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
+                                title:'People with Disabilties',
+                                text: 'Supporting an organization that employs people with disabilities supports their economic empowerment, independence and helps create a more equitable society.',
                                 icon: 'wheelchair',
                             },
                         ],
@@ -88,18 +90,7 @@ const giveData = [
                 time: ['Sunday-Thursday', '9am - 9pm'],
                 duration: 'ongoing',
             },
-        sponsors:
-            {
-                text: 'Tamir',
-                array: [
-                    {
-                        id: '1',
-                        image: 'adam',
-                        name: 'adam',
-                        text: 'An Israeli non-profit organization dedicated to promoting inclusion and improving the lives of people with disabilities. We collaborate with the social business "HaMzeyon" in Jerusalem, offering employment opportunities for individuals with disabilities.',
-                    },
-                ]
-            },
+
         additionalInfo: {
             text: '',
             array: [
@@ -180,8 +171,8 @@ const giveData = [
     },
     {
         id: '21',
-        title: 'Donate to Our Animal Shelter.',
-        coverImage: '',
+        title: 'Donate to Our Animal Shelter',
+        coverImage: 'give_card_animal.png',
         activityType: 'fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: 'SPCA Israel (צער בעלי חיים)',
         about: "Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare", //About the NGO or the Give
@@ -216,19 +207,31 @@ const giveData = [
                 text: '500 NIS - you can sponsor therapy treatments for abused or traumatized animals, providing them an oppertunity to find a home.',
             },
         ],
+
+
+
+
         requirements: [''],
         impact: {
             type: 'Social',
-            categories: ['Money'],
-            boldText: 'Donation',
-            text: '',
-            tooltip: [
+            categories: [
                 {
-                    text: 'Donating to an animal shelter helps them to find warm and loving homes.',
-                    icon: 'animal-welfare',
-                },
-            ]
-        },
+                    icon: 'donation',
+                    boldText: 'Fundraising',
+                    text:'',
+
+                tooltips: [
+                    {
+                        title:'Animal Welfare',
+                        text: 'Donating to an animal shelter helps them to find warm and loving homes.',
+                        icon: 'animal-welfare',
+                    },
+                ],
+            },
+        ],
+    },
+                
+               
         timeDetails:
             {
                 Date: 'n/a',
@@ -252,13 +255,14 @@ const giveData = [
     {
         id: '22',
         title: 'English Teacher for Children and Youth',
-        coverImage: '',
+        coverImage: 'english_teacher_high_school.png',
         activityType: 'online', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
         author: "Kidum No'ar Kiryat Gat",
         about: "'Kidum Noa'r' is a program for high school students that includes 50 at-risk teenagers located in Kiryat Gat.", //About the NGO or the Give
         description: "We are seeking volunteers for personal and educational mentoring in English for these students.  The volunteer will provide conversation and personal support, as well as educational mentoring that includes preparation for English exams and assistance in understanding the material being studied.  The commitment is until the end of the academic year.",
         category: 'For you',
         skills: ['English', 'Teaching',],
+        duration:'25',
         location: 'Online',
         parking: "n/a",
         dateTime: "October till June, Sundays.",
@@ -272,20 +276,27 @@ const giveData = [
         requirements: ['English-Reading and writing', 'Teaching'],
         impact: {
             type: 'Social',
-            categories: ['clock'],
-            boldText: '25 hours',
-            text: '',
-            tooltip: [
-                {
-                    text: 'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
-                    icon: 'education',
-                },
-                {
-                    text: 'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
-                    icon: 'child',
-                },
-            ]
-        },
+            categories: [
+               {
+                icon: "clock",
+                boldText: '25 hours',
+                text: '',
+                tooltips: [
+                        {
+                            title:'Education',
+                            text: 'Teaching English is important to access educational resources, employment opportunities, communication and connection with a wider world.',
+                            icon: 'education',
+                        },
+                        {
+                            title:'Children',
+                            text: 'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
+                            icon: 'child',
+                        },
+                    ],
+                    },
+                ],
+            },
+      
 
         timeDetails:
             {
@@ -323,7 +334,7 @@ const giveData = [
         title: 'Collect and Sort Surplus Food for Families in Need',
         author: 'Food Rescuers JLM (מצילות המזון בירושלים)',
         duration: 10,
-        location: 'Ein Gedi Park',
+        location: 'השוק הסיטונאי, ירושלים',
         donations: true,
         coverImage: '',
         activityType: 'field',
@@ -335,33 +346,52 @@ const giveData = [
     },
     {
         id: '3',
-        title: 'Online Volunteer Digital Marketing Tutors Needed',
-        author: 'Clean Coin',
+        title: 'Help us Purchase Computers for our commuimity center ',
+        author: 'Kidum Noar, Kiryat Gat',
         duration: 8,
         location: 'Online',
         donations: false,
-        coverImage: 'give_card_online_volunteer_digital_marketing_tutors_needed.png',
-        activityType: 'online',
+        coverImage: 'give_card_computers.png',
+        activityType: 'fundraising',
         endDate: '21/5/2023',
         participants: false,
-        category: 'For you',
+        category: 'Fundraising',
         cause: '',
         type: '',
         sponsors: [],
     },
     {
         id: '14',
-        title: '',
-        author: 'Latet & Shufersal',
+        title: 'Building a Community Garden Together!',
+        author: 'Ginot Kehila Israel',
         duration: 4,
-        location: '97 Jaffa Street, Clal Center, Jerusalem',
+        location: "Rehavia neighberhod, Jerusalem",
         donations: false,
         coverImage: 'give_card_food_collection_distribution.png',
-        activityType: 'goods-donation',
+        activityType: 'field',
         endDate: '3/5/2023',
         participants: {
             number: 81,
             array: [11, 22, 18, 12, 14],
+        },
+        category: 'In your area',
+        cause: '',
+        type: '',
+        sponsors: [],
+    },
+    {
+        id: '5',
+        title: "Legal Guidance for Women in Shleters",
+        author: 'נשים למען נשים',
+        duration: 6,
+        location: 'Online',
+        donations: false,
+        coverImage: 'give_card_women.png',
+        activityType: 'field',
+        endDate: '14/7/2023',
+        participants: {
+            number: 8,
+            array: [8, 9, 12, 17, 18],
         },
         category: 'For you',
         cause: '',
@@ -369,13 +399,13 @@ const giveData = [
         sponsors: [],
     },
     {
-        id: '5',
-        title: "Planting Trees in Ben Shemen Forest",
-        author: 'Kakal',
-        duration: 6,
-        location: 'Ben Shemen Forest',
+        id: '2yrhfyrujfndgsyegf',
+        title: "Guiding a Group of LGBTQ+ Teenagers",
+        author: 'IGY Organization',
+        duration: '',
+        location: 'Givat Ram, Jerusalem',
         donations: false,
-        coverImage: 'give_card_environmental _restoration_day.png',
+        coverImage: 'give_card_pride.png',
         activityType: 'field',
         endDate: '14/5/2023',
         participants: {
@@ -394,7 +424,7 @@ const giveData = [
         duration: 10,
         location: "Online",
         donations: true,
-        coverImage: 'give_card_at-risk_youth_field.png',
+        coverImage: 'give_card_donkey.png',
         activityType: 'fundraising',
         endDate: '',
         participants: {
@@ -462,16 +492,16 @@ const giveData = [
     },
     {
         id: '10',
-        title: 'Help us at Freedom Farm Sanctuary for Rescued Animals',
+        title: 'Volunteer and Play with Rescued Animals',
         author: 'חוות החופש',
         duration: 4,
         location: 'מושב עולש',
         donations: true,
-        coverImage: '',
+        coverImage: 'give_card_rescued_animals.png',
         activityType: 'field',
         endDate: '3/6/2023',
         participants: {
-            number: 105,
+            number: 13,
             array: [16, 17, 0, 1, 10],
         },
         category: 'Events',
@@ -481,15 +511,18 @@ const giveData = [
     },
     {
         id: '11',
-        title: 'Cooking together for people in need',
-        author: 'Shishi Beiti & Food Rescuers JLM ',
+        title: 'Cooking Together for People in Need',
+        author: 'Shishi Beiti & Hanisui School',
         duration: 5,
-        location: 'Online',
+        location: 'Hanisui School, Jerusalem',
         donations: false,
-        coverImage: 'give_card_food_basket_distribution.png',
+        coverImage: 'give_card_cooking.jpg',
         activityType: 'field',
         endDate: '16/5/2023',
-        participants: false,
+        participants: {
+            number: 25,
+            array: [16, 17, 0, 1, 10],
+        },
         category: 'Events',
         cause: '',
         type: '',
@@ -502,7 +535,7 @@ const giveData = [
         duration: 6,
         location: 'Ein-Gedi National Park',
         donations: false,
-        coverImage: 'give_card_environmental _restoration_day.png',
+        coverImage: 'give_card_ein_gedi_national_park_cleaning_day.png',
         activityType: 'field',
         endDate: '3/5/2023',
         participants: {
@@ -516,11 +549,12 @@ const giveData = [
     },
     {
         id: '13',
-        title: '',
-        author: 'Rakefet Group',
+        title: 'Donations For Families in Need',
+        author: 'Latet',
         donations: false,
-        coverImage: 'give_card_Empowering give_card_women_children.png',
-        activityType: 'donation',
+        location: 'online',
+        coverImage: 'give_card_food_basket_distribution.png',
+        activityType: 'fundraising',
         endDate: '14/5/2023',
         participants: {
             number: 12,
@@ -550,15 +584,15 @@ const giveData = [
     },
     {
         id: '15',
-        title: 'Hel',
+        title: 'Help Us Treat and Prevent Addiction',
         author: 'ICA',
         location: 'Online',
         donations: false,
         coverImage: 'give_card_helping_children.png',
-        activityType: 'goods-donation',
+        activityType: 'fundraising',
         endDate: '16/5/2023',
         participants: false,
-        category: '',
+        category: 'Fundraising',
         cause: '',
         type: '',
         sponsors: [],
