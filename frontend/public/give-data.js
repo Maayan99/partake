@@ -402,7 +402,7 @@ const giveData = [
         id: '2yrhfyrujfndgsyegf',
         title: "Guiding a Group of LGBTQ+ Teenagers",
         author: 'IGY Organization',
-        duration: '',
+        duration: '60',
         location: 'Givat Ram, Jerusalem',
         donations: false,
         coverImage: 'give_card_pride.png',
@@ -569,8 +569,8 @@ const giveData = [
         id: '4',
         title: 'Host a Lone Solider for the Weekend',
         author: 'Big Brother Oganization for Lone Soliders',
-        donations: true,
         coverImage: 'give_card_help_PTSD.png',
+        location:'At your home',
         activityType: 'field',
         endDate: '3/6/2023',
         participants: {
