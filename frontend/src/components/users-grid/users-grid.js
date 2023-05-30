@@ -147,7 +147,7 @@ export default function UsersGrid({numberOfRows, paginate}) {
 
                 {filtered.map((user, index) =>
                     <tr key={user.id}
-                        className={selected.includes(user.id) ? `${index % 2 === 0 ? 'bg-zebra-blue-on' : 'bg-zebra-blue-off'}` : `${index % 2 === 0 ? 'bg-light-gray' : 'bg-white'}`}>
+                        className={selected.includes(user.id) ? `bg-gradient-to-r ${index % 2 === 0 ? 'from-purple-500 to-blue' : 'from-zebra-blue-off to-blue'}` : `${index % 2 === 0 ? 'bg-light-gray' : 'bg-white'}`}>
                         <td>
                             <input id={user.id} checked={selected.includes(user.id)} onChange={handleSelect}
                                    type="checkbox"/>
