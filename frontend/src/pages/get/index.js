@@ -4,6 +4,7 @@ import {useState} from "react";
 import GetButton from "@components/components/common/get-button/get-button";
 import GetCollection from "@components/components/get-collection/get-collection";
 import Head from "next/head";
+import LargeGetCard from "@components/components/cards/large-get-card/large-get-card";
 
 export default function Get() {
     const categories = [
@@ -32,7 +33,7 @@ export default function Get() {
     ];
 
     let filtered = getData;
-    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+    const [selectedCategory, setSelectedCategory] = useState(categories[1]);
 
 
     return (
@@ -58,6 +59,13 @@ export default function Get() {
                 </div>
 
                 <GetCollection collection={getData[0]}/>
+
+
+                <div className="flex space-x-4">
+                <LargeGetCard get={getData[1]}/>
+                <LargeGetCard get={getData[2]}/>
+                <LargeGetCard get={getData[3]}/>
+                </div>
             </div>
         </>
     )
