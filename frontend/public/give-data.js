@@ -77,7 +77,8 @@ const giveData = [
                     tooltips:
                         [
                             {
-                                text: 'Supporting an organization that employs people with disabilities is important as it supports their economic empowerment , independence and helps create a more equitable society.',
+                                title:'People with Disabilties',
+                                text: 'Supporting an organization that employs people with disabilities supports their economic empowerment, independence and helps create a more equitable society.',
                                 icon: 'wheelchair',
                             },
                         ],
@@ -221,6 +222,7 @@ const giveData = [
 
                 tooltips: [
                     {
+                        title:'Animal Welfare',
                         text: 'Donating to an animal shelter helps them to find warm and loving homes.',
                         icon: 'animal-welfare',
                     },
@@ -281,10 +283,12 @@ const giveData = [
                 text: '',
                 tooltips: [
                         {
-                            text: 'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
+                            title:'Education',
+                            text: 'Teaching English is important to access educational resources, employment opportunities, communication and connection with a wider world.',
                             icon: 'education',
                         },
                         {
+                            title:'Children',
                             text: 'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
                             icon: 'child',
                         },
