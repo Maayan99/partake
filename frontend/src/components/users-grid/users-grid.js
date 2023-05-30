@@ -89,7 +89,7 @@ export default function UsersGrid({numberOfRows, paginate}) {
                 <tbody>
                 <tr className="p-2 bg-slate-50">
                     <th className="w-4"/>
-                    <th>Name</th>
+                    <th className="w-52">Name</th>
                     <th>Department</th>
                     <th>Impact Score</th>
                     <th>Partake Coins</th>
@@ -103,13 +103,13 @@ export default function UsersGrid({numberOfRows, paginate}) {
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-32" onChange={handleNameSearchChange}
+                            <input className="rounded-none border border-light-gray w-full" onChange={handleNameSearchChange}
                                 type="text"/>    
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-32"
+                            <input className="rounded-none border border-light-gray w-full"
                                 onChange={handleDepartmentSearchChange}
                                 type="text"/>
                                 <Icon name="down-arrow" className="w-4 -ml-5"/>                    
@@ -117,28 +117,28 @@ export default function UsersGrid({numberOfRows, paginate}) {
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-28" onChange={handleImpactSearchChange}
+                            <input className="rounded-none border border-light-gray w-full" onChange={handleImpactSearchChange}
                                 type="text"/>
                                 <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
+                            <input className="rounded-none border border-light-gray w-full" onChange={handleCoinSearchChange}
                                 type="text"/>
                                 <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
+                            <input className="rounded-none border border-light-gray w-full" onChange={handleCoinSearchChange}
                             type="text"/>
                             <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-24" onChange={handleCoinSearchChange}
+                            <input className="rounded-none border border-light-gray w-full" onChange={handleCoinSearchChange}
                                 type="text"/>
                                 <Icon name="down-arrow" className="w-4 -ml-5"/> 
                         </div>
@@ -152,7 +152,12 @@ export default function UsersGrid({numberOfRows, paginate}) {
                             <input id={user.id} checked={selected.includes(user.id)} onChange={handleSelect}
                                    type="checkbox"/>
                         </td>
-                        <td className="border-r border-slate-300">{user.username}</td>
+                        <td className="border-r border-slate-300">
+                            <div className="flex gap-2 items-center">
+                                <img src={`/assets/PNG/profile-images/${user.profileImage}`} className="h-8"/>
+                                {user.username}
+                            </div>
+                            </td>
                         <td className="border-r border-slate-300">{user.department}</td>
                         <td className="border-r border-slate-300">{user.impact}</td>
                         <td className="border-r border-slate-300">{user.coins}</td>

@@ -162,6 +162,14 @@ export default function GivePage() {
                     <p className="text-gray">{give.aboutTheCause}</p>
                 </div>}
                 {give.impact && <ImpactGraphic impact={give.impact} showIconsBelow={true}/>}
+                {give.skills &&
+                    <div className="space-y-5">
+                        <h1 className="font-bold">Skill Requirements</h1>
+                        <div className="grid grid-cols-4">{give.skills.map((skill, index) =>
+                            <div className="text-white bg-blue rounded-full flex items-center justify-center px-4 w-min py-1"
+                                 key={index}>{skill}</div>
+                        )}</div>
+                    </div>}
                 {give.sponsors &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Partners</h1>
