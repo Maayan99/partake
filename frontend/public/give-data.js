@@ -274,20 +274,25 @@ const giveData = [
         requirements: ['English-Reading and writing', 'Teaching'],
         impact: {
             type: 'Social',
-            categories: ['clock'],
-            boldText: '25 hours',
-            text: '',
-            tooltip: [
-                {
-                    text: 'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
-                    icon: 'education',
-                },
-                {
-                    text: 'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
-                    icon: 'child',
-                },
-            ]
-        },
+            categories: [
+               {
+                icon: "clock",
+                boldText: '25 hours',
+                text: '',
+                tooltips: [
+                        {
+                            text: 'Teaching English is  important to access educational resources, employment opportunities, communication and connection with a wider world.',
+                            icon: 'education',
+                        },
+                        {
+                            text: 'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
+                            icon: 'child',
+                        },
+                    ],
+                    },
+                ],
+            },
+      
 
         timeDetails:
             {
