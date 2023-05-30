@@ -102,6 +102,7 @@ const TopAfterStarted = ({
                              handleLeaveChallenge,
                              handleInviteFriends,
                              impact,
+                             completed,
                          }) => {
     const {tasks} = take;
 
@@ -132,7 +133,7 @@ const TopAfterStarted = ({
                     }
                 </div>
                 <ExpandedProgressBar numberOfTasks={tasks.length} numberOfFulfilledTasks={currentTask + 1}
-                                     viewedTask={currentTask}/>
+                                     viewedTask={currentTask} completed={completed}/>
                 <BlueButton className="mt-4 text-2xl w-64" onClick={handleShowValidation}>Validate
                     Task {currentTask + 1}</BlueButton>
             </div>
@@ -167,6 +168,8 @@ export default function TakePage() {
     const [currentTask, setCurrentTask] = useState(0);
     const [displayInvitePopUp, setDisplayInvitePopUp] = useState(false);
     const [displayCongratsPopUp, setDisplayCongratsPopUp] = useState(false);
+    const [completed, setCompleted] = useState(false);
+
 
 
     const router = useRouter();
@@ -212,6 +215,7 @@ export default function TakePage() {
                 <InvitePopUp display={displayInvitePopUp} setDisplay={setDisplayInvitePopUp}/>
                 <ValidationPopUp currentTask={currentTask} setCurrentTask={setCurrentTask}
                                  display={displayValidationPopUp} setDisplayCongratsPopUp={setDisplayCongratsPopUp}
+                                 setCompleted={setCompleted}
                                  numberOfTasks={take.tasks.length}
                                  setDisplay={setDisplayValidationPopUp}
                                  validationData={take.tasks[currentTask].validation}/>
@@ -231,6 +235,7 @@ export default function TakePage() {
                                                  }
                                              }), type: take.impact.type
                                          }}
+                                         completed={completed}
                                          setDisplayValidationPopUp={setDisplayValidationPopUp}
                                          currentTask={currentTask}/> :
                         <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}

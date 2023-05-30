@@ -1,8 +1,10 @@
-export default function ExpandedProgressBar({numberOfTasks, numberOfFulfilledTasks: numberOfFulfilled, viewedTask}) {
+export default function ExpandedProgressBar({numberOfTasks, numberOfFulfilledTasks: numberOfFulfilled, completed, viewedTask}) {
     const blockArray = [];
 
     for (let i = 0; i < numberOfTasks; i++) {
-        if (viewedTask === i) {
+        if (completed) {
+            blockArray.push(<div className="h-full w-full bg-blue" key={i}/>)
+        } else if (viewedTask === i) {
             blockArray.push(<div className="h-full w-full bg-green-400" key={i}/>)
         } else if (i < numberOfFulfilled) {
             blockArray.push(<div className="h-full w-full bg-blue" key={i}/>)

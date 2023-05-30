@@ -71,6 +71,7 @@ const Validation = ({
                         setCurrentTask,
                         numberOfTasks,
                         setDisplayCongratsPopUp,
+                        setCompleted,
                         setDisplay,
                     }) => {
 
@@ -115,6 +116,7 @@ const Validation = ({
 
             if (currentTask + 1 === numberOfTasks) {
                 setDisplayCongratsPopUp(true);
+                setCompleted(true);
             } else {
                 setCurrentTask(prev => prev + 1);
             }
@@ -172,7 +174,7 @@ const Validation = ({
 
 export default function ValidationPopUp({
                                             currentTask, setCurrentTask, display, setDisplay, validationData,
-                                            setDisplayCongratsPopUp, numberOfTasks
+                                            setDisplayCongratsPopUp, setCompleted, numberOfTasks
                                         }) {
     const {icon, numberValidationData} = validationData;
 
@@ -196,6 +198,7 @@ export default function ValidationPopUp({
                                                 currentTask={currentTask}
                                                 setCurrentTask={setCurrentTask}
                                                 numberOfTasks={numberOfTasks}
+                                                setCompleted={setCompleted}
                                                 setDisplayCongratsPopUp={setDisplayCongratsPopUp}
                                                 setDisplay={setDisplay}/>
                 : <CongratsGraphic multiplier={numberValidationData?.multiplier}
