@@ -139,6 +139,8 @@ const takeData = [
         },
         type: 'challenge',
 
+        duration: 10,
+
         whatToDo: "Take a screenshot of the number of emails you deleted before and another one  after. Don't forget to encourage your coworkers to participate as well!",
         tasks:
             [
