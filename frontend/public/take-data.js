@@ -1122,7 +1122,7 @@ const takeData = [
     },
     {
         id: 'hgutjnrbegrtfgdsb',
-        title: 'Turn Off your Computer Screen for 10 Minutes',
+        title: 'Turn Off Your Computer Screen for 10 Minutes',
         author: 'Partake',
         shortDescription: 'A few minutes without looking at a screen will improve your mental and physical health',
         coverImage: 'turn-off.jpg',
