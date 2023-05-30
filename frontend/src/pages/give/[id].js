@@ -15,7 +15,7 @@ import LoadingSpinner from "@components/components/loading-spinner/loading-spinn
 import ParticipantsGrid from "@components/components/participants-grid/participants-grid";
 import DonationPopUp from "@components/components/pop-ups/donation-pop-up/donation-pop-up";
 
-const ImportantDetails = ({give}) => {
+const ImportantDetails = ({give, setDisplayDonationPopUp}) => {
     const {
         parking,
         location,
@@ -30,16 +30,27 @@ const ImportantDetails = ({give}) => {
 
     const {email, name, phone} = contactDetails;
 
+
+    const handleButtonClick = () => {
+        if (give.activityType === "online" || give.activityType === "field") {
+        } else {
+            setDisplayDonationPopUp(true);
+        }
+    }
+
+
     return (
         <>
             <div className="md:col-span-2 space-y-9 h-[760px] lg:h-[420px]">
                 <div className="flex space-x-1 text-2xl">
-                    <PrimaryButton className="w-1/4 mr-4">Join</PrimaryButton>
+                    <PrimaryButton className="w-1/4 mr-4" onClick={handleButtonClick}>
+                        {(give.activityType === "online" || give.activityType === "field") ? "Join" : "Donate"}
+                    </PrimaryButton>
                     <TransparentButton>Invite Friends</TransparentButton>
                 </div>
                 <div className="w-full h-[680px] md:h-[340px] bg-important-blue grid md:grid-cols-2 items-center">
                     <div className="ml-10 space-y-2">
-                        <Icon name="location" className="float-left w-4 mt-4 mr-3 -ml-1 opacity-70"/>    
+                        <Icon name="location" className="float-left w-4 mt-4 mr-3 -ml-1 opacity-70"/>
                         <h1 className="font-bold">Location</h1>
                         <div className="flex space-x-2 items-center rounded-full w-max px-5 py-1 bg-blue">
                             <p className="text-white">{location}</p>
@@ -132,7 +143,7 @@ export default function GivePage() {
                 <GiveCoverCard className="md:col-span-2 lg:col-span-1" give={give}/>
 
 
-                <ImportantDetails give={give}/>
+                <ImportantDetails give={give} setDisplayDonationPopUp={setDisplayDonationPopUp}/>
 
 
                 {/*Detailed details*/}
@@ -142,21 +153,22 @@ export default function GivePage() {
                 </div>
                 {give.tasks && <div className="space-y-5">
                     <h1 className="font-bold">Task</h1>
-                    <ul className="list-disc pl-4">{give.tasks.map(task => <li key={task.id} className="text-gray">{task.shortText}</li>)}</ul>
+                    <ul className="list-disc pl-4">{give.tasks.map(task => <li key={task.id}
+                                                                               className="text-gray">{task.shortText}</li>)}</ul>
                 </div>}
 
                 {give.aboutTheCause && <div className="space-y-5">
                     <h1 className="font-bold">About the Cause</h1>
                     <p className="text-gray">{give.aboutTheCause}</p>
                 </div>}
-                {give.impact && <ImpactGraphic impact={give.impact}  showIconsBelow={true}/>}
+                {give.impact && <ImpactGraphic impact={give.impact} showIconsBelow={true}/>}
                 {give.sponsors &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Partners</h1>
                         <div className="flex">
                             {give.sponsors.array.map(sponsor =>
-                            <img key={sponsor.id} src={`/assets/PNG/logos/rectangle/logo-${sponsor.image}.png`}
-                                 className="h-16" alt={sponsor.name}/>)}
+                                <img key={sponsor.id} src={`/assets/PNG/logos/rectangle/logo-${sponsor.image}.png`}
+                                     className="h-16" alt={sponsor.name}/>)}
                         </div>
                         <p className="text-gray">{give.sponsors.text}</p>
                     </div>}
@@ -164,18 +176,20 @@ export default function GivePage() {
                     <div className="space-y-5">
                         <h1 className="font-bold">Additional Information</h1>
                         <p className="font-bold">{give.additionalInfo.text}</p>
-                        <ul className="list-disc pl-4">{give.additionalInfo.array.map(info => <li className="text-gray" key={info.id}>{info.text}</li>)}</ul>
+                        <ul className="list-disc pl-4">{give.additionalInfo.array.map(info => <li className="text-gray"
+                                                                                                  key={info.id}>{info.text}</li>)}</ul>
                     </div>}
                 {give.organizer &&
                     <div className="space-y-5">
                         <h1 className="font-bold">Event Organizer</h1>
                         <div className="text-gray" dangerouslySetInnerHTML={{__html: give.organizer}}></div>
                     </div>}
-                {give.participants && <ParticipantsGrid participants={give.participants} handleInviteFriends={handleInviteFriends}/>}
-                <div className="space-y-5">
+                {give.participants &&
+                    <ParticipantsGrid participants={give.participants} handleInviteFriends={handleInviteFriends}/>}
+                {(give.activityType === "online" || give.activityType === "field") && <div className="space-y-5">
                     <h1 className="font-bold">Want to help in other ways?</h1>
                     <PrimaryButton onClick={() => setDisplayDonationPopUp(true)}>Click to Donate</PrimaryButton>
-                </div>
+                </div>}
             </div>
         </>
     )
