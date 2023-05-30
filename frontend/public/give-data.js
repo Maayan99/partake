@@ -420,7 +420,7 @@ const giveData = [
     {
         id: '6',
         title: 'Adopt a Donkey',
-        author: 'Safe haven for donkeys',
+        author: 'Safe Haven for Donkeys',
         duration: 10,
         location: "Online",
         donations: true,
