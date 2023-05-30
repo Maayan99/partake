@@ -352,7 +352,7 @@ const takeData = [
                 validation: {
                     text: "Now, write it down and release it to the universe (aka the gallery..)",
                     type: 'text',
-                    icon: 'mindfulness',
+                    icon: 'lotus',
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
                     textValidationData:
                         {},
@@ -365,7 +365,7 @@ const takeData = [
                 validation: {
                     text: 'Which app did you choose?',
                     type: 'multi',
-                    icon: 'mindfulness',
+                    icon: 'lotus',
                     infoText: 'Mindfulness meditation is like a gentle breeze that awakens the senses.',
                     multiValidationData:
                         {
