@@ -217,6 +217,7 @@ export default function Take() {
             <Head>
                 <title>Take - Partake</title>
             </Head>
+            <div className="ml-32">
             <FilterBar
                 search={search} setSearch={setSearch}
                 filterersArray={filterers}
@@ -224,6 +225,7 @@ export default function Take() {
             {(search !== "" || type !== "" || subject !== "" || duration !== "") ?
                 <AfterSearch search={search} type={type} subject={subject} duration={duration}/> :
                 <BeforeSearch/>}
+            </div>
         </>
     );
 }
