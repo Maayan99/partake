@@ -4,7 +4,7 @@ import LearnMoreTooltip from "@components/components/pop-ups/learn-more-tooltip/
 const ImpactCause = ({impactCategory}) => {
 
     return (
-        <div className="flex flex-col items-center w-max relative min-w-[50px]">
+        <div className="flex flex-col items-center w-max ">
             <Icon name={impactCategory.icon} className={`min-w-[40px] max-w-[40px] aspect-square mb-2`}/>
             <div>
                 {impactCategory.boldText &&
@@ -20,12 +20,12 @@ export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
 
 
     return (
-        <div className="grid grid-cols-[15%_75%] text-sm w-full gap-4 mt-4">
+        <div className="grid grid-cols-[15%_65%] text-sm w-full gap-4 mt-4">
             {type &&
                 <div className="w-12 aspect-square outline outline-2 outline-offset-2 rounded-full p-2">
                     <Icon name={type} className="w-full aspect-square"/>
                 </div>}
-            <div className="flex space-x-16 w-full ml-10">
+            <div className="flex space-x-8 w-full ml-10">
                 {categories.map(category => <ImpactCause key={category.id} impactCategory={category}/>)}
             </div>
             {showIconsBelow && <div className="flex justify-center">
