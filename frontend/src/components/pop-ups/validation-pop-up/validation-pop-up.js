@@ -9,6 +9,7 @@ const CongratsGraphic = ({
                              icon,
                              destinationNumber,
                              multiplier,
+                             units,
                              setDisplay,
                              setCurrentTask,
                              currentTask,
@@ -55,7 +56,8 @@ const CongratsGraphic = ({
         <div className="flex flex-col items-center p-6">
             <Icon name={icon} className="h-12 w-12"/>
             <h1 className="font-bold">You saved:</h1>
-            <span className="text-center mb-10">{displayedNumber}</span>
+            <p className="text-center">{displayedNumber}</p>
+            <span className="font-bold mb-10">{units}</span>
             <BlueButton onClick={handleClose}>Close</BlueButton>
         </div>
     )
@@ -77,7 +79,7 @@ const Validation = ({
     const typeIsNumber = type === "number";
     const typeIsText = type === "text";
     const typeIsMulti = type === "multi";
-    const typeIsImage= type === "image";
+    const typeIsImage = type === "image";
     const typeIsFeedback = type === "feedback";
 
     const [number, setNumber] = useState(0);
@@ -153,10 +155,10 @@ const Validation = ({
                         <span className="font-medium text-gray">
                             Drop files to Attach, or <span className="text-blue underline">browse</span>
                         </span>
-                                            <input type="file" className="hidden"/>
-                                        </label>}
+                                                <input type="file" className="hidden"/>
+                                            </label>}
                                     </>
-                                    }
+                                }
                             </>
                         }
                     </>
@@ -199,6 +201,7 @@ export default function ValidationPopUp({
                 : <CongratsGraphic multiplier={numberValidationData?.multiplier}
                                    destinationNumber={destinationNumber}
                                    icon={icon}
+                                   units={numberValidationData?.units}
                                    setDisplay={setDisplay}
                                    setCurrentTask={setCurrentTask}
                                    setDisplayCongratsPopUp={setDisplayCongratsPopUp}
