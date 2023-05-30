@@ -48,7 +48,7 @@ const template = {
 
 const giveData = [
     {
-        id: "18",
+        id: "fgry675trgfdh856",
         title: "Goods Donation for “Ha’Metsion”",
         coverImage: 'shekel_hamezion_donations.png',
         activityType: 'goods-donation',
@@ -170,7 +170,7 @@ const giveData = [
             },
     },
     {
-        id: '21',
+        id: 'f658jdfe54rdgh45',
         title: 'Donate to Our Animal Shelter',
         coverImage: 'give_card_animal.png',
         activityType: 'fundraising', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
@@ -253,7 +253,7 @@ const giveData = [
         aboutTheCause: 'Since its establishment in 1927, The Society for Prevention of Cruelty to Animals in Israel (SPCA Israel) has been working for the prevention of cruelty and suffering in animals and the promotion of their rights and welfare.',
     },
     {
-        id: '22',
+        id: 'hgyt9gueh5urhfte',
         title: 'English Teacher for Children and Youth',
         coverImage: 'english_teacher_high_school.png',
         activityType: 'online', //Either Field Volunteering, Online Voluneering, Goods Donation, or Fundraising
