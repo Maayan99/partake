@@ -217,7 +217,7 @@ export default function Take() {
             <Head>
                 <title>Take - Partake</title>
             </Head>
-            <div className="ml-32">
+            <div className="pl-10 scale-[1.2] py-32 translate-y-10">
             <FilterBar
                 search={search} setSearch={setSearch}
                 filterersArray={filterers}
