@@ -162,7 +162,7 @@ const takeData = [
                     validation: {
                         text: 'Draw the line to your current number.',
                         type: 'number',
-                        icon: 'db',
+                        icon: 'carbon',
                         infoText: 'Emails are stored in data centers that require extensive cooling systems that  consume significant amounts of energy.',
                         numberValidationData:
                             {
