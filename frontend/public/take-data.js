@@ -515,7 +515,7 @@ const takeData = [
         title: 'Social Involvement Survey',
         author: 'HR',
         subject: 'ESG',
-        shortDescription: 'Please take a few moments and answer this survey.',
+        shortDescription: 'Please take a few moments and answer this survey. Your answers will help us to choose our goals for this year.',
         coins: 50,
         progress: 0,
         category: 'Learning and Surveys',
@@ -920,15 +920,15 @@ const takeData = [
         coverImage: 'zero-waste.jpg',
         title: 'Go Zero-Waste for a Day',
         author: 'Partake',
-        shortDescription: "Reducing waste can be difficult, so let's take it slowly, day by day.",
+        shortDescription: "Reducing waste can be difficult, but we can show you how to do it. See if you can stop leaving any waste for one day",
         impact: {
             type: 'environmental'
         },
         subject: 'environmental',
-        coins: 100,
+        coins: 200,
         progress: 0,
         category: 'Popular',
-        duration: 10,
+        duration: 480,
         participants: {
             number: 85,
             array: [19, 7, 13, 18, 12],
@@ -939,7 +939,7 @@ const takeData = [
         coverImage: 'morning-yoga.jpg',
         title: ' Morning Yoga with Ilanit',
         author: 'Ilanit from marketing',
-        shortDescription: 'Join me for a 20 min yoga class at Monday, 8:15.',
+        shortDescription: 'Join me for a 20 min yoga class at Monday, 8:15. bring your yoga mattress please.',
         impact: {
             type: 'wellness'
         },
@@ -958,7 +958,7 @@ const takeData = [
         coverImage: 'take_card_pub_quiz.png',
         title: 'Pub Quiz',
         author: 'Amnon',
-        shortDescription: 'The weekly pub quiz with many annoying questions',
+        shortDescription: "The weekly pub quiz with many annoying questions. This week's topic: famous tweets.",
         impact: {
             type: 'wellness',
         },
@@ -976,7 +976,7 @@ const takeData = [
         coverImage: 'home-energy-audit.jpg',
         title: 'Home Energy Audit',
         author: 'HR',
-        shortDescription: "Manage your home's energy usage with this challenge",
+        shortDescription: "Manage your home's energy usage with this challenge. Learn how to reduce your energy spendings.",
         impact: {
             type: 'wellness',
         },
@@ -1010,7 +1010,7 @@ const takeData = [
         coverImage: 'diversity.jpg',
         title: 'Inclusion, Diversity and Equality',
         author: 'HR',
-        shortDescription: 'In this course you will learn the principals of IDE',
+        shortDescription: 'In this course you will learn the principals of IDE and how to create a positive and welcoming work enviroment.',
         subject: 'Training and Development',
         coins: 1000,
         progress: 0,
@@ -1042,7 +1042,7 @@ const takeData = [
         coverImage: 'gift-card.jpg',
         title: 'Gift Card Survey',
         author: 'HR',
-        shortDescription: "Choose your gift card",
+        shortDescription: "Choose your gift card. Not much of a surprise, but we got you last year's cards again.",
         subject: 'survey',
         coins: 1000,
         progress: 0,
