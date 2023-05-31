@@ -20,7 +20,12 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     icon: 'igud',
                     name: 'Igud Arim Haifa',
                 },
-                partners: 'Electra',
+                partners:
+                    [
+                        {
+                            name: 'Electra',
+                        }
+                    ],
                 demands: 'Money donation, biogas',
                 timeFrame: '3 years',
                 scope: '2',
@@ -34,7 +39,12 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     icon: 'elem',
                     name: 'Elem',
                 },
-                partners: 'Mhaneyuda group',
+                partners:
+                    [
+                        {
+                            name: 'Mhaneyuda group',
+                        }
+                    ],
                 demands: 'A bus from Tel Aviv to Ein-Gedi',
                 timeFrame: '1 day',
                 scope: '3',
@@ -48,7 +58,12 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     icon: 'lohamim',
                     name: 'fighting for Life',
                 },
-                partners: 'Facebook Israel',
+                partners:
+                    [
+                        {
+                            name: 'Facebook Israel',
+                        }
+                    ],
                 demands: 'Hosting place in Ramle',
                 timeFrame: '1 day',
                 scope: '3',
@@ -62,7 +77,12 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     icon: 'heshel',
                     name: 'Heshel Center',
                 },
-                partners: 'Electra',
+                partners:
+                    [
+                        {
+                            name: 'Electra',
+                        }
+                    ],
                 demands: 'Money donation, food delivery',
                 timeFrame: '6 hours',
                 scope: '1',
@@ -76,7 +96,12 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     icon: 'matav',
                     name: 'Matav',
                 },
-                partners: 'Bank HaPoalim',
+                partners:
+                    [
+                        {
+                            name: 'Bank HaPoalim',
+                        }
+                    ],
                 demands: 'Ad campaign, print and web',
                 timeFrame: '3 days',
                 scope: '3',
@@ -90,10 +115,13 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     icon: 'ilan',
                     name: 'Ilan',
                 },
-                partners: {
-                    icon: 'mccann',
-                    name: 'McCann Tel Aviv',
-                },
+                partners:
+                    [
+                        {
+                            icon: 'mccann',
+                            name: 'McCann Tel Aviv',
+                        }
+                    ],
                 demands: 'Online advertising, design, ',
                 timeFrame: '1 week',
                 scope: '2',
@@ -182,7 +210,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     <th>Partners</th>
                     <th>Demands</th>
                     <th>Time frame</th>
-                    <th>Scope</th>                  
+                    <th>Scope</th>
                     <th>Status</th>
                 </tr>
 
@@ -249,17 +277,35 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                             <input id={initiative.id} checked={selected.includes(initiative.id)} onChange={handleSelect}
                                    type="checkbox"/>
                         </td>
-                        <td className="max-w-[40px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.initiatives}</p></td>
+                        <td className="max-w-[40px] overflow-hidden border-r border-slate-300"><p
+                            className="whitespace-nowrap">{initiative.initiatives}</p></td>
                         <td className="flex items-center w-36 overflow-hidden border-r border-slate-300 px-2"><img
-                            src={`/assets/PNG/logos/square/logo-s-${initiative.leader.icon}.png`} className="h-10 p-1 rounded-full"/>
+                            src={`/assets/PNG/logos/square/logo-s-${initiative.leader.icon}.png`}
+                            className="h-10 p-1 rounded-full"/>
                             <p className="whitespace-nowrap pl-2">{initiative.leader.name}</p></td>
-                        <td className="max-w-[96px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.partners}</p></td>
-                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.demands}</p></td>
-                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.timeFrame}</p></td>
-                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p className="whitespace-nowrap">{initiative.scope}</p></td>                      
-                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><ColoredButton className={`${initiative.status === 'Joined' ? 
-                        'bg-green-500' : initiative.status === 'Join' ?
-                        'bg-blue' : initiative.status === 'Pending' && 'bg-orange-400'} w-28 `}>{initiative.status}</ColoredButton></td>
+                        <td className="max-w-[96px] overflow-hidden border-r border-slate-300">
+                            <div className="flex">
+                                {initiative.partners.map((partner, index) =>
+                                    <div key={index} className="flex">
+                                        {partner.icon && <img
+                                            src={`/assets/PNG/logos/square/logo-s-${partner.icon}.png`}
+                                            className="h-10 p-1 rounded-full"/>}
+                                        <p>{partner.name}</p>
+                                    </div>
+                                )}
+                            </div>
+                        </td>
+                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p
+                            className="whitespace-nowrap">{initiative.demands}</p></td>
+                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p
+                            className="whitespace-nowrap">{initiative.timeFrame}</p></td>
+                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><p
+                            className="whitespace-nowrap">{initiative.scope}</p></td>
+                        <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><ColoredButton
+                            className={`${initiative.status === 'Joined' ?
+                                'bg-green-500' : initiative.status === 'Join' ?
+                                    'bg-blue' : initiative.status === 'Pending' && 'bg-orange-400'} w-28 `}>{initiative.status}</ColoredButton>
+                        </td>
                     </tr>
                 )}
                 </tbody>
