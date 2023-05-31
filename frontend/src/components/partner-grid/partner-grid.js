@@ -23,10 +23,11 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                 partners:
                     [
                         {
-                            name: 'Electra',
+                            icon: 'biogas',
+                            name: 'Home Biogas',
                         }
                     ],
-                demands: 'Money donation, biogas',
+                demands: 'Money donation, biogas system installing',
                 timeFrame: '3 years',
                 scope: '2',
                 status: 'Join',
@@ -42,6 +43,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                 partners:
                     [
                         {
+                            icon: 'mahne',
                             name: 'Mhaneyuda group',
                         }
                     ],
@@ -61,6 +63,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                 partners:
                     [
                         {
+                            icon: 'fb',
                             name: 'Facebook Israel',
                         }
                     ],
@@ -80,6 +83,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                 partners:
                     [
                         {
+                            icon: 'electra',
                             name: 'Electra',
                         }
                     ],
@@ -99,6 +103,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                 partners:
                     [
                         {
+                            icon: 'hapoalim',
                             name: 'Bank HaPoalim',
                         }
                     ],
@@ -206,12 +211,12 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                 <tr className="p-2 bg-slate-50">
                     <th className="w-4"/>
                     <th>Initiatives</th>
-                    <th>Leader</th>
+                    <th className="w-[150px]">Leader</th>
                     <th>Partners</th>
                     <th>Demands</th>
-                    <th>Time frame</th>
-                    <th>Scope</th>
-                    <th>Status</th>
+                    <th className="w-[130px]">Time frame</th>
+                    <th className="w-24">Scope</th>
+                    <th className="w-40">Status</th>
                 </tr>
 
                 <tr className="bg-important-blue">
@@ -249,14 +254,14 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-32"
+                            <input className="rounded-none border border-light-gray w-24"
                                    onChange={handleCoinSearchChange}
                                    type="text"/>
                         </div>
                     </td>
                     <td>
                         <div className="flex">
-                            <input className="rounded-none border border-light-gray w-32"
+                            <input className="rounded-none border border-light-gray w-16"
                                    onChange={handleCoinSearchChange}
                                    type="text"/>
                         </div>
@@ -284,13 +289,13 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                             className="h-10 p-1 rounded-full"/>
                             <p className="whitespace-nowrap pl-2">{initiative.leader.name}</p></td>
                         <td className="max-w-[96px] overflow-hidden border-r border-slate-300">
-                            <div className="flex">
+                            <div className="flex pl-0">
                                 {initiative.partners.map((partner, index) =>
                                     <div key={index} className="flex">
                                         {partner.icon && <img
                                             src={`/assets/PNG/logos/square/logo-s-${partner.icon}.png`}
-                                            className="h-10 p-1 rounded-full"/>}
-                                        <p>{partner.name}</p>
+                                            className="h-10 p-1 rounded-full pt-1"/>}
+                                        <p className="mt-2 pl-3">{partner.name}</p>
                                     </div>
                                 )}
                             </div>
@@ -304,7 +309,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                         <td className="max-w-[36px] overflow-hidden border-r border-slate-300"><ColoredButton
                             className={`${initiative.status === 'Joined' ?
                                 'bg-green-500' : initiative.status === 'Join' ?
-                                    'bg-blue' : initiative.status === 'Pending' && 'bg-orange-400'} w-28 `}>{initiative.status}</ColoredButton>
+                                    'bg-blue' : initiative.status === 'Pending' && 'bg-orange-400'} w-28 hover:bg-black `}>{initiative.status}</ColoredButton>
                         </td>
                     </tr>
                 )}
