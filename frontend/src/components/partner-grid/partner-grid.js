@@ -119,7 +119,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     [
                         {
                             icon: 'mccann',
-                            name: 'McCann Tel Aviv',
+                            name: 'McCann',
                         }
                     ],
                 demands: 'Online advertising, design, ',
@@ -207,10 +207,10 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                     <th className="w-4"/>
                     <th>Initiatives</th>
                     <th>Leader</th>
-                    <th>Partners</th>
+                    <th className="w-44">Partners</th>
                     <th>Demands</th>
                     <th>Time frame</th>
-                    <th>Scope</th>
+                    <th className="w-20">Scope</th>
                     <th>Status</th>
                 </tr>
 
@@ -284,7 +284,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                             className="h-10 p-1 rounded-full"/>
                             <p className="whitespace-nowrap pl-2">{initiative.leader.name}</p></td>
                         <td className="max-w-[96px] overflow-hidden border-r border-slate-300">
-                            <div className="flex">
+                            <div className="flex items-center">
                                 {initiative.partners.map((partner, index) =>
                                     <div key={index} className="flex">
                                         {partner.icon && <img
