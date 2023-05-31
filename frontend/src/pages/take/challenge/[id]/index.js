@@ -141,7 +141,7 @@ const TopAfterStarted = ({
             </div>
             <div className="max-h-[420px] flex flex-col justify-between">
                 <h1 className="mb-2">Your impact</h1>
-                <ImpactGraphic impact={impact} setPingCategory={setPingCategory}/>
+                <ImpactGraphic impact={impact} setPingCategory={setPingCategory} dontShowTotal={true}/>
                 {take.isCompetition ?
                     <>
                         <h1 className="mt-7 mb-3">Leaderboard</h1>
