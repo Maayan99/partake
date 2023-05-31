@@ -587,7 +587,9 @@ const takeData = [
                         {
                             max: 10,
                             min: 0,
-                            multiplier: 40,
+                            multiplier: 91,
+                            icon: 'carbon',
+                            units: 'Grams',
                         },
                 },
                 shortText: "",
