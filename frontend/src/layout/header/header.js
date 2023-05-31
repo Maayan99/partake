@@ -12,8 +12,8 @@ const Header = () => {
     }
 
     return (
-        <div className="flex items-center justify-between py-4 px-16">
-              <Icon name="logo" className="h-6 mb-2"/>
+        <div className="flex items-center justify-between py-4 px-8">
+              <Icon name="logo" className="h-8 mb-2"/>
 
             <div className='flex items-center'>
                 <div className="flex items-center space-x-7 mr-10">
