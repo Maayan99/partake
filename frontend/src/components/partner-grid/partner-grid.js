@@ -286,7 +286,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                         <td className="max-w-[96px] overflow-hidden border-r border-slate-300">
                             <div className="flex items-center">
                                 {initiative.partners.map((partner, index) =>
-                                    <div key={index} className="flex">
+                                    <div key={index} className="flex items-center">
                                         {partner.icon && <img
                                             src={`/assets/PNG/logos/square/logo-s-${partner.icon}.png`}
                                             className="h-10 p-1 rounded-full"/>}
