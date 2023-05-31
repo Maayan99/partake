@@ -115,7 +115,7 @@ export default function AdminDashboard() {
                             <p className="absolute bottom-3 right-4 font-bold text-blue">See more</p>
                         </DashboardCard>
                         <DashboardCard className="col-span-2 border-[#00CFFF]">
-                            <h1 className="font-medium mb-5">ESG Goals</h1>
+                            <h1 className="font-medium mb-5">SDG</h1>
                             <div className="flex items-center space-x-2">
                                 <Icon name="graph2" className="my-2 w-40"/>
 

@@ -15,7 +15,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
         [
             {
                 id: '1',
-                initiatives: 'Installing biogas service',
+                initiatives: 'Biogas for peripheral communities',
                 leader: {
                     icon: 'igud',
                     name: 'Igud Arim Haifa',
@@ -27,7 +27,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                             name: 'Home Biogas',
                         }
                     ],
-                demands: 'Money donation, biogas system installing',
+                demands: 'Funding',
                 timeFrame: '3 years',
                 scope: '2',
                 status: 'Join',
@@ -55,19 +55,19 @@ export default function PartnerGrid({numberOfRows, paginate}) {
 
             {
                 id: '3',
-                initiatives: 'Terror victims fundraising',
+                initiatives: 'Solar panels for peryphery areas',
                 leader: {
-                    icon: 'lohamim',
-                    name: 'fighting for Life',
+                    icon: 'eshkol',
+                    name: 'Eshkol Regional Council',
                 },
                 partners:
                     [
                         {
-                            icon: 'fb',
-                            name: 'Facebook Israel',
+                            icon: 'tadiran',
+                            name: 'Tadiran',
                         }
                     ],
-                demands: 'Hosting place in Ramle, catering',
+                demands: 'Funding',
                 timeFrame: '1 day',
                 scope: '3',
                 status: 'Joined',
@@ -75,19 +75,19 @@ export default function PartnerGrid({numberOfRows, paginate}) {
 
             {
                 id: '4',
-                initiatives: 'Solar panels installment',
+                initiatives: 'Improving workforce skills',
                 leader: {
-                    icon: 'heshel',
-                    name: 'Heshel Center',
+                    icon: 'naam',
+                    name: "Na'Am",
                 },
                 partners:
                     [
                         {
-                            icon: 'electra',
-                            name: 'Electra',
+                            icon: 'huji',
+                            name: 'The Hebrew University',
                         }
                     ],
-                demands: 'Money donation, food delivery',
+                demands: 'Career consulting, vocational training',
                 timeFrame: '6 hours',
                 scope: '1',
                 status: 'Joined',
@@ -95,16 +95,16 @@ export default function PartnerGrid({numberOfRows, paginate}) {
 
             {
                 id: '5',
-                initiatives: 'awareness campaign',
+                initiatives: 'Urban Farming Projects',
                 leader: {
-                    icon: 'matav',
-                    name: 'Matav',
+                    icon: 'muslala',
+                    name: 'Muslala',
                 },
                 partners:
                     [
                         {
-                            icon: 'hapoalim',
-                            name: 'Bank HaPoalim',
+                            icon: 'jlm',
+                            name: 'Jerusalem Municipality',
                         }
                     ],
                 demands: 'Ad campaign, print and web',
@@ -115,7 +115,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
 
             {
                 id: '6',
-                initiatives: 'Nonprofit advertising',
+                initiatives: 'Fundraising for Ilan association',
                 leader: {
                     icon: 'ilan',
                     name: 'Ilan',
@@ -127,7 +127,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                             name: 'McCann Tel Aviv',
                         }
                     ],
-                demands: 'Online advertising, design, art direction',
+                demands: 'Digital ad space, promo video',
                 timeFrame: '1 week',
                 scope: '2',
                 status: 'Pending',
