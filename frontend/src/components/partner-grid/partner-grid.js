@@ -210,8 +210,8 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                 <tbody>
                 <tr className="p-2 bg-slate-50">
                     <th className="w-4"/>
-                    <th>Initiatives</th>
-                    <th className="w-[150px]">Leader</th>
+                    <th className="w-48">Initiatives</th>
+                    <th className="w-[180px]">Leader</th>
                     <th>Partners</th>
                     <th>Demands</th>
                     <th className="w-[130px]">Time frame</th>
@@ -284,7 +284,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                         </td>
                         <td className="max-w-[40px] overflow-hidden border-r border-slate-300"><p
                             className="whitespace-nowrap">{initiative.initiatives}</p></td>
-                        <td className="flex items-center w-36 overflow-hidden border-r border-slate-300 px-2"><img
+                        <td className="flex items-center w-48 overflow-hidden border-r border-slate-300 px-2"><img
                             src={`/assets/PNG/logos/square/logo-s-${initiative.leader.icon}.png`}
                             className="h-10 p-1 rounded-full"/>
                             <p className="whitespace-nowrap pl-2">{initiative.leader.name}</p></td>
@@ -324,7 +324,6 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                                setShow(e.target.value)
                            }}></input>
                 </div>}
-
                 {filtered.length > 25 && <div className="flex space-x-3 items-center">
                     <IconButton>
                         <Icon name="donation"/>
