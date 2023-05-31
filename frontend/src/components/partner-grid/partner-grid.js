@@ -67,7 +67,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                             name: 'Facebook Israel',
                         }
                     ],
-                demands: 'Hosting place in Ramle',
+                demands: 'Hosting place in Ramle, catering',
                 timeFrame: '1 day',
                 scope: '3',
                 status: 'Joined',
@@ -127,7 +127,7 @@ export default function PartnerGrid({numberOfRows, paginate}) {
                             name: 'McCann Tel Aviv',
                         }
                     ],
-                demands: 'Online advertising, design, ',
+                demands: 'Online advertising, design, art direction',
                 timeFrame: '1 week',
                 scope: '2',
                 status: 'Pending',
