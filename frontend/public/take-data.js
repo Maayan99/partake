@@ -329,7 +329,7 @@ const takeData = [
     //Second featured take
     {
         id: "a6289983652a8ef8",
-        coverImage: 'take_card_mindful_moment.png',
+        coverImage: '21-days-green.jpg',
         title: '21 Days of Mindfulness',
         author: 'Partake',
         impactType: 'wellness',
@@ -918,25 +918,6 @@ const takeData = [
         },
     },
     {
-        id: "416171eef1bf987b",
-        coverImage: 'zero-waste.jpg',
-        title: 'Go Zero-Waste for a Day',
-        author: 'Partake',
-        shortDescription: "Reducing waste can be difficult, but we can show you how to do it. See if you can stop leaving any waste for one day",
-        impact: {
-            type: 'environmental'
-        },
-        subject: 'environmental',
-        coins: 200,
-        progress: 0,
-        category: 'Popular',
-        duration: 480,
-        participants: {
-            number: 85,
-            array: [19, 7, 13, 18, 12],
-        },
-    },
-    {
         id: "416171eef1bg987b",
         coverImage: 'morning-yoga.jpg',
         title: ' Morning Yoga with Ilanit',
@@ -950,6 +931,25 @@ const takeData = [
         progress: 0,
         category: 'Popular',
         duration: 10,
+        participants: {
+            number: 85,
+            array: [19, 7, 13, 18, 12],
+        },
+    },
+    {
+        id: "416171eef1bf987b",
+        coverImage: 'take_card_eat_any_fruit_right_now.png',
+        title: 'Go Zero-Waste for a Day',
+        author: 'Partake',
+        shortDescription: "Reducing waste can be difficult, but we can show you how to do it. See if you can stop leaving any waste for one day",
+        impact: {
+            type: 'environmental'
+        },
+        subject: 'environmental',
+        coins: 200,
+        progress: 0,
+        category: 'Popular',
+        duration: 480,
         participants: {
             number: 85,
             array: [19, 7, 13, 18, 12],
