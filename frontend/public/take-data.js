@@ -123,7 +123,7 @@ const takeData = [
         coverImage: 'take_card_clean_inbox_clear_conscience_big.png',
         title: 'Clean Inbox, Clear Conscience',
         author: 'Partake',
-        subject: "Environmental",
+        subject: "environmental",
         shortDescription: 'Even a small action such as deleting emails can reduce carbon emissions.',
         description: "Have you ever thought about the impact that deleting old emails can have on the environment? In this challenge, we want you to take a few minutes out of your day to go through your inbox and delete any old or unnecessary emails. It's a small action, but it can have a big impact on the environment.",
         coins: 200,
@@ -526,7 +526,6 @@ const takeData = [
         },
     },
 
-
     // For you challenges
     {
         id: "sdgfhtyrujhfnmjf",
@@ -535,14 +534,14 @@ const takeData = [
         title: 'Departments Recycling War',
         author: 'HR, Abraham’s Hostel',
         impactType: 'environmental',
-        subject: "Environmental",
+        subject: 'Environmental',
         shortDescription: 'Our exciting interdepartmental recycling competition! Who can make the biggest impact?',
         description: 'Get ready for an exhilarating recycling challenge between departments! In this thrilling competition, teams will go head-to-head to determine who can make the most significant environmental impact. Please watch this video by Tamir corporation:',
         coins: 50,
         progress: 35,
         category: 'For you',
         duration: 20160,
-        durationText: 'two weeks, starting Monday 15/4/2023',
+        durationText: 'Two weeks, starting Monday 15/4/2023',
         numberOfTasks: 3,
         location: 'Home',
         difficultyLevel: 'Intermediate',
@@ -610,7 +609,6 @@ const takeData = [
             },
         ],
 
-
         galleryItems: [
             {
                 id: "1",
@@ -637,7 +635,6 @@ const takeData = [
                 },
             },
         ],
-
 
         impact: {
             tooltips:
@@ -733,86 +730,133 @@ const takeData = [
     {
         id: "ghtuyjhnghfdklhrt",
         coverImage: 'transportation-team.jpg',
-        title: 'Transportation Team',
+        title: 'EcoRide',
         author: 'Partake',
-        impactType: 'environmental',
-        subject: "environmental",
-        shortDescription: "Sharing a ride together and reducing personal car usauge can have major impact on the environment.",
-        description: '',
-        coins: 50,
+        subject: 'environmental',
+        shortDescription: 'Sharing a ride together and reducing personal car usauge can have major impact on the environment.',
+        description: "We are excited to announce the launch of our new initiative, the Company EcoRide Challenge! The EcoRide Challenge is a 3 month-long adventure where we encourage you to team up with your colleagues and carpool to work. This isn't just about reducing traffic - it's about making a real, tangible impact on our planet and our community. This challenge aligns with Scope 1 of our company's carbon emissions strategy, which focuses on direct emissions from owned or controlled sources.",
+        coins: 200,
         progress: 0,
         category: 'For you',
-        duration: 30,
-        durationText: '5 days, starting Monday 15/4/2023',
-        numberOfTasks: 5,
+        durationText: '3 months, starting Monday 15/4/2023',
+        numberOfTasks: 3,
         location: 'Office',
         difficultyLevel: 'Easy',
         participants: {
-            number: 85,
+            number: 25,
             array: [19, 7, 13, 18, 12],
         },
-
-        tasks: [
+        type: 'challenge',
+        duration: 600,
+        whatToDo: "Your task is to create and log your Carpool EcoRides throughout the challenge. By doing so, you will actively participate in sustainable commuting practices and contribute to reducing carbon emissions and traffic congestion.",
+        tasks:
+        [
             {
-                id: 1,
-                validateText: 'How do you feel after 15 minutes of meditation?',
-                shortText: 'Have a 15-minute meditation',
-                longText: '',
+                id: "19f10a8ec96751ad2",
+                validation: {
+                    text: "Typical Work Schedule: Do you usually go back home after work?",
+                    type: 'multi',
+                    icon: 'car',
+                    infoText: 'Shared travel provides an opportunity for employees to connect with their colleagues and build stronger relationships.',
+                    multiValidationData:
+                        {
+                            options: ['yes', 'no'],
+                        },
+                },
+                shortText: "Check out your collegues' mailboxes",
+                longText: "Form Your EcoRide: Answer a small survey to form your Eco-Trip.",
+            },
+            {
+                id: "2g75y6htyr73regf3",
+                validation: {
+                    text: 'Daily EcoRide Creation: create a new trip each day by specifying their pickup and drop-off locations for that particular day.',
+                    type: 'number',
+                    icon: 'energy',
+                    numberValidationData:
+                        {
+                            max: 200,
+                            min: 0,
+                            multiplier: 0.4,
+                            icon: 'carbon',
+                            units: 'grams',
+                        },
+                },
+                shortText: "Check out your collegues' mailbox",
+                longText: "Log in your time Preferred Pickup/Drop-off Points.",
+            },
+
+            {
+                id: "39f10a8ec96751af4",
+                validation: {
+                    text: "Log in your carpool EcoRide you have made",
+                    type: 'number',
+                    icon: 'car',
+                    infoText: 'Storing emails requires servers and data storage devices that are associated with CO2 emissions, and electronic waste.',
+                    numberValidationData:
+                        {
+                            max: 200,
+                            min: 0,
+                            multiplier: 1,
+                            units: 'grams',
+                        },
+                },
+                shortText: "Check out your collegues' mailbox",
+                longText: " Log in your carpool EcoRide you have made.",
             },
         ],
 
 
         galleryItems: [
-            {
-                id: "1",
-                text: 'Link to the podcast!',
-                image: 'give_card_renovation_day_home.png'
-            },
-            {
-                id: "2",
-                text: 'Link to the podcast?',
-                image: 'give_card_sustainable_farming_volunteer.png',
-                user: {
-                    name: 'Someone',
-                    profileImage: 'profile_image_3.jpeg'
-                },
-            },
+
         ],
 
         impact: {
-            causes: [
+            type: 'environmental',
+
+            tooltips:
+                [
+                    {
+                        id: '1',
+                        title: 'Digital Footprint',
+                        text: 'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
+                        icon: 'digital-footprint',
+                    }
+                ],
+
+            categories: [
                 {
-                    id: 1,
-                    text: 'Happy',
-                    icon: 'happy',
-                    infoText: 'Happy',
-                    boldText: '',
-                    largeText: '',
-                },
-            ],
-            text: 'Emotional Well-Being',
-            type: 'social'
+                    icon: 'carbon',
+                    boldText: 'CO2 emissions',
+                    text: '',
+
+                }],
+
         },
 
         tips: [
             {
-                text: "",
-                id: 1,
+                id: "ddc6ce14bd798f60",
+                text: "Driver Rotation: Rotating drivers is a great way to share the responsibility and ensure that no one person is burdened with driving all the time.",
+            },
+            {
+                id: "055060e5408fcf25",
+                text: "Carpool Playlist: Music can make the journey more enjoyable and can be a great way to bond with your team members.",
+            },
+            {
+                id: "17b75b356a1e021b",
+                text: "Plan Your Routes Efficiently: To maximize the benefits of carpooling, plan your routes efficiently.",
             },
         ],
 
-        moreInformation: '',
-
         reward: [
             {
-                amount: 50,
-                text: ''
+                amount: 5,
+                text: '5 points for evrey EcoRide report.',
             }
         ],
 
-        bonus: '',
+        moreInformation: 'Research has shown that carpooling not only reduces carbon emissions and traffic congestion but can also have a positive impact on mental health. A study conducted by the University of Waterloo in Canada found that individuals who carpool to work experience lower levels of stress compared to those who commute alone.',
     },
-
 
     {
         id: "3",
