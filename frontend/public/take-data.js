@@ -828,9 +828,6 @@ const takeData = [
                 },
             ],
 
-
-        galleryItems: [],
-
         impact: {
             type: 'environmental',
 

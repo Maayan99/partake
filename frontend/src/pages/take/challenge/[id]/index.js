@@ -250,7 +250,7 @@ export default function TakePage() {
                         <TakeCoverCard className="md:col-span-2 lg:col-span-1" take={take}/>}
 
 
-                    {started &&
+                    {(started && take.galleryItems) &&
                         <Gallery items={take.galleryItems} taskNum={currentTask + 1}
                                  task={take.tasks[currentTask]?.shortText}/>}
 
