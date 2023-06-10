@@ -51,6 +51,7 @@ export default function InvitePopUp({display, setDisplay}) {
 
     const handleSubmit = () => {
         setSelected([]);
+        window.scroll(0, 0);
         setDisplay(false);
     }
 

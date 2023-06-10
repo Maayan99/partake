@@ -46,6 +46,7 @@ const CongratsGraphic = ({
 
     const handleClose = () => {
         setDisplay(false);
+        window.scroll(0, 0);
         if (currentTask + 1 === numberOfTasks) {
             setDisplayCongratsPopUp(true);
         } else {
@@ -123,6 +124,7 @@ const Validation = ({
             setShowCongratsGraphic(true);
         } else {
             setDisplay(false);
+            window.scroll(0, 0);
 
             if (currentTask + 1 === numberOfTasks) {
                 setDisplayCongratsPopUp(true);
