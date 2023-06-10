@@ -134,35 +134,47 @@ const giveData = [
                 phone: '+972-03-6198214',
             },
 
-        impact: {
-            type: 'Environmental',
-            categories: [
-                {
-                    icon: 'clock',
-                    boldText: '6',
-                    text: 'Volunteering Hours',
-                    tooltips:
-                        [
-                            {
-                                title:'Carbon Sequestration',
-                                text: 'Trees absorb carbon dioxide from the atmosphere through photosynthesis, helping to mitigate climate change by reducing the concentration of greenhouse gasses and sequestering carbon.',
-                                icon: 'carbon',
-                            },
-                            {
-                                title:'Carbon Sequestration',
-                                text: 'Trees release oxygen as a byproduct of photosynthesis, contributing to cleaner and healthier air by reducing pollutants and filtering harmful particles.',
-                                icon: 'air',
-                            },
-                            {
-                                title:'Carbon Sequestration',
-                                text: 'Planting trees creates new habitats for various species, promoting biodiversity and providing food, shelter, and nesting sites for animals, insects, and birds.',
-                                icon: 'wildlife',
-                            },
-                        ],
-                },
-            ],
-
-        },
+            impact: {
+                tooltips:
+                    [
+                        {
+                            id: '1',
+                            title: 'Carbon Sequestration',
+                            text: 'Trees absorb carbon dioxide from the atmosphere through photosynthesis, helping to mitigate climate change by reducing the concentration of greenhouse gasses and sequestering carbon.',
+                            icon: 'carbon-sequestration',
+                        },
+    
+                        {
+                            id: '2',
+                            title: 'Air Quality',
+                            text: 'Trees release oxygen as a byproduct of photosynthesis, contributing to cleaner and healthier air by reducing pollutants and filtering harmful particles.',
+                            icon: 'air'
+                        },
+    
+                        {
+                            id: '3',
+                            title: 'Biodiversity Enhancement',
+                            text: "Planting trees creates new habitats for various species, promoting biodiversity and providing food, shelter, and nesting sites for animals, insects, and birds.",
+                            icon: 'wildlife'
+                        }
+                    ],
+                type: 'environmental',
+                categories:
+                    [
+                        {
+                            icon: 'clock',
+                            boldText: '6 Hours',
+                            text: '',
+                        }
+                    ],
+                boldText: 'CO2 emissions',
+                text: '',
+                tooltip:
+                    {
+                        text: 'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
+                        icon: 'digital-footprint',
+                    },
+            },
         timeDetails:
             {
                 time: ['Sunday-Thursday', '9am - 9pm'],
