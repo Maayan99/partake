@@ -777,11 +777,11 @@ const takeData = [
                                             type: 'radio',
                                             options: ['Gasoline', 'Hybrid', 'Electric', 'Other:'],
                                         },
-                                     //   {
-                                     //       title: 'What type of music do you prefer during a commute? (This will help in creating a shared playlist)',
-                                     //       type: 'multi',
-                                     //       options: ['Pop', 'Rock', 'World Music', 'Jazz', 'Country', 'Podcasts/Audiobooks', 'Other:' ],
-                                     //   },
+                                       {
+                                           title: 'What type of music do you prefer during a commute? (This will help in creating a shared playlist)',
+                                           type: 'multi',
+                                           options: ['Pop', 'Rock', 'World Music', 'Jazz', 'Country', 'Podcasts/Audiobooks', 'Other:' ],
+                                       },
                                     ],
 
                             },
