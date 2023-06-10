@@ -754,29 +754,34 @@ const takeData = [
                 {
                     id: "19f10a8ec96751ad2",
                     validation: {
-                        text: "Typical Work Schedule: Do you usually go back home after work?",
+                        text: "Please answer this short survey",
                         type: 'survey',
                         icon: 'car',
-                        infoText: 'Shared travel provides an opportunity for employees to connect with their colleagues and build stronger relationships.',
+                        //infoText: 'Shared travel provides an opportunity for employees to connect with their colleagues and build stronger relationships.',
                         surveyValidationData:
                             {
                                 questions:
                                     [
                                         {
-                                            title: 'Do you?',
+                                            title: 'Do you usually go back home after work?',
                                             type: 'radio',
                                             options: ['yes', 'no'],
                                         },
                                         {
-                                            title: 'Do you?',
+                                            title: "Do you have a vehicle that you're willing to use for carpooling?",
                                             type: 'radio',
                                             options: ['yes', 'no'],
                                         },
                                         {
-                                            title: 'Do you?',
-                                            type: 'multi',
-                                            options: ['hmm', 'another option', 'Other:'],
+                                            title: 'If yes, what type of vehicle do you have?',
+                                            type: 'radio',
+                                            options: ['Gasoline', 'Hybrid', 'Electric', 'Other:'],
                                         },
+                                     //   {
+                                     //       title: 'What type of music do you prefer during a commute? (This will help in creating a shared playlist)',
+                                     //       type: 'multi',
+                                     //       options: ['Pop', 'Rock', 'World Music', 'Jazz', 'Country', 'Podcasts/Audiobooks', 'Other:' ],
+                                     //   },
                                     ],
 
                             },
