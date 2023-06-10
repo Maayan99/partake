@@ -115,6 +115,85 @@ const giveData = [
         aboutTheCause: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.',
         delivery: 'Self delivery',
     },
+    {
+        id: "fgry675trgfdh856v",
+        title: "Earth Day Tree Planting",
+        coverImage: 'give_card_environmental_planting.png',
+        activityType: 'field',
+        author: 'KKL (קרן קיימת לישראל)',
+        DateTime: "April 22nd, 9:00-15:00",
+        parking: 'On site',
+        category: 'For you',
+        duration: '6',
+        about: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.', 
+        description: "Join us in celebrating Earth Day with a meaningful tree planting event in collaboration with Keren Kayemeth LeIsrael - Jewish National Fund (KKL-JNF). This event aims to promote sustainable development and contribute to the goals of the United Nations' Sustainable Development Goals (SDGs). Together, we can make a positive impact on the environment and support social and environmental goals..",
+        location: 'Yatir Forest, Negev Desert',
+        contactDetails:
+            {
+                name: 'Shira, HR department',
+                phone: '+972-03-6198214',
+            },
+
+        impact: {
+            type: 'Environmental',
+            categories: [
+                {
+                    icon: 'clock',
+                    boldText: '6',
+                    text: 'Volunteering Hours',
+                    tooltips:
+                        [
+                            {
+                                title:'Carbon Sequestration',
+                                text: 'Trees absorb carbon dioxide from the atmosphere through photosynthesis, helping to mitigate climate change by reducing the concentration of greenhouse gasses and sequestering carbon.',
+                                icon: 'carbon',
+                            },
+                            {
+                                title:'Carbon Sequestration',
+                                text: 'Trees release oxygen as a byproduct of photosynthesis, contributing to cleaner and healthier air by reducing pollutants and filtering harmful particles.',
+                                icon: 'air',
+                            },
+                            {
+                                title:'Carbon Sequestration',
+                                text: 'Planting trees creates new habitats for various species, promoting biodiversity and providing food, shelter, and nesting sites for animals, insects, and birds.',
+                                icon: 'wildlife',
+                            },
+                        ],
+                },
+            ],
+
+        },
+        timeDetails:
+            {
+                time: ['Sunday-Thursday', '9am - 9pm'],
+                duration: 'ongoing',
+            },
+
+        additionalInfo: {
+            text: '',
+            array: [
+                {
+                    id: "uhfgdtsbvutr",
+                    text: 'The shuttle will leave from the office buildings and go through the following stations: Tel Aviv HaHagana, Tel Aviv HaShalom.',
+                },
+                {
+                    id: "gfbdteyhjiwf",
+                    text: 'Sun Protection: It is important to ensure that participants have adequate sun protection. Providing sun hats, sunscreen and can help prevent sunburn and heat-related issues.',
+                },
+                {
+                    id: "lokgfbdtsvtw",
+                    text: 'Comfortable Clothing and Footwear: Participants should be encouraged to wear comfortable clothing and closed-toe shoes suitable for outdoor activities.',
+                },
+            ]
+        },
+
+        participants: {
+            number: 63,
+            array: [19, 7, 13, 18, 12],
+        },
+
+        aboutTheCause: 'At the Earth Day Tree Planting event, employees will participate in tree planting activities, attend educational sessions, engage in environmental awareness activities, build teamwork and collaboration, network with experts, and document the event through photography. This event promotes the goals of the SDGs by fostering environmental sustainability, raising awareness about tree planting, and encouraging employee engagement in environmental conservation efforts.',
+    },
 
     {
         id: "19",
