@@ -762,9 +762,21 @@ const takeData = [
                             {
                                 questions:
                                     [
-                                        {title: 'Do you?', type: 'radio', options: ['yes', 'no'],},
-                                        {title: 'Do you?', type: 'radio', options: ['yes', 'no'],},
-                                        {title: 'Do you?', type: 'multi', options: ['hmm', 'another option', 'Other:'],},
+                                        {
+                                            title: 'Do you?',
+                                            type: 'radio',
+                                            options: ['yes', 'no'],
+                                        },
+                                        {
+                                            title: 'Do you?',
+                                            type: 'radio',
+                                            options: ['yes', 'no'],
+                                        },
+                                        {
+                                            title: 'Do you?',
+                                            type: 'multi',
+                                            options: ['hmm', 'another option', 'Other:'],
+                                        },
                                     ],
 
                             },
