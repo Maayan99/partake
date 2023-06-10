@@ -5,17 +5,13 @@ const OptionRow = ({option, selected, setSelected}) => {
     const {text, id} = option;
 
     const handleSelect = (event) => {
-        if (selected.includes(id)) {
-            setSelected(prev => prev.filter(option => option !== id));
-        } else {
-            setSelected(prev => [...prev, id]);
-        }
+        setSelected(id);
     }
 
     return (
         <div className="flex space-x-2">
             <div className="flex items-center cursor-pointer space-x-3 mb-1" onClick={handleSelect}>
-                <input type="checkbox" checked={selected.includes(id)} onChange={handleSelect}/>
+                <input type="radio" checked={selected === id} onChange={handleSelect}/>
                 <span className="text-sm">{text}</span>
 
             </div>
@@ -25,15 +21,15 @@ const OptionRow = ({option, selected, setSelected}) => {
 };
 
 
-export default function Multichoice({options}) {
-    const [selected, setSelected] = useState([]);
+export default function Radio({options}) {
+    const [selected, setSelected] = useState("");
 
     const indexedOptions = options.map((option, index) => {
         return {text: option, id: index}
     })
 
     return (
-        <div className="space-y-2 w-full">
+        <div className="w-full flex flex-col items-start">
             {indexedOptions.map(option => <OptionRow selected={selected} setSelected={setSelected} option={option}/>)}
         </div>
     );

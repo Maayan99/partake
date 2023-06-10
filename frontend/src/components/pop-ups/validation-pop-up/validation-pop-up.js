@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import Icon from "@components/components/common/icon/icon";
 import BlueButton from "@components/components/common/blue-button";
 import Multichoice from "@components/components/common/multi-choice/multi-choice";
+import Radio from "@components/components/common/radio/radio";
 
 
 const CongratsGraphic = ({
@@ -75,13 +76,22 @@ const Validation = ({
                         setDisplay,
                     }) => {
 
-    const {text, type, icon, photoValidationData, infoText, numberValidationData, multiValidationData} = validationData;
+    const {
+        text,
+        type,
+        icon,
+        surveyValidationData,
+        infoText,
+        numberValidationData,
+        multiValidationData
+    } = validationData;
 
     const typeIsNumber = type === "number";
     const typeIsText = type === "text";
     const typeIsMulti = type === "multi";
     const typeIsImage = type === "image";
     const typeIsFeedback = type === "feedback";
+    const typeIsSurvey = type === "survey";
 
     const [number, setNumber] = useState(0);
 
@@ -131,7 +141,7 @@ const Validation = ({
                 <span className="text-center">{infoText}</span>
             </div>
             <form className="px-8 pb-6 flex flex-col items-center space-y-4" onSubmit={handleValidate}>
-                <h1 className="text-xl">{text}</h1>
+                {text && <h1 className="text-xl">{text}</h1>}
 
                 {typeIsNumber ?
                     <div className="flex space-x-2 w-full">
@@ -151,14 +161,30 @@ const Validation = ({
                                         {typeIsFeedback ?
                                             <input className="w-full bg-light-gray focus:outline-none" type="range"
                                                    min={0} max={100}/> :
-                                            <label className="flex justify-center items-center w-full h-32 px-4 transition bg-white
+                                            <>
+                                                {typeIsSurvey ?
+                                                    <div className="space-y-4 w-full">
+                                                        {surveyValidationData.questions.map((question, index) =>
+                                                            <div key={index}>
+                                                                <p className='font-bold'>{question.title}</p>
+                                                                {question.type === "radio" ?
+                                                                    <Radio options={question.options}/> :
+                                                                    <Multichoice options={question.options}/>
+                                                                }
+                                                            </div>)
+                                                        }
+                                                    </div> :
+                                                    <label className="flex justify-center items-center w-full h-32 px-4 transition bg-white
                     border-2 border-gray-300 border-dashed rounded-md appearance-none cursor-pointer
                     hover:border-gray-400 focus:outline-none">
                         <span className="font-medium text-gray">
                             Drop files to Attach, or <span className="text-blue underline">browse</span>
                         </span>
-                                                <input type="file" className="hidden"/>
-                                            </label>}
+                                                        <input type="file" className="hidden"/>
+                                                    </label>
+                                                }
+                                            </>
+                                        }
                                     </>
                                 }
                             </>

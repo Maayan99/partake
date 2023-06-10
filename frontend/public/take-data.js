@@ -750,65 +750,69 @@ const takeData = [
         duration: 600,
         whatToDo: "Your task is to create and log your Carpool EcoRides throughout the challenge. By doing so, you will actively participate in sustainable commuting practices and contribute to reducing carbon emissions and traffic congestion.",
         tasks:
-        [
-            {
-                id: "19f10a8ec96751ad2",
-                validation: {
-                    text: "Typical Work Schedule: Do you usually go back home after work?",
-                    type: 'multi',
-                    icon: 'car',
-                    infoText: 'Shared travel provides an opportunity for employees to connect with their colleagues and build stronger relationships.',
-                    multiValidationData:
-                        {
-                            options: ['yes', 'no'],
-                        },
+            [
+                {
+                    id: "19f10a8ec96751ad2",
+                    validation: {
+                        text: "Typical Work Schedule: Do you usually go back home after work?",
+                        type: 'survey',
+                        icon: 'car',
+                        infoText: 'Shared travel provides an opportunity for employees to connect with their colleagues and build stronger relationships.',
+                        surveyValidationData:
+                            {
+                                questions:
+                                    [
+                                        {title: 'Do you?', type: 'radio', options: ['yes', 'no'],},
+                                        {title: 'Do you?', type: 'radio', options: ['yes', 'no'],},
+                                        {title: 'Do you?', type: 'multi', options: ['hmm', 'another option', 'Other:'],},
+                                    ],
+
+                            },
+                    },
+                    shortText: "Check out your collegues' mailboxes",
+                    longText: "Form Your EcoRide: Answer a small survey to form your Eco-Trip.",
                 },
-                shortText: "Check out your collegues' mailboxes",
-                longText: "Form Your EcoRide: Answer a small survey to form your Eco-Trip.",
-            },
-            {
-                id: "2g75y6htyr73regf3",
-                validation: {
-                    text: 'Daily EcoRide Creation: create a new trip each day by specifying their pickup and drop-off locations for that particular day.',
-                    type: 'number',
-                    icon: 'energy',
-                    numberValidationData:
-                        {
-                            max: 200,
-                            min: 0,
-                            multiplier: 0.4,
-                            icon: 'carbon',
-                            units: 'grams',
-                        },
+                {
+                    id: "2g75y6htyr73regf3",
+                    validation: {
+                        text: 'Daily EcoRide Creation: create a new trip each day by specifying their pickup and drop-off locations for that particular day.',
+                        type: 'number',
+                        icon: 'energy',
+                        numberValidationData:
+                            {
+                                max: 200,
+                                min: 0,
+                                multiplier: 0.4,
+                                icon: 'carbon',
+                                units: 'grams',
+                            },
+                    },
+                    shortText: "Check out your collegues' mailbox",
+                    longText: "Log in your time Preferred Pickup/Drop-off Points.",
                 },
-                shortText: "Check out your collegues' mailbox",
-                longText: "Log in your time Preferred Pickup/Drop-off Points.",
-            },
 
-            {
-                id: "39f10a8ec96751af4",
-                validation: {
-                    text: "Log in your carpool EcoRide you have made",
-                    type: 'number',
-                    icon: 'car',
-                    infoText: 'Storing emails requires servers and data storage devices that are associated with CO2 emissions, and electronic waste.',
-                    numberValidationData:
-                        {
-                            max: 200,
-                            min: 0,
-                            multiplier: 1,
-                            units: 'grams',
-                        },
+                {
+                    id: "39f10a8ec96751af4",
+                    validation: {
+                        text: "Log in your carpool EcoRide you have made",
+                        type: 'number',
+                        icon: 'car',
+                        infoText: 'Storing emails requires servers and data storage devices that are associated with CO2 emissions, and electronic waste.',
+                        numberValidationData:
+                            {
+                                max: 200,
+                                min: 0,
+                                multiplier: 1,
+                                units: 'grams',
+                            },
+                    },
+                    shortText: "Check out your collegues' mailbox",
+                    longText: " Log in your carpool EcoRide you have made.",
                 },
-                shortText: "Check out your collegues' mailbox",
-                longText: " Log in your carpool EcoRide you have made.",
-            },
-        ],
+            ],
 
 
-        galleryItems: [
-
-        ],
+        galleryItems: [],
 
         impact: {
             type: 'environmental',
