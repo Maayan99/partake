@@ -121,7 +121,7 @@ const giveData = [
         coverImage: 'give_card_environmental_planting.png',
         activityType: 'field',
         author: 'KKL (קרן קיימת לישראל)',
-        DateTime: "April 22nd, 9:00-15:00",
+        dateTime: "April 22nd, 9:00-15:00",
         parking: 'On site',
         category: 'For you',
         duration: '6',
@@ -177,8 +177,7 @@ const giveData = [
             },
         timeDetails:
             {
-                time: ['Sunday-Thursday', '9am - 9pm'],
-                duration: 'ongoing',
+                frequency: 'Ongoing'
             },
 
         additionalInfo: {
@@ -246,7 +245,7 @@ const giveData = [
         location: 'Ein Gedi National Park',
         contactDetails:
             {
-                name: 'Shiri Buzaglo,HR Department',
+                name: 'Shiri Buzaglo, HR Department',
                 phone: '054-12345678',
             },
         reward: '',
