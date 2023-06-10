@@ -125,7 +125,6 @@ const giveData = [
         parking: 'On site',
         category: 'For you',
         duration: '6',
-        about: 'HaMetzion was founded in 2013 as a social and environmental business that partnered with ‘Shekel’ organisation – Israel’s leading organisation for the inclusion of people with disabilities in the community – to open a chain store of second-hand items that employs people with special needs.', 
         description: "Join us in celebrating Earth Day with a meaningful tree planting event in collaboration with Keren Kayemeth LeIsrael - Jewish National Fund (KKL-JNF). This event aims to promote sustainable development and contribute to the goals of the United Nations' Sustainable Development Goals (SDGs). Together, we can make a positive impact on the environment and support social and environmental goals..",
         location: 'Yatir Forest, Negev Desert',
         contactDetails:
