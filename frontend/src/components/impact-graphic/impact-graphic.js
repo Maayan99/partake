@@ -35,7 +35,7 @@ export default function ImpactGraphic({impact, showIconsBelow, dontShowTotal}) {
         category.tooltips.map(tooltip => tooltip)));
 
     return (
-        <div className="grid grid-cols-4 text-sm gap-4 mt-4">
+        <div className="grid grid-cols-4 text-sm gap-4 mt-4 h-min">
             {type &&
                 <div className="w-12 aspect-square outline outline-2 outline-offset-2 rounded-full p-2">
                     <Icon name={type} className="w-full aspect-square"/>
