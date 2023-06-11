@@ -48,7 +48,7 @@ const template = {
 
 const giveData = [
     {
-        id: "fgry675trgfdh856",
+        id: "fgry675trgfdh856k",
         title: "Goods Donation for “Ha’Metsion”",
         coverImage: 'shekel_hamezion_donations.png',
         activityType: 'goods-donation',
@@ -66,25 +66,26 @@ const giveData = [
                 website: 'https://hamezion.co.il/',
             },
         requirements: ['All clothes must be in good condition.', 'Furniture and baby products must be in good condition.', 'All electricity products must be working.'],
-
         impact: {
+            tooltips: [
+                {
+                    id: '334t43',
+                    title: 'People with Disabilties',
+                    text: 'Supporting an organization that employs people with disabilities supports their economic empowerment, independence and helps create a more equitable society.',
+                    icon: 'accessibility',
+                },
+                
+            ],
             type: 'Social',
             categories: [
                 {
                     icon: 'goods-donation',
                     boldText: 'Goods Donation',
                     text: '',
-                    tooltips:
-                        [
-                            {
-                                title:'People with Disabilties',
-                                text: 'Supporting an organization that employs people with disabilities supports their economic empowerment, independence and helps create a more equitable society.',
-                                icon: 'wheelchair',
-                            },
-                        ],
                 },
             ],
         },
+
         timeDetails:
             {
                 time: ['Sunday-Thursday', '9am - 9pm'],
@@ -168,11 +169,6 @@ const giveData = [
                     ],
                 boldText: 'CO2 emissions',
                 text: '',
-                tooltip:
-                    {
-                        text: 'Deleting a single email can reduce an average of 0.4 grams of CO2 emissions.',
-                        icon: 'digital-footprint',
-                    },
             },
         timeDetails:
             {
@@ -302,20 +298,20 @@ const giveData = [
 
         requirements: [''],
         impact: {
+            tooltips: [
+                {
+                    title:'Animal Welfare',
+                    text: 'Donating to an animal shelter helps them to find warm and loving homes.',
+                    icon: 'animal-welfare',
+                },
+            ],
             type: 'Social',
             categories: [
+                
                 {
                     icon: 'donation',
                     boldText: 'Fundraising',
                     text:'',
-
-                tooltips: [
-                    {
-                        title:'Animal Welfare',
-                        text: 'Donating to an animal shelter helps them to find warm and loving homes.',
-                        icon: 'animal-welfare',
-                    },
-                ],
             },
         ],
     },
@@ -364,24 +360,24 @@ const giveData = [
         reward: 'Certificate of recognition.',
         requirements: ['English-Reading and writing', 'Teaching'],
         impact: {
+            tooltips: [
+                {
+                    title:'Education',
+                    text: 'Teaching English is important to access educational resources, employment opportunities, communication and connection with a wider world.',
+                    icon: 'education',
+                },
+                {
+                    title:'Children',
+                    text: 'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
+                    icon: 'child',
+                },
+            ],
             type: 'Social',
             categories: [
                {
                 icon: "clock",
                 boldText: '25 hours',
                 text: '',
-                tooltips: [
-                        {
-                            title:'Education',
-                            text: 'Teaching English is important to access educational resources, employment opportunities, communication and connection with a wider world.',
-                            icon: 'education',
-                        },
-                        {
-                            title:'Children',
-                            text: 'Volunteering with children can help break the cycle of disadvantage, empower them to overcome challenges, and create a brighter future full of possibilities.',
-                            icon: 'child',
-                        },
-                    ],
                     },
                 ],
             },
