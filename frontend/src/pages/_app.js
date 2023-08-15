@@ -10,14 +10,14 @@ import LoadingSpinner from "@components/components/loading-spinner/loading-spinn
 
 export default function App({Component, pageProps}) {
     const [loadedAdmin, setLoadedAdmin] = useState(false);
-    const [loadedLoggedIn, setLoadedLoggedIn] = useState(false);
+    const [loadedLoggedIn, setLoadedLoggedIn] = useState(true);
 
-    const [loggedIn, setLoggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(true);
     const [isAdmin, setIsAdmin] = useState(false);
 
     const updateLoggedIn = useCallback(() => {
         setLoadedLoggedIn(true);
-        setLoggedIn(sessionStorage.getItem("loggedIn") === "true");
+        //setLoggedIn(sessionStorage.getItem("loggedIn") === "true");
     }, []);
     const updateIsAdmin = useCallback(() => {
         setLoadedAdmin(true);

@@ -1,9 +1,13 @@
 import React from "react";
 import PrimaryButton from "@components/components/common/primary-button";
+import Head from "next/head";
 
 export default function Home() {
     return (
         <>
+            <Head>
+                <meta http-equiv="refresh" content="0; URL=/take" />
+            </Head>
             <div className="flex flex-col h-screen items-center">
                 <div className="flex items-end w-full h-1/3 px-32 mb-20 mt-32 space-x-20">
                     <div className="flex flex-col space-y-5">
